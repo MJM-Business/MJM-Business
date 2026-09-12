@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0b0b0b",
+                        "surface-dark": "#1a1814",
+                        "border-gold": "#433d28",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f2d06b 50%, #b8860b 100%);
+        }
+        .glass-card {
+            background: rgba(26, 24, 20, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-surface-dark border-l border-border-gold flex flex-col justify-between p-6 shrink-0">
+<div class="flex flex-col gap-8">
+<!-- Logo Section -->
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg gold-gradient flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-background-dark font-bold text-3xl">account_balance</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-primary font-bold text-lg leading-tight">MJM Smart</h1>
+<p class="text-slate-400 text-xs">نظام إدارة الضرائب المتطور</p>
+</div>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-medium">تقارير الضرائب</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<span class="font-medium">محرك الاحتساب</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-medium">الامتثال الضريبي</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 text-slate-400 transition-all hover:text-primary" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">الإعدادات</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<button class="w-full py-3 rounded-xl gold-gradient text-background-dark font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined">download</span>
+                    تحميل التقرير السنوي
+                </button>
+<div class="pt-6 border-t border-border-gold flex flex-col gap-2">
+<div class="flex items-center justify-between text-slate-500 text-xs mb-2">
+<span>اختصارات النظام</span>
+</div>
+<div class="flex justify-between text-[10px] text-slate-400 bg-background-dark/50 p-2 rounded">
+<span>توليد تقرير</span>
+<span class="font-mono border border-border-gold px-1 rounded uppercase">Alt + G</span>
+</div>
+<div class="flex justify-between text-[10px] text-slate-400 bg-background-dark/50 p-2 rounded">
+<span>تصدير بيانات</span>
+<span class="font-mono border border-border-gold px-1 rounded uppercase">Alt + E</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-y-auto bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="h-20 border-b border-border-gold px-8 flex items-center justify-between sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+<h2 class="text-xl font-bold tracking-tight">نظام إدارة الضرائب والقيمة المضافة</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="w-80 bg-surface-dark border border-border-gold rounded-full px-10 py-2 focus:ring-1 focus:ring-primary focus:border-primary text-sm" placeholder="بحث عن الفواتير أو المعاملات..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-slate-400 text-xl">search</span>
+</div>
+<div class="flex items-center gap-3 border-r border-border-gold pr-6">
+<button class="size-10 rounded-full border border-border-gold flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 cursor-pointer">
+<div class="size-10 rounded-full border-2 border-primary p-0.5">
+<img alt="User Profile Picture" class="w-full h-full rounded-full object-cover" data-alt="Corporate User Profile Image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9g76w1bJyR22g3TD2luiOqmh-zLmp4qginY2A7TKlcaB_xaUMt9du-nJA10WG1QkIJIeJIh7J7hi7ZCM-wBsNgTdcNOBmJabvD3qZxnl1j7e2yyMXc0FhbmiIvBI5u1cyXtilSni0WfrHUKVagktVjGFB4DFcu0xf0l_y4OA_1musMnrtEiziefjoOyA3V_VrYj4sL0tm2AUlOcz98aCNHg1EP2rR9nCunyGfs3mga4FMFHhWcq3tyNW3H82u_RCo4lety2EY_w"/>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">محمد الجاسم</span>
+<span class="text-[10px] text-primary uppercase font-bold tracking-wider">مدير مالي</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="p-8 flex flex-col gap-8 max-w-[1400px]">
+<!-- Quick Actions Banner -->
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-2xl font-bold mb-1">ملخص الموقف الضريبي</h3>
+<p class="text-slate-400 text-sm">مراجعة حية لجميع التزامات القيمة المضافة الحالية</p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-lg border border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+                            تحديث القواعد الضريبية
+                        </button>
+<button class="px-5 py-2.5 rounded-lg bg-surface-dark border border-border-gold text-slate-100 font-bold text-sm hover:bg-white/5 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">ios_share</span>
+                            تصدير البيانات
+                        </button>
+<button class="px-5 py-2.5 rounded-lg gold-gradient text-background-dark font-bold text-sm hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">add_chart</span>
+                            إنشاء إقرار جديد
+                        </button>
+</div>
+</div>
+<!-- KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-dark border border-border-gold p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">upload_file</span>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">+12.4%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">إجمالي ضريبة المخرجات</p>
+<h4 class="text-3xl font-bold tracking-tight">٤٥٠,٣٢٠.٥٠ <span class="text-sm font-normal text-slate-500">ر.س</span></h4>
+</div>
+<div class="bg-surface-dark border border-border-gold p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">download_for_offline</span>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">+5.2%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">إجمالي ضريبة المدخلات</p>
+<h4 class="text-3xl font-bold tracking-tight">٢١٠,٤٥٠.٠٠ <span class="text-sm font-normal text-slate-500">ر.س</span></h4>
+</div>
+<div class="bg-surface-dark border-2 border-primary p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-background-dark p-2 gold-gradient rounded-lg font-bold">account_balance_wallet</span>
+<span class="text-rose-500 text-xs font-bold bg-rose-500/10 px-2 py-1 rounded">-٨.٣%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">صافي الضريبة المستحقة</p>
+<h4 class="text-3xl font-bold tracking-tight text-primary">٢٣٩,٨٧٠.٥٠ <span class="text-sm font-normal text-slate-500">ر.س</span></h4>
+</div>
+</div>
+<!-- Main Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Live Tax Engine & Breakdown -->
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-dark border border-border-gold rounded-2xl p-6">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h3 class="text-lg font-bold">محرك الاحتساب اللحظي (حسب القطاع)</h3>
+</div>
+<select class="bg-background-dark border border-border-gold rounded-lg text-xs px-3 py-1.5 focus:ring-primary focus:border-primary">
+<option>الربع الثالث ٢٠٢٣</option>
+<option>الربع الثاني ٢٠٢٣</option>
+</select>
+</div>
+<div class="grid grid-cols-3 gap-6 items-end h-64 mb-6">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-full bg-border-gold/30 rounded-t-lg relative h-40 group-hover:bg-primary/20 transition-all overflow-hidden">
+<div class="absolute bottom-0 w-full gold-gradient h-[45%] rounded-t-sm shadow-[0_-4px_10px_rgba(212,175,55,0.3)]"></div>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold">الخدمات</p>
+<p class="text-xs text-slate-500">٥٤٠,٠٠٠ ر.س</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-full bg-border-gold/30 rounded-t-lg relative h-64 group-hover:bg-primary/20 transition-all overflow-hidden">
+<div class="absolute bottom-0 w-full gold-gradient h-[75%] rounded-t-sm shadow-[0_-4px_10px_rgba(212,175,55,0.3)]"></div>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold">الأصول</p>
+<p class="text-xs text-slate-500">٩٢٠,٠٠٠ ر.س</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-full bg-border-gold/30 rounded-t-lg relative h-24 group-hover:bg-primary/20 transition-all overflow-hidden">
+<div class="absolute bottom-0 w-full gold-gradient h-[30%] rounded-t-sm shadow-[0_-4px_10px_rgba(212,175,55,0.3)]"></div>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold">الشحن</p>
+<p class="text-xs text-slate-500 ٢٨٠,٠٠٠ ر.س"></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Tax Returns Table -->
+<div class="bg-surface-dark border border-border-gold rounded-2xl overflow-hidden">
+<div class="p-6 border-b border-border-gold flex items-center justify-between">
+<h3 class="text-lg font-bold">تقارير الإقرارات الضريبية</h3>
+<button class="text-primary text-sm font-bold hover:underline">عرض الكل</button>
+</div>
+<table class="w-full text-right text-sm">
+<thead class="bg-background-dark/50 text-slate-400">
+<tr>
+<th class="px-6 py-4 font-medium">الفترة</th>
+<th class="px-6 py-4 font-medium">تاريخ الاستحقاق</th>
+<th class="px-6 py-4 font-medium">المبلغ الإجمالي</th>
+<th class="px-6 py-4 font-medium">الحالة</th>
+<th class="px-6 py-4 font-medium">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-gold/50">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-bold">الربع الثاني ٢٠٢٣</td>
+<td class="px-6 py-4 text-slate-400">٣١ يوليو ٢٠٢٣</td>
+<td class="px-6 py-4">٨٩,٥٠٠ ر.س</td>
+<td class="px-6 py-4">
+<span class="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="size-1.5 rounded-full bg-emerald-500"></span> تم التقديم
+                                            </span>
+</td>
+<td class="px-6 py-4 text-primary font-bold">
+<button class="material-symbols-outlined">visibility</button>
+<button class="material-symbols-outlined mr-2">download</button>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-bold">الربع الثالث ٢٠٢٣</td>
+<td class="px-6 py-4 text-slate-400">٣١ أكتوبر ٢٠٢٣</td>
+<td class="px-6 py-4">١٠٤,٢٣٠ ر.س</td>
+<td class="px-6 py-4">
+<span class="bg-amber-500/10 text-amber-500 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="size-1.5 rounded-full bg-amber-500"></span> مسودة
+                                            </span>
+</td>
+<td class="px-6 py-4 text-primary font-bold">
+<button class="material-symbols-outlined">edit</button>
+<button class="material-symbols-outlined mr-2">delete</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Side Compliance & Deadlines -->
+<div class="flex flex-col gap-6">
+<!-- Compliance Alerts -->
+<div class="bg-surface-dark border border-border-gold rounded-2xl p-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-rose-500">notification_important</span>
+<h3 class="text-lg font-bold">تنبيهات الامتثال</h3>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-rose-500/5 border border-rose-500/20 rounded-xl border-r-4 border-r-rose-500">
+<p class="text-xs font-bold text-rose-500 mb-1">موعد نهائي قريب</p>
+<p class="text-sm font-medium">تقديم إقرار الربع الثالث ينتهي خلال ٥ أيام.</p>
+</div>
+<div class="p-4 bg-primary/5 border border-primary/20 rounded-xl border-r-4 border-r-primary">
+<p class="text-xs font-bold text-primary mb-1">تلميح الذكاء الاصطناعي</p>
+<p class="text-sm font-medium">تم رصد فجوة بنسبة ٣% في ضريبة المدخلات للأصول مقارنة بالشهر الماضي.</p>
+</div>
+</div>
+</div>
+<!-- Calendar Summary -->
+<div class="bg-surface-dark border border-border-gold rounded-2xl p-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<h3 class="text-lg font-bold">مواعيد الاستحقاق</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-center bg-background-dark p-2 rounded-lg border border-border-gold min-w-[50px]">
+<span class="text-[10px] text-slate-500 font-bold uppercase">Oct</span>
+<span class="text-lg font-bold">31</span>
+</div>
+<div>
+<p class="text-sm font-bold">إقرار الربع الثالث</p>
+<p class="text-xs text-slate-500">تاريخ انتهاء التقديم النهائي</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-center bg-background-dark p-2 rounded-lg border border-border-gold min-w-[50px]">
+<span class="text-[10px] text-slate-500 font-bold uppercase">Nov</span>
+<span class="text-lg font-bold">15</span>
+</div>
+<div>
+<p class="text-sm font-bold">مراجعة التدقيق الداخلي</p>
+<p class="text-xs text-slate-500">موعد المراجعة الدورية</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="bg-surface-dark border border-border-gold rounded-2xl p-6 h-48 relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-20 grayscale brightness-50" data-alt="Stylized map showing business operations distribution" data-location="Riyadh, Saudi Arabia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOdr383ryJWpFONXBpLSfmb9QlLiDm5rj71uzL_bV2NXskghC8rICYKf9EseGc5kXNPX33MmPD2p1MOMAtI2KMc2quGPue2STxV-s5PO4gHuOe814y-GMRQovxIO6mQQ3AoKKfHdvQAF8lvRIWjm4qxXw4OcOnX-dtp53XaT9WzUmIGhjqO9zSHbUl8lQtOzw-1OCBGYVGoM0S8TQ_NG38oXobESLIDCZC9QJoleLjBxF5eJgcovvEyzcfu3im6CqEpxFERM-Y9Q'); background-size: cover;"></div>
+<div class="relative z-10 text-center">
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">مركز العمليات</p>
+<p class="text-lg font-bold">المملكة العربية السعودية</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="mt-auto p-8 border-t border-border-gold flex items-center justify-between text-slate-500 text-xs">
+<p>© ٢٠٢٣ MJM Smart Business Platform. جميع الحقوق محفوظة.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary" href="#">سياسة الخصوصية</a>
+<a class="hover:text-primary" href="#">الشروط والأحكام</a>
+<div class="flex items-center gap-2 px-3 py-1 bg-primary/5 rounded border border-primary/20">
+<span class="size-2 rounded-full bg-emerald-500"></span>
+<span class="text-primary font-bold">النظام متصل: مباشر</span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>حوكمة النظام والقلب المركزي | MJM Smart Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "on-surface": "#E5E2E1",
+                        "background": "#0B0B0B",
+                        "surface": "#131313",
+                        "outline-variant": "#4d4635",
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0B0B0B;
+            color: #E5E2E1;
+            font-family: 'Inter', sans-serif;
+        }
+        .luxury-card {
+            background: linear-gradient(145deg, #131313 0%, #0E0E0E 100%);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .luxury-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+        }
+        .gold-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        .sidebar-item-active {
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-right: 3px solid #D4AF37;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-72 z-40 bg-[#0B0B0B] border-l border-[#D4AF37]/10 flex flex-col py-8 px-6 shadow-2xl">
+<div class="flex flex-col items-center gap-4 mb-12">
+<img alt="MJM Logo" class="h-14 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhsYsTjeDo42W4UO0CmX7ClL7RnnPBtLYyqLc3akgqOqoxbrkBia_VfUmnNTf_iFtRl2P0u6c_3mY-iMq9rfAdFbMxU8zUOYlmIjJ1yhf0h3jSSmVVdTECbdptsR0Z9ZUpffPyDemaR_gfSlW6pzsElfO7Kk2tMzxFbwpB-pgfXe1LyA27IvpKOR7NNfR3SrBtfSCXcZ7oLBBWul8ObbvpBCIM5QhhLcanaKNw3IIbfnjyWSxt-FPtYkXbPd6lIpj6hVkIIRrOE"/>
+<div class="text-center">
+<h1 class="text-[#D4AF37] font-bold text-lg tracking-widest uppercase">MJM Smart Business</h1>
+<p class="text-[#D4AF37]/40 text-[10px] tracking-[0.3em]">EXECUTIVE CORE</p>
+</div>
+</div>
+<nav class="flex flex-col gap-y-2">
+<p class="text-[10px] text-[#D4AF37]/30 uppercase tracking-widest mb-2 px-4">القائمة الرئيسية</p>
+<a class="flex items-center gap-4 px-4 py-3 text-[#D4AF37]/60 hover:text-[#D4AF37] hover:bg-[#131313] transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 sidebar-item-active text-[#D4AF37]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-sm font-bold">حوكمة النظام</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#D4AF37]/60 hover:text-[#D4AF37] hover:bg-[#131313] transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">الذكاء الاصطناعي</span>
+</a>
+</nav>
+<!-- Technical Core Sidebar Panel -->
+<div class="mt-auto bg-[#131313]/50 rounded-xl p-5 border border-[#D4AF37]/5 space-y-4">
+<div>
+<p class="text-[10px] text-[#D4AF37]/40 mb-2 uppercase tracking-tighter">حالة الخادم المركزي</p>
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium">الرياض - سحابة MJM</span>
+<span class="flex h-2 w-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"></span>
+</div>
+<div class="mt-2 h-1 w-full bg-[#0B0B0B] rounded-full overflow-hidden">
+<div class="h-full bg-[#D4AF37] w-[24%]"></div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#D4AF37]/5">
+<p class="text-[10px] text-[#D4AF37]/40 mb-1 uppercase">رقم الأتمتة الرسمي</p>
+<p class="text-xs font-mono tracking-wider" dir="ltr">+966 500 000 000</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="mr-72 min-h-screen pb-16">
+<!-- Top Executive Bar -->
+<header class="sticky top-0 z-30 bg-[#0B0B0B]/80 backdrop-blur-md px-10 py-6 flex justify-between items-center border-b border-[#D4AF37]/5">
+<div>
+<h2 class="font-headline text-2xl font-bold text-[#E5E2E1] gold-glow">لوحة التحكم السيادية</h2>
+<p class="text-xs text-[#D4AF37]/50 mt-1">مرحبًا بك في واجهة إدارة النظم المركزية</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3 bg-[#131313] px-4 py-2 rounded-lg border border-[#D4AF37]/10">
+<span class="material-symbols-outlined text-[#D4AF37] text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-[#D4AF37] placeholder-[#D4AF37]/30 w-48" placeholder="بحث في الأنظمة..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-[#D4AF37]/50 hover:text-[#D4AF37] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-1.5 h-1.5 bg-[#D4AF37] rounded-full"></span>
+</button>
+<div class="h-8 w-px bg-[#D4AF37]/10"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="text-xs font-bold text-[#D4AF37]">الإدارة التنفيذية</p>
+<p class="text-[10px] text-[#D4AF37]/40">System Architect</p>
+</div>
+<img alt="Admin" class="h-10 w-10 rounded-full border border-[#D4AF37]/20 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIsBt9oFtBZ094tKV-mRIbKk68dNAHuwuFwG8vW4mX0kOqHfPGnlFTn_gigbAXK3Aw5Fayk3QsYIFXHlzllNe4NlAQPkRF6EEcoBDMC6VTi0WsQTtFG4gEBX2-FhrEwvGdM1cW45-DtFolaB_odeJB7PoMP3C8vldaKpt0U28g9oD1rVrrx9Z6PFk0EIZJH84hpfsfuIHJoknjDJU-YVwoR7XrUZrapgnJQriyr6Jb29vgkuWOKlc3IwhnsTtz7dOwadWcRFoiHA"/>
+</div>
+</div>
+</div>
+</header>
+<div class="px-10 mt-12">
+<!-- Modular Grid Navigation -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- 1. Assets Management -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">inventory_2</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">inventory_2</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">إدارة الأصول</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">تتبع الأصول الثابتة والمتداولة بدقة</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">نشط</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 2. General Services -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">room_service</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">room_service</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">الخدمات العامة</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">إدارة الطلبات والخدمات اللوجستية</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">نشط</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 3. Logistics & Transport -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">local_shipping</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">local_shipping</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">اللوجستيات والنقل</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">تحسين مسارات النقل والتوصيل</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-[#D4AF37]/10 text-[#D4AF37] rounded-md border border-[#D4AF37]/20">تحت المراقبة</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 4. Travel & Cargo -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">flight_takeoff</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">flight_takeoff</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">السفر والشحن</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">إدارة الرحلات والشحنات الدولية</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">نشط</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 5. Advanced Accounting -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">account_balance_wallet</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">المحاسبة المتقدمة</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">التحليل المالي والتدقيق الذكي</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">نشط</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 6. WhatsApp Automation -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden border-[#D4AF37]/30" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">chat</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">الواتساب الذكي</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">محرك الأتمتة والردود الفورية</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">نشط للتعاون</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 7. Security & Permissions -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">admin_panel_settings</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">admin_panel_settings</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">الأمن والصلاحيات</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">إدارة الوصول والتشفير العسكري</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md border border-blue-500/20">محمي</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 8. Executive Reports -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">leaderboard</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">leaderboard</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">تقارير القيادة</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">لوحات تحليل الأداء التنفيذي</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 rounded-md border border-green-500/20">محدث</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+<!-- 9. System Settings (Core Data) -->
+<a class="luxury-card group p-8 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden bg-[#D4AF37]/5" href="#">
+<div class="absolute -right-4 -top-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+<span class="material-symbols-outlined text-[120px]">settings_suggest</span>
+</div>
+<div class="space-y-4">
+<div class="h-12 w-12 rounded-xl bg-[#D4AF37]/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#D4AF37] text-3xl">settings_suggest</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">إعدادات النظام</h3>
+<p class="text-[11px] text-[#D4AF37]/40 mt-1">تكوين النواة المركزية والبيانات الأساسية</p>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-[10px] px-2 py-1 bg-[#D4AF37]/20 text-[#D4AF37] rounded-md border border-[#D4AF37]/30">تحكم كامل</span>
+<span class="material-symbols-outlined text-[#D4AF37]/30 text-sm group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+</div>
+</a>
+</div>
+<!-- Footer Core Stats Section -->
+<section class="mt-12 pt-12 border-t border-[#D4AF37]/5 grid grid-cols-1 lg:grid-cols-4 gap-8">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-[#131313] rounded-lg border border-[#D4AF37]/10">
+<span class="material-symbols-outlined text-[#D4AF37]">shield</span>
+</div>
+<div>
+<p class="text-[10px] text-[#D4AF37]/40 uppercase">نوع التشفير</p>
+<p class="text-xs font-bold">AES-256 Military Grade</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-3 bg-[#131313] rounded-lg border border-[#D4AF37]/10">
+<span class="material-symbols-outlined text-[#D4AF37]">verified</span>
+</div>
+<div>
+<p class="text-[10px] text-[#D4AF37]/40 uppercase">السجل التجاري</p>
+<p class="text-xs font-bold">1010XXXX99</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-3 bg-[#131313] rounded-lg border border-[#D4AF37]/10">
+<span class="material-symbols-outlined text-[#D4AF37]">language</span>
+</div>
+<div>
+<p class="text-[10px] text-[#D4AF37]/40 uppercase">نطاق النظام</p>
+<p class="text-xs font-bold text-[#D4AF37]">internal.mjm.system</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-3 bg-[#131313] rounded-lg border border-[#D4AF37]/10">
+<span class="material-symbols-outlined text-[#D4AF37]">history</span>
+</div>
+<div>
+<p class="text-[10px] text-[#D4AF37]/40 uppercase">آخر نسخ احتياطي</p>
+<p class="text-xs font-bold">منذ 4 ساعات</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Sovereign Action Button -->
+<div class="fixed bottom-10 left-10 z-50">
+<button class="h-16 w-16 bg-[#D4AF37] rounded-full shadow-[0_8px_32px_rgba(212,175,55,0.3)] flex items-center justify-center text-[#0B0B0B] hover:scale-110 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;family=Noto+Kufi+Arabic:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        :root {
+            --font-headline: 'Manrope', 'Noto+Kufi+Arabic', sans-serif;
+            --font-body: 'Inter', 'Noto+Kufi+Arabic', sans-serif;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: #0b0b0b;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .font-headline { font-family: var(--font-headline); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kanban-column {
+            min-width: 320px;
+            max-width: 380px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4d4635;
+            border-radius: 10px;
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+        .active-indicator {
+            box-shadow: 0 0 8px #D4AF37;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "on-primary": "#241a00",
+                        "background": "#0b0b0b",
+                        "surface": "#131313",
+                        "surface-container": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#4d4635",
+                        "on-surface": "#e5e2e1",
+                        "on-surface-variant": "#d0c5af"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<div class="w-full flex flex-col min-w-0">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between p-6 bg-transparent">
+<div class="flex flex-col items-end">
+<h1 class="text-3xl font-headline font-extrabold text-primary">إدارة الصيانة - الشقق</h1>
+<p class="text-on-surface-variant text-sm mt-1">مركز التحكم والمتابعة الفنية</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-surface-container-high p-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+<div class="flex items-center gap-3 bg-surface-container-high pr-2 pl-4 py-1.5 rounded-full border border-outline-variant/20">
+<div class="text-right">
+<p class="text-xs font-bold">م. خالد العتيبي</p>
+<p class="text-[10px] text-on-surface-variant">مدير العمليات</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pb-12 pt-4 w-full px-6">
+<!-- Analytics Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container p-6 rounded-xl border border-primary/20 gold-glow flex flex-col justify-between h-36">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest">إجمالي الطلبات</span>
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-black text-on-surface">24</span>
+<span class="text-xs text-green-500 font-bold">+5%</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/10 flex flex-col justify-between h-36">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest">قيد المعالجة</span>
+<div class="p-2 bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant">pending_actions</span>
+</div>
+</div>
+<div class="text-4xl font-headline font-black text-on-surface">09</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/10 flex flex-col justify-between h-36">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest">طلبات مكتملة</span>
+<div class="p-2 bg-green-500/10 rounded-lg">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+</div>
+</div>
+<div class="text-4xl font-headline font-black text-on-surface">12</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/10 flex flex-col justify-between h-36">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest">متوسط الاستجابة</span>
+<div class="p-2 bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant">speed</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-black text-on-surface">45</span>
+<span class="text-sm font-normal text-on-surface-variant">دقيقة</span>
+</div>
+</div>
+</section>
+<!-- Maintenance Kanban Board -->
+<div class="flex gap-8 overflow-x-auto pb-6 custom-scrollbar snap-x">
+<!-- NEW REQUESTS -->
+<div class="kanban-column flex-shrink-0 flex flex-col gap-4 snap-start">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-primary active-indicator"></div>
+<h2 class="font-headline font-bold text-lg">طلبات جديدة</h2>
+</div>
+<span class="bg-surface-container-high px-2.5 py-0.5 rounded-full text-xs font-bold text-primary border border-primary/20">04</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface-container p-5 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all cursor-pointer group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1.5 h-full bg-primary/40"></div>
+<div class="flex justify-between items-center mb-3">
+<span class="text-primary font-mono text-[10px] font-bold">#RQ-8842</span>
+<span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-[10px] font-bold">عاجل</span>
+</div>
+<h3 class="text-on-surface font-headline font-bold mb-2 group-hover:text-primary transition-colors">تسرب مياه في المطبخ</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2 leading-relaxed">يوجد تسرب تحت المغسلة أدى إلى تبلل الخزائن الخشبية مما يتطلب صيانة فورية لتجنب التلف.</p>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-sm text-primary">apartment</span>
+<span class="text-xs text-on-surface-variant font-medium">شقة 402 - البرج A</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<span class="text-[10px] text-on-surface-variant font-bold">بانتظار التعيين</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center text-[10px] text-outline-variant">?</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-5 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="flex justify-between items-center mb-3">
+<span class="text-primary font-mono text-[10px] font-bold">#RQ-8845</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">عادي</span>
+</div>
+<h3 class="text-on-surface font-headline font-bold mb-2">عطل في مقابس الكهرباء</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">المقبس الرئيسي في غرفة المعيشة لا يعمل منذ يومين، تم التأكد من القاطع الفرعي.</p>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-sm text-primary">apartment</span>
+<span class="text-xs text-on-surface-variant">شقة 105 - البرج B</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<span class="text-[10px] text-on-surface-variant">بانتظار التعيين</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center text-[10px]">?</div>
+</div>
+</div>
+</div>
+<!-- IN PROGRESS -->
+<div class="kanban-column flex-shrink-0 flex flex-col gap-4 snap-start">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]"></div>
+<h2 class="font-headline font-bold text-lg">قيد المعالجة</h2>
+</div>
+<span class="bg-surface-container-high px-2.5 py-0.5 rounded-full text-xs font-bold text-on-surface-variant border border-outline-variant/20">03</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-5 rounded-xl border border-outline-variant/10 hover:border-primary/40 transition-all cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1.5 h-full bg-orange-500/40"></div>
+<div class="flex justify-between items-center mb-3">
+<span class="text-primary font-mono text-[10px] font-bold">#RQ-8839</span>
+<span class="bg-orange-500/10 text-orange-400 px-2 py-0.5 rounded text-[10px] font-bold">متوسط</span>
+</div>
+<h3 class="text-on-surface font-headline font-bold mb-2">صيانة التكييف المركزي</h3>
+<p class="text-on-surface-variant text-sm mb-4">يصدر صوت ضجيج عالي عند التشغيل وتبريد ضعيف جداً في الغرفة الرئيسية.</p>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-sm text-primary">apartment</span>
+<span class="text-xs text-on-surface-variant">شقة 901 - الجناح الملكي</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+</span>
+<span class="text-[10px] text-on-surface-variant font-bold">جاري الإصلاح</span>
+</div>
+<div class="flex items-center -space-x-2 space-x-reverse">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container overflow-hidden bg-primary-container">
+<img alt="Technician" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn1kAj2tGL11ROWpJNACvjg34pwS8I64rR9umljRQUgN-1p95yPyYbvNA_oRxmQNKL8rNBdSTvYcvdRIj3Pwe7UDCLffPY4lYSJIRny6tRT3TkxGTz8Kthv1j9t3yP8eQIwd2A6D8M020eootPe8aRwwfSxHHHGPytqzXm-pQQ0514PWNeD_Mv6XY0AlY0P7vpuKyL_hOzz1ibRtVb2CDbJjnSOet3PXwS_53yemgQ5-4Dp_UrS2dDudthXJR2X52YYog3LM63KQ"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPLETED -->
+<div class="kanban-column flex-shrink-0 flex flex-col gap-4 snap-start">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]"></div>
+<h2 class="font-headline font-bold text-lg">مكتمل</h2>
+</div>
+<span class="bg-surface-container-high px-2.5 py-0.5 rounded-full text-xs font-bold text-on-surface-variant border border-outline-variant/20">12</span>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container/40 p-5 rounded-xl border border-outline-variant/5 opacity-80">
+<div class="flex justify-between items-center mb-3">
+<span class="text-on-surface-variant/50 font-mono text-[10px] font-bold">#RQ-8821</span>
+<span class="bg-green-500/10 text-green-500 px-2 py-0.5 rounded text-[10px] font-bold">تم الإصلاح</span>
+</div>
+<h3 class="text-on-surface-variant/80 font-headline font-bold mb-2 line-through decoration-primary/30">تغيير إضاءة الممر</h3>
+<p class="text-on-surface-variant/60 text-sm mb-4">تم استبدال 4 وحدات إضاءة LED في ممر الشقة الرئيسي بنجاح.</p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm">verified</span>
+<span class="text-[10px] text-on-surface-variant/60 italic">اكتمل منذ ساعتين</span>
+</div>
+<div class="w-8 h-8 rounded-full border border-outline-variant/10 overflow-hidden grayscale">
+<img alt="Technician" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8o2mvqLFzg8Yre85aUbPaqmNCGM9CjAtf1755Ay0-vlbicDarBSe4LPRHsgLM40h8OKNMmObJVE95moUwfCkxUxmtu7V4UhMXNbCxCm0-WBOvcl-1SIlINrYdgfeyIEXrJIiHsWtTfhbcJhUM1gO41U5y_e-Wtrdpw-6Uui-d6hPjDBV-5wjUrOcjGBpx3LcW77udd4pWJeEvdhnIWRfiItWqheKTMb_fRS-Enu-HVmujqVyqohGrqjN822dHhKxSb1Ql9zM6Ww"/>
+</div>
+</div>
+</div>
+</div>
+<!-- ARCHIVED -->
+<div class="kanban-column flex-shrink-0 flex flex-col gap-4 snap-start">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant"></div>
+<h2 class="font-headline font-bold text-lg text-on-surface-variant">مؤرشف</h2>
+</div>
+<span class="bg-surface-container-high px-2.5 py-0.5 rounded-full text-xs font-bold text-on-surface-variant/60 border border-outline-variant/20">08</span>
+</div>
+<div class="h-full border-2 border-dashed border-outline-variant/10 rounded-2xl flex items-center justify-center flex-col gap-4 p-8 text-center bg-surface-container/20">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-4xl text-outline-variant/30">inventory_2</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">عرض الطلبات المؤرشفة للشهر الماضي</p>
+<button class="text-primary text-xs font-bold border border-primary/40 px-6 py-2.5 rounded-lg hover:bg-primary/10 transition-all bg-primary/5">فتح الأرشيف</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-8 left-8 h-16 w-auto px-6 bg-primary text-on-primary rounded-full shadow-2xl flex items-center gap-3 hover:scale-105 active:scale-95 transition-all z-40 gold-glow border border-primary/50 group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-90 transition-transform" style="font-variation-settings: 'FILL' 1;">add</span>
+<span class="font-headline font-bold text-sm">طلب صيانة جديد</span>
+</button>
+<!-- Detailed Request Modal -->
+<div class="fixed inset-0 z-[60] bg-background/95 backdrop-blur-md flex items-center justify-center p-6 hidden" id="requestModal">
+<div class="bg-surface-container-high w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-primary/10">
+<div class="h-56 relative">
+<img alt="Request Detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnGygKvPD0JRWzo0kO-9TuNpQlwruYORM0xh3_uCBy8DxXo6IcYpIuAiwE20qKYtPn_DYhpr6AciE09DL0jJKtQ0mOfBcGFAzw1z9Ktuqk6CdBFRPyP2hgxObrqpapvre3iCYnyyk1kJDQS-FJC-6eGLJdgvZhP610fqTW31AqjB33cwfnnkA3SjEiFC_p2x9713oFi_V0MCdrtKQsQTiqc7ijUiDP4Dxset5g57To9TwroCBcF2aZHfI1RH8X8JOwTLimZTHE8A"/>
+<button class="absolute top-4 left-4 w-12 h-12 bg-background/50 backdrop-blur-xl rounded-full flex items-center justify-center text-on-surface hover:bg-red-500 transition-colors border border-outline-variant/20" onclick="toggleModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="absolute bottom-6 right-8 bg-red-500 text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg">عاجل جداً</div>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h2 class="text-3xl font-headline font-black text-primary mb-3">تسرب مياه في المطبخ</h2>
+<p class="text-on-surface-variant flex items-center gap-2 font-medium">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        شقة 402، الطابق الرابع، البرج A
+                    </p>
+</div>
+<div class="text-left bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/20">
+<div class="text-[10px] text-primary uppercase font-bold tracking-widest mb-1">رقم الطلب</div>
+<div class="text-xl font-mono font-black text-on-surface">#RQ-8842</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-10 mb-10">
+<div class="space-y-6">
+<div>
+<span class="text-[11px] text-on-surface-variant uppercase font-bold block mb-2">تاريخ الإنشاء</span>
+<span class="text-sm font-bold bg-surface-container px-3 py-1 rounded">12 أكتوبر 2023 - 09:15 ص</span>
+</div>
+<div>
+<span class="text-[11px] text-on-surface-variant uppercase font-bold block mb-2">نوع العطل</span>
+<span class="text-sm font-bold text-primary">أعطال سباكة رئيسية</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<span class="text-[11px] text-on-surface-variant uppercase font-bold block mb-2">الفني المكلف</span>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">engineering</span>
+</div>
+<span class="text-sm font-bold">المهندس أحمد صالح</span>
+</div>
+</div>
+<div>
+<span class="text-[11px] text-on-surface-variant uppercase font-bold block mb-2">الحالة الراهنة</span>
+<span class="inline-block px-3 py-1 rounded-lg bg-primary/10 text-primary text-[11px] font-black border border-primary/20">بانتظار المباشرة</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-4 bg-primary text-on-primary font-black rounded-xl hover:brightness-110 shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_arrow</span>
+                    بدء العمل الميداني
+                </button>
+<button class="px-8 py-4 border border-outline-variant/30 text-on-surface font-bold rounded-xl hover:bg-surface-container transition-all">إعادة تكليف</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function toggleModal() {
+        const modal = document.getElementById('requestModal');
+        modal.classList.toggle('hidden');
+    }
+
+    // Add event listeners to cards (all divs with bg-surface-container that are interactive)
+    document.querySelectorAll('.kanban-column > div.bg-surface-container').forEach(card => {
+        card.addEventListener('click', toggleModal);
+    });
+</script>
+</body></html>

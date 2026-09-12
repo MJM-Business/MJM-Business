@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-slate-50 dark:bg-slate-900/50 border-l border-slate-200 dark:border-primary/10 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg text-background-dark">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+</div>
+<div>
+<h2 class="text-xl font-bold text-primary tracking-tight">MJM Smart</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400">نظام الأتمتة الذكي</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">hub</span>
+<span class="font-medium">أتمتة الموظفين</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium">إدارة العملاء</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-medium">القوالب الذكية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-medium">تقارير الأداء</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+<p class="text-xs text-slate-400 mb-2 font-medium uppercase tracking-wider">سعة المعالجة</p>
+<div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[78%]"></div>
+</div>
+<p class="text-[10px] text-slate-500 mt-2 text-left">78% - 12,450 / 15,000</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="h-20 border-b border-slate-200 dark:border-primary/10 px-8 flex items-center justify-between bg-slate-50/50 dark:bg-background-dark/50 backdrop-blur-md">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-96 group">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-xl pr-10 focus:ring-1 focus:ring-primary text-sm transition-all py-2.5" placeholder="البحث في الرسائل، العملاء، أو السجلات..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 relative transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-background-dark"></span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-primary/10 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="text-sm font-bold">محمد جاسم</p>
+<p class="text-[10px] text-slate-400">المدير العام</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of Muhammad Jasim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ8fk4KyC8nT3upMhlecu173dtrXGCoh1T8RwdFlwEZw3a_SdINxX6uwA2_w1R604Y9KLUmQaHYAahfoR50T67uNgCmP_yJdAaTu-7_eHW6HMnJPckzo0TGxenEuCu7jljeBaKMlp2CJpISImszgQGXWsi4KO0bxLILZqLfKA8_DN4nGEX3njmqz7z8jD72o-G2OX856eCTNuKk4t-cnQaaFTtSvsNw3G86cbvWVD53Qx9CpMsthFMogoao_g4lnJ8B44hEXdokg"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Body -->
+<div class="flex-1 overflow-y-auto p-8 scrollbar-hide">
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-slate-500 text-sm mb-1">دقة ردود الذكاء الاصطناعي</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white leading-none">98.5%</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-emerald-500 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+2.1% عن الأمس</span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-slate-500 text-sm mb-1">سرعة التفاعل اليومي</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white leading-none">1.2s</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-primary text-sm font-medium">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>فائق السرعة</span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-slate-500 text-sm mb-1">الرسائل المجدولة</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white leading-none">428</h3>
+</div>
+<div class="mt-4 flex items-center gap-2 text-slate-500 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>قيد الانتظار اليوم</span>
+</div>
+</div>
+</div>
+<!-- Dashboard Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Automation Triggers -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-primary/5 overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-primary/10 flex items-center justify-between">
+<h4 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_fix_high</span>
+                                قوالب الأتمتة السريعة
+                            </h4>
+<button class="text-xs text-primary hover:underline font-medium">إدارة الكل</button>
+</div>
+<div class="p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-dashed border-primary/20 hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2">warning</span>
+<span class="text-sm font-medium">تنبيهات</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-dashed border-primary/20 hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2">notifications_active</span>
+<span class="text-sm font-medium">تحذيرات</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-dashed border-primary/20 hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2">mail</span>
+<span class="text-sm font-medium">دعوات</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-dashed border-primary/20 hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2">celebration</span>
+<span class="text-sm font-medium">شكر وتقدير</span>
+</button>
+</div>
+</div>
+<!-- Operational Log -->
+<div class="bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-primary/5 overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-primary/10 flex items-center justify-between bg-slate-100/30 dark:bg-slate-800/20">
+<h4 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                                سجل العمليات المباشر
+                            </h4>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+                                    المجموع: 12,450
+                                </span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="text-slate-400 text-xs border-b border-slate-200 dark:border-primary/5">
+<th class="px-6 py-4 font-medium uppercase tracking-wider">المستلم</th>
+<th class="px-6 py-4 font-medium uppercase tracking-wider">نوع الرسالة</th>
+<th class="px-6 py-4 font-medium uppercase tracking-wider">الحالة</th>
+<th class="px-6 py-4 font-medium uppercase tracking-wider">الوقت</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-primary/5">
+<tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">أ ص</div>
+<span class="text-sm font-medium">أحمد صالح</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">تذكير بالموعد</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-blue-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">done_all</span>
+                                                تمت القراءة
+                                            </span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-500">منذ 2 دقيقة</td>
+</tr>
+<tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">س م</div>
+<span class="text-sm font-medium">سارة محمد</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">شكر وتقدير</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-emerald-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">check</span>
+                                                تم الإرسال
+                                            </span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-500">منذ 5 دقائق</td>
+</tr>
+<tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">ف ع</div>
+<span class="text-sm font-medium">فهد العتيبي</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-400">تحذير أمني</td>
+<td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-blue-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">done_all</span>
+                                                تمت القراءة
+                                            </span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-500">منذ 12 دقيقة</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Preview Window -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-primary/5 overflow-hidden flex flex-col h-full sticky top-8">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-primary/10 flex items-center justify-between bg-primary/10">
+<h4 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+                                معاينة الرسالة الذكية
+                            </h4>
+<span class="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded-full uppercase tracking-widest font-bold">AI Recommended</span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm relative mb-6">
+<div class="flex items-center justify-between mb-3 border-b border-slate-100 dark:border-slate-700 pb-2">
+<span class="text-xs text-slate-400">إلى: عميل VIP</span>
+<span class="text-xs text-slate-400">10:45 ص</span>
+</div>
+<p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed mb-4">
+                                    "عزيزنا العميل، يسعدنا في MJM إبلاغك بتفعيل الخدمة الجديدة تلقائياً. نحن ممتنون لثقتكم الدائمة بنا."
+                                </p>
+<div class="bg-slate-100 dark:bg-slate-900/50 p-3 rounded-lg border border-primary/10">
+<p class="text-[11px] text-primary mb-1 font-bold">اقتراح الذكاء الاصطناعي:</p>
+<p class="text-xs italic text-slate-500">أضف رمز خصم 10% لتعزيز الولاء.</p>
+</div>
+<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-slate-800 rotate-45"></div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary text-background-dark font-bold py-3 rounded-xl flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined">send</span>
+                                    إرسال الآن
+                                </button>
+<button class="w-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined">edit</span>
+                                    تعديل المحتوى
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Shortcuts -->
+<footer class="h-12 border-t border-slate-200 dark:border-primary/10 bg-slate-50 dark:bg-slate-900 px-8 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<kbd class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-[10px] font-mono border border-slate-300 dark:border-slate-700">Enter</kbd>
+<span class="text-[11px] text-slate-500">إرسال سريع</span>
+</div>
+<div class="flex items-center gap-2">
+<kbd class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-[10px] font-mono border border-slate-300 dark:border-slate-700">Alt + G</kbd>
+<span class="text-[11px] text-slate-500">اقتراح ذكي</span>
+</div>
+<div class="flex items-center gap-2">
+<kbd class="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-[10px] font-mono border border-slate-300 dark:border-slate-700">Ctrl + L</kbd>
+<span class="text-[11px] text-slate-500">سجل العمليات</span>
+</div>
+</div>
+<div class="text-[11px] text-slate-500">
+                حالة النظام: <span class="text-emerald-500 font-bold ml-1">متصل</span>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

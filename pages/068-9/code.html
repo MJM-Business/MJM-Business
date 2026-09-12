@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart Assets - نظام إدارة المستأجرين</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0b0b0b",
+                        "surface-dark": "#1a1814",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<main class="flex-1 px-6 md:px-20 py-8">
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl font-black text-slate-100 tracking-tight">إدارة بيانات المستأجرين</h1>
+<p class="text-primary/70 text-lg">نظام MJM الذكي للأصول الفاخرة - التحكم الشامل</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex items-center gap-2 px-6 py-2.5 bg-primary text-background-dark font-bold rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">person_add</span>
+                        إضافة مستأجر جديد <span class="text-xs opacity-70 mr-1">(Alt+N)</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-surface-dark border border-primary/30 text-primary font-bold rounded-lg hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined">description</span>
+                        تصدير بيان مالي <span class="text-xs opacity-70 mr-1">(Alt+S)</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+<div class="bg-red-500/10 border border-red-500/30 p-4 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-red-400 text-xs font-bold uppercase mb-1">متعثرين عن السداد</p>
+<h3 class="text-2xl font-black text-red-500">12</h3>
+</div>
+<span class="material-symbols-outlined text-red-500 text-4xl opacity-50">warning</span>
+</div>
+<div class="bg-orange-500/10 border border-orange-500/30 p-4 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-orange-400 text-xs font-bold uppercase mb-1">دفعات متأخرة</p>
+<h3 class="text-2xl font-black text-orange-500">08</h3>
+</div>
+<span class="material-symbols-outlined text-orange-500 text-4xl opacity-50">pending_actions</span>
+</div>
+<div class="bg-primary/10 border border-primary/30 p-4 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-primary text-xs font-bold uppercase mb-1">إجمالي المستأجرين</p>
+<h3 class="text-2xl font-black text-primary">154</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl opacity-50">groups</span>
+</div>
+<div class="bg-green-500/10 border border-green-500/30 p-4 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-green-400 text-xs font-bold uppercase mb-1">التحصيل الشهري</p>
+<h3 class="text-2xl font-black text-green-500">92%</h3>
+</div>
+<span class="material-symbols-outlined text-green-500 text-4xl opacity-50">payments</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-surface-dark rounded-xl border border-primary/10 overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-primary/10 flex items-center justify-between bg-primary/5">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                                بيانات المستأجر الجديد
+                            </h2>
+<span class="text-xs text-primary/50">تعبئة البيانات الأساسية للعقد</span>
+</div>
+<div class="p-6">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">اسم المستأجر بالكامل</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" placeholder="أدخل الاسم الرباعي" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">رقم الهوية / الإقامة</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" placeholder="1XXXXXXXXX" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">رقم التواصل (واتساب)</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100 text-right" dir="ltr" placeholder="+966 5X XXX XXXX" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">معرف الأصل (شقة / فيلا / سيارة)</label>
+<select class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100">
+<option>اختر الأصل العقاري...</option>
+<option>شقة رقم 101 - برج المملكة</option>
+<option>شقة رقم 204 - جاردن فيو</option>
+<option>فيلا الياقوت - المربع 4</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">بداية العقد</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">نهاية العقد</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">الإيجار الشهري</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" placeholder="0.00" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-400">مبلغ التأمين</label>
+<input class="bg-background-dark border border-primary/20 rounded-lg p-3 focus:ring-primary focus:border-primary outline-none text-slate-100" placeholder="0.00" type="number"/>
+</div>
+</div>
+</form>
+</div>
+</section>
+<section class="bg-surface-dark rounded-xl border border-primary/10 overflow-hidden">
+<div class="p-6 border-b border-primary/10 flex items-center justify-between">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">fact_check</span>
+                                قائمة المستأجرين وحالات الدفع
+                            </h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right text-sm">
+<thead class="bg-primary/5 text-primary">
+<tr>
+<th class="px-6 py-4 font-bold border-b border-primary/10">المستأجر</th>
+<th class="px-6 py-4 font-bold border-b border-primary/10">الأصل</th>
+<th class="px-6 py-4 font-bold border-b border-primary/10">مبلغ الإيجار</th>
+<th class="px-6 py-4 font-bold border-b border-primary/10">تاريخ الاستحقاق</th>
+<th class="px-6 py-4 font-bold border-b border-primary/10 text-center">حالة السداد</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">أحمد عبدالله العتيبي</td>
+<td class="px-6 py-4">فيلا جاردن 44</td>
+<td class="px-6 py-4 font-bold">12,500 ر.س</td>
+<td class="px-6 py-4">05/10/2023</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-green-500/10 text-green-500 rounded-full text-xs font-bold border border-green-500/20">
+<span class="material-symbols-outlined text-xs">check_circle</span> مدفوع
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">سارة منصور الفهد</td>
+<td class="px-6 py-4">شقة برج أ</td>
+<td class="px-6 py-4 font-bold">4,200 ر.س</td>
+<td class="px-6 py-4">01/10/2023</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-orange-500/10 text-orange-500 rounded-full text-xs font-bold border border-orange-500/20">
+<span class="material-symbols-outlined text-xs">schedule</span> متأخر
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">خالد محمد إبراهيم</td>
+<td class="px-6 py-4">محل تجاري - 09</td>
+<td class="px-6 py-4 font-bold">25,000 ر.س</td>
+<td class="px-6 py-4">25/09/2023</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-red-500/10 text-red-500 rounded-full text-xs font-bold border border-red-500/20 animate-pulse">
+<span class="material-symbols-outlined text-xs">error</span> متعثر
+                                            </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<div class="space-y-8">
+<section class="bg-surface-dark rounded-xl border border-primary/20 overflow-hidden shadow-2xl relative">
+<div class="absolute top-0 right-0 w-2 h-full bg-primary"></div>
+<div class="p-6">
+<h2 class="text-xl font-bold flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+                                وحدة المراسلة الذكية (AI)
+                            </h2>
+<div class="bg-background-dark rounded-lg p-5 border border-primary/10 space-y-4">
+<div class="flex flex-col gap-1">
+<span class="text-xs text-primary/60 font-medium">التذكير التلقائي القادم</span>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-slate-100">سارة منصور الفهد</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded italic">في غضون ساعتين</span>
+</div>
+</div>
+<hr class="border-primary/5"/>
+<div class="flex flex-col gap-1">
+<span class="text-xs text-primary/60 font-medium">آخر رسالة تم إرسالها</span>
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-green-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-sm">forum</span>
+</div>
+<div>
+<p class="text-xs font-bold">خالد محمد إبراهيم</p>
+<p class="text-[10px] text-slate-400">منذ 15 دقيقة عبر WhatsApp</p>
+</div>
+</div>
+</div>
+<div class="p-3 bg-primary/5 border border-dashed border-primary/20 rounded text-[11px] text-primary/70 leading-relaxed">
+                                    "عزيزي خالد، نذكركم بضرورة سداد مستحقات الإيجار المتأخرة لتجنب الإجراءات القانونية..."
+                                </div>
+</div>
+<div class="mt-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold">حالة النظام</span>
+<span class="text-[10px] text-green-500 flex items-center gap-1">
+<span class="size-1.5 bg-green-500 rounded-full animate-ping"></span> نشط حالياً
+                                    </span>
+</div>
+<div class="w-full bg-primary/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full shadow-[0_0_8px_rgba(212,175,53,0.6)]"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-red-500/5 rounded-xl border border-red-500/20 p-6 overflow-hidden relative group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-red-500 animate-pulse">campaign</span>
+<h2 class="text-lg font-bold text-red-500">تنبيهات عاجلة</h2>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-red-500/10 rounded-lg border-r-4 border-red-500">
+<p class="text-sm font-bold text-slate-200">فشل التحصيل التلقائي</p>
+<p class="text-xs text-slate-400 mt-1">المستأجر: فهد السالم - المبلغ 18,000 ر.س</p>
+</div>
+<div class="p-3 bg-orange-500/10 rounded-lg border-r-4 border-orange-500">
+<p class="text-sm font-bold text-slate-200">عقود شارفت على الانتهاء</p>
+<p class="text-xs text-slate-400 mt-1">عدد 5 مستأجرين تنتهي عقودهم خلال 30 يوم</p>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-red-500/30 text-red-500 text-xs font-bold rounded-lg hover:bg-red-500 hover:text-slate-100 transition-all">
+                            مراجعة كافة التنبيهات
+                        </button>
+</section>
+<div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+<h3 class="text-sm font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">keyboard_command_key</span>
+                            اختصارات سريعة
+                        </h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center justify-between bg-surface-dark px-3 py-2 rounded border border-primary/10">
+<span class="text-[11px] text-slate-400">إضافة مستأجر</span>
+<span class="text-[11px] font-bold text-primary">Alt+N</span>
+</div>
+<div class="flex items-center justify-between bg-surface-dark px-3 py-2 rounded border border-primary/10">
+<span class="text-[11px] text-slate-400">تصدير مالي</span>
+<span class="text-[11px] font-bold text-primary">Alt+S</span>
+</div>
+<div class="flex items-center justify-between bg-surface-dark px-3 py-2 rounded border border-primary/10">
+<span class="text-[11px] text-slate-400">بحث</span>
+<span class="text-[11px] font-bold text-primary">Alt+F</span>
+</div>
+<div class="flex items-center justify-between bg-surface-dark px-3 py-2 rounded border border-primary/10">
+<span class="text-[11px] text-slate-400">التقارير</span>
+<span class="text-[11px] font-bold text-primary">Alt+R</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-dark border-t border-primary/10 py-6 px-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-primary/50 text-xs font-medium">© 2023 MJM Smart Assets - جميع الحقوق محفوظة</p>
+<div class="flex items-center gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors text-xs" href="#">الشروط والأحكام</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-xs" href="#">سياسة الخصوصية</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-xs" href="#">الدعم الفني</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

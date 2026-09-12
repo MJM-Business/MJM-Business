@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head><title>الءقارقر العامة للأسطول - MJM Smart</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#dac58d",
+                    "inverse-primary": "#735c00",
+                    "surface-variant": "#353534",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "surface-bright": "#3a3939",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "surface-container": "#201f1f",
+                    "on-tertiary-fixed": "#00174b",
+                    "secondary-fixed": "#f7e1a6",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#c8b37d",
+                    "tertiary": "#bfcdff",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#254188",
+                    "on-primary": "#3c2f00",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#574500",
+                    "secondary-container": "#544519",
+                    "on-error": "#690005",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "primary": "#f2ca50",
+                    "outline": "#99907c",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#131313",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-fixed": "#241a00",
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-tertiary": "#082b72",
+                    "on-secondary": "#3c2f05",
+                    "outline-variant": "#4d4635",
+                    "tertiary-container": "#97b0ff",
+                    "secondary-fixed-dim": "#dac58d",
+                    "primary-container": "#d4af37",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#544519",
+                    "on-primary-fixed": "#241a00",
+                    "surface-tint": "#e9c349",
+                    "on-background": "#e5e2e1",
+                    "on-primary-container": "#554300",
+                    "on-surface-variant": "#d0c5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0b0b0b; }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .royal-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .royal-shadow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="font-body text-on-surface overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-72 left-0 z-50 bg-surface/80 backdrop-blur-md px-8 py-4 flex flex-row-reverse justify-between items-center shadow-sm">
+<div class="flex items-center gap-6 flex-row-reverse">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<span class="font-headline font-bold text-primary text-xl">أسطول السيادة</span>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant/30"></div>
+<h1 class="text-headline-sm font-headline font-bold text-on-surface">تقارير عامة</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="flex items-center gap-3 bg-surface-container px-3 py-1.5 rounded-full border border-outline-variant/20">
+<div class="text-left leading-none">
+<p class="text-xs font-bold text-on-surface">المدير التنفيذي</p>
+<p class="text-[10px] text-on-surface-variant">أدمن النظام</p>
+</div>
+<img alt="صورة الملف الشخصي للمدير التنفيذي" class="w-8 h-8 rounded-full border border-primary/30" data-alt="A professional close-up portrait of an executive male in a tailored charcoal suit against a dark, minimalist background. The lighting is dramatic and high-contrast, highlighting sophisticated features. The image exudes authority and luxury, consistent with a high-end corporate ERP environment with deep black and gold undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIJv070WGab-exIEfOQeq928YW1uTawwgMX0ORw0gK6t5DmOrv6XE9Mhh0BwMKXKcvfJlQFTNKFfYuE7O2tKiZ236WJgbi9nVKKIQP6G1ZTDpoJCDuqB99gj7mJXt8D9x5ox8JgYj2MLxTam-0I4pJtnFxyq2V6fr20kgu7b00wu-eVz_7MQ3snKaPTWHLSkmy-zf5y9wsQSe4eab_I67J450T3XKBA_4YwDPwmqEcuKZo6FjG8pyjh_WET_G90wV_BzK2j9x8yA"/>
+</div>
+</div>
+</header>
+<!-- Side Navigation Bar -->
+<nav class="fixed right-0 top-0 h-full w-72 flex flex-col z-40 bg-surface-container-low border-l border-outline-variant/20">
+<div class="p-8 flex flex-col items-center gap-2">
+<div class="w-16 h-16 royal-gradient rounded-xl flex items-center justify-center royal-shadow mb-2">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+<h2 class="text-headline-sm font-headline font-bold text-primary">نظام الأسطول</h2>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">الإدارة التنفيذية</p>
+</div>
+<div class="flex-1 px-4 space-y-1 overflow-y-auto no-scrollbar">
+<!-- Navigation Items Mapping from JSON -->
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="dashboard">dashboard</span>
+<span class="flex-1 text-right">نظرة عامة</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="directions_car">directions_car</span>
+<span class="flex-1 text-right">إدارة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="badge">badge</span>
+<span class="flex-1 text-right">إدارة السائقين</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="assignment">assignment</span>
+<span class="flex-1 text-right">إدارة العقود</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="payments">payments</span>
+<span class="flex-1 text-right">إدارة المدفوعات</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-row-reverse items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg p-3 mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="flex-1 text-right font-bold">تقارير عامة</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="assessment">assessment</span>
+<span class="flex-1 text-right">تقارير حالة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="shopping_cart">shopping_cart</span>
+<span class="flex-1 text-right">مبيعات المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="report_problem">report_problem</span>
+<span class="flex-1 text-right">إدارة المخالفات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="description">description</span>
+<span class="flex-1 text-right">إدارة وثائق المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="chat">chat</span>
+<span class="flex-1 text-right">الواتساب الذكي</span>
+</a>
+</div>
+<div class="p-6">
+<button class="w-full royal-gradient text-on-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 royal-shadow hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                إضافة مركبة جديدة
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="mr-72 mt-20 p-8 min-h-screen">
+<!-- Header Actions -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<p class="text-primary font-headline tracking-widest text-sm mb-1">التقارير التحليلية</p>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface leading-tight">الأداء السنوي للأسطول <span class="text-primary-container">٢٠٢٤</span></h2>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 rounded-lg border border-outline-variant/30 text-on-surface hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+                    تصدير PDF
+                </button>
+<button class="px-6 py-2.5 rounded-lg royal-gradient text-on-primary font-bold flex items-center gap-2 hover:scale-[1.02] transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="print">print</span>
+                    طباعة التقرير المختوم
+                </button>
+</div>
+</div>
+<!-- KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- KPI 1 -->
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded">+١٢.٥٪</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">إجمالي قيمة الأسطول</p>
+<h3 class="text-3xl font-display font-extrabold text-on-surface">١٢,٤٥٠,٠٠٠ <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="trending_up">trending_up</span>
+</div>
+<span class="text-secondary text-xs font-bold bg-secondary/10 px-2 py-0.5 rounded">+٨.٢٪</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">متوسط الإيراد الشهري/مركبة</p>
+<h3 class="text-3xl font-display font-extrabold text-on-surface">١٨,٩٠٠ <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-error opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-error-container/20 rounded-lg">
+<span class="material-symbols-outlined text-error" data-icon="money_off">money_off</span>
+</div>
+<span class="text-error text-xs font-bold bg-error/10 px-2 py-0.5 rounded">-٣.١٪</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">إجمالي التكاليف التشغيلية</p>
+<h3 class="text-3xl font-display font-extrabold text-on-surface">٤,٢٠٠,٠٠٠ <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full royal-gradient flex items-center justify-center royal-shadow">
+<span class="material-symbols-outlined text-on-primary text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-0.5 rounded">صافي</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">صافي الأرباح المحققة</p>
+<h3 class="text-3xl font-display font-extrabold text-on-surface">٨,٢٥٠,٠٠٠ <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<!-- Main Revenue/Expense Chart -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container p-8 rounded-xl h-[450px] relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface">تحليل الإيرادات والمصروفات</h4>
+<p class="text-sm text-on-surface-variant">مقارنة أداء النقدية على مدار الـ ١٢ شهر الماضية</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs text-on-surface-variant">الإيرادات</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-outline"></div>
+<span class="text-xs text-on-surface-variant">المصروفات</span>
+</div>
+</div>
+</div>
+<!-- Visualizing a Mock Chart with SVG -->
+<div class="relative w-full h-64 mt-12">
+<svg class="w-full h-full" viewbox="0 0 1000 300">
+<!-- Grid Lines -->
+<line stroke="#4d4635" stroke-opacity="0.1" x1="0" x2="1000" y1="50" y2="50"></line>
+<line stroke="#4d4635" stroke-opacity="0.1" x1="0" x2="1000" y1="150" y2="150"></line>
+<line stroke="#4d4635" stroke-opacity="0.1" x1="0" x2="1000" y1="250" y2="250"></line>
+<!-- Area Gradient -->
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#f2ca50" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#f2ca50" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,220 Q150,180 300,200 Q450,120 600,150 Q750,80 1000,100 L1000,300 L0,300 Z" fill="url(#areaGradient)"></path>
+<!-- Expense Line -->
+<path d="M0,250 Q150,230 300,240 Q450,210 600,220 Q750,190 1000,200" fill="none" stroke="#99907c" stroke-dasharray="8,4" stroke-width="2"></path>
+<!-- Revenue Line -->
+<path d="M0,220 Q150,180 300,200 Q450,120 600,150 Q750,80 1000,100" fill="none" stroke="#f2ca50" stroke-width="4"></path>
+<!-- Data Points -->
+<circle cx="300" cy="200" fill="#0b0b0b" r="6" stroke="#f2ca50" stroke-width="3"></circle>
+<circle cx="600" cy="150" fill="#0b0b0b" r="6" stroke="#f2ca50" stroke-width="3"></circle>
+<circle cx="1000" cy="100" fill="#0b0b0b" r="6" stroke="#f2ca50" stroke-width="3"></circle>
+</svg>
+<!-- Tooltip Simulation -->
+<div class="absolute left-[58%] top-[10%] glass-panel p-3 rounded-lg border border-primary/40 royal-shadow">
+<p class="text-[10px] text-primary font-bold mb-1">يوليو ٢٠٢٤</p>
+<p class="text-xs text-on-surface">١,٤٥٠,٠٠٠ ر.س</p>
+</div>
+</div>
+<div class="flex justify-between mt-6 px-2 text-[10px] text-on-surface-variant font-bold">
+<span>يناير</span><span>مارس</span><span>مايو</span><span>يوليو</span><span>سبتمبر</span><span>نوفمبر</span>
+</div>
+</div>
+<!-- Maintenance/Fuel Distribution -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- Maintenance Pie Chart -->
+<div class="bg-surface-container p-6 rounded-xl flex-1">
+<h4 class="text-md font-headline font-bold text-on-surface mb-6">توزيع الصيانة</h4>
+<div class="flex items-center gap-8">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="none" r="16" stroke="#2a2a2a" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#f2ca50" stroke-dasharray="70, 100" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#d4af37" stroke-dasharray="25, 100" stroke-dashoffset="-70" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-lg font-bold">٩٤٪</span>
+<span class="text-[8px] text-on-surface-variant">كفاءة</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-xs text-on-surface-variant">دورية</span>
+</div>
+<span class="text-xs font-bold">٧٠٪</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="text-xs text-on-surface-variant">طارئة</span>
+</div>
+<span class="text-xs font-bold">٢٥٪</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-surface-variant"></div>
+<span class="text-xs text-on-surface-variant">إصلاحات</span>
+</div>
+<span class="text-xs font-bold">٥٪</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fuel Consumption Bars -->
+<div class="bg-surface-container p-6 rounded-xl flex-1">
+<h4 class="text-md font-headline font-bold text-on-surface mb-6">معدل استهلاك الوقود</h4>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-on-surface-variant">شاحنات النقل الثقيل</span>
+<span class="text-primary font-bold">٨٥٪</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-on-surface-variant">سيارات الخدمة</span>
+<span class="text-primary font-bold">٤٢٪</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[42%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1.5">
+<span class="text-on-surface-variant">مركبات الرفاهية</span>
+<span class="text-primary font-bold">١٨٪</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[18%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Leaderboards Section -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Top Drivers -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container rounded-xl overflow-hidden">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center">
+<h4 class="text-lg font-headline font-bold text-on-surface">نخبة السائقين (الأعلى كفاءة)</h4>
+<span class="material-symbols-outlined text-primary" data-icon="emoji_events">emoji_events</span>
+</div>
+<div class="divide-y divide-outline-variant/5">
+<!-- Driver 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="سائق متميز" class="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Close up professional headshot of a middle-aged Arabic male driver in a clean uniform, smiling slightly. Cinematic professional lighting, dark studio setting, high resolution, sharp focus on eyes, reflecting high-end luxury fleet management brand standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgMRSV5ZIZN5lPobeRjLGwr8abCibX5vmQe-FiK47xHQxXyeSR19MhkqWq9CIcOEVRev1ngGfwM7wzJrIuTi-nIrpZnZgwfXnaEK6eqPhHzxPOfa29813hDsiimE9rpyMaDNXG6hb8r_UbhYnH3sj58dgbqgLFBw_rEgJJA8QF56_3wgA_d5RoLX9e70vRQ70lnG_6XNvtxzXOrJJx18395Ny1Ecgh5AdGyy-wcdKJYIWIZ517vteIvtGaZycJRVufEAjRHNVqA"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-primary rounded-full flex items-center justify-center text-[10px] text-on-primary font-bold">١</div>
+</div>
+<div>
+<h5 class="text-sm font-bold">أحمد محمد عبد الله</h5>
+<p class="text-[10px] text-on-surface-variant">رقم الهوية: ****٥٦٤٣</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-sm">٩.٨ / ١٠</p>
+<p class="text-[9px] text-on-surface-variant">تقييم الأمان</p>
+</div>
+</div>
+<!-- Driver 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="سائق متميز" class="w-12 h-12 rounded-full grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Portrait of a young Arabic professional driver in his 30s. He is wearing a professional fleet company polo shirt. Minimalist dark environment, soft warm key light, cinematic photography style, deep black background with subtle gold hints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHhi0rQHmZ92CJytCHCRCTteLxS4CLYJ-0scnNnXQuilylLY0_TpAnYQjHeoLDGj5Dtog3JmxmEnNPTDzUbSN_BDD2Wvm0a3jEnYiJD6Zb_zGDBYer8OXV4vUJVEFD3dIdlvtP7OR4Uws28Y_oILJ5dTaMcNMdtAj-pEAN-_8bs-KgjEfHoJppdf4atMVBm30HpUcDb0RRw2-I5VqQJNthaEpijGoP9l0AGC4K-CxaSCD_v5bzPFdVkjvQ1sRa9C2CLvkrRWh_WA"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-outline-variant rounded-full flex items-center justify-center text-[10px] text-on-surface font-bold">٢</div>
+</div>
+<div>
+<h5 class="text-sm font-bold">سلطان بن إبراهيم</h5>
+<p class="text-[10px] text-on-surface-variant">رقم الهوية: ****١١٩٠</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-on-surface font-bold text-sm">٩.٤ / ١٠</p>
+<p class="text-[9px] text-on-surface-variant">تقييم الأمان</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 text-xs text-primary font-bold hover:bg-surface-container-high transition-colors">عرض كافة السائقين</button>
+</div>
+<!-- Most Profitable Vehicles -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container rounded-xl overflow-hidden">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center">
+<h4 class="text-lg font-headline font-bold text-on-surface">المركبات الأكثر ربحية</h4>
+<span class="material-symbols-outlined text-primary" data-icon="star">star</span>
+</div>
+<div class="divide-y divide-outline-variant/5">
+<!-- Vehicle 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 bg-surface-container-high rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h5 class="text-sm font-bold">مرسيدس أكتروس ٢٠٢٤</h5>
+<p class="text-[10px] text-on-surface-variant">رقم اللوحة: أ ب ج ١٢٣٤</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-sm">٤٥,٠٠٠ ر.س</p>
+<p class="text-[9px] text-on-surface-variant">صافي الربح الشهري</p>
+</div>
+</div>
+<!-- Vehicle 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 bg-surface-container-high rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="commute">commute</span>
+</div>
+<div>
+<h5 class="text-sm font-bold">تويوتا لاندكروزر VXR</h5>
+<p class="text-[10px] text-on-surface-variant">رقم اللوحة: ح ط ي ٥٦٧٨</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-on-surface font-bold text-sm">٣٢,٥٠٠ ر.س</p>
+<p class="text-[9px] text-on-surface-variant">صافي الربح الشهري</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 text-xs text-primary font-bold hover:bg-surface-container-high transition-colors">عرض قائمة العائد على الاستثمار</button>
+</div>
+</div>
+<!-- Official Seal Area (Footer Design) -->
+<div class="mt-16 flex flex-col items-center opacity-40">
+<div class="w-24 h-24 border-2 border-primary-container/30 rounded-full flex items-center justify-center p-2 mb-4">
+<div class="w-full h-full border border-primary-container/20 rounded-full flex items-center justify-center relative">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="verified_user">verified_user</span>
+<svg class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]" viewbox="0 0 100 100">
+<path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath"></path>
+<text class="text-[6px] fill-primary-container font-bold uppercase tracking-widest">
+<textpath href="#circlePath">
+                                MJM SMART BUSINESS • FLEET AUTHORITY • SEAL OF EXCELLENCE •
+                            </textpath>
+</text>
+</svg>
+</div>
+</div>
+<p class="text-[10px] font-headline text-on-surface-variant tracking-[0.2em]">هذا التقرير معتمد إلكترونياً من نظام أسطول السيادة</p>
+</div>
+</main>
+<script>
+        // Micro-interaction for numbers
+        document.querySelectorAll('h3').forEach(el => {
+            const finalVal = el.innerText;
+            el.addEventListener('mouseenter', () => {
+                el.style.transform = 'translateY(-2px)';
+                el.style.color = '#f2ca50';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translateY(0)';
+                el.style.color = '#e5e2e1';
+            });
+        });
+    </script>
+</body></html>

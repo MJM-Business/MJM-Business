@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign Executive | مركز قيادة الأقسام الموحد المتقدم</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#544519",
+                        "on-secondary-fixed-variant": "#544519",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-tertiary": "#082b72",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#dac58d",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#dbe1ff",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary-fixed": "#00174b",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary": "#dac58d",
+                        "outline-variant": "#4d4635",
+                        "primary": "#f2ca50",
+                        "on-primary-container": "#554300",
+                        "on-primary": "#3c2f00",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#f7e1a6",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-bright": "#3a3939",
+                        "background": "#131313",
+                        "primary-container": "#d4af37",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#d0c5af",
+                        "outline": "#99907c",
+                        "on-secondary-container": "#c8b37d",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "tertiary": "#bfcdff",
+                        "surface-container-highest": "#353534",
+                        "on-secondary": "#3c2f05",
+                        "tertiary-container": "#97b0ff",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary-container": "#254188"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', 'Manrope', sans-serif;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed right-0 top-0 border-l border-outline-variant/10 bg-[#1C1B1B] shadow-[48px_0_48px_rgba(0,0,0,0.4)] flex flex-col py-8 z-50 antialiased tracking-tight">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-bold tracking-widest uppercase text-[#F2CA50]">Sovereign Executive</h1>
+<p class="text-[10px] text-[#D0C5AF]/50 uppercase tracking-[0.2em] mt-1">مركز القيادة</p>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#F2CA50] font-bold border-r-2 border-[#F2CA50] bg-[#2A2A2A] transition-transform active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-sm">إدارة الأصول</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="text-sm">الخدمات العامة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-sm">السفر والشحن</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-sm">المحاسبة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="text-sm">أتمتة الواتساب</span>
+</a>
+</nav>
+<div class="mt-auto px-4 pt-8 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] rounded-lg transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="text-sm">الفروع</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] rounded-lg transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="text-sm">الصلاحيات</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-[#2A2A2A] rounded-lg transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">الإعدادات</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-64 h-20 z-40 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center px-12">
+<div class="flex items-center gap-8">
+<span class="text-lg font-black text-[#F2CA50] font-headline uppercase tracking-tighter">SOVEREIGN ERP</span>
+<nav class="hidden md:flex items-center gap-6 font-headline font-medium text-sm">
+<a class="text-[#F2CA50] border-b border-[#F2CA50] pb-1" href="#">سير العمل</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#F2CA50] transition-all" href="#">التحليلات</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#F2CA50] transition-all" href="#">التقارير</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant/50" data-icon="search">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg pr-10 pl-4 py-2 text-sm focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="بحث في الأوامر..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#E5E2E1]/70 hover:text-[#F2CA50] transition-all relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_#F2CA50]"></span>
+</button>
+<button class="p-2 text-[#E5E2E1]/70 hover:text-[#F2CA50] transition-all">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</button>
+<button class="bg-primary-container text-on-primary px-5 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:brightness-110 transition-all">
+<span>أمر جديد</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="Executive User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3iKVLSBh69KpauZo_9_SWf2qfxgUwdo0pJvE6ndZkSZM4NJBtoLjWJ8jQviNcl_EdjM-EcoIk2f5Jj6YXFl5aIhheGAfBr_VtIs8LqTPwViiGoYkrorXj9Ua93SEiCs28C5bJnianD6yl3jtb5t-qv_pu6P0fg1QYCNfAgQdrqPJQL_z-gc7OIYDbmmEDC-ModteRV2SsOf8Xq8MD14N1jqdSQKmwY_F_tQTVeafUXzoljZ3cUMiw_hlAPT9nD4WNyPW7r_HGUA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="mr-64 pt-28 pb-12 px-12 min-h-screen bg-surface-container-lowest">
+<!-- Hero Header -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="w-3 h-3 bg-primary rounded-full shadow-[0_0_8px_#F2CA50]"></span>
+<span class="text-primary-fixed uppercase tracking-widest text-[10px] font-bold">حالة النظام: مثالية</span>
+</div>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">مركز قيادة الأقسام الموحد المتقدم</h2>
+<p class="text-on-surface-variant/60 mt-2 max-w-xl font-medium">نظرة شاملة فورية على أداء المؤسسة، سير العمل، وحالة الفروع عبر كافة قطاعات السيادة.</p>
+</div>
+<div class="flex gap-4">
+<div class="text-right px-6 py-4 bg-surface-container rounded-lg border-r-2 border-primary">
+<p class="text-[10px] text-on-surface-variant/50 uppercase font-bold tracking-widest mb-1">إجمالي قيمة الأصول</p>
+<p class="text-2xl font-headline font-black text-primary">$128.4M</p>
+</div>
+<div class="text-right px-6 py-4 bg-surface-container rounded-lg border-r-2 border-tertiary">
+<p class="text-[10px] text-on-surface-variant/50 uppercase font-bold tracking-widest mb-1">معدل الإنجاز العالمي</p>
+<p class="text-2xl font-headline font-black text-tertiary">94.2%</p>
+</div>
+</div>
+</header>
+<!-- Bento Grid: Departmental Oversight -->
+<section class="grid grid-cols-12 gap-6 mb-12">
+<!-- Assets Module (Large) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl overflow-hidden group">
+<div class="p-8">
+<div class="flex justify-between items-start mb-8">
+<div>
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-headline font-bold uppercase tracking-widest text-xs">إدارة الأصول</span>
+</div>
+<h3 class="text-2xl font-headline font-bold">إدارة الأصول العقارية</h3>
+</div>
+<div class="flex -space-x-3 rtl:space-x-reverse">
+<img alt="Asset Department Head" class="w-10 h-10 rounded-full border-2 border-surface-container object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkRLugp9NYolHyv6LZc-npqtq0mk_As147ahmWh73kltQn9CDiSWVQabvtaVtyXt83JEx4CLeeUPvgIjP6oIgm3hw2yMjYhGKT8i4KZWI4X6DXJXBCiHFpktYwEZx11OGDC5sgTKB48qpsCxaKZH0zoz4NdFSgyhtjTFXHYZctpj_z_NCN72YVcA1e57HtjNHe1S7l4Min7EuRM4gk8nLLPTyA1XqOlL3qL1eiLl35R_ms3g-9HaKk7L55eTxvRfB61r-vIkKqUw"/>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface-container flex items-center justify-center text-[10px] font-bold text-primary">+12</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 mb-8">
+<div>
+<p class="text-on-surface-variant/50 text-xs mb-1">معدل الإشغال</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">92%</span>
+<span class="text-primary-fixed text-xs font-bold">↑ 4%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2">
+<div class="bg-primary h-full w-[92%] rounded-full shadow-[0_0_8px_#F2CA50]"></div>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant/50 text-xs mb-1">الإيرادات السنوية</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">14.2M</span>
+<span class="text-on-surface-variant/30 text-xs">دولار</span>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant/50 text-xs mb-1">المشاريع النشطة</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold text-on-surface">24</span>
+<span class="text-on-surface-variant/30 text-xs">مباشر</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between border border-outline-variant/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="account_tree">account_tree</span>
+<div>
+<p class="text-xs font-bold">فرع ألفا: إقليمي جدة</p>
+<p class="text-[10px] text-on-surface-variant/60">آخر مزامنة: منذ دقيقتين</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant/50 font-bold uppercase mb-1">الصلاحيات</p>
+<div class="flex gap-1">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+<div class="w-2 h-2 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">مراقبة مباشرة</button>
+</div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Control (Small) -->
+<div class="col-span-12 lg:col-span-4 bg-[#1C1B1B] rounded-xl p-8 border-l-4 border-primary/20 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl luxury-gradient flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+</div>
+<div class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full">قنوات حية</div>
+</div>
+<h3 class="text-xl font-headline font-bold mb-1">أتمتة الواتساب</h3>
+<p class="text-on-surface-variant/60 text-sm mb-6">WhatsApp Corporate API</p>
+<div class="space-y-4 flex-1">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+</div>
+<span class="text-sm font-medium">علاقات العملاء</span>
+</div>
+<span class="text-primary-fixed text-xs font-bold">42 نشط</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="campaign">campaign</span>
+</div>
+<span class="text-sm font-medium">الإرسال الداخلي</span>
+</div>
+<span class="text-on-surface-variant/40 text-xs font-bold">12 نشط</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant/50">وقت الاستجابة</span>
+<span class="text-primary font-bold text-xs">1.4 دقيقة</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+</div>
+<!-- Services & Accounting Cards -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container rounded-xl p-8 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="handyman">handyman</span>
+<h3 class="font-headline font-bold text-lg">الخدمات العامة</h3>
+</div>
+<div class="flex items-center justify-between mb-8">
+<div>
+<p class="text-3xl font-headline font-extrabold">88.5%</p>
+<p class="text-[10px] text-on-surface-variant/60 font-bold uppercase">معدل الإنجاز</p>
+</div>
+<div class="h-16 w-16 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-tertiary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="20" stroke-width="4"></circle>
+</svg>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/10">
+<img alt="Services Head" class="w-8 h-8 rounded-full grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlQlMDFMCCV8J3uW9YNriBKtkzF0dBi1AjBTd3pv30S2DVYgCvoFHcXqxS4WjznkDvxdwmaBOS9oBESWWV3Enz8Su7Feu-04VBMYBCSq-pCKa2o-PrQ56XhpZratuVcldKSLzu9z4kKIoh1-Kzn65LV5qROse5VVgiPgQ2v4AyifVNRr4splqvKiRjNjxiYgkvvcFa6TBinIk-XLdsACWL3NCDlttbZC1V7Ql77d9hEoB0vhn3JUuLqgq3PdbuWlZKG8owJmGWWg"/>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">سارة القحطاني</p>
+<p class="text-on-surface-variant/50 uppercase">رئيسة العمليات</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container rounded-xl p-8 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+<h3 class="font-headline font-bold text-lg">المحاسبة</h3>
+</div>
+<div class="flex items-center justify-between mb-8">
+<div>
+<p class="text-3xl font-headline font-extrabold">$4.2M</p>
+<p class="text-[10px] text-on-surface-variant/60 font-bold uppercase">السيولة الحالية</p>
+</div>
+<div class="text-left">
+<span class="text-xs font-bold text-primary-fixed bg-primary/10 px-2 py-1 rounded">تدقيق سليم</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/10">
+<img alt="Finance Head" class="w-8 h-8 rounded-full grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoCPVg76l4eGwCTmWq74OCSw5C89hcYnKkq7rILYetsT67JiyobRqe152hLrOvIHm12u3VBHkgTdaTxA44jBZbKzd-4kK-JZh0nkIwyS5LbED136g_nXWENfST1g1HqXIdNTmUOENG8r5VFhpmiAOedpZq4_XNNTHz80pbpIQpMRf8BupL8grtg87NjVymW9jVfDFzssyQlX8qf5hdFtZdYxCSEWBInVe1JZdj_98w0hfBCfI-Ok9_97yKSGoIv6Rm0535wASobw"/>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">مارك ستيفنسون</p>
+<p class="text-on-surface-variant/50 uppercase">كبير المحاسبين</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container rounded-xl p-8 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="flight_takeoff">flight_takeoff</span>
+<h3 class="font-headline font-bold text-lg">السفر والشحن</h3>
+</div>
+<div class="flex items-center justify-between mb-8">
+<div>
+<p class="text-3xl font-headline font-extrabold">16</p>
+<p class="text-[10px] text-on-surface-variant/60 font-bold uppercase">حجوزات نشطة</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="schedule" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-[10px] font-bold">4 قريبة</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/10">
+<img alt="Travel Head" class="w-8 h-8 rounded-full grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdDUntnPWQeK-NufJwMZLfhlHTIVkPpc8J-J96moXusMaECKypIZlmOZPG7z-5t78zsXqp1sZebWbJgHd2Ll9v1eZPrAt58r9UhQ_9Oz-RWv_dGNfOhjSsONMLPUbT-rOcuR9CqXFz1Y5wqriUlSaA9r7eNFYnBJzUAKFRiFgLiD2YoxrZ9LsC9zcnXwt4-tGEEX7bVfNnQDNANehjgc812pmCRr5puRy0TzojFAZUJfYyqI8FuiegidxEKef5QOb472sc0UjP5w"/>
+<div class="text-[10px]">
+<p class="font-bold text-on-surface">أحمد بن جابر</p>
+<p class="text-on-surface-variant/50 uppercase">مدير اللوجستيات</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Workflows & Activity -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Workflow Monitoring Feed -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-headline font-bold">مراقبة سير العمل المباشر</h3>
+<div class="flex gap-2">
+<button class="bg-surface-container-highest text-on-surface-variant text-xs font-bold px-4 py-2 rounded-lg">جميع الأقسام</button>
+<button class="bg-primary/10 text-primary text-xs font-bold px-4 py-2 rounded-lg">أولوية قصوى</button>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-6 group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<h4 class="text-sm font-bold">تجديد عقود الصيانة - فرع الرياض</h4>
+<span class="text-[10px] font-bold uppercase text-primary tracking-widest">قيد المعالجة (75%)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[75%] transition-all"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">اكتمال مقدر</p>
+<p class="text-[10px] text-on-surface-variant/50">اليوم، 4:00 م</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="done_all">done_all</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<h4 class="text-sm font-bold">إتمام الميزانية الربعية - قسم المحاسبة</h4>
+<span class="text-[10px] font-bold uppercase text-tertiary tracking-widest">مكتمل</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-full"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">أُنجز بواسطة</p>
+<p class="text-[10px] text-on-surface-variant/50">م. ستيفنسون</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group opacity-50">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between mb-1">
+<h4 class="text-sm font-bold">حجز رحلة تنفيذية - طيران الوفد</h4>
+<span class="text-[10px] font-bold uppercase text-secondary-fixed-dim tracking-widest">مجدول</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary w-0"></div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">المغادرة</p>
+<p class="text-[10px] text-on-surface-variant/50">غداً، 9:00 ص</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Permission & Access Visualizer -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container rounded-xl p-8">
+<h3 class="text-xl font-headline font-bold mb-8">تحكم الوصول والأذونات</h3>
+<div class="space-y-6">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant/60">مدير تنفيذي</span>
+<span class="font-bold text-primary">تحكم كامل</span>
+</div>
+<div class="flex gap-1 h-2">
+<div class="flex-1 bg-primary rounded-sm shadow-[0_0_5px_rgba(242,202,80,0.3)]"></div>
+<div class="flex-1 bg-primary rounded-sm shadow-[0_0_5px_rgba(242,202,80,0.3)]"></div>
+<div class="flex-1 bg-primary rounded-sm shadow-[0_0_5px_rgba(242,202,80,0.3)]"></div>
+<div class="flex-1 bg-primary rounded-sm shadow-[0_0_5px_rgba(242,202,80,0.3)]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant/60">رئيس قسم</span>
+<span class="font-bold text-on-surface">إشراف قياسي</span>
+</div>
+<div class="flex gap-1 h-2">
+<div class="flex-1 bg-primary rounded-sm"></div>
+<div class="flex-1 bg-primary rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant/60">موظف عمليات</span>
+<span class="font-bold text-on-surface">قراءة فقط</span>
+</div>
+<div class="flex gap-1 h-2">
+<div class="flex-1 bg-primary rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container-low p-6 rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-3 text-error mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="gpp_maybe">gpp_maybe</span>
+<span class="text-xs font-bold uppercase tracking-widest">تنبيه نشط</span>
+</div>
+<p class="text-sm text-on-surface">تم اكتشاف محاولة وصول غير مصرح بها في وحدة المحاسبة (فرع غاما).</p>
+<button class="mt-4 w-full bg-error text-on-error py-2 rounded font-bold text-xs uppercase tracking-tighter">مراجعة سجلات الأمن</button>
+</div>
+</div>
+</div>
+<!-- System Footer -->
+<footer class="mt-12 pt-8 border-t border-outline-variant/10 flex justify-between items-center opacity-40 hover:opacity-100 transition-opacity">
+<p class="text-[10px] font-bold uppercase tracking-[0.3em]">Sovereign Executive Framework v4.0.2</p>
+<div class="flex gap-6">
+<a class="text-[10px] uppercase font-bold tracking-widest hover:text-primary" href="#">سجلات النظام</a>
+<a class="text-[10px] uppercase font-bold tracking-widest hover:text-primary" href="#">وثائق API</a>
+<a class="text-[10px] uppercase font-bold tracking-widest hover:text-primary" href="#">الامتثال القانوني</a>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB -->
+<button class="fixed bottom-8 left-8 w-16 h-16 luxury-gradient text-on-primary rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-110 transition-transform z-50 group">
+<span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-90" data-icon="add">add</span>
+<div class="absolute right-full ml-4 bg-surface-container-high px-4 py-2 rounded text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
+            إنشاء سير عمل
+        </div>
+</button>
+</body></html>

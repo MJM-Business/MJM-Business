@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                        "card-dark": "#161616",
+                        "border-dark": "#2a261a",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #f1d592 50%, #D4AF37 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #161616;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2a261a;
+            border-radius: 10px;
+        }
+        .table-row-hover:hover {
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen bg-background-dark">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-64 bg-card-dark border-l border-border-dark z-50 hidden lg:flex flex-col">
+<div class="p-6 border-b border-border-dark flex items-center gap-3">
+<div class="h-10 w-24 flex items-center justify-center overflow-hidden"><img alt="MJM Logo" class="h-full w-auto object-contain" src="data:image/png;base64,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"/></div>
+<div>
+<h1 class="text-primary font-bold text-lg leading-tight tracking-wide">MJM Smart</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Business Intelligence</p>
+</div>
+</div>
+<nav class="flex-1 p-4 space-y-2 overflow-y-auto custom-scrollbar">
+<div class="text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">القائمة الرئيسية</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">لوحة التحكم الاستراتيجية</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="text-sm font-medium">شجرة الحسابات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-medium">القيود المحاسبية</span>
+</a>
+<div class="pt-6 text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">التحليل القطاعي</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">apartment</span>
+<span class="text-sm font-medium">الأصول والعقارات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-sm font-medium">الشحن واللوجستيات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-medium">الخدمات العامة</span>
+</a>
+<div class="pt-6 text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">التقارير المالية</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">ميزان المراجعة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm font-medium">قائمة الأرباح والخسائر</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-dark bg-black/20">
+<div class="flex items-center justify-between text-[10px] text-slate-500 mb-2">
+<span>اختصارات لوحة المفاتيح</span>
+<span class="material-symbols-outlined text-xs">keyboard</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-card-dark p-1.5 border border-border-dark rounded text-center">
+<kbd class="text-primary text-[10px] font-bold">Alt + P</kbd>
+<div class="text-[9px] text-slate-400">التقارير</div>
+</div>
+<div class="bg-card-dark p-1.5 border border-border-dark rounded text-center">
+<kbd class="text-primary text-[10px] font-bold">Alt + J</kbd>
+<div class="text-[9px] text-slate-400">القيود</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:mr-64 p-4 lg:p-8">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-2xl font-bold text-slate-100">تحليل الإيرادات والذكاء المالي</h2>
+<p class="text-slate-400 text-sm">مرحباً بك، نظام MJM الذكي يعمل بكفاءة قصوى</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="absolute right-3 top-2.5 text-slate-500 material-symbols-outlined">search</span>
+<input class="bg-card-dark border-border-dark rounded-lg pr-10 pl-4 py-2 text-sm w-64 focus:ring-primary focus:border-primary" placeholder="بحث سريع عن قيود أو تقارير..." type="text"/>
+</div>
+<button class="gold-gradient text-background-dark font-bold px-6 py-2 rounded-lg flex items-center gap-2 text-sm shadow-xl shadow-primary/10">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    قيد محاسبي جديد
+                </button>
+</div>
+</header>
+<!-- Top Metrics (Net Profit Intelligence) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/5 rounded-full group-hover:scale-125 transition-transform"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">إجمالي الإيرادات</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">$1,420,500</h3>
+</div>
+<span class="text-green-500 bg-green-500/10 px-2 py-1 rounded text-xs font-bold">+12.5%</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>نمو مستدام في قطاع الخدمات العامة</span>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">المصاريف التشغيلية</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">$420,300</h3>
+</div>
+<span class="text-red-500 bg-red-500/10 px-2 py-1 rounded text-xs font-bold">-2.1%</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm">history_edu</span>
+<span>انخفاض التكاليف اللوجستية بنسبة 4%</span>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">الإهلاك (الذكاء الآلي)</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">$85,200</h3>
+</div>
+<span class="text-slate-500 bg-slate-500/10 px-2 py-1 rounded text-xs font-bold">ثابت</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span>تحديث تلقائي لأصول المعدات</span>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/30 p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute left-0 bottom-0 w-full h-1 gold-gradient"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-primary text-sm mb-1 font-bold">صافي الربح الذكي</p>
+<h3 class="text-3xl font-bold text-white tracking-tight">$915,000</h3>
+</div>
+<div class="size-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-primary font-medium">
+<span class="material-symbols-outlined text-sm font-bold">auto_awesome</span>
+<span>رؤية AI: زيادة متوقعة 8% في الربع القادم</span>
+</div>
+</div>
+</div>
+<!-- Revenue Segmentation & Classification -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+<!-- Revenue Segmentation Chart -->
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+                        تجزئة الإيرادات حسب القطاع
+                    </h4>
+<select class="bg-background-dark border-border-dark text-xs rounded-lg py-1 px-3 text-slate-400">
+<option>الربع الحالي</option>
+<option>السنة الحالية</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-48 gap-4 px-4">
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/20 rounded-t-lg relative group h-[85%] border-x border-t border-primary/30">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">85%</div>
+</div>
+<span class="text-[10px] text-slate-400 text-center">عقارات ومركبات</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/40 rounded-t-lg relative group h-[60%] border-x border-t border-primary/30">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">60%</div>
+</div>
+<span class="text-[10px] text-slate-400 text-center">خدمات مالية</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/60 rounded-t-lg relative group h-[45%] border-x border-t border-primary/30">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">45%</div>
+</div>
+<span class="text-[10px] text-slate-400 text-center">شحن ولوجستيات</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary rounded-t-lg relative group h-[30%] border-x border-t border-primary/30">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[10px] font-bold px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">30%</div>
+</div>
+<span class="text-[10px] text-slate-400 text-center">سفر وسياحة</span>
+</div>
+</div>
+</div>
+<!-- Classification Analysis (Employee Classes) -->
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">groups</span>
+                        تحليل الربحية حسب فئات الموظفين
+                    </h4>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer">info</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">الفئة A (الخبراء والمستشارون)</span>
+<span class="text-primary font-bold">72% من الأرباح</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full gold-gradient" style="width: 72%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">الفئة B (الفرق التشغيلية)</span>
+<span class="text-slate-400 font-bold">18% من الأرباح</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-slate-600" style="width: 18%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">الفئة C (الدعم اللوجستي)</span>
+<span class="text-slate-400 font-bold">10% من الأرباح</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-slate-800" style="width: 10%"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 p-3 bg-primary/5 rounded-lg border border-primary/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<p class="text-[11px] text-slate-400 leading-relaxed">تحليل الكفاءة يشير إلى أن الاستثمار في تدريب الفئة B قد يرفع صافي الربح الإجمالي بنسبة 4%.</p>
+</div>
+</div>
+</div>
+<!-- Live Automated Journal Entries Feed -->
+<div class="bg-card-dark border border-border-dark rounded-xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-3 bg-red-500 rounded-full animate-pulse"></div>
+<h4 class="font-bold text-slate-100">البث المباشر للقيود المحاسبية الآلية</h4>
+</div>
+<div class="flex gap-2">
+<button class="text-slate-400 hover:text-white p-2 border border-border-dark rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+<button class="text-slate-400 hover:text-white p-2 border border-border-dark rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead class="bg-black/40 text-slate-500 text-[11px] uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4 font-bold">التوقيت</th>
+<th class="px-6 py-4 font-bold">البيان</th>
+<th class="px-6 py-4 font-bold">القسم المصدر</th>
+<th class="px-6 py-4 font-bold">مدين (Debit)</th>
+<th class="px-6 py-4 font-bold">دائن (Credit)</th>
+<th class="px-6 py-4 font-bold">الحالة</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-dark text-sm">
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">14:22:15</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">تحصيل رسوم شحن دولي #INV-9902</div>
+<div class="text-[10px] text-slate-500">من ح/ البنك إلى ح/ إيرادات الشحن</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-bold border border-blue-500/20">اللوجستيات</span>
+</td>
+<td class="px-6 py-4 text-primary font-bold">$12,450.00</td>
+<td class="px-6 py-4 text-slate-500 font-bold">$0.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-green-500 text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+                                    مرحل تلقائياً
+                                </div>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">14:18:40</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">إهلاك شهري - أسطول مركبات دبي</div>
+<div class="text-[10px] text-slate-500">من ح/ مصروف الإهلاك إلى ح/ مجمع الإهلاك</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded text-[10px] font-bold border border-amber-500/20">الأصول الثابتة</span>
+</td>
+<td class="px-6 py-4 text-slate-100 font-bold">$3,200.00</td>
+<td class="px-6 py-4 text-red-500 font-bold">$3,200.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-primary text-xs">
+<span class="material-symbols-outlined text-xs">pending</span>
+                                    قيد المراجعة
+                                </div>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">14:05:12</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">سداد دفعة مقدمة - خدمات استشارية</div>
+<div class="text-[10px] text-slate-500">من ح/ مصروفات تحت التسوية إلى ح/ الصندوق</div>
+</td>
+<td class="px-6 py-4">
+<span class="bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded text-[10px] font-bold border border-purple-500/20">الإدارة العامة</span>
+</td>
+<td class="px-6 py-4 text-primary font-bold">$45,000.00</td>
+<td class="px-6 py-4 text-slate-500 font-bold">$0.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-green-500 text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+                                    مرحل تلقائياً
+                                </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-black/20 border-t border-border-dark flex justify-center">
+<button class="text-xs text-slate-400 hover:text-primary transition-colors flex items-center gap-2">
+                    عرض جميع القيود المحاسبية للـ 24 ساعة الماضية
+                    <span class="material-symbols-outlined text-sm">keyboard_double_arrow_down</span>
+</button>
+</div>
+</div>
+<!-- Strategic Financial Access Footer -->
+<footer class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">balance</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">ميزان المراجعة الذكي</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تدقيق آني لكافة أرصدة الحسابات المدينة والدائنة</p>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">التدفقات النقدية</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تحليل السيولة الواردة والخارجة والتوقعات المستقبلية</p>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">description</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">الأرباح والخسائر P&amp;L</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تقرير مفصل للأداء المالي القطاعي والإجمالي</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Bar (Fixed Bottom) -->
+<div class="fixed bottom-0 left-0 w-full bg-card-dark border-t border-border-dark p-2 flex justify-around items-center lg:hidden z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px]">الرئيسية</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px]">القيود</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px]">التقارير</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px]">الإعدادات</span>
+</button>
+</div>
+</body></html>

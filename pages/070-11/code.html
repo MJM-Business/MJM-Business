@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#0B0B0B",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0B0B0B 100%);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="dark:bg-background-dark font-display dark:text-slate-100 bg-[#0B0B0B] text-white">
+<div class="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 px-6 md:px-10 py-4 sticky top-0 z-50 bg-[#0B0B0B]">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+</div>
+<h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight">MJM Smart Business</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-white/5 border border-primary/20 overflow-hidden bg-[#161616]">
+<div class="text-primary flex items-center justify-center pl-4 pr-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-slate-100 placeholder:text-slate-400 focus:ring-0 text-sm" placeholder="البحث عن أصل..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-white/5 border border-primary/20 text-primary hover:bg-primary/10 transition-colors bg-[#161616]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-white/5 border border-primary/20 text-primary hover:bg-primary/10 transition-colors bg-[#161616]">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full border-2 border-primary bg-cover bg-center" data-alt="User profile avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGnWcgn113rnEIT8c9JxTHq_8HaOAhR-lyJBr7RQ488O0q3FuHUuNBKgyM3ojdvNjNwQKfuAi9plzvH1ct7o7tcW58Gh2vSRxPM3AOaH4N37Vxh0FcwUd3QYRiGNFLVTnKCdanFVfIgSyoaUwNyThSxwxerE_dVOhoGmfwDik4G_MuokTSwJ8Ky1_87VUqFcH3fVJdk114kqz9UqprE-eIxdZrZ3PoVimp41DhGbEoBnCAtUHvNII358O29_pmj8HZ80Q3DYL2cg')"></div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full p-4 md:p-8 bg-[#0B0B0B]">
+<!-- Dashboard Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div>
+<h1 class="text-3xl font-black dark:text-slate-100 mb-2 text-white">نظام إدارة الأصول</h1>
+<p class="dark:text-slate-400 text-slate-400">إدارة الأصول الفاخرة والتدفقات المالية</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+                    أصل جديد <span class="text-xs opacity-60 ml-2">Alt+N</span>
+</button>
+</div>
+</div>
+<!-- Financial Overview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+<div class="dark:bg-white/5 p-6 rounded-xl border flex flex-col gap-2 shadow-sm border-primary/30">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">إجمالي الأصول</p>
+<p class="text-2xl font-bold dark:text-slate-100 text-white">1,245</p>
+<div class="flex items-center gap-1 text-emerald-500 text-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+4.2%</span>
+</div>
+</div>
+<div class="dark:bg-white/5 p-6 rounded-xl border flex flex-col gap-2 shadow-sm border-primary/30">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">العوائد الشهرية</p>
+<p class="text-2xl font-bold text-primary">450,000 ريال</p>
+<div class="flex items-center gap-1 text-emerald-500 text-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.5%</span>
+</div>
+</div>
+<div class="dark:bg-white/5 p-6 rounded-xl border flex flex-col gap-2 shadow-sm border-primary/30">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">نسبة الإشغال</p>
+<p class="text-2xl font-bold dark:text-slate-100 text-white">92%</p>
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[92%]"></div>
+</div>
+</div>
+<div class="dark:bg-white/5 p-6 rounded-xl border flex flex-col gap-2 shadow-sm border-primary/30">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">تكاليف الصيانة</p>
+<p class="text-2xl font-bold text-rose-500">24,500 ريال</p>
+<div class="flex items-center gap-1 text-rose-500 text-sm">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>3 متأخرة</span>
+</div>
+</div>
+</div>
+<!-- Asset Categories Tabs -->
+<div class="flex border-b mb-8 gap-8 overflow-x-auto border-primary/30">
+<button class="pb-4 border-b-2 border-primary text-primary font-bold flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined">domain</span> العقارات
+            </button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined">directions_bus</span> النقل
+            </button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined">storefront</span> التجاري
+            </button>
+<button class="pb-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 font-medium hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined">construction</span> المعدات
+            </button>
+</div>
+<!-- Hierarchy View -->
+<div class="space-y-6">
+<!-- Section: Real Estate -->
+<div class="dark:bg-white/5 rounded-2xl border overflow-hidden shadow-sm border-primary/30">
+<div class="dark:bg-white/5 px-6 py-4 flex items-center justify-between border-b bg-white/5 border-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+<h3 class="font-bold text-lg">مبنى Z (البرج الإداري)</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-xs font-bold">نشط</span>
+<span class="text-sm text-slate-500">العائد: 85,000 ريال</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<!-- Nested: Apartment -->
+<div class="ml-0 md:mr-8 border-r-2 border-primary/20 pr-6 py-2">
+<div class="flex items-center justify-between mb-4 dark:bg-white/5 p-4 rounded-xl border bg-white/5 border-primary/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70">apartment</span>
+<div>
+<p class="font-bold">شقة رقم 15</p>
+<p class="text-xs text-slate-500">الطابق الخامس - إيجار شهري: 12,000 ريال</p>
+</div>
+</div>
+<span class="bg-amber-500/10 text-amber-500 px-3 py-1 rounded-full text-xs font-bold">مؤجرة جزئياً</span>
+</div>
+<!-- Nested: Room -->
+<div class="mr-8 space-y-3">
+<div class="flex items-center justify-between dark:bg-white/5 p-4 rounded-xl border border-primary/20 shadow-sm border-l-4 border-l-primary">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center rounded-lg text-primary bg-primary/20">
+<span class="material-symbols-outlined">meeting_room</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-bold">غرفة 66 (تأجير فرعي)</p>
+<span class="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded uppercase font-bold tracking-widest">Sub-Leased</span>
+</div>
+<p class="text-sm text-slate-500">المستأجر: شركة التقنية الحديثة | الدفعة القادمة: 01/10/2023</p>
+</div>
+</div>
+<div class="text-left">
+<p class="font-black text-primary">3,500 ريال</p>
+<p class="text-[10px] text-slate-400">شهرياً</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Transportation -->
+<div class="dark:bg-white/5 rounded-2xl border overflow-hidden shadow-sm border-primary/30">
+<div class="dark:bg-white/5 px-6 py-4 flex items-center justify-between border-b bg-white/5 border-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">commute</span>
+<h3 class="font-bold text-lg">أسطول النقل الجماعي</h3>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-primary px-3 py-1 rounded-full text-xs font-bold bg-primary/20">6 حافلات</span>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="border border-primary/20 rounded-xl p-5 hover:border-primary transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="size-12 bg-slate-900 dark:bg-white/10 rounded-xl flex items-center justify-center text-primary border border-primary/30">
+<span class="material-symbols-outlined text-3xl">directions_bus</span>
+</div>
+<div>
+<p class="font-bold">حافلة نقل عام X</p>
+<p class="text-xs text-slate-500 font-mono tracking-widest">Plate: 1235 ALR</p>
+</div>
+</div>
+<div class="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-[10px] font-bold">في الخدمة</div>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm border-t pt-4 border-primary/30">
+<div>
+<p class="text-slate-400 text-xs">السائق</p>
+<p class="font-medium">أحمد محمد علي</p>
+</div>
+<div>
+<p class="text-slate-400 text-xs">رقم الهوية</p>
+<p class="font-mono">109844231</p>
+</div>
+<div>
+<p class="text-slate-400 text-xs">العقد</p>
+<p class="font-medium">سنة واحدة</p>
+</div>
+<div>
+<p class="text-slate-400 text-xs">الإيجار</p>
+<p class="font-bold text-primary">300 ريال / شهرياً</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Commercial -->
+<div class="dark:bg-white/5 rounded-2xl border overflow-hidden shadow-sm border-primary/30">
+<div class="dark:bg-white/5 px-6 py-4 flex items-center justify-between border-b bg-white/5 border-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+<h3 class="font-bold text-lg">المحلات التجارية (مبنى Y)</h3>
+</div>
+<button class="text-sm text-primary flex items-center gap-1">
+                        عرض المخطط <span class="material-symbols-outlined text-sm">map</span>
+</button>
+</div>
+<div class="p-6 overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="text-slate-500 dark:text-slate-400 border-b text-sm border-primary/30">
+<th class="pb-3 pr-2">المتجر</th>
+<th class="pb-3">المستأجر</th>
+<th class="pb-3">عداد الكهرباء</th>
+<th class="pb-3">المدة</th>
+<th class="pb-3 text-left">الإيجار الشهري</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b transition-colors hover:bg-primary/10 border-primary/20">
+<td class="py-4 pr-2 font-bold">محل رقم 102</td>
+<td class="py-4">مطاعم النخبة</td>
+<td class="py-4 font-mono">EM-99823-A</td>
+<td class="py-4">24 شهر</td>
+<td class="py-4 text-left font-black text-primary">8,500 ريال</td>
+</tr>
+<tr class="border-b transition-colors hover:bg-primary/10 border-primary/20">
+<td class="py-4 pr-2 font-bold">محل رقم 105</td>
+<td class="py-4">مغسلة السحاب</td>
+<td class="py-4 font-mono">EM-99441-B</td>
+<td class="py-4">12 شهر</td>
+<td class="py-4 text-left font-black text-primary">4,200 ريال</td>
+</tr>
+<tr class="bg-rose-500/5">
+<td class="py-4 pr-2 font-bold">محل رقم 108</td>
+<td class="py-4 text-rose-500">شاغر</td>
+<td class="py-4 font-mono">-</td>
+<td class="py-4">-</td>
+<td class="py-4 text-left">
+<span class="bg-rose-500 text-white px-3 py-1 rounded text-xs">متاح للعرض</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section: Equipment -->
+<div class="dark:bg-white/5 rounded-2xl border overflow-hidden shadow-sm border-primary/30">
+<div class="dark:bg-white/5 px-6 py-4 flex items-center justify-between border-b bg-white/5 border-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+<h3 class="font-bold text-lg">المعدات الصناعية</h3>
+</div>
+</div>
+<div class="p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 border rounded-xl dark:bg-white/5 flex flex-col items-center text-center gap-2 bg-white/5 border-primary/30">
+<span class="material-symbols-outlined text-4xl text-primary">forklift</span>
+<p class="font-bold text-sm">رافعة شوكية 5T</p>
+<span class="text-[10px] bg-emerald-500/20 text-emerald-500 px-2 py-0.5 rounded">ممتازة</span>
+</div>
+<div class="p-4 border rounded-xl dark:bg-white/5 flex flex-col items-center text-center gap-2 bg-white/5 border-primary/30">
+<span class="material-symbols-outlined text-4xl text-primary">remote_gen</span>
+<p class="font-bold text-sm">مولد كهرباء 500KW</p>
+<span class="text-[10px] bg-amber-500/20 text-amber-500 px-2 py-0.5 rounded">تحت الصيانة</span>
+</div>
+<div class="p-4 border rounded-xl dark:bg-white/5 flex flex-col items-center text-center gap-2 opacity-60 bg-white/5 border-primary/30">
+<span class="material-symbols-outlined text-4xl text-slate-400">agriculture</span>
+<p class="font-bold text-sm">تراكتور زراعي T-10</p>
+<span class="text-[10px] bg-slate-500/20 text-slate-500 px-2 py-0.5 rounded">مباع</span>
+</div>
+<div class="p-4 border rounded-xl bg-primary/5 flex flex-col items-center justify-center text-center gap-2 border-dashed border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl text-primary">add</span>
+<p class="font-bold text-xs text-primary">إضافة معدة</p>
+</div>
+</div>
+</div>
+</div>
+<!-- System Shortcuts Help -->
+<div class="mt-12 p-4 text-slate-400 rounded-xl flex items-center justify-center gap-8 text-xs border border-primary/20 bg-[#0B0B0B]">
+<div class="flex items-center gap-2">
+<kbd class="bg-white/10 px-2 py-1 rounded border border-white/20">Alt+N</kbd>
+<span>أصل فرعي جديد</span>
+</div>
+<div class="flex items-center gap-2">
+<kbd class="bg-white/10 px-2 py-1 rounded border border-white/20">Alt+F</kbd>
+<span>بحث سريع</span>
+</div>
+<div class="flex items-center gap-2">
+<kbd class="bg-white/10 px-2 py-1 rounded border border-white/20">Esc</kbd>
+<span>إلغاء</span>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-primary/20 bg-[#0B0B0B] py-6 px-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>© 2023 MJM Smart Business. جميع الحقوق محفوظة.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">الدعم الفني</a>
+<a class="hover:text-primary transition-colors" href="#">سياسة الخصوصية</a>
+<a class="hover:text-primary transition-colors" href="#">تصدير التقارير</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

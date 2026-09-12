@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign Assets - طلبات الصيانة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-tint": "#e9c349",
+                    "secondary-fixed": "#f7e1a6",
+                    "primary-fixed": "#ffe088",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "secondary-container": "#544519",
+                    "on-primary-container": "#554300",
+                    "tertiary": "#bfcdff",
+                    "on-tertiary-container": "#254188",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#97b0ff",
+                    "on-tertiary": "#082b72",
+                    "outline-variant": "#4d4635",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#c8b37d",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#544519",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#3c2f05",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#dac58d",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#dac58d",
+                    "surface-bright": "#3a3939",
+                    "inverse-primary": "#735c00",
+                    "primary": "#f2ca50",
+                    "on-tertiary-fixed": "#00174b",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-on-surface": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "outline": "#99907c",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary-fixed-dim": "#e9c349"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #F2CA50 0%, #D4AF37 100%);
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4d4635;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 h-20 bg-surface flex flex-row-reverse justify-between items-center px-8">
+<div class="flex items-center gap-6">
+<div class="text-headline-sm font-headline font-black text-primary tracking-tight">Sovereign Assets</div>
+<div class="h-8 w-[1px] bg-outline-variant/30 hidden md:block"></div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">الرئيسية</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">طلبات الصيانة</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">الأصول</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-on-surface-variant/50 w-48" placeholder="بحث في الطلبات..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</button>
+</div>
+<img alt="Executive Profile" class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover" data-alt="A close-up high-end portrait of a middle-aged executive professional with a serious and confident expression. The lighting is dramatic and moody, emphasizing sharp features and a sophisticated charcoal suit. The background is a blurred high-end corporate office with subtle hints of gold and dark wood, perfectly aligning with the sovereign and luxurious visual identity of the asset management platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYAP4_68u9-AJhI9rtMpOQO1iVMhmqK-5q2GJj006g-E21AHMIT2S8U4wFcoIZYV0zocE0bxuFmZ6YlEMkaxNCbZ8t7R2xb67qCMZmDkihwB7-lqd8bBc5YXBiYrQk_hcE2Aop2iytyCQ_nStuWXk3uULeD6-ELWh4VK-8dg0rpJwCOEzrK-euzl-Lp1sdpp2fs_XCfpMt4gfjshGgoHY2K78lt5CmSs9OoUuXUuap0btkbYlY1LFyuJXMcBI1dG4tPIBEJl0qQ"/>
+</div>
+</header>
+<div class="flex pt-20 h-screen overflow-hidden">
+<!-- Side Navigation Bar -->
+<aside class="fixed inset-y-0 right-0 w-72 h-full bg-surface-container-low border-l border-outline-variant/20 py-6 px-4 flex flex-col gap-4 z-40">
+<div class="flex items-center gap-3 px-4 mb-6">
+<div class="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-primary font-bold" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<div class="text-primary font-headline font-bold">إدارة المعدات</div>
+<div class="text-[10px] text-on-surface-variant/70 uppercase tracking-widest font-bold">Sovereign Executive</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body text-sm font-medium">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-body text-sm font-medium">إدارة المستأجرين</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-body text-sm font-medium">سجلات المدفوعات</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-primary font-bold bg-surface-container-high rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="build" style="font-variation-settings: 'FILL' 1;">build</span>
+<span class="font-body text-sm font-medium">طلبات الصيانة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body text-sm font-medium">عقود الإيجار</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body text-sm font-medium">تقرير الأداء</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/10 pt-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body text-sm font-medium">الإعدادات</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-error/80 hover:bg-error-container/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body text-sm font-medium">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 mr-72 overflow-y-auto bg-surface px-8 py-10 space-y-10">
+<!-- Header Section with Hero KPI -->
+<div class="flex justify-between items-end">
+<div class="space-y-2">
+<h1 class="text-3xl font-headline font-extrabold text-on-surface tracking-tight">إدارة الصيانة والطلبات</h1>
+<p class="text-on-surface-variant max-w-lg">متابعة حالة الإصلاحات التقنية وتنبؤات الخدمة القادمة للأصول السيادية.</p>
+</div>
+<div class="flex gap-4">
+<button class="gold-gradient text-on-primary font-bold px-6 py-3 rounded-xl flex items-center gap-2 hover:scale-105 transition-transform gold-glow active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        إنشاء طلب جديد
+                    </button>
+</div>
+</div>
+<!-- Bento Grid for Maintenance Insights -->
+<div class="grid grid-cols-12 gap-6">
+<!-- AI Prediction Card -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -mr-8 -mt-8 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex justify-between items-start mb-10">
+<div>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/20 uppercase tracking-widest">تحليلات الذكاء الاصطناعي</span>
+<h2 class="text-2xl font-headline font-bold mt-4">الصيانة المجدولة القادمة</h2>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/10">
+<div class="text-on-surface-variant text-xs mb-2">مولدات الطاقة المركزية</div>
+<div class="text-lg font-bold text-primary">خلال 4 أيام</div>
+<div class="w-full bg-surface-container-high h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-4/5"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/10">
+<div class="text-on-surface-variant text-xs mb-2">نظام التبريد الصناعي</div>
+<div class="text-lg font-bold text-primary">خلال 12 يوم</div>
+<div class="w-full bg-surface-container-high h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/4"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant/10">
+<div class="text-on-surface-variant text-xs mb-2">محولات الجهد العالي</div>
+<div class="text-lg font-bold text-primary">خلال 18 يوم</div>
+<div class="w-full bg-surface-container-high h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/5"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Total Costs Card -->
+<div class="col-span-12 lg:col-span-4 bg-primary-container text-on-primary-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-lg">إجمالي التكاليف (الشهر)</h3>
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div class="text-4xl font-headline font-black">245,850 ر.س</div>
+<p class="text-sm mt-2 opacity-70">+12% عن الشهر الماضي</p>
+</div>
+<div class="mt-8 flex items-center justify-between">
+<div class="flex -space-x-2 space-x-reverse">
+<img class="w-8 h-8 rounded-full border-2 border-primary-container object-cover" data-alt="A professional technician wearing high-visibility specialized gear and safety equipment, working on complex electrical circuits. The lighting is focused and professional, highlighting technical precision. The background shows a modern technical workshop with clean lines and metallic finishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFf83f9OHwar-VJzz3qlAaA5qzpS0k4J10AwJIKVzjYzfrok8nWhoooZ1Ad4tUqJ54H06XxFokDfpUx28BW02K2Ce8yucfLfOkm0PnUVkqZvJFTiYaA2lj47xMfS4hMjC5vjASioTU1dTkN62FvpECbMxTNn0tNhyUZveiHTA0NXFM1XLqpwCoBgkW5Qfvf2NoKdhi4g2jR4Q4gtiVOA-ABCo223f5Z26BObLBuMrtgF-lSiSxFGTT-7KaAqZ0MchLYXgDk0Umg"/>
+<img class="w-8 h-8 rounded-full border-2 border-primary-container object-cover" data-alt="A senior engineering supervisor with grey hair and sharp features looking over blueprint documents in a high-tech facility. The lighting is sophisticated and warm, creating a sense of experience and trust. The overall mood is serious and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJnTihK-bR6s6jJeRmA8459FUE3bszSBDr9mRMCiKNR2ep8QJA4xgU9aGMAyMd_e8eyWvHQeAece5EWhXfMoh1EOE3tZ1RyvkYnpNICwT01L-_RTtCGhfNFicRi0_VdEzZKosjmTyWVxWEjIXnk7Q7kmmzBWTnSDfrIe3YY1Jwyt5AQthefZBr9Prrx5OrQN0tRJr7j_OJV5W3IdIUnpv7MABuSf-MeHxqry39fPWbxO1rd616KbOCxOCe3vslm3xBtRMcEzpt5w"/>
+<div class="w-8 h-8 rounded-full border-2 border-primary-container bg-on-primary-container/20 flex items-center justify-center text-[10px] font-bold">+8</div>
+</div>
+<button class="text-xs font-bold underline">عرض التفاصيل</button>
+</div>
+</div>
+</div>
+<!-- Active Maintenance Tickets Section -->
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-headline font-bold">طلبات الصيانة النشطة</h2>
+<div class="flex gap-2">
+<button class="bg-surface-container-high px-4 py-2 rounded-lg text-sm font-medium border border-outline-variant/10">الكل</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-2 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-all">قيد التنفيذ</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-2 rounded-lg text-sm font-medium hover:bg-surface-container-high transition-all">مكتمل</button>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl border border-outline-variant/10 bg-surface-container-lowest">
+<table class="w-full text-right">
+<thead class="bg-surface-container">
+<tr>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">الطلب / الأصل</th>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">الأولوية</th>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">الفني المكلف</th>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">تاريخ الانتهاء المتوقع</th>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">التكلفة المتوقعة</th>
+<th class="px-6 py-4 font-headline text-sm font-bold text-on-surface-variant">الحالة</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Ticket 1 -->
+<tr class="hover:bg-surface-container/50 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="font-bold">إصلاح محول الطاقة B2</div>
+<div class="text-xs text-on-surface-variant">رمز الأصل: EQ-9942</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-error/10 text-error border border-error/20">
+<span class="w-1 h-1 rounded-full bg-error"></span> عالية
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A professional male technician in a smart navy uniform working in a data center environment. Soft, localized lighting highlights his focused work. The background is a high-tech server room with blue and gold ambient lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADypcAnpxlOTfQXqM46VYhAR95w1aaezHBPj_Ox-qKsmMakTW2KAEuexpb_fMFW3l9ZL4T9AOE5AJb9WoI6QP-AuR603HUdvSB0CBnVy7tp0WzxxFfBn_uB0NL83M8726DNZC4cNb0bj78cDOv8xdGu4PGXkPS6xJ9r7uQo86-hZMgGvn2g1Gvkz_v1JvhwHoaAoAPvuZRf1y0YnfWm_egFDwFrogV5FbSTeqb3IPGhwH4DqB5660KjTqGLPxyY4NVTuqbTTX5Ow"/>
+<span class="text-sm">م. فهد العتيبي</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">14 أكتوبر، 2023</td>
+<td class="px-6 py-5 font-bold text-primary text-sm">12,500 ر.س</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full gold-gradient shadow-[0_0_8px_#f2ca50]"></div>
+<span class="text-xs font-bold text-primary">قيد العمل</span>
+</div>
+</td>
+</tr>
+<!-- Ticket 2 -->
+<tr class="hover:bg-surface-container/50 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="font-bold">صيانة دورية - رافعة الحمولة 4</div>
+<div class="text-xs text-on-surface-variant">رمز الأصل: HV-1020</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">
+<span class="w-1 h-1 rounded-full bg-primary"></span> متوسطة
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A portrait of a technical specialist wearing a sleek, dark grey jumpsuit and a professional headset. The lighting is clean and cinematic, suggesting a high-end control center. The background features complex machinery out of focus with golden light accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBsGXAZWPtHIrKWA0xflWZ2_2h-lk6_TnANs-Nov9oQloZQ0LW_EvgQ06XMDvbF0MhBOK1GG06NdSsRVhJjfs_NZjPkjBzrNtn5hmlTnR0A8DUrPpR2PhE-P3mbozA3E4TrZPv5OifeE5-dlITNv6NluS28SG2Sy2vwYEtPPYqDEllQ48-7AewDhq9fCmbQYsftZXENseHLAcbGn9-ZM7cJYsz8AvKqHewCreGDXrvDyPkw-1JUY2vHEvcnQGjB_6zpTk-MBXa4Q"/>
+<span class="text-sm">م. خالد منصور</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">18 أكتوبر، 2023</td>
+<td class="px-6 py-5 font-bold text-primary text-sm">4,200 ر.س</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-xs font-bold">مجدول</span>
+</div>
+</td>
+</tr>
+<!-- Ticket 3 -->
+<tr class="hover:bg-surface-container/50 transition-colors cursor-pointer">
+<td class="px-6 py-5">
+<div class="font-bold">تحديث نظام التحكم الآلي</div>
+<div class="text-xs text-on-surface-variant">رمز الأصل: CS-5521</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-on-surface-variant/10 text-on-surface-variant border border-on-surface-variant/20">
+<span class="w-1 h-1 rounded-full bg-on-surface-variant"></span> منخفضة
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A professional female engineer with a focused expression, wearing technical goggles on her head and a refined dark uniform. The setting is a bright, modern laboratory with high-key lighting. The overall visual style is elegant, modern, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVc7Kxfg4nm32RBpxeLAusPJjgShBJV18ztMQiKpZrVF4kURvCGo2GlAJ0lzr-w7evtdWVPFtUC0K_pIRn6C4IwEBTcRe24_77WXr02mtR-xMtfa29i_f1ITFBNXtmuoPmJiSNmtL4nK9e_jfcdQr6phmQtG0lfci62pftuxz5TPKEK7Q5EUi5xdLKjFv_xGnBAKNVGHfHhhe5j33Lim4jntTd60o564Jvc_lUwCP2wSmDsZyldm82-_TmgPIsuZyhcACkn4R6wQ"/>
+<span class="text-sm">م. سارة الصالح</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">22 أكتوبر، 2023</td>
+<td class="px-6 py-5 font-bold text-primary text-sm">8,900 ر.س</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full gold-gradient shadow-[0_0_8px_#f2ca50]"></div>
+<span class="text-xs font-bold text-primary">قيد العمل</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Asset Health Overview Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container rounded-xl p-6 border border-outline-variant/10">
+<h3 class="font-headline font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+                        توزيع المهام حسب الفنيين
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-on-surface-variant">م. فهد العتيبي</span>
+<div class="flex-1 mx-4 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<span class="text-xs font-bold">12 مهمة</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-on-surface-variant">م. خالد منصور</span>
+<div class="flex-1 mx-4 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[40%]"></div>
+</div>
+<span class="text-xs font-bold">6 مهمة</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-on-surface-variant">م. سارة الصالح</span>
+<div class="flex-1 mx-4 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+<span class="text-xs font-bold">9 مهمة</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 border border-outline-variant/10 overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_#f2ca50_0%,_transparent_50%)]"></div>
+</div>
+<h3 class="font-headline font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="inventory_2">inventory_2</span>
+                        توفر قطع الغيار الحرجة
+                    </h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/10 flex flex-col items-center">
+<div class="text-3xl font-headline font-black text-primary">94%</div>
+<div class="text-[10px] text-on-surface-variant uppercase font-bold mt-1">المخزون العام</div>
+</div>
+<div class="p-4 bg-error/5 rounded-xl border border-error/20 flex flex-col items-center">
+<div class="text-3xl font-headline font-black text-error">3</div>
+<div class="text-[10px] text-on-surface-variant uppercase font-bold mt-1">نقص حرج</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-surface-container-high text-xs font-bold rounded-lg border border-outline-variant/20 hover:border-primary/40 transition-colors">إدارة المخزون</button>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Button - Contextual for Maintenance -->
+<button class="fixed bottom-10 left-10 w-16 h-16 gold-gradient rounded-full shadow-[0_8px_30px_rgba(242,202,80,0.3)] flex items-center justify-center text-on-primary active:scale-90 transition-transform md:hidden z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="build">build</span>
+</button>
+<script>
+        // Micro-interactions and atmospheric effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.bg-surface-container');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            // Smooth entrance animations
+            const mainRows = document.querySelectorAll('tbody tr');
+            mainRows.forEach((row, index) => {
+                row.style.opacity = '0';
+                row.style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    row.style.transition = 'all 0.4s ease';
+                    row.style.opacity = '1';
+                    row.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>

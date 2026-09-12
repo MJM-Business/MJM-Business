@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Noto+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0b0b0b",
+                        "accent-dark": "#1a1814",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Arabic', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af3744;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-background-light dark:bg-accent-dark border-l border-slate-200 dark:border-primary/10 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">diamond</span>
+</div>
+<div>
+<h1 class="text-sm font-bold tracking-tight uppercase text-primary">إم جي إم سمارت</h1>
+<p class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">المنصة التنفيذية</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto custom-scrollbar">
+<div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest px-3 mb-2 mt-4">الأنظمة الأساسية</div>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">لوحة القيادة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">business_center</span>
+<span class="text-sm font-medium">الخدمات العامة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+<span class="text-sm font-medium">السفر والشحن</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">إدارة المستخدمين</span>
+</a>
+<div class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest px-3 mb-2 mt-6">الذكاء الاصطناعي</div>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">monitoring</span>
+<span class="text-sm font-medium">سجلات النظام</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="text-sm font-medium">تحليلات الذكاء</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">الإعدادات</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-primary/10">
+<div class="bg-primary/5 rounded-xl p-3 border border-primary/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-primary uppercase">الحالة</span>
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<p class="text-[11px] text-slate-400 leading-tight">جميع الأنظمة تعمل بكفاءة. زمن الاستجابة العالمي 24 مللي ثانية.</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Header -->
+<header class="h-16 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-primary/10 px-8 flex items-center justify-between">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full bg-slate-100 dark:bg-white/5 border-none rounded-lg pr-10 pl-4 py-2 text-sm focus:ring-1 focus:ring-primary" placeholder="بحث عالمي عن المقاييس، المستخدمين، أو السجلات..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-primary/20 text-xs font-bold hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[18px]">language</span>
+                    AR / EN
+                </button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 left-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-background-dark"></span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-primary/20 mx-2"></div>
+<div class="flex items-center gap-3 pr-2">
+<div class="text-left hidden sm:block">
+<p class="text-xs font-bold">سيف المنصوري</p>
+<p class="text-[10px] text-primary">مسؤول النظام الأعلى</p>
+</div>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-primary/20 border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Corporate headshot of executive user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdMOW0HkOmZ5af7C1exTpMYuNqSKZBE2hWFNjEEB355k9cwPeUP254lQ_d80NdBUHpOgDtr3v3odDgtHExKuc6kvB5QCftFQJy-gYpNFSv0uByqPSFwRyvffKX-Abw3ono1G4pNKHE6yUK9kWiWk6snz8xPllAkPYlGyDQQZK2keQCLno5giUd9iCNen756xApDkNUUMlP3rnrgC-s7U1gd0FvLb8LssWYTN2K8PqhwxV6ZGKCE-yWeLIhJpyAppC5Qrnd-OVaNw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Body -->
+<main class="flex-1 overflow-y-auto bg-slate-50 dark:bg-background-dark p-8 custom-scrollbar">
+<!-- Welcome Section -->
+<div class="mb-8 flex items-end justify-between">
+<div>
+<h2 class="text-2xl font-bold tracking-tight">نظرة عامة تنفيذية</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">مقاييس الأداء في الوقت الفعلي لعمليات إم جي إم العالمية.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-background-dark rounded-lg text-sm font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                        تصدير التقرير
+                    </button>
+</div>
+</div>
+<!-- Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-background-light dark:bg-accent-dark p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-[10px] font-bold text-green-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +12.5%
+                        </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">أرباح اليوم (الذهب)</p>
+<h3 class="text-2xl font-bold mt-1" dir="ltr">$128,430.00</h3>
+</div>
+<div class="bg-background-light dark:bg-accent-dark p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<span class="text-[10px] font-bold text-red-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> -2.1%
+                        </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">إجمالي العمليات</p>
+<h3 class="text-2xl font-bold mt-1" dir="ltr">4,290</h3>
+</div>
+<div class="bg-background-light dark:bg-accent-dark p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<span class="text-[10px] font-bold text-green-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +4.0%
+                        </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">أداء الموظفين</p>
+<h3 class="text-2xl font-bold mt-1" dir="ltr">94.2%</h3>
+</div>
+<div class="bg-background-light dark:bg-accent-dark p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<span class="px-2 py-0.5 bg-green-500/10 text-green-500 text-[10px] font-bold rounded-full uppercase">محسن</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">درجة ذكاء النظام</p>
+<h3 class="text-2xl font-bold mt-1" dir="ltr">98.8</h3>
+</div>
+</div>
+<!-- Charts and AI Intelligence Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<!-- Revenue Growth Chart -->
+<div class="lg:col-span-2 bg-background-light dark:bg-accent-dark rounded-xl border border-slate-200 dark:border-primary/10 p-6">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h4 class="font-bold text-lg">تحليلات الإيرادات والنمو</h4>
+<p class="text-xs text-slate-500">تدفق المعاملات المباشر عبر المراكز العالمية</p>
+</div>
+<select class="bg-slate-100 dark:bg-white/5 border-none text-xs font-bold rounded-lg focus:ring-1 focus:ring-primary">
+<option>آخر 24 ساعة</option>
+<option>آخر 7 أيام</option>
+<option>آخر 30 يوم</option>
+</select>
+</div>
+<div class="h-64 w-full flex flex-col justify-end gap-2">
+<div class="flex-1 w-full relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#d4af37" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#d4af37" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 Q100,120 200,160 T400,100 T600,120 T800,40 T1000,60 V200 H0 Z" fill="url(#chartGradient)"></path>
+<path d="M0,150 Q100,120 200,160 T400,100 T600,120 T800,40 T1000,60" fill="none" stroke="#d4af37" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="800" cy="40" fill="#d4af37" r="4"></circle>
+<text fill="#d4af37" font-size="12" font-weight="bold" text-anchor="middle" x="800" y="30">ذروة حركة المراكز</text>
+</svg>
+</div>
+<div class="flex justify-between text-[10px] text-slate-500 font-bold uppercase tracking-tighter" dir="ltr">
+<span>00:00</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span>16:00</span>
+<span>20:00</span>
+<span>23:59</span>
+</div>
+</div>
+</div>
+<!-- AI Performance Intelligence Widget -->
+<div class="bg-background-light dark:bg-accent-dark rounded-xl border border-slate-200 dark:border-primary/10 p-6 flex flex-col">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h4 class="font-bold text-lg">أداء الذكاء الاصطناعي</h4>
+</div>
+<div class="flex-1 space-y-4">
+<div class="p-3 bg-primary/5 border-r-2 border-primary rounded-l-lg">
+<p class="text-[10px] font-bold text-primary uppercase mb-1">توصية</p>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">يُقترح التوسع في عقدة الشحن 'DXB-04' بناءً على زيادة متوقعة بنسبة 15% في حركة المرور المسائية.</p>
+<div class="mt-2 flex justify-start">
+<button class="text-[10px] font-bold text-primary hover:underline">تطبيق التحسين</button>
+</div>
+</div>
+<div class="p-3 bg-red-500/5 border-r-2 border-red-500 rounded-l-lg">
+<p class="text-[10px] font-bold text-red-500 uppercase mb-1">تنبيه خطأ حرج</p>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">تم اكتشاف خلل في واجهة برمجة تطبيقات تسوية العملات. تم تحديد فرق بنسبة 2.4% في مزامنة احتياطيات الذهب.</p>
+<div class="mt-2 flex justify-start">
+<button class="text-[10px] font-bold text-red-500 hover:underline">مراجعة سجل التدقيق</button>
+</div>
+</div>
+<div class="p-3 bg-blue-500/5 border-r-2 border-blue-500 rounded-l-lg">
+<p class="text-[10px] font-bold text-blue-500 uppercase mb-1">ملاحظة كفاءة</p>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">وصلت وحدة السفر والشحن إلى نسبة تشغيل 99.9% هذا الشهر. حمل النظام لا يزال مستقراً.</p>
+</div>
+</div>
+<button class="mt-6 w-full py-2 bg-slate-100 dark:bg-white/5 text-xs font-bold rounded-lg hover:text-primary transition-colors">
+                        إطلاق التحليل الكامل
+                    </button>
+</div>
+</div>
+<!-- Recent Transactions / Audit Log Table -->
+<div class="bg-background-light dark:bg-accent-dark rounded-xl border border-slate-200 dark:border-primary/10 overflow-hidden shadow-sm">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-primary/10 flex justify-between items-center">
+<h4 class="font-bold">المعاملات الأخيرة وسجلات التدقيق</h4>
+<div class="flex gap-2">
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-white/5 rounded-md"><span class="material-symbols-outlined text-[18px]">filter_list</span></button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-white/5 rounded-md"><span class="material-symbols-outlined text-[18px]">more_vert</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right text-sm">
+<thead class="bg-slate-50 dark:bg-white/[0.02] text-slate-500 dark:text-slate-400 text-[11px] uppercase font-bold tracking-wider">
+<tr>
+<th class="px-6 py-3">رقم المرجع</th>
+<th class="px-6 py-3">وحدة الخدمة</th>
+<th class="px-6 py-3">المستخدم التنفيذي</th>
+<th class="px-6 py-3">الطابع الزمني</th>
+<th class="px-6 py-3">المبلغ / الوحدات</th>
+<th class="px-6 py-3">الحالة</th>
+<th class="px-6 py-3 text-left">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-primary/5">
+<tr class="hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors">
+<td class="px-6 py-4 font-mono text-[12px] text-primary" dir="ltr">#MJM-9821-43</td>
+<td class="px-6 py-4">لوجستيات الشحن</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-slate-300" data-alt="Avatar of user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChrdSw0jHhJRQ406Y7PJfr3yA1v1wjDpb7vF7YRr7CL-Nit8OqBVlkMAmC67mlinUOiwcYx21pKR0E9FNHlcEJQfnwvo25uUQDLyChnpx5SoLKt3SEN5PNa-1qP_fixULHD9q6smtAurjpaXQNzaSmRddvlsUAjPyelBW8QV8o6Jd8npwldZLKsKpTmd4ARjU2Gn-paZt3v0nvBH6-XYoTTPg70pGdQxpfTzEj766Aosk8zCYTWO0H1dy4v2VpODIuyGzxH6ocNA')"></div>
+<span>م. حمدان</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-500 text-xs" dir="ltr">2023-11-24 14:22:10</td>
+<td class="px-6 py-4 font-bold text-slate-900 dark:text-slate-100" dir="ltr">$12,400.00</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold rounded">مكتمل</span>
+</td>
+<td class="px-6 py-4 text-left">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors">
+<td class="px-6 py-4 font-mono text-[12px] text-primary" dir="ltr">#MJM-7710-12</td>
+<td class="px-6 py-4">تسوية الذهب</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-slate-300" data-alt="Avatar of user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXNvk18Lk5K5mjgqhc-KBkPn4wEiuDqY_U1XhVQ3pymtdlaDUZrZkCpY3nbC9RG6GMLy-Iho4xcLemf_Nv1qIJ8aARbAJq5MDFrRrV5r1yvExBahogLZwl28W3DB4K-BnrCRwII3wU5_Ynq9uHQ2GumcWxypTEq2piFEiUgyvrV82Ab9PHbdVbXpqrSp10bJ0ba1U9CF8CN78BnlTgy_87ozF0u3fiKANOEKyz3-veyZvcNcSMdvOySIMpRLttOyRw4CvcBWtKOA')"></div>
+<span>أ. كريم</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-500 text-xs" dir="ltr">2023-11-24 14:15:45</td>
+<td class="px-6 py-4 font-bold text-slate-900 dark:text-slate-100" dir="ltr">45.50 oz</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded">قيد المعالجة</span>
+</td>
+<td class="px-6 py-4 text-left">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors">
+<td class="px-6 py-4 font-mono text-[12px] text-primary" dir="ltr">#MJM-4421-90</td>
+<td class="px-6 py-4">الخدمات العامة</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-slate-300" data-alt="Avatar of user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLDCfT_XCy7tuSa5mawpmPbZ-IEZtQTZy5VPzWiTvfbWMfsfhbSva6DE22ocY7tGveEkivWYFjErbZcyFuzWWGea5HVJNoP2hOz-IhWXqg0Z9yOjeH-hlUKKCAJ-yjyEFOeraD5lBahcNMbToPhzpB2ohZd_yFfW8yEeLbZ4c_648WLo4okgg0sf0bNM1Sk-6rODDgZGzMfxZk10kZ8RGaGJLyAFfz8bVWQNLbuEkkplH2dR0j7AKrBPDd2rJH03adahLNg0m7MQ')"></div>
+<span>س. المنصوري</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-500 text-xs" dir="ltr">2023-11-24 13:55:02</td>
+<td class="px-6 py-4 font-bold text-slate-900 dark:text-slate-100" dir="ltr">$2,150.00</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold rounded">مكتمل</span>
+</td>
+<td class="px-6 py-4 text-left">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors">
+<td class="px-6 py-4 font-mono text-[12px] text-primary" dir="ltr">#MJM-2210-01</td>
+<td class="px-6 py-4">حجز السفر</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-slate-300" data-alt="Avatar of user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTgQLCF0zXIym0IiRFOnYBlpaIwST4eGSbw2PgCI11sY7lMqT_FPN6fS4KyVJR1-bwrByoeS_5qVBQsE-h0_9lwSQijfqENPp3SUB5yA1UZsRKqtHX0nBdyeNmzwV6bvsM0NPrUcsH1aGFXOYUZENk4G4W8xZVOANnGEYykNyDTC2xq8QNI59SBFNkBOfXNOlyqf3Utawryf5HnviE5kjUOUC1-AAgRq2PZVaxQ6WUNfthM02oXnjnwqeMyQW9C-vYdBn6bzSacg')"></div>
+<span>ج. دو</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-500 text-xs" dir="ltr">2023-11-24 13:40:12</td>
+<td class="px-6 py-4 font-bold text-slate-900 dark:text-slate-100" dir="ltr">$840.00</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-red-500/10 text-red-500 text-[10px] font-bold rounded">تم التنبيه</span>
+</td>
+<td class="px-6 py-4 text-left">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-slate-50 dark:bg-white/[0.02] border-t border-slate-200 dark:border-primary/10 flex justify-between items-center">
+<p class="text-[11px] text-slate-500 font-medium">عرض 4 من أصل 2,840 إدخالاً عالمياً</p>
+<div class="flex gap-1" dir="ltr">
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-primary/20 hover:bg-white/5 transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded border border-primary bg-primary/10 text-primary font-bold text-xs">1</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-primary/20 hover:bg-white/5 transition-colors font-bold text-xs">2</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-primary/20 hover:bg-white/5 transition-colors font-bold text-xs">3</button>
+<button class="size-8 flex items-center justify-center rounded border border-slate-200 dark:border-primary/20 hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

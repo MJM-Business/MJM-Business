@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0b0b0b",
+                        "surface-dark": "#1a1a1a",
+                        "border-gold": "#433d28",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        .arabic-text { font-family: 'Noto Sans Arabic', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-gold px-6 md:px-10 py-4 bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="size-8">
+<img alt="MJM Smart Business Logo" class="h-full w-full object-contain" data-alt="MJM Smart Business corporate logo in gold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcPrUkZ55fwMX6xPb03Mbjt974w75hvMSD_0mf-07NJ8MBiBPvGfAxFMQzvy1B-tODQY3E33sIo23nbF4sOm5dvfJCzz33EvPryEWiy2mplyzIlOVySBq38b6SW0t-Z2EikekhbsvALv6_lGU3H_MTEYpXoiuk_5Ro2VzreT5suBLxs3q0i70vmcFTX8pjBi0PC-UxNUSSeFOYE9bbY6H-tbTPwUBHoKzixFEOyL0TSm-m3BqIBpH6iBZCcPK3wHplyNV-8eWcLg"/>
+</div>
+<div class="flex flex-col">
+<h2 class="text-primary text-lg font-bold leading-tight tracking-tight">MJM Smart Business</h2>
+<p class="text-[10px] text-primary/70 uppercase tracking-[0.2em] arabic-text">إم جي إم للأعمال الذكية</p>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden md:flex gap-4 mr-6"><a class="text-sm font-medium hover:text-primary transition-colors" href="#">لوحة التحكم</a><a class="text-sm font-medium text-primary underline underline-offset-8" href="#">التوقيعات</a><a class="text-sm font-medium hover:text-primary transition-colors" href="#">المستندات</a></div>
+<button class="flex size-10 items-center justify-center rounded-lg bg-surface-dark border border-border-gold text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-border-gold">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold">Ahmed Al-Sayed</p>
+<p class="text-[10px] text-slate-400 arabic-text">المدير التنفيذي</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfuIgosgrC5qvV4_fqjXj40T4lzhN3673zRQaxBd-GRmn8I925xTt0-wcneb5566mJIGCFY6QlLZgVzFITllGMZzMZ99QI-BRmX7HCPi_WFTGB1tZSijrdB97g-N7iP_7ZATWwi3cPjrMlxRsdt3H3F9FmQJcxzranOKh2nGRpDqbRGeqkW1iqVeNtqyN_dlwGbB6aPe-tWEiYEYnQ46bNPZHg3lUrza82vn3TPbnM_6QCpSKciSsdl2H6ZyBp5Mplk4eH1LqNQg");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col p-4 md:p-8 max-w-[1440px] mx-auto w-full gap-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-primary/60 text-xs font-bold uppercase tracking-widest"><span>المستندات</span><span class="material-symbols-outlined text-xs">chevron_left</span><span>التوقيع الرقمي</span></div>
+<h1 class="text-3xl md:text-4xl font-black tracking-tight">تطبيق التوقيع الرقمي</h1>
+<p class="text-slate-400 text-sm arabic-text">يرجى مراجعة المستند أدناه والمصادقة عليه باستخدام التوقيع الرقمي الآمن</p>
+</div>
+<div class="flex gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">pending</span>
+<span>PENDING APPROVAL</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-dark border border-border-gold text-slate-400 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>EXP: 24H</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 flex-1 min-h-[600px]">
+<div class="lg:col-span-7 bg-surface-dark rounded-xl border border-border-gold overflow-hidden flex flex-col shadow-2xl">
+<div class="p-4 border-b border-border-gold flex justify-between items-center bg-background-dark/50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-sm font-bold">Executive_Contract_v4.pdf</span>
+</div>
+<div class="flex gap-2">
+<button class="p-1.5 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">zoom_in</span></button>
+<button class="p-1.5 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">zoom_out</span></button>
+<button class="p-1.5 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">download</span></button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-8 bg-slate-800/20 flex justify-center">
+<div class="bg-white w-full max-w-[600px] aspect-[1/1.41] shadow-xl p-12 text-slate-800 relative">
+<div class="border-b-2 border-slate-200 pb-4 mb-8 flex justify-between items-start">
+<div class="size-12 opacity-20 bg-slate-900 rounded-sm"></div>
+<div class="text-[10px] text-right text-slate-400 uppercase tracking-tighter">Confidential Commercial Agreement</div>
+</div>
+<div class="space-y-4">
+<div class="h-4 bg-slate-100 rounded w-3/4"></div>
+<div class="h-4 bg-slate-100 rounded w-full"></div>
+<div class="h-4 bg-slate-100 rounded w-full"></div>
+<div class="h-4 bg-slate-100 rounded w-5/6"></div>
+<div class="h-4 bg-slate-100 rounded w-full"></div>
+<div class="h-4 bg-slate-100 rounded w-2/3"></div>
+</div>
+<div class="mt-20 border-t border-slate-100 pt-8 grid grid-cols-2 gap-12">
+<div>
+<div class="text-[8px] uppercase text-slate-400 mb-8">Authorized Party</div>
+<div class="h-10 border-b border-slate-300"></div>
+<div class="text-[8px] mt-1 italic text-slate-400">MJM Smart Business Representative</div>
+</div>
+<div class="relative">
+<div class="text-[8px] uppercase text-slate-400 mb-8">Client Approval</div>
+<div class="h-10 border-b-2 border-primary/30 flex items-center justify-center group cursor-pointer">
+<span class="text-[10px] text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity">Click here to sign</span>
+<div class="absolute -top-2 -right-2 bg-primary text-background-dark p-1 rounded-full animate-pulse">
+<span class="material-symbols-outlined text-xs">edit</span>
+</div>
+</div>
+<div class="text-[8px] mt-1 italic text-slate-400 arabic-text">توقيع العميل المعتمد</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-background-dark/50 border-t border-border-gold flex justify-center gap-4 text-[10px] text-slate-500">
+<span>الصفحة 1 من 12</span>
+<span>•</span>
+<span>ID: MJM-8829-X</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-dark rounded-xl border border-border-gold p-6 shadow-xl flex flex-col h-full">
+<h3 class="text-xl font-bold mb-1">لوحة الاعتماد والتفويض</h3>
+<p class="text-sm text-slate-400 mb-6 arabic-text">اختر طريقة التوقيع المفضلة لديك</p>
+<div class="flex p-1 bg-background-dark rounded-lg mb-6 border border-border-gold/50"><button class="flex-1 py-2 text-xs font-bold bg-primary text-background-dark rounded-md shadow-lg transition-all">رسم</button><button class="flex-1 py-2 text-xs font-bold text-slate-400 hover:text-white transition-all">كتابة</button><button class="flex-1 py-2 text-xs font-bold text-slate-400 hover:text-white transition-all">رفع</button></div>
+<div class="flex-1 relative bg-background-dark rounded-xl border-2 border-dashed border-border-gold/40 flex flex-col items-center justify-center group overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-5xl text-primary/20 mb-4">signature</span>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-bold">وقع داخل المربع المخصص</p>
+<div class="absolute bottom-4 right-4 flex gap-2">
+<button class="size-8 rounded-full bg-surface-dark border border-border-gold flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all shadow-lg">
+<span class="material-symbols-outlined text-sm">refresh</span>
+</button>
+</div>
+</div>
+<div class="mt-6 space-y-4">
+<div class="flex items-start gap-3 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+<div class="pt-0.5">
+<input class="rounded border-primary text-primary focus:ring-primary bg-background-dark" type="checkbox"/>
+</div>
+<div class="text-xs leading-relaxed">
+<p class="font-bold text-slate-200">إقرار قانوني</p>
+<p class="text-slate-400">I agree that this digital signature is a legally binding equivalent of my handwritten signature.</p>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark py-4 rounded-lg font-bold text-sm tracking-widest uppercase transition-all shadow-[0_0_20px_rgba(212,175,53,0.3)] flex items-center justify-center gap-2 group">
+<span>اعتماد التوقيع</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">verified_user</span>
+</button>
+<button class="w-full bg-transparent hover:bg-white/5 text-slate-400 py-3 rounded-lg font-bold text-xs uppercase transition-all">إلغاء والعودة</button>
+</div>
+</div>
+<div class="bg-surface-dark/50 rounded-xl border border-border-gold/50 p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield_lock</span>
+</div>
+<div>
+<p class="text-xs font-bold">معاملة مشفرة آمنة</p>
+<p class="text-[10px] text-slate-500">مؤمن بواسطة تشفير MJM للمؤسسات</p>
+</div>
+<div class="ml-auto">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto px-10 py-6 border-t border-border-gold bg-background-dark/80 text-[10px] text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-4"><span>© 2024 منصة MJM للأعمال الذكية</span><a class="hover:text-primary transition-colors" href="#">سياسة الخصوصية</a><a class="hover:text-primary transition-colors" href="#">شروط الخدمة</a></div>
+<div class="flex items-center gap-2 arabic-text">
+<span>مدعوم من قبل MJM لخدمات الأعمال</span>
+<div class="size-4 opacity-50">
+<img alt="MJM Small Logo" data-alt="MJM Smart Business tiny gold logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnbCdVcMJW8o-aNLiTgaO2LXNMtsqSaUq25XJ4tfjZd-C6SMjiX2d1sBZn8apZcqwoORcXx23TOardk7sg1q-1l8zoaJ607lyxY5JDXqnWpx-4wImDsI-X-MC296cOwY2HR9DMVKhQR-95HIpsE3hw9g_FJzT4hJbQBEJDxkWUQ1hou6ZSFhYWoJRkAyXXxQ_LH6eQow7wgDIvXvc10EQz6cHHObY8pRmxWCAw9QKiIbUznf2oOcp98txNvs1gV-N-yi-8lQpkQ"/>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

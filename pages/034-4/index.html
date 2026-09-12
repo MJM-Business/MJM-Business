@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>عقود الإيجار | Sovereign Assets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-tint": "#e9c349",
+                    "secondary-fixed": "#f7e1a6",
+                    "primary-fixed": "#ffe088",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "secondary-container": "#544519",
+                    "on-primary-container": "#554300",
+                    "tertiary": "#bfcdff",
+                    "on-tertiary-container": "#254188",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#97b0ff",
+                    "on-tertiary": "#082b72",
+                    "outline-variant": "#4d4635",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#c8b37d",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#544519",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#3c2f05",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#dac58d",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#dac58d",
+                    "surface-bright": "#3a3939",
+                    "inverse-primary": "#735c00",
+                    "primary": "#f2ca50",
+                    "on-tertiary-fixed": "#00174b",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-on-surface": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "outline": "#99907c",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary-fixed-dim": "#e9c349"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "display": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-glow {
+            box-shadow: 0 0 8px #f2ca50;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="overflow-hidden">
+<!-- Wrapper Shell -->
+<div class="flex h-screen w-full bg-surface-container-lowest">
+<!-- SideNavBar (Authority: JSON & Design System) -->
+<aside class="fixed inset-y-0 right-0 w-72 h-full bg-surface-container-low border-l border-outline-variant/20 flex flex-col h-full py-6 px-4 gap-4 rtl z-50">
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">account_balance</span>
+</div>
+<div>
+<h1 class="text-primary font-headline font-bold text-lg leading-none">إدارة المعدات</h1>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest">Sovereign Executive</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1 overflow-y-auto custom-scrollbar">
+<!-- Navigation Items -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl group translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body text-sm font-medium">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl group translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body text-sm font-medium">إدارة المستأجرين</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl group translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body text-sm font-medium">سجلات المدفوعات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl group translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-body text-sm font-medium">طلبات الصيانة</span>
+</a>
+<!-- Active Tab: عقود الإيجار -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-surface-container-high rounded-xl translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-body text-sm font-medium">عقود الإيجار</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl group translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body text-sm font-medium">تقرير الأداء</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 rounded-xl translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body text-sm font-medium">الإعدادات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error/80 hover:text-error hover:bg-error/5 transition-all duration-200 rounded-xl translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body text-sm font-medium">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 mr-72 overflow-y-auto bg-surface custom-scrollbar">
+<!-- TopAppBar (Authority: JSON & Design System) -->
+<header class="flex flex-row-reverse justify-between items-center w-full px-8 h-20 bg-surface sticky top-0 z-40">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all scale-95 active:opacity-80 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full gold-glow"></span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male executive with a confident expression, wearing a tailored charcoal suit and a crisp white shirt. The background is a soft-focus high-end office with warm ambient lighting. The visual style is premium and editorial, featuring high contrast and a sophisticated dark color palette that mirrors the UI's luxury gold and obsidian tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE2rzLk4i7_7_xRwv0x6K_atUk6t36OROn7RtYHvDm09QQviPkiC_tsczRxh-ak2xVDTqYDJDvpkYw6dNDzAKOOoH3xkcv-y5609PrdbKP-Ak5Z3Ws2vm6RkPEiJVGl3N0sU5JSzg2OnYYg_OkCsO8MMflmRqSgKoDYS2eJbeMyZWg213F-PxczcACWAE_2bX-1fEkX-b-qGlIyhllHT21yLOLH2eMDK1qTDr0JAGONohdrmtyMRylyc2sH6yJK68Ky8l8mhN-Uw"/>
+</div>
+</div>
+<div class="flex items-center gap-8 flex-1 justify-end px-12">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-2.5 pr-12 pl-4 text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:ring-1 focus:ring-primary transition-all" placeholder="بحث في العقود والوثائق..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body text-sm" href="#">عقود الأجهزة</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body text-sm" href="#">أرشيف العقود</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body text-sm" href="#">القوالب القانونية</a>
+</div>
+</div>
+<div class="text-headline-sm font-headline font-black text-primary tracking-tight">Sovereign Assets</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 max-w-7xl mx-auto space-y-8">
+<!-- Hero Header -->
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight">إدارة عقود الإيجار</h2>
+<p class="text-on-surface-variant mt-2 font-body">إدارة مركزية للعقود القانونية والتشغيلية للأجهزة والمعدات الأصولية.</p>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-3 rounded-xl font-headline font-bold flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_circle</span>
+                        إنشاء عقد جديد
+                    </button>
+</div>
+<!-- KPI Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface-container p-6 rounded-xl border-r-4 border-primary">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-wider">إجمالي العقود النشطة</p>
+<h3 class="text-3xl font-display font-bold mt-1 text-primary">١٤٢</h3>
+<div class="flex items-center gap-1 text-[10px] text-primary-fixed mt-2">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+١٢٪ عن الشهر الماضي</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-r-4 border-error">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-wider">عقود تنتهي قريباً</p>
+<h3 class="text-3xl font-display font-bold mt-1 text-error">٠٨</h3>
+<div class="flex items-center gap-1 text-[10px] text-error mt-2">
+<span class="material-symbols-outlined text-xs">warning</span>
+<span>تتطلب إجراءً فوريًا</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-wider">القيمة الإيجارية الشهرية</p>
+<h3 class="text-3xl font-display font-bold mt-1 text-on-surface">٤٥٠,٠٠٠ <span class="text-sm font-body text-on-surface-variant">ر.س</span></h3>
+<div class="flex items-center gap-1 text-[10px] text-primary-fixed mt-2">
+<span class="material-symbols-outlined text-xs">account_balance_wallet</span>
+<span>استقرار في التدفق النقدي</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-wider">نسبة التوقيع الرقمي</p>
+<h3 class="text-3xl font-display font-bold mt-1 text-on-surface">٩٦٪</h3>
+<div class="flex items-center gap-1 text-[10px] text-primary-fixed mt-2">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>تحقق أمني مكتمل</span>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (Asymmetric) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Contracts List (Large Span) -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="text-xl font-headline font-bold text-on-surface">سجل المستودع الرقمي</h4>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-high rounded-lg text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">كل الحالات</button>
+<button class="px-4 py-2 bg-surface-container-high rounded-lg text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">نشط</button>
+<button class="px-4 py-2 bg-surface-container-high rounded-lg text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">قيد التجديد</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Contract Card 1 -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all p-5 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl text-primary">precision_manufacturing</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center gap-3">
+<h5 class="text-lg font-headline font-bold text-on-surface">عقد توريد خوادم Blade Series X</h5>
+<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">نشط</span>
+</div>
+<p class="text-on-surface-variant text-xs font-body">المستأجر: شركة التقنية المتطورة • رقم العقد: #SR-8842</p>
+<div class="flex gap-6 mt-3">
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">تاريخ البدء/الانتهاء</span>
+<span class="text-on-surface font-medium">٢٠٢٣/٠١/٠١ - ٢٠٢٤/١٢/٣١</span>
+</div>
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">القيمة الإيجارية</span>
+<span class="text-on-surface font-medium">٨٥,٠٠٠ ر.س / شهرياً</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<div class="flex items-center gap-2 text-primary-fixed text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>توقيع رقمي موثق</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all" title="عرض العقد الأصلي">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all" title="تحميل PDF">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contract Card 2 -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all p-5 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl text-primary">print_connect</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center gap-3">
+<h5 class="text-lg font-headline font-bold text-on-surface">إيجار معدات طباعة صناعية (Kyocera)</h5>
+<span class="px-2 py-0.5 bg-error/10 text-error text-[10px] font-bold rounded-full border border-error/20">ينتهي قريباً</span>
+</div>
+<p class="text-on-surface-variant text-xs font-body">المستأجر: المطابع المركزية • رقم العقد: #SR-2109</p>
+<div class="flex gap-6 mt-3">
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">تاريخ البدء/الانتهاء</span>
+<span class="text-on-surface font-medium">٢٠٢٣/٠٦/٠١ - ٢٠٢٤/٠٥/٣١</span>
+</div>
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">القيمة الإيجارية</span>
+<span class="text-on-surface font-medium">١٢,٤٠٠ ر.س / شهرياً</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<div class="flex items-center gap-2 text-primary-fixed text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>توقيع رقمي موثق</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all" title="عرض العقد الأصلي">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all" title="تحميل PDF">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contract Card 3 -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all p-5 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl text-primary">router</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center gap-3">
+<h5 class="text-lg font-headline font-bold text-on-surface">عقد شبكات Cisco المؤسسية</h5>
+<span class="px-2 py-0.5 bg-outline/10 text-outline text-[10px] font-bold rounded-full border border-outline/20">منتهي</span>
+</div>
+<p class="text-on-surface-variant text-xs font-body">المستأجر: بنك التنمية • رقم العقد: #SR-7731</p>
+<div class="flex gap-6 mt-3">
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">تاريخ البدء/الانتهاء</span>
+<span class="text-on-surface font-medium">٢٠٢٢/٠١/٠١ - ٢٠٢٣/١٢/٣١</span>
+</div>
+<div class="text-xs">
+<span class="text-on-surface-variant block mb-1">القيمة الإيجارية</span>
+<span class="text-on-surface font-medium">٤٥,٠٠٠ ر.س / شهرياً</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">history</span>
+<span>مؤرشف</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-2 bg-surface-container-highest rounded-lg text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panel: Stats & Quick View -->
+<div class="space-y-8">
+<!-- Verification Status Glass Panel -->
+<div class="glass-panel p-6 rounded-xl space-y-6">
+<h4 class="text-lg font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">verified</span>
+                                التحقق الأمني الرقمي
+                            </h4>
+<div class="space-y-4">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">عقود موقعة إلكترونياً</span>
+<span class="text-on-surface font-bold">١٣٦ / ١٤٢</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full gold-glow" style="width: 96%"></div>
+</div>
+<div class="p-4 bg-surface-container-high/50 rounded-lg border border-outline-variant/10">
+<p class="text-[10px] text-on-surface-variant leading-relaxed">تستخدم منصة Sovereign Assets بروتوكولات تشفير RSA-4096 لضمان سلامة التوقيعات الرقمية ومطابقتها للمعايير القانونية الدولية.</p>
+</div>
+<button class="w-full py-2 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-all">
+                                    بدء فحص دوري للوثائق
+                                </button>
+</div>
+</div>
+<!-- Visual Summary Card -->
+<div class="bg-surface-container rounded-xl overflow-hidden relative group">
+<img alt="Modern Office Architecture" class="w-full h-48 object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A low-angle, architectural photograph of a sleek, modern skyscraper with floor-to-ceiling glass windows reflecting a dramatic golden sunset. The image is captured in a cinematic, high-contrast style with deep shadows and brilliant warm highlights, emphasizing the verticality and power of corporate infrastructure. The aesthetic is luxurious and professional, aligning with the Royal Black and Gold theme of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP-kSPCbWJEHKKyRP5FuqLuRmtxnz2rqJcxGkn3cvOWiKvgZxX79hFy7sgiSJRH5_U9BG2YiXn7WNXmAjv1X8eZP9W40xnpEGAI2-BsmtlWykSOK8CHrGllWBCGR0JgnZdcBK48tR95Yu0diypM46rvc500mv_HF6KUzuUTFzihZVgy1xu3G-LxiOBi6e9lSgYoWE9ppI8lmZFg4-MGlhgC1dv9ZUbxyXiFh32hB49XUWq41HLzJhptBiv9NAYtNStJjwBQFSHGA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/60 to-transparent p-6 flex flex-col justify-end">
+<h4 class="text-on-surface font-headline font-bold">توزيع الأصول المؤجرة</h4>
+<p class="text-on-surface-variant text-xs">تحليل حسب نوع الجهاز</p>
+<div class="mt-4 flex gap-2 overflow-x-auto pb-2 custom-scrollbar">
+<div class="bg-surface-container-high px-3 py-2 rounded-lg shrink-0 border border-outline-variant/20">
+<span class="text-[10px] text-on-surface-variant block">خوادم</span>
+<span class="text-primary font-bold">٤٥٪</span>
+</div>
+<div class="bg-surface-container-high px-3 py-2 rounded-lg shrink-0 border border-outline-variant/20">
+<span class="text-[10px] text-on-surface-variant block">شبكات</span>
+<span class="text-primary font-bold">٣٠٪</span>
+</div>
+<div class="bg-surface-container-high px-3 py-2 rounded-lg shrink-0 border border-outline-variant/20">
+<span class="text-[10px] text-on-surface-variant block">طابعات</span>
+<span class="text-primary font-bold">٢٥٪</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-4 bg-surface-container hover:bg-surface-container-high rounded-xl transition-all border-r-2 border-transparent hover:border-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+<span class="text-sm font-medium">سجل التعديلات القانونية</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_left</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-surface-container hover:bg-surface-container-high rounded-xl transition-all border-r-2 border-transparent hover:border-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">policy</span>
+<span class="text-sm font-medium">الشروط والأحكام العامة</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Spacing -->
+<div class="h-20"></div>
+</main>
+</div>
+<!-- Floating Action Button (SUPPRESSED based on Contextual Suppression Rule: Details/Transactional Screen) -->
+<script>
+        // Micro-interactions for card hover effects and atmospheric subtle motions
+        document.querySelectorAll('.bg-surface-container').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0px)';
+            });
+        });
+
+        // Simple search feedback logic
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-1', 'ring-primary');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-1', 'ring-primary');
+        });
+    </script>
+</body></html>

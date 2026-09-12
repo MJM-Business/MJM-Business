@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سجلات المدفوعات | Sovereign Assets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-tint": "#e9c349",
+                    "secondary-fixed": "#f7e1a6",
+                    "primary-fixed": "#ffe088",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "secondary-container": "#544519",
+                    "on-primary-container": "#554300",
+                    "tertiary": "#bfcdff",
+                    "on-tertiary-container": "#254188",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#97b0ff",
+                    "on-tertiary": "#082b72",
+                    "outline-variant": "#4d4635",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#c8b37d",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#544519",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#3c2f05",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#dac58d",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#dac58d",
+                    "surface-bright": "#3a3939",
+                    "inverse-primary": "#735c00",
+                    "primary": "#f2ca50",
+                    "on-tertiary-fixed": "#00174b",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-on-surface": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "outline": "#99907c",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary-fixed-dim": "#e9c349"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.5rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        h1, h2, h3, .headline {
+            font-family: 'Manrope', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar Implementation -->
+<header class="fixed top-0 left-0 right-0 z-50 flex flex-row-reverse justify-between items-center w-full px-8 h-20 bg-surface">
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full border border-primary/20 overflow-hidden">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="A professional close-up of a high-ranking executive in a tailored black suit, set against a blurred background of a modern, luxury corporate office with golden ambient lighting. The style is cinematic and expensive, mirroring the Royal Black and Gold aesthetic of the Sovereign Assets platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAowuRDjjMgEtpLhyVhVyk-GP3WJ2iKDJtchhJTt4SBUy6J2XgYfZdkSVU_-VeL_p5d93XqfDPGVv0f58QZ_GdjNhjjZeGU8aHAC8nenJdTv3mHhESD-cGPupLboChL9ZUQTR0s7aLf21V9IdxUhyiWTNbDE7iVTZf2k0eYGe1yi4kQngO_WIbFqcIH9zOtEi2d8A4oqDSs-YMgw9849CrUIQK1KzKu3JGE-6CVbUa7qeBJkLo3PDAWrbawY6zvTVD6QQiF7uMlmQ"/>
+</div>
+</div>
+<div class="flex-1 px-12">
+<div class="max-w-md relative">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pr-10 py-2 text-sm focus:ring-1 focus:ring-primary placeholder-on-surface-variant/50" placeholder="البحث في المعاملات..." type="text"/>
+</div>
+</div>
+<div class="text-headline-sm font-headline font-black text-primary tracking-tight">
+            Sovereign Assets
+        </div>
+</header>
+<!-- SideNavBar Implementation -->
+<aside class="fixed inset-y-0 right-0 w-72 h-full bg-surface-container-low border-l border-outline-variant/20 flex flex-col py-6 px-4 gap-4 z-40 mt-20">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 bg-primary-container/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="text-primary font-headline font-bold">إدارة المعدات</h2>
+<p class="text-xs text-on-surface-variant">Sovereign Executive</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body text-sm font-medium">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body text-sm font-medium">إدارة المستأجرين</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-surface-container-high rounded-xl translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-body text-sm font-medium">سجلات المدفوعات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-body text-sm font-medium">طلبات الصيانة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-body text-sm font-medium">عقود الإيجار</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body text-sm font-medium">تقرير الأداء</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/10 pt-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body text-sm font-medium">الإعدادات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error/80 hover:text-error hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body text-sm font-medium">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="mr-72 mt-20 p-8 min-h-screen bg-surface-container-lowest">
+<!-- Header & Action Row -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<h1 class="text-4xl font-headline font-extrabold text-on-surface mb-2">سجلات المدفوعات</h1>
+<p class="text-on-surface-variant text-lg">متابعة التدفقات المالية وتأجير المعدات الثقيلة</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary font-semibold px-6 py-2.5 rounded-lg flex items-center gap-2 hover:opacity-90 transition-all active:scale-95 shadow-[0_0_15px_rgba(242,202,80,0.2)]">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+                    تصدير PDF
+                </button>
+<button class="bg-surface-container-high text-primary border border-primary/20 px-6 py-2.5 rounded-lg flex items-center gap-2 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-xl">ios_share</span>
+                    مشاركة عبر واتساب
+                </button>
+</div>
+</div>
+<!-- Bento Stats Grid -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<div class="col-span-12 md:col-span-4 bg-surface-container p-6 rounded-xl border-r-4 border-primary">
+<p class="text-on-surface-variant text-sm mb-1">إجمالي إيرادات اليوم</p>
+<h3 class="text-3xl font-display font-bold text-primary">12,450.00 ر.س</h3>
+<div class="flex items-center gap-1 mt-4 text-xs text-green-400">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12% عن يوم أمس</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container p-6 rounded-xl">
+<p class="text-on-surface-variant text-sm mb-1">إجمالي إيرادات الشهر</p>
+<h3 class="text-3xl font-display font-bold text-on-surface">342,800.00 ر.س</h3>
+<div class="flex items-center gap-1 mt-4 text-xs text-on-surface-variant">
+<span>مقارنة بـ 290k الشهر الماضي</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-6 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">المدفوعات المعلقة</p>
+<h3 class="text-3xl font-display font-bold text-secondary">8,200.00 ر.س</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+</div>
+</div>
+</div>
+<!-- Filters & Ledger Stage -->
+<div class="bg-surface-container rounded-xl overflow-hidden">
+<!-- Filter Bar -->
+<div class="p-6 border-b border-outline-variant/10 flex flex-wrap gap-4 items-center justify-between">
+<div class="flex gap-4 items-center">
+<div class="relative">
+<select class="bg-surface-container-highest text-sm border-none rounded-lg pr-10 pl-4 py-2 appearance-none focus:ring-1 focus:ring-primary min-w-[160px]">
+<option>جميع الحالات</option>
+<option>مدفوع</option>
+<option>غير مدفوع</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-lg pointer-events-none">filter_list</span>
+</div>
+<div class="relative">
+<input class="bg-surface-container-highest text-sm border-none rounded-lg pr-4 pl-4 py-2 focus:ring-1 focus:ring-primary text-on-surface" type="date"/>
+</div>
+</div>
+<div class="text-sm text-on-surface-variant">
+                    عرض <span class="text-on-surface font-bold">1 - 25</span> من أصل <span class="text-on-surface font-bold">142</span> معاملة
+                </div>
+</div>
+<!-- Transaction Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4 font-semibold">التاريخ</th>
+<th class="px-6 py-4 font-semibold">اسم المعدة / الخدمة</th>
+<th class="px-6 py-4 font-semibold">المبلغ</th>
+<th class="px-6 py-4 font-semibold">وسيلة الدفع</th>
+<th class="px-6 py-4 font-semibold">الحالة</th>
+<th class="px-6 py-4 font-semibold">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-4 text-sm font-medium">2023/10/24</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Equipment" class="w-full h-full object-cover" data-alt="A high-end industrial bulldozer parked on a construction site during a golden hour sunset. The sunlight glints off the metallic surfaces of the machinery, creating a powerful, authoritative atmosphere consistent with a luxury industrial ERP system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjAQhR7wbjJ83pjWHmOhh1NpXyBJcO_Y68O1eD9ebk1M6TEujZAvMHm0yyEPjUsBVw1cC73VsbfKXsvLvb-xUVB20p7s0ZsG1GJyzrbsv6BzA8K9rS6viOY9BuYg3KK_PHurkrL2Y426C3v5HH3C1GcdGrVl7dCuVLhOkBEP2N7nTEjqZovzW6YQ-8qGgNrdJIYRJR2qBOOcpm1OWBAwLd7e_pQz9_F82YX0Wwc_Vo9ZyrZntChU6Y6AUVSsqJK8xVdpCj6lgvVA"/>
+</div>
+<span class="text-on-surface font-semibold">جرافة كوماتسو D155AX</span>
+</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">4,500.00 ر.س</td>
+<td class="px-6 py-4 text-on-surface-variant text-sm">تحويل بنكي</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] bg-green-500/10 text-green-400 border border-green-500/20 flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_8px_#4ade80]"></span>
+                                    تم السداد
+                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-1 hover:text-primary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-4 text-sm font-medium">2023/10/23</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Equipment" class="w-full h-full object-cover" data-alt="A heavy-duty yellow industrial crane lifting heavy steel beams against a moody, dark twilight sky. The crane's intricate structural details are highlighted by sharp artificial work lights, conveying a sense of engineering precision and high-stakes asset management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgle_SUJsVVsYc7FqJA_iu5A0557_zUn80XYhHN-oElM3ha0bCPLXIblRjvSwgAQqpFv93SM6mfbcWM3QI5uJKvZw2tpmSNO1NFYdNU6grX8LrsrdjZOuzKwAdLqZ4iq0yn9w3yFSwVt_VcL2KoXgX1PbV9WHgJMjiA9b-PlYifQvakkkfqjHJQ4W67aSedYxJlqu2mrhYkJGxcjlY-t1C8sc7s_x6_bRcnBULu88dMp4A_89eWxNytRWwUCQgk2wiovcHnbx0fg"/>
+</div>
+<span class="text-on-surface font-semibold">رافعة تادانو 50 طن</span>
+</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">2,800.00 ر.س</td>
+<td class="px-6 py-4 text-on-surface-variant text-sm">نقدي</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] bg-secondary/10 text-secondary border border-secondary/20 flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_8px_#D4AF37]"></span>
+                                    انتظار
+                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-1 hover:text-primary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-4 text-sm font-medium">2023/10/23</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">precision_manufacturing</span>
+</div>
+<span class="text-on-surface font-semibold">صيانة دورية - مولدات بيركنز</span>
+</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">1,200.00 ر.س</td>
+<td class="px-6 py-4 text-on-surface-variant text-sm">بطاقة ائتمان</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] bg-green-500/10 text-green-400 border border-green-500/20 flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_8px_#4ade80]"></span>
+                                    تم السداد
+                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-1 hover:text-primary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-4 text-sm font-medium">2023/10/22</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Equipment" class="w-full h-full object-cover" data-alt="A row of modern, powerful diesel generators lined up in a clean, high-tech industrial facility. The lighting is cold and precise, with warm reflections from polished metal surfaces, symbolizing reliability and heavy-duty infrastructure assets in a premium management platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq08g13JsKppPfWWqFX8V8culq-yL3g17l5AAoi2914YFaM4-PVQREQhhrEsKB1YIACY9ERZXrZU8o--4bpeoheQ3lDLTmOt7lA8uvm393oXw2tHlrgL-fgih7tf0_GLZ56hEXSyFTP0qryxBzIk90pqc68ZS-JZ8vUfWlX1-tGUpChqG5ATDcHYUydJvKKaSsWyMGhuv3A5G3Hcm8x_68Z0_mBfJhetyZ8QvCTr7aPHSf-tCKptlNfOnMWjdk4wq6Ygie_8eF8Q"/>
+</div>
+<span class="text-on-surface font-semibold">حفار هيتاشي ZX210</span>
+</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">3,950.00 ر.س</td>
+<td class="px-6 py-4 text-on-surface-variant text-sm">تحويل بنكي</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full text-[10px] bg-error/10 text-error border border-error/20 flex items-center w-fit gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error shadow-[0_0_8px_#ffb4ab]"></span>
+                                    متأخر
+                                </span>
+</td>
+<td class="px-6 py-4">
+<button class="p-1 hover:text-primary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 bg-surface-container-low flex justify-center gap-2">
+<button class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary border border-outline-variant/10">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-10 h-10 rounded bg-primary-container text-on-primary font-bold">1</button>
+<button class="w-10 h-10 rounded bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest">2</button>
+<button class="w-10 h-10 rounded bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest">3</button>
+<button class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary border border-outline-variant/10">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+<!-- Atmospheric Micro-Interaction: Hover Effect Shadow Glow -->
+<script>
+            document.querySelectorAll('.bg-surface-container').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        </script>
+<style>
+            .bg-surface-container::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(242, 202, 80, 0.03), transparent 40%);
+                opacity: 0;
+                transition: opacity 0.5s;
+                pointer-events: none;
+                border-radius: inherit;
+            }
+            .bg-surface-container:hover::before {
+                opacity: 1;
+            }
+            .bg-surface-container {
+                position: relative;
+            }
+        </style>
+</main>
+<!-- Contextual FAB - Restricted as per mandate (Suppressed on Ledger/Details) -->
+<!-- (None rendered here as this is a focused task/ledger page) -->
+</body></html>

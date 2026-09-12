@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex flex-col w-full min-h-screen overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-4 lg:px-10 py-3">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight hidden md:block">منصة MJM للأعمال الذكية</h2>
+</div>
+<div class="relative hidden sm:block">
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-primary/60">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="block w-64 md:w-80 bg-white/5 border border-primary/20 rounded-lg py-2 pr-10 pl-3 text-sm focus:ring-primary focus:border-primary text-slate-100 placeholder-slate-500" placeholder="بحث عن منتج، مورد أو طلب..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 lg:gap-8">
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-primary font-bold text-sm border-b-2 border-primary pb-1" href="#">لوحة القيادة</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm" href="#">المشتريات</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm" href="#">المستودعات</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm" href="#">الموردين</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-primary/30 bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm">language</span>
+<span>العربية / EN</span>
+</button>
+<div class="h-10 w-10 rounded-full border-2 border-primary overflow-hidden bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="Corporate Executive Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiJMh7Xd_BPjAhFGZGb3ZBEBl7Rv9I2LU4EyCZEzUTrvNML1EAwRksIjWPNSMJ5HZnYtB7QU2trKZ2XOEfwyNmDZRNw0GJqVLkyKq8CjTRdoiRqi40jtBFF3xNvYm6JJpFznQA3eS1FQ4Fd0npjNdhS0dfxn_DLHwNHgM-LIcJNMisn0qxohEmDq5QbWP5E6RjmiDqwVSg6WkRXluWuoc0UFRwJBIX4TERiaR0a8Ddwj2tLXFu250emzeeCLhOSkqvfCTm2x_R7A"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1440px] mx-auto p-4 md:p-8 space-y-8">
+<!-- Hero Header & AI Alerts -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="xl:col-span-2 space-y-2">
+<h1 class="text-3xl md:text-4xl font-black text-slate-100">إدارة المشتريات والمستودعات الفاخرة</h1>
+<p class="text-slate-400 text-lg">تحليلات دقيقة لأداء المخزون وسلاسل التوريد الخاصة بك</p>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div class="flex-1">
+<h4 class="text-primary font-bold text-sm mb-1">تنبيهات الذكاء الاصطناعي الذكية</h4>
+<p class="text-slate-300 text-xs leading-relaxed">سينفد "رخام إيطالي كرارا" خلال 3 أيام بناءً على معدل الاستهلاك الحالي.</p>
+<button class="mt-3 text-primary text-xs font-bold flex items-center gap-1 hover:underline">
+                            إعادة طلب الآن <span class="material-symbols-outlined text-xs">arrow_left</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white/5 border border-primary/10 rounded-xl p-6 relative overflow-hidden group hover:border-primary/40 transition-all">
+<div class="absolute top-0 left-0 w-24 h-24 bg-primary/5 rounded-br-full -ml-8 -mt-8 transition-all group-hover:scale-110"></div>
+<p class="text-slate-400 text-sm font-medium">إجمالي قيمة المخزون</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-3xl font-bold text-slate-100">$4,250,000</h3>
+<span class="text-emerald-400 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +5.2%
+                        </span>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 rounded-xl p-6 relative overflow-hidden group hover:border-primary/40 transition-all">
+<p class="text-slate-400 text-sm font-medium">عناصر خارج المخزون</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-3xl font-bold text-slate-100">12 عنصر</h3>
+<span class="text-rose-400 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">warning</span> حرجة
+                        </span>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 rounded-xl p-6 relative overflow-hidden group hover:border-primary/40 transition-all">
+<p class="text-slate-400 text-sm font-medium">شحنات قيد الانتظار</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-3xl font-bold text-slate-100">08 شحنات</h3>
+<span class="text-primary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">local_shipping</span> قيد النقل
+                        </span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Stock Management Table -->
+<div class="lg:col-span-3 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+                            إدارة المخزون
+                        </h2>
+<div class="flex gap-2">
+<button class="bg-primary text-background-dark font-bold py-2 px-4 rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-all text-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+                                إضافة منتج
+                            </button>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 rounded-xl overflow-hidden">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-white/5 text-slate-400 text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-semibold">الوصف</th>
+<th class="px-6 py-4 font-semibold">الفئة</th>
+<th class="px-6 py-4 font-semibold text-center">الكمية</th>
+<th class="px-6 py-4 font-semibold text-center">سعر الوحدة</th>
+<th class="px-6 py-4 font-semibold text-center">الحالة</th>
+<th class="px-6 py-4 font-semibold text-center">إجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-200">أرضيات خشب الساج الفاخر</td>
+<td class="px-6 py-4 text-slate-400 text-sm">مواد بناء</td>
+<td class="px-6 py-4 text-center font-mono">1,200 m²</td>
+<td class="px-6 py-4 text-center font-mono">$120.00</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-400/10 text-emerald-400 border border-emerald-400/20 uppercase">متوفر</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-200">رخام إيطالي كرارا</td>
+<td class="px-6 py-4 text-slate-400 text-sm">مواد بناء</td>
+<td class="px-6 py-4 text-center font-mono">45 m²</td>
+<td class="px-6 py-4 text-center font-mono">$450.00</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-400/10 text-amber-400 border border-amber-400/20 uppercase">منخفض</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-200">ثريات كريستال سواروفسكي</td>
+<td class="px-6 py-4 text-slate-400 text-sm">إضاءة ديكور</td>
+<td class="px-6 py-4 text-center font-mono">08 unit</td>
+<td class="px-6 py-4 text-center font-mono">$3,200.00</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-400/10 text-emerald-400 border border-emerald-400/20 uppercase">متوفر</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 font-medium text-slate-200">نوافذ زجاجية عازلة للحرارة</td>
+<td class="px-6 py-4 text-slate-400 text-sm">واجهات</td>
+<td class="px-6 py-4 text-center font-mono">0 unit</td>
+<td class="px-6 py-4 text-center font-mono">$850.00</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-rose-400/10 text-rose-400 border border-rose-400/20 uppercase">نافذ</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Side Panel: Purchasing & Suppliers -->
+<div class="space-y-8">
+<!-- Purchasing Workflow -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold text-slate-100">سير عمل المشتريات</h2>
+<button class="text-primary text-xs font-bold hover:underline">الكل</button>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-white/5 border-r-4 border-amber-400 rounded-lg">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-slate-200">طلب #4592 - أسلاك نحاسية</p>
+<span class="text-[10px] text-amber-400 font-bold">قيد الموافقة</span>
+</div>
+<p class="text-xs text-slate-400">منذ ساعتين • المورد: السويدي للكابلات</p>
+</div>
+<div class="p-3 bg-white/5 border-r-4 border-primary rounded-lg">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-slate-200">طلب #4588 - دهانات جوتن</p>
+<span class="text-[10px] text-primary font-bold">في الطريق</span>
+</div>
+<p class="text-xs text-slate-400">أمس • وصول متوقع: غداً</p>
+</div>
+<button class="w-full py-3 bg-primary/10 border border-dashed border-primary/40 rounded-lg text-primary text-sm font-bold flex items-center justify-center gap-2 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-lg">shopping_cart_checkout</span>
+                                طلب شراء جديد (Alt+N)
+                            </button>
+</div>
+</div>
+<!-- Supplier Management -->
+<div class="space-y-4">
+<h2 class="text-lg font-bold text-slate-100">الموردين المميزين</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer border border-transparent hover:border-primary/20">
+<div class="h-10 w-10 bg-slate-800 rounded-lg flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">factory</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-200">شركة الخليج للحديد</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary fill-current">star</span>
+<span class="text-[10px] text-slate-400">4.9 (ممتاز)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer border border-transparent hover:border-primary/20">
+<div class="h-10 w-10 bg-slate-800 rounded-lg flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-200">المتحدة للديكور</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary fill-current">star</span>
+<span class="text-[10px] text-slate-400">4.7 (جيد جداً)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shortcuts -->
+<footer class="mt-auto border-t border-primary/10 bg-background-dark/50 px-6 py-4">
+<div class="max-w-[1440px] mx-auto flex flex-wrap gap-6 text-xs text-slate-500 font-medium">
+<div class="flex items-center gap-2">
+<span class="bg-white/10 text-slate-300 px-1.5 py-0.5 rounded border border-white/20">Alt+N</span>
+<span>طلب شراء جديد</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-white/10 text-slate-300 px-1.5 py-0.5 rounded border border-white/20">Alt+S</span>
+<span>البحث السريع</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-white/10 text-slate-300 px-1.5 py-0.5 rounded border border-white/20">Alt+I</span>
+<span>تقارير المخزون</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-white/10 text-slate-300 px-1.5 py-0.5 rounded border border-white/20">Alt+P</span>
+<span>طباعة القوائم</span>
+</div>
+<div class="mr-auto text-slate-400">
+                    © 2024 منصة MJM للأعمال الذكية. جميع الحقوق محفوظة.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                        "card-dark": "#161616",
+                        "border-dark": "#2a261a",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #f1d592 50%, #D4AF37 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #161616;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2a261a;
+            border-radius: 10px;
+        }
+        .table-row-hover:hover {
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen bg-background-dark">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-64 bg-card-dark border-l border-border-dark z-50 hidden lg:flex flex-col">
+<div class="p-6 border-b border-border-dark flex items-center gap-3">
+<div class="size-10 gold-gradient rounded-lg flex items-center justify-center text-background-dark shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined font-bold">account_balance</span>
+</div>
+<div>
+<h1 class="text-primary font-bold text-lg leading-tight tracking-wide">MJM Smart</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Business Intelligence</p>
+</div>
+</div>
+<nav class="flex-1 p-4 space-y-2 overflow-y-auto custom-scrollbar">
+<div class="text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">القائمة الرئيسية</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">لوحة التحكم الاستراتيجية</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="text-sm font-medium">شجرة الحسابات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-medium">القيود المحاسبية</span>
+</a>
+<div class="pt-6 text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">التحليل القطاعي</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">apartment</span>
+<span class="text-sm font-medium">الأصول والعقارات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-sm font-medium">الشحن واللوجستيات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-medium">الخدمات العامة</span>
+</a>
+<div class="pt-6 text-[11px] font-bold text-slate-500 px-3 pb-2 uppercase tracking-wider">التقارير المالية</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">ميزان المراجعة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 text-slate-400 transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm font-medium">قائمة الأرباح والخسائر</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-dark bg-black/20">
+<div class="flex items-center justify-between text-[10px] text-slate-500 mb-2">
+<span>اختصارات لوحة المفاتيح</span>
+<span class="material-symbols-outlined text-xs">keyboard</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-card-dark p-1.5 border border-border-dark rounded text-center">
+<kbd class="text-primary text-[10px] font-bold">Alt + P</kbd>
+<div class="text-[9px] text-slate-400">التقارير</div>
+</div>
+<div class="bg-card-dark p-1.5 border border-border-dark rounded text-center">
+<kbd class="text-primary text-[10px] font-bold">Alt + J</kbd>
+<div class="text-[9px] text-slate-400">القيود</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:mr-64 p-4 lg:p-8">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-2xl font-bold text-slate-100">التقارير المالية - قطاع العقارات</h2><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20 mt-1">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+                    صلاحيات محدودة: قطاع العقارات فقط
+                </span>
+<p class="text-slate-400 text-sm">مرحباً بك، نظام MJM الذكي يعمل بكفاءة قصوى</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="absolute right-3 top-2.5 text-slate-500 material-symbols-outlined">search</span>
+<input class="bg-card-dark border-border-dark rounded-lg pr-10 pl-4 py-2 text-sm w-64 focus:ring-primary focus:border-primary" placeholder="بحث سريع عن قيود أو تقارير..." type="text"/>
+</div>
+<button class="gold-gradient text-background-dark font-bold px-6 py-2 rounded-lg flex items-center gap-2 text-sm shadow-xl shadow-primary/10">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    قيد محاسبي جديد
+                </button>
+</div>
+</header>
+<!-- Top Metrics (Net Profit Intelligence) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">إجمالي إيرادات العقارات</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">$842,500</h3>
+</div>
+<span class="text-green-500 bg-green-500/10 px-2 py-1 rounded text-xs font-bold">+15.2%</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm text-primary">apartment</span>
+<span>أداء قوي في قطاع المحلات التجارية</span>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">مصاريف الصيانة والتشغيل</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">$120,300</h3>
+</div>
+<span class="text-red-500 bg-red-500/10 px-2 py-1 rounded text-xs font-bold">-5.4%</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm">handyman</span>
+<span>تحسين كفاءة الصيانة الدورية</span>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-slate-400 text-sm mb-1">عدد الوحدات المؤجرة</p>
+<h3 class="text-2xl font-bold text-white tracking-tight">142 وحدة</h3>
+</div>
+<span class="text-primary bg-primary/10 px-2 py-1 rounded text-xs font-bold">94%</span>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-sm">key</span>
+<span>نسبة الإشغال مرتفعة هذا الربع</span>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/30 p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute left-0 bottom-0 w-full h-1 gold-gradient"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<p class="text-primary text-sm mb-1 font-bold">صافي ربح العقارات</p>
+<h3 class="text-3xl font-bold text-white tracking-tight">$722,200</h3>
+</div>
+<div class="size-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">real_estate_agent</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-2 text-[11px] text-primary font-medium">
+<span class="material-symbols-outlined text-sm font-bold">auto_awesome</span>
+<span>توقعات بنمو 5% من عقود الإيجار الجديدة</span>
+</div>
+</div>
+</div>
+<!-- Revenue Segmentation & Classification -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+<!-- Revenue Segmentation Chart -->
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-100 flex items-center gap-2"><span class="material-symbols-outlined text-primary">bar_chart</span> إيرادات العقارات الشهرية</h4>
+<select class="bg-background-dark border-border-dark text-xs rounded-lg py-1 px-3 text-slate-400">
+<option>الربع الحالي</option>
+<option>السنة الحالية</option>
+</select>
+</div>
+<div class="flex items-end justify-between h-48 gap-4 px-4"><div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/20 rounded-t-lg relative group h-[65%] border-x border-t border-primary/30"></div>
+<span class="text-[10px] text-slate-400 text-center">أكتوبر</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/40 rounded-t-lg relative group h-[80%] border-x border-t border-primary/30"></div>
+<span class="text-[10px] text-slate-400 text-center">نوفمبر</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/60 rounded-t-lg relative group h-[95%] border-x border-t border-primary/30"></div>
+<span class="text-[10px] text-slate-400 text-center">ديسمبر</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary rounded-t-lg relative group h-[85%] border-x border-t border-primary/30"></div>
+<span class="text-[10px] text-slate-400 text-center">يناير</span>
+</div></div>
+</div>
+<!-- Classification Analysis (Employee Classes) -->
+<div class="bg-card-dark border border-border-dark p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-bold text-slate-100 flex items-center gap-2"><span class="material-symbols-outlined text-primary">domain</span> توزيع الإيرادات حسب نوع العقار</h4>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer">info</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">الشقق السكنية</span>
+<span class="text-primary font-bold">55% من الإيرادات</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full gold-gradient" style="width: 55%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">المحلات التجارية</span>
+<span class="text-slate-400 font-bold">30% من الإيرادات</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-slate-600" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-300 font-medium">المباني الإدارية</span>
+<span class="text-slate-400 font-bold">15% من الإيرادات</span>
+</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-slate-800" style="width: 15%"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 p-3 bg-primary/5 rounded-lg border border-primary/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<p class="text-[11px] text-slate-400 leading-relaxed">تقرير الإشغال يشير إلى أن تجديد المحلات في المنطقة الجنوبية قد يرفع الإيرادات بنسبة 12%.</p>
+</div>
+</div>
+</div>
+<!-- Live Automated Journal Entries Feed -->
+<div class="bg-card-dark border border-border-dark rounded-xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-3 bg-red-500 rounded-full animate-pulse"></div>
+<h4 class="font-bold text-slate-100">مراقبة عقود الإيجار والتحصيلات العقارية</h4>
+</div>
+<div class="flex gap-2">
+<button class="text-slate-400 hover:text-white p-2 border border-border-dark rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+<button class="text-slate-400 hover:text-white p-2 border border-border-dark rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead class="bg-black/40 text-slate-500 text-[11px] uppercase tracking-wider">
+<tr><th class="px-6 py-4 font-bold">التوقيت</th><th class="px-6 py-4 font-bold">اسم العقار والوحدة</th><th class="px-6 py-4 font-bold">مبلغ الإيجار</th><th class="px-6 py-4 font-bold">حالة الدفع</th><th class="px-6 py-4 font-bold">الإجراء</th></tr>
+</thead>
+<tbody class="divide-y divide-border-dark text-sm"><tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">12:45:00</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">برج النخبة - وحدة 402</div>
+<div class="text-[10px] text-slate-500">عقد سنوي - سكني</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">$4,500.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-green-500 text-xs">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+            تم التحصيل
+        </div>
+</td>
+<td class="px-6 py-4">
+<button class="text-[10px] border border-border-dark px-2 py-1 rounded text-slate-400 hover:text-primary">التفاصيل</button>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">10:30:15</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">مركز الجوهرة - محل 12</div>
+<div class="text-[10px] text-slate-500">عقد ربع سنوي - تجاري</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">$12,000.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-primary text-xs">
+<span class="material-symbols-outlined text-xs">pending</span>
+            قيد الانتظار
+        </div>
+</td>
+<td class="px-6 py-4">
+<button class="text-[10px] border border-border-dark px-2 py-1 rounded text-slate-400 hover:text-primary">التفاصيل</button>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors group">
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">09:15:20</td>
+<td class="px-6 py-4">
+<div class="text-slate-100 font-medium">فيلا الياسمين - الوحدة 3</div>
+<div class="text-[10px] text-slate-500">عقد سنوي - سكني</div>
+</td>
+<td class="px-6 py-4 text-primary font-bold">$35,000.00</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-red-500 text-xs">
+<span class="material-symbols-outlined text-xs">error</span>
+            متأخر
+        </div>
+</td>
+<td class="px-6 py-4">
+<button class="text-[10px] border border-border-dark px-2 py-1 rounded text-slate-400 hover:text-primary">التفاصيل</button>
+</td>
+</tr></tbody>
+</table>
+</div>
+<div class="p-4 bg-black/20 border-t border-border-dark flex justify-center">
+<button class="text-xs text-slate-400 hover:text-primary transition-colors flex items-center gap-2">
+                    عرض جميع القيود المحاسبية للـ 24 ساعة الماضية
+                    <span class="material-symbols-outlined text-sm">keyboard_double_arrow_down</span>
+</button>
+</div>
+</div>
+<!-- Strategic Financial Access Footer -->
+<footer class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">balance</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">ميزان المراجعة الذكي</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تدقيق آني لكافة أرصدة الحسابات المدينة والدائنة</p>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">التدفقات النقدية</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تحليل السيولة الواردة والخارجة والتوقعات المستقبلية</p>
+</div>
+</div>
+<div class="bg-card-dark border border-border-dark p-5 rounded-xl flex items-center gap-4 hover:border-primary/60 transition-all cursor-pointer group shadow-lg">
+<div class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">description</span>
+</div>
+<div>
+<h5 class="font-bold text-white text-sm">الأرباح والخسائر P&amp;L</h5>
+<p class="text-[10px] text-slate-500 leading-tight mt-1">تقرير مفصل للأداء المالي القطاعي والإجمالي</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Bar (Fixed Bottom) -->
+<div class="fixed bottom-0 left-0 w-full bg-card-dark border-t border-border-dark p-2 flex justify-around items-center lg:hidden z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px]">الرئيسية</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px]">القيود</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px]">التقارير</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px]">الإعدادات</span>
+</button>
+</div>
+</body></html>

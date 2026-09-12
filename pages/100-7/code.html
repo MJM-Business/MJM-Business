@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مركز قيادة الأقسام الموحد | Sovereign Executive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#dac58d",
+              "primary-fixed-dim": "#e9c349",
+              "on-tertiary-fixed-variant": "#27438a",
+              "on-secondary": "#3c2f05",
+              "inverse-primary": "#735c00",
+              "primary-container": "#d4af37",
+              "secondary": "#dac58d",
+              "outline-variant": "#4d4635",
+              "on-secondary-fixed": "#241a00",
+              "on-tertiary-fixed": "#00174b",
+              "on-primary-fixed-variant": "#574500",
+              "tertiary-container": "#97b0ff",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "primary": "#f2ca50",
+              "on-primary": "#3c2f00",
+              "surface-container-highest": "#353534",
+              "on-secondary-fixed-variant": "#544519",
+              "on-surface-variant": "#d0c5af",
+              "outline": "#99907c",
+              "surface-variant": "#353534",
+              "tertiary-fixed": "#dbe1ff",
+              "on-primary-fixed": "#241a00",
+              "on-tertiary-container": "#254188",
+              "on-background": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "surface-dim": "#131313",
+              "on-secondary-container": "#c8b37d",
+              "surface-container": "#201f1f",
+              "on-surface": "#e5e2e1",
+              "on-tertiary": "#082b72",
+              "surface-bright": "#3a3939",
+              "secondary-container": "#544519",
+              "surface-container-low": "#1c1b1b",
+              "primary-fixed": "#ffe088",
+              "background": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "surface-tint": "#e9c349",
+              "secondary-fixed": "#f7e1a6",
+              "on-primary-container": "#554300",
+              "surface-container-lowest": "#0e0e0e",
+              "error": "#ffb4ab",
+              "tertiary": "#bfcdff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.15);
+        }
+        body {
+            background-color: #0E0E0E;
+            color: #E5E2E1;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f2ca50;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-64 bg-[#1C1B1B] flex flex-col p-4 z-50 border-l border-[#4D4635]/20">
+<div class="mb-10 px-2 flex items-center gap-3">
+<img alt="MJM Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACFqbMFOXMcKhRZ_w_VIklSADNsDfvjRgbCpr4AEeYMGSb1G_krP2p-81J81zgBAJNAb3Mf_OnlILvI06ZYwuexogSzLq3QcCnbvgELBI2ndArkumLvrl7pFfKYPU58SoZfy0NcNYOx32m-i5L8vPO5IlIL9HUkovePPzTfgXC7DfSxdKAvUjXZbPWyQRn0M0H8EC_vZWXgnFvWdDjTF_fOpHq8d03SYpNqLHQGLktR9t9rLa38G_MgF-QvrrwGLRenBm7EY4XQg"/>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-primary tracking-tighter text-lg leading-none">MJM SMART</span>
+<span class="text-[0.65rem] text-on-surface-variant uppercase tracking-[0.2em]">Platform</span>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-primary bg-[#2A2A2A] rounded-md border-r-4 border-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-[0.875rem]">لوحة القيادة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="font-medium text-[0.875rem]">الخدمات العامة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-medium text-[0.875rem]">الأصول</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-medium text-[0.875rem]">الخدمات اللوجستية</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-medium text-[0.875rem]">المحاسبة</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="flight">flight</span>
+<span class="font-medium text-[0.875rem]">السفر والشحن</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-medium text-[0.875rem]">واتساب</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant/70 hover:text-primary hover:bg-[#2A2A2A]/50 rounded-md transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+<span class="font-medium text-[0.875rem]">الأمن</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant/70 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium text-[0.875rem]">الإعدادات</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant/70 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-medium text-[0.875rem]">الدعم الفني</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pr-64 h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-[#131313] flex justify-between items-center w-full px-8 py-6 shadow-[0_0_8px_#F2CA50]/10 border-b border-[#1C1B1B]">
+<div class="flex items-center gap-8 flex-1">
+<h1 class="font-headline text-2xl font-bold tracking-tighter text-primary">مركز قيادة الأقسام الموحد</h1>
+<!-- Search Bar -->
+<div class="relative w-96 max-w-md">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant/50 text-xl" data-icon="search">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pr-11 py-2 text-sm text-on-surface focus:ring-1 focus:ring-primary/50 placeholder:text-on-surface-variant/30 font-body" placeholder="بحث في النظام الشامل..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 left-2 w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_#F2CA50]"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/20">
+<div class="text-left flex flex-col">
+<span class="text-sm font-bold text-on-surface leading-none text-right">الإدارة التنفيذية</span>
+<span class="text-[0.65rem] text-primary/70 font-label uppercase tracking-wider text-right">EXECUTIVE VIEW</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary/30 p-0.5 overflow-hidden">
+<img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk0zTZaw9zGPPpgq0_NK3pCjFRAq_tmhBl0tYscTE8Wiv956bOILD4DVxPyZ5g6jBFniPk7yq2JtQX_Uoau7yjSlTdqdHY_1yldXGlZFK5VtJX7oeqiRKlSfsEhB7PuKaX8BrmnAEv1t9whhZiwZ14ZPmlfnGyXmHon5lN5Nu-BTUlwRWYZIF-kod6NmbfHjBjzuWhoXXdis9auw-0KHGZc9vl6Gi5ElMFs_N4GYHithNNi2u15YeFEGJgXa6WN9-mu2djHvxo3g"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Grid Section -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8 bg-[#0E0E0E]">
+<!-- Key Metrics Overview (Bento Grid) -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Assets Management Card -->
+<div class="col-span-12 lg:col-span-4 glass-card p-6 rounded-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="text-left">
+<span class="text-primary-fixed font-bold text-2xl tracking-tight">1,284</span>
+<p class="text-[0.6875rem] text-on-surface-variant/60 uppercase">إجمالي الوحدات</p>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1">إدارة الأصول</h3>
+<p class="text-on-surface-variant text-sm mb-6">إدارة المحافظ الاستثمارية والأصول المادية</p>
+<div class="flex items-center justify-between mb-6">
+<div class="space-y-1">
+<span class="text-xs text-on-surface-variant/50">معدل الإشغال</span>
+<div class="flex items-center gap-2">
+<div class="w-32 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+<span class="text-xs font-bold text-primary">92%</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary-container text-on-primary font-bold text-sm rounded transition-transform active:scale-95">فتح المحفظة</button>
+</div>
+<!-- Accounting & Finance Card -->
+<div class="col-span-12 lg:col-span-4 glass-card p-6 rounded-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="text-left">
+<span class="text-primary-fixed font-bold text-2xl tracking-tight">$4.2M</span>
+<p class="text-[0.6875rem] text-on-surface-variant/60 uppercase">صافي الربح للربع الثالث</p>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1">المحاسبة والمالية</h3>
+<p class="text-on-surface-variant text-sm mb-6">التدفقات النقدية والميزانيات العمومية</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-lowest p-2 rounded border border-outline-variant/10">
+<span class="text-[0.6rem] text-on-surface-variant uppercase block">الرصيد الحالي</span>
+<span class="text-sm font-bold">$12,450,000</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded border border-outline-variant/10">
+<span class="text-[0.6rem] text-on-surface-variant uppercase block">التكلفة التشغيلية</span>
+<span class="text-sm font-bold text-error">$840K</span>
+</div>
+</div>
+<button class="w-full py-2.5 bg-primary-container text-on-primary font-bold text-sm rounded transition-transform active:scale-95">السجل المالي</button>
+</div>
+<!-- Logistics & Transport Card -->
+<div class="col-span-12 lg:col-span-4 glass-card p-6 rounded-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="local_shipping" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="text-left">
+<span class="text-primary-fixed font-bold text-2xl tracking-tight">42</span>
+<p class="text-[0.6875rem] text-on-surface-variant/60 uppercase">الرحلات النشطة</p>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1">الخدمات اللوجستية</h3>
+<p class="text-on-surface-variant text-sm mb-6">إدارة الأسطول وحركة النقل البري</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex -space-x-2 space-x-reverse">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] text-on-primary font-bold ring-2 ring-surface">TR</div>
+<div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-[10px] text-on-secondary font-bold ring-2 ring-surface">SH</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] text-on-surface font-bold ring-2 ring-surface">+8</div>
+</div>
+<span class="text-xs text-on-surface-variant/80">حالة الأسطول: <span class="text-primary">مفعل</span></span>
+</div>
+<button class="w-full py-2.5 bg-primary-container text-on-primary font-bold text-sm rounded transition-transform active:scale-95">تحكم التوزيع</button>
+</div>
+<!-- General Services Card -->
+<div class="col-span-12 lg:col-span-3 glass-card p-6 rounded-xl group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="business_center">business_center</span>
+<h3 class="font-headline text-lg font-bold">الخدمات العامة</h3>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">المعاملات اليومية</span>
+<span class="text-on-surface font-bold">142</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">الكفاءة</span>
+<span class="text-primary font-bold">98.4%</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary/20 hover:bg-primary/5 text-primary text-xs font-bold rounded">دخول سريع</button>
+</div>
+<!-- Travel & Cargo Card -->
+<div class="col-span-12 lg:col-span-3 glass-card p-6 rounded-xl group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="flight">flight</span>
+<h3 class="font-headline text-lg font-bold">السفر والشحن</h3>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">الحجوزات</span>
+<span class="text-on-surface font-bold">28 قيد الانتظار</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">حجم الشحن</span>
+<span class="text-on-surface font-bold">12.5 طن</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary/20 hover:bg-primary/5 text-primary text-xs font-bold rounded">مركز الحجز</button>
+</div>
+<!-- WhatsApp Automation Card -->
+<div class="col-span-12 lg:col-span-3 glass-card p-6 rounded-xl group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="chat">chat</span>
+<h3 class="font-headline text-lg font-bold">أتمتة الواتساب</h3>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">الرسائل</span>
+<span class="text-on-surface font-bold">4.2k/يوم</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">دقة الذكاء الاصطناعي</span>
+<span class="text-primary-fixed font-bold">94%</span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary/20 hover:bg-primary/5 text-primary text-xs font-bold rounded">مركز الاتصالات</button>
+</div>
+<!-- Security & Permissions Card -->
+<div class="col-span-12 lg:col-span-3 glass-card p-6 rounded-xl group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="security">security</span>
+<h3 class="font-headline text-lg font-bold">الأمن والصلاحيات</h3>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">الجلسات النشطة</span>
+<span class="text-on-surface font-bold">12 مستخدم</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">حالة النظام</span>
+<span class="flex items-center gap-1 text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary gold-glow"></span>
+                                مستقر
+                            </span>
+</div>
+</div>
+<button class="w-full py-2 border border-primary/20 hover:bg-primary/5 text-primary text-xs font-bold rounded">التحكم بالوصول</button>
+</div>
+</div>
+<!-- Global Activity Feed -->
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/5">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+<h2 class="font-headline text-lg font-bold">نشاط النظام العالمي (بث حي)</h2>
+</div>
+<span class="text-[0.6875rem] text-primary/60 font-label tracking-widest uppercase">تحديثات النظام الحية</span>
+</div>
+<div class="space-y-4 max-h-64 overflow-y-auto custom-scrollbar">
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10 group hover:bg-surface-container transition-colors px-2">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-sm font-medium">تمت معالجة دفعة جديدة بقيمة <span class="text-primary">$12,400</span></p>
+<span class="text-[0.7rem] text-on-surface-variant/50">وحدة المحاسبة • منذ دقيقتين</span>
+</div>
+</div>
+<span class="text-[0.65rem] px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">نجاح</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10 group hover:bg-surface-container transition-colors px-2">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<p class="text-sm font-medium">انطلاق الرحلة رقم #L-9042 نحو المنطقة الغربية</p>
+<span class="text-[0.7rem] text-on-surface-variant/50">وحدة الخدمات اللوجستية • منذ 14 دقيقة</span>
+</div>
+</div>
+<span class="text-[0.65rem] px-2 py-0.5 rounded bg-secondary-container/30 text-secondary-fixed-dim border border-secondary/20">قيد التنفيذ</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant/10 group hover:bg-surface-container transition-colors px-2">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="security">security</span>
+</div>
+<div>
+<p class="text-sm font-medium">تحديث صلاحيات المستخدم: "أحمد منصور" - رتبة تنفيذية</p>
+<span class="text-[0.7rem] text-on-surface-variant/50">وحدة الأمن • منذ 45 دقيقة</span>
+</div>
+</div>
+<span class="text-[0.65rem] px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant/80">مسؤول النظام</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer / Status Bar -->
+<footer class="h-10 bg-surface-container-lowest border-t border-outline-variant/5 px-8 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary gold-glow"></span>
+<span class="text-[0.65rem] font-bold text-on-surface-variant">حالة الخادم: مثالية</span>
+</div>
+<div class="h-3 w-px bg-outline-variant/20"></div>
+<span class="text-[0.65rem] text-on-surface-variant/50">MJMS-PRD-01 Node Active</span>
+</div>
+<div class="text-[0.65rem] text-on-surface-variant/50">
+                © 2024 منصة MJM للأعمال الذكية. جميع الحقوق محفوظة.
+            </div>
+</footer>
+</main>
+</body></html>

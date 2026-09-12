@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffdad6",
+              "primary": "#d4af37",
+              "error": "#ffb4ab",
+              "on-secondary-fixed-variant": "#544519",
+              "primary-container": "#d4af37",
+              "outline-variant": "#4d4635",
+              "on-surface-variant": "#d0c5af",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#dac58d",
+              "on-tertiary-fixed-variant": "#27438a",
+              "on-tertiary-fixed": "#00174b",
+              "surface-bright": "#3a3939",
+              "on-primary": "#3c2f00",
+              "tertiary": "#bfcdff",
+              "surface-variant": "#353534",
+              "on-tertiary": "#082b72",
+              "on-primary-fixed-variant": "#574500",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary-fixed": "#241a00",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#544519",
+              "surface-container-lowest": "#0e0e0e",
+              "background": "#0b0b0b",
+              "tertiary-fixed": "#dbe1ff",
+              "inverse-on-surface": "#313030",
+              "outline": "#99907c",
+              "surface-tint": "#d4af37",
+              "primary-fixed": "#ffe088",
+              "on-background": "#e5e2e1",
+              "secondary": "#dac58d",
+              "on-primary-container": "#554300",
+              "surface-container": "#1a1a1a",
+              "on-tertiary-container": "#254188",
+              "on-surface": "#e5e2e1",
+              "surface-dim": "#0b0b0b",
+              "on-secondary": "#3c2f05",
+              "secondary-fixed": "#f7e1a6",
+              "primary-fixed-dim": "#d4af37",
+              "on-secondary-container": "#c8b37d",
+              "inverse-primary": "#735c00",
+              "on-primary-fixed": "#241a00",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "surface": "#0b0b0b",
+              "tertiary-container": "#97b0ff",
+              "surface-container-low": "#131313",
+              "surface-container-highest": "#353534",
+              "error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .headline-font { font-family: 'Manrope', sans-serif; }
+        .gold-border { border-color: #d4af37; }
+        .gold-glow { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0b0b0b; }
+        ::-webkit-scrollbar-thumb { background: #4d4635; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #d4af37); }
+            50% { opacity: 0.5; filter: drop-shadow(0 0 10px #d4af37); }
+        }
+        .animate-pulse-gold { animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed top-0 right-0 h-full w-72 bg-[#131313] border-l border-[#4d4635]/30 shadow-2xl z-40 hidden lg:flex flex-col py-8 px-4 text-right">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 bg-transparent flex items-center justify-center rounded-lg overflow-hidden">
+<img alt="MJM Logo" class="h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhsYsTjeDo42W4UO0CmX7ClL7RnnPBtLYyqLc3akgqOqoxbrkBia_VfUmnNTf_iFtRl2P0u6c_3mY-iMq9rfAdFbMxU8zUOYlmIjJ1yhf0h3jSSmVVdTECbdptsR0Z9ZUpffPyDemaR_gfSlW6pzsElfO7Kk2tMzxFbwpB-pgfXe1LyA27IvpKOR7NNfR3SrBtfSCXcZ7oLBBWul8ObbvpBCIM5QhhLcanaKNw3IIbfnjyWSxt-FPtYkXbPd6lIpj6hVkIIRrOE"/>
+</div>
+<div>
+<h2 class="text-primary text-lg font-black headline-font leading-none uppercase">MJM SOVEREIGN</h2>
+<p class="text-[#D0C5AF]/40 text-[10px] mt-1 tracking-widest uppercase">الخدمات العامة</p>
+</div>
+</div>
+<!-- Quick Stats Sidebar (User Level) -->
+<div class="bg-[#1a1a1a] rounded-lg p-4 border border-[#4d4635]/20">
+<p class="text-[10px] text-[#D0C5AF]/50 mb-2 uppercase">حساب الموظف</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#353534] flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-xs text-primary">person</span>
+</div>
+<div>
+<p class="text-xs font-bold">فهد العتيبي</p>
+<p class="text-[10px] text-primary/70">أخصائي خدمات</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<p class="px-4 text-[10px] text-[#D0C5AF]/30 mb-2 font-bold uppercase tracking-tighter">بوابة الموظف</p>
+<a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/10 border-r-2 border-primary transition-colors rounded-l-lg" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-medium text-sm">معاملاتي الحالية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:bg-[#1a1a1a] hover:text-primary transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+<span class="font-medium text-sm">أدائي المالي</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:bg-[#1a1a1a] hover:text-primary transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl">mark_chat_unread</span>
+<span class="font-medium text-sm">سجل الإشعارات الآلية</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-[#4d4635]/20">
+<button class="w-full bg-primary text-[#0b0b0b] font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all gold-glow">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span class="text-sm">إضافة معاملة جديدة</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:mr-72 min-h-screen bg-[#0b0b0b] pb-20">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-30 bg-[#0b0b0b]/80 backdrop-blur-md w-full px-8 py-4 flex flex-row-reverse items-center justify-between border-b border-[#4d4635]/10">
+<div class="flex items-center gap-6">
+<div class="relative group cursor-pointer">
+<span class="material-symbols-outlined text-primary transition-colors animate-pulse-gold">notifications</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-error rounded-full border border-[#0b0b0b]"></span>
+</div>
+<div class="h-8 w-px bg-[#4d4635]/30"></div>
+<div class="flex items-center gap-3">
+<div class="text-left leading-tight hidden sm:block">
+<p class="text-xs font-bold text-[#E5E2E1]">نظام الموظفين</p>
+<p class="text-[10px] text-[#D0C5AF]/50">بوابة الخدمات</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#1a1a1a] to-[#353534] border border-[#4d4635]/30 flex items-center justify-center overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq_nvtMsL3EgsrSczzR7yTJw6-_MgGhDNSm-Tn-4DIuUMSgJS3JKQ9edbZQmb7hLbvhJALomErqmAbrXm-xu2etVFxLlTXXqs8tA9sCQ_2zFMQIyJXvy9uEmJo1vQBq0gEIkRrcJmAu6_TRff5axXWQL9D4Gws3QXL5VVjIozieK7YCFZWjmaOOZf3pZh3cDgnNFhVKdTh9ePsyEBdy9gT2uClpWP0PTbjpd6MKsDTYqUS8VEcII_0GTNqaksdtEYU7AcMBPLw6Q"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<h1 class="text-xl font-extrabold tracking-tighter text-primary headline-font">لوحة التحكم الخاصة</h1>
+<span class="px-2 py-0.5 rounded text-[10px] bg-primary/10 text-primary border border-primary/20 font-bold uppercase">User Portal</span>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto space-y-8">
+<!-- User Performance Dashboard -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-[#131313] p-6 rounded-xl border border-[#4d4635]/20 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-30"></div>
+<p class="text-[#D0C5AF]/50 text-[11px] mb-1 uppercase tracking-wider">معاملاتي (هذا الشهر)</p>
+<h3 class="text-3xl font-bold headline-font text-[#E5E2E1]">142</h3>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-[10px] text-green-500 bg-green-500/10 px-2 py-1 rounded">+12% عن الشهر الماضي</span>
+</div>
+</div>
+<div class="bg-[#131313] p-6 rounded-xl border border-[#4d4635]/20 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary opacity-30"></div>
+<p class="text-[#D0C5AF]/50 text-[11px] mb-1 uppercase tracking-wider">إجمالي الإيرادات المحققة</p>
+<h3 class="text-3xl font-bold headline-font text-primary">28,450 <span class="text-sm font-normal">ر.س</span></h3>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-[10px] text-primary/60">بناءً على المعاملات المكتملة</span>
+</div>
+</div>
+<div class="bg-[#131313] p-6 rounded-xl border border-[#4d4635]/20 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<p class="text-[#D0C5AF]/50 text-[11px] uppercase tracking-wider">معدل الإنجاز</p>
+<span class="material-symbols-outlined text-primary text-xl">bolt</span>
+</div>
+<div class="mt-2">
+<div class="flex justify-between text-[10px] mb-1">
+<span>متوسط زمن المعالجة</span>
+<span class="text-primary font-bold">2.4 يوم</span>
+</div>
+<div class="w-full bg-[#1a1a1a] h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Transaction Entry & Messaging Focus -->
+<section class="lg:col-span-7 space-y-6">
+<div class="bg-[#131313] rounded-xl overflow-hidden border border-[#4d4635]/20 shadow-xl">
+<div class="p-4 bg-[#1a1a1a] border-b border-[#4d4635]/20 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">post_add</span>
+<h2 class="text-sm font-bold headline-font">إدخال معاملة (خدمات عامة)</h2>
+</div>
+</div>
+<div class="p-6 space-y-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">اسم العميل (Client Name) <span class="text-error">*</span></label>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary placeholder:text-[#4d4635]" placeholder="أدخل الاسم الكامل للعميل..." required="" type="text"/>
+</div>
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">رقم جوال العميل (Phone Number) <span class="text-error">*</span></label>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary placeholder:text-[#4d4635] text-left" dir="ltr" placeholder="+966 5X XXX XXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">نوع المعاملة (Transaction Type)</label>
+<select class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-primary">
+<option>تجديد تراخيص</option>
+<option>استشارات فنية</option>
+<option>تأشيرات وإقامات</option>
+<option>خدمات لوجستية</option>
+</select>
+</div>
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">مدة الإنجاز المتوقعة (أيام)</label>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-primary" placeholder="3" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">التكلفة (Cost)</label>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-primary" placeholder="0.00" type="number"/>
+</div>
+<div>
+<label class="block text-[11px] font-bold text-[#D0C5AF]/70 mb-2">المبلغ المحجوز (Reserved Amount)</label>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg p-3 text-sm focus:ring-primary" placeholder="0.00" type="number"/>
+</div>
+</div>
+<!-- Receipt Actions -->
+<div class="pt-4 border-t border-[#4d4635]/20 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm">offline_share</span>
+<span class="text-[10px] text-[#D0C5AF]/60">التوصيل التلقائي عبر WhatsApp مفعل</span>
+</div>
+<div class="w-10 h-5 bg-primary/20 rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<button class="bg-primary text-[#0b0b0b] font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all gold-glow shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-lg">receipt</span>
+<span class="text-xs">إصدار الفاتورة (Generate Receipt)</span>
+</button>
+<button class="bg-[#353534] border border-[#4d4635] text-[#D0C5AF] font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-[#4d4635] transition-all">
+<span class="material-symbols-outlined text-lg">drafts</span>
+<span class="text-xs">حفظ كمسودة (Save as Draft)</span>
+</button><button class="bg-[#1a1a1a] border border-primary/40 text-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined text-lg">send</span>
+<span class="text-xs">إرسال رابط الموافقة</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Status & Automated Messaging Monitoring -->
+<section class="lg:col-span-5 space-y-6">
+<!-- Automated WhatsApp Status Tracker -->
+<div class="bg-[#131313] rounded-xl border border-primary/30 p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<img alt="WhatsApp" class="w-5 h-5 opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkhgEXOVRPeZEZTz-hLHLtK1YQws2cp7tcXa001N8vT-JJpUJKgFfThT1mEGuvZXnRF_PrCd8Y0WpE0cknt-6JYwGP_u6ZOKHJAEUGDsJbU1sylsxVJGYGlNGbolmOLRGBYdCLvnVH14xwOd5f-Hg8NF5ErQqhyvbUUW3SarqNm-dmKltG35IYctEkwiVswEfVURoqeUIfI80dPbBaMNSnHQDifoI-D75KOhhdm1avmUXruqTa_GGNkHjbdV_NxDUK39RjgdQcVA"/>
+</div>
+<h3 class="text-sm font-bold headline-font text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">hub</span>
+                            حالة الإشعارات الآلية (WhatsApp)
+                        </h3>
+<div class="space-y-6 relative">
+<!-- Progress Line -->
+<div class="absolute right-4 top-2 bottom-2 w-px bg-[#4d4635]/30"></div>
+<!-- Step 1 -->
+<div class="relative flex items-start gap-4 pr-10">
+<div class="absolute right-2.5 top-1.5 w-3 h-3 rounded-full bg-green-500 border-4 border-[#0b0b0b] z-10"></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<h4 class="text-xs font-bold text-[#E5E2E1]">رسالة الترحيب والشكر (Thank You)</h4>
+<span class="text-[9px] bg-green-500/10 text-green-500 px-2 py-0.5 rounded border border-green-500/20">تـم الإرسـال</span>
+</div>
+<p class="text-[10px] text-[#D0C5AF]/40">أُرسلت فور البدء بالمعاملة - 10:30 ص</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-4 pr-10">
+<div class="absolute right-2.5 top-1.5 w-3 h-3 rounded-full bg-green-500 border-4 border-[#0b0b0b] z-10 animate-pulse-gold"></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<h4 class="text-xs font-bold text-[#E5E2E1]">إرسال الفاتورة الرسمية (Receipt)</h4>
+<span class="text-[9px] bg-green-500/10 text-green-500 px-2 py-0.5 rounded border border-green-500/20">تـم الإرسـال</span>
+</div>
+<p class="text-[10px] text-[#D0C5AF]/40 text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">check_circle</span>
+                                        تم تأكيد الاستلام من قبل العميل
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Console -->
+<div class="bg-[#1a1a1a] rounded-xl border border-[#4d4635]/20 p-4">
+<p class="text-[10px] text-[#D0C5AF]/50 mb-3 uppercase font-bold tracking-widest">تحديث الحالة السريع (Action Center)</p>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center gap-1 p-2 bg-green-500/10 border border-green-500/30 rounded-lg hover:bg-green-500/20 transition-all text-green-500">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="text-[10px] font-bold">إنجاز</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 bg-error/10 border border-error/30 rounded-lg hover:bg-error/20 transition-all text-error">
+<span class="material-symbols-outlined text-lg">error</span>
+<span class="text-[10px] font-bold">متعثر</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 bg-[#353534] border border-[#4d4635] rounded-lg hover:bg-[#4d4635] transition-all text-[#D0C5AF]">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span class="text-[10px] font-bold">إغلاق</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Recent Activity Table (User Specific) -->
+<section class="bg-[#131313] rounded-xl border border-[#4d4635]/20 overflow-hidden shadow-2xl">
+<div class="p-5 border-b border-[#4d4635]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<h2 class="text-sm font-bold headline-font flex items-center gap-2 shrink-0">
+<span class="material-symbols-outlined text-primary text-lg">history</span>
+                        آخر معاملاتي المنجزة
+                    </h2>
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#D0C5AF]/40 text-sm">search</span>
+<input class="w-full bg-[#1a1a1a] border-[#4d4635]/30 rounded-lg pr-10 py-2 text-xs focus:ring-1 focus:ring-primary focus:border-primary placeholder:text-[#4d4635]" placeholder="البحث برقم المعاملة أو اسم العميل..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right text-[11px]">
+<thead class="bg-[#1a1a1a] text-[#D0C5AF]/50">
+<tr>
+<th class="p-3 font-medium">رقم المعاملة</th>
+<th class="p-3 font-medium">العميل</th>
+<th class="p-3 font-medium">النوع</th>
+<th class="p-3 font-medium">المبلغ</th>
+<th class="p-3 font-medium">الحالة</th>
+<th class="p-3 font-medium">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#4d4635]/10">
+<tr class="hover:bg-[#1a1a1a]/50">
+<td class="p-3 font-mono text-primary">#TR-8921</td>
+<td class="p-3 font-bold">مؤسسة التاج</td>
+<td class="p-3 text-[#D0C5AF]/60">تجديد رخصة</td>
+<td class="p-3 text-primary">1,200 ر.س</td>
+<td class="p-3">
+<span class="px-2 py-0.5 rounded-full bg-green-500/10 text-green-500 border border-green-500/20 text-[9px]">مكتمل</span>
+</td>
+<td class="p-3">
+<div class="flex gap-2">
+<button class="text-green-500 hover:text-green-400" title="إنجاز"><span class="material-symbols-outlined text-base">task_alt</span></button>
+<button class="text-error hover:text-error/80" title="تعثر"><span class="material-symbols-outlined text-base">report_problem</span></button>
+<button class="text-[#D0C5AF]/60 hover:text-primary" title="إغلاق"><span class="material-symbols-outlined text-base">lock</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#1a1a1a]/50">
+<td class="p-3 font-mono text-primary">#TR-8922</td>
+<td class="p-3 font-bold">خالد بن نايف</td>
+<td class="p-3 text-[#D0C5AF]/60">تأشيرة عمل</td>
+<td class="p-3 text-primary">3,500 ر.س</td>
+<td class="p-3">
+<span class="px-2 py-0.5 rounded-full bg-orange-400/10 text-orange-400 border border-orange-400/20 text-[9px]">قيد المعالجة</span>
+</td>
+<td class="p-3">
+<div class="flex gap-2">
+<button class="text-green-500 hover:text-green-400" title="إنجاز"><span class="material-symbols-outlined text-base">task_alt</span></button>
+<button class="text-error hover:text-error/80" title="تعثر"><span class="material-symbols-outlined text-base">report_problem</span></button>
+<button class="text-[#D0C5AF]/60 hover:text-primary" title="إغلاق"><span class="material-symbols-outlined text-base">lock</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#1a1a1a]/50">
+<td class="p-3 font-mono text-primary">#TR-8923</td>
+<td class="p-3 font-bold">شركة الأمل</td>
+<td class="p-3 text-[#D0C5AF]/60">خدمات لوجستية</td>
+<td class="p-3 text-[#D0C5AF]/40">1,200 ر.س</td>
+<td class="p-3">
+<span class="px-2 py-0.5 rounded-full bg-[#353534] text-[#D0C5AF]/60 border border-[#4d4635] text-[9px]">مسودة</span>
+</td>
+<td class="p-3">
+<div class="flex gap-2">
+<button class="text-primary hover:text-primary/80" title="تعديل"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="text-error hover:text-error/80" title="حذف"><span class="material-symbols-outlined text-base">delete</span></button>
+</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full bg-[#131313] lg:hidden flex justify-around items-center py-4 border-t border-[#4d4635]/20 z-50">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-medium">معاملاتي</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#D0C5AF]/60">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-[10px] font-medium">إضافة</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#D0C5AF]/60">
+<span class="material-symbols-outlined">hub</span>
+<span class="text-[10px] font-medium">الرسائل</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#D0C5AF]/60">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">أدائي</span>
+</div>
+</nav>
+</body></html>

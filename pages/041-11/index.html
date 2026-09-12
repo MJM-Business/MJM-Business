@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تقرير الأداء - Sovereign Assets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-tint": "#e9c349",
+                    "secondary-fixed": "#f7e1a6",
+                    "primary-fixed": "#ffe088",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "secondary-container": "#544519",
+                    "on-primary-container": "#554300",
+                    "tertiary": "#bfcdff",
+                    "on-tertiary-container": "#254188",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#97b0ff",
+                    "on-tertiary": "#082b72",
+                    "outline-variant": "#4d4635",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#c8b37d",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#544519",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#3c2f05",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#241a00",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#dac58d",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#dac58d",
+                    "surface-bright": "#3a3939",
+                    "inverse-primary": "#735c00",
+                    "primary": "#f2ca50",
+                    "on-tertiary-fixed": "#00174b",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-on-surface": "#313030",
+                    "on-surface-variant": "#d0c5af",
+                    "outline": "#99907c",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary-fixed-dim": "#e9c349"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.4rem;
+        }
+        .chart-glow {
+            filter: drop-shadow(0 0 8px #f2ca50);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-0 h-20 bg-surface flex flex-row-reverse justify-between items-center px-8 z-50">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="relative text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full shadow-[0_0_8px_#f2ca50]"></span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full border border-outline-variant/30 overflow-hidden">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male executive with a confident expression, wearing a tailored charcoal suit and a crisp white shirt. The background is a soft-focus modern office with warm lighting and gold accents, reflecting a high-end corporate environment. The image is clean and sharp, using deep blacks and muted metallic tones to maintain the Sovereign Assets brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Y5lgyt3Ksg9doSZjWcr4HsY2AoFCzKKgPsIsOYCOfPyygt_r1zX95TpL4dlHqEHIRVc3_bVaaHuQzzX4Pc-guhr2uIR6Ry2HYKRDHPzNzJgtLhFqn50yHO06FlnVRM7x6dFJGj6d8VapwjlCutU09uFgUFayfGQZaPItpjiExtNizz0iM18JpViM8QXXGaoxGUOQ8fYdl2ztxCkGp3mOjonxaUfB7H4jMZS4Jbvv3-Kn6_LubYJmiwcaif_6ZKv4jSbK00H8uA"/>
+</div>
+</div>
+<div class="flex-1 max-w-xl mx-12">
+<div class="relative group">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-xl pr-12 pl-4 py-2.5 text-sm focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/50" placeholder="البحث في الأصول والمعدات..." type="text"/>
+</div>
+</div>
+<div class="text-headline-sm font-headline font-black text-primary tracking-tight">
+            Sovereign Assets
+        </div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed inset-y-0 right-0 w-72 h-full bg-surface-container-low border-l border-outline-variant/20 py-6 px-4 flex flex-col gap-4 rtl z-40 mt-20">
+<div class="flex items-center gap-3 px-2 mb-6">
+<div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div>
+<h2 class="text-primary font-headline font-bold text-lg leading-tight">إدارة المعدات</h2>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest">Sovereign Executive</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body text-sm font-medium">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body text-sm font-medium">إدارة المستأجرين</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body text-sm font-medium">سجلات المدفوعات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-body text-sm font-medium">طلبات الصيانة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-body text-sm font-medium">عقود الإيجار</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-surface-container-high rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-body text-sm font-medium">تقرير الأداء</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/10 pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body text-sm font-medium">الإعدادات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error/80 hover:bg-error/10 hover:text-error rounded-xl transition-all duration-200 translate-x-1 active:scale-98" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body text-sm font-medium">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="mr-72 mt-20 p-8 min-h-screen">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-12">
+<div>
+<h1 class="font-headline text-4xl font-bold text-on-surface mb-2">تحليل أداء الأصول</h1>
+<p class="font-body text-on-surface-variant text-lg">التقرير الربع سنوي للكفاءة التشغيلية والعوائد</p>
+</div>
+<div class="flex gap-4">
+<div class="glass-panel px-6 py-3 rounded-xl flex flex-col items-end">
+<span class="text-xs text-on-surface-variant font-label uppercase tracking-widest">هامش النمو</span>
+<span class="text-2xl font-display font-bold text-primary">+12.4%</span>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-all active:scale-95 shadow-[0_4px_20px_rgba(212,175,55,0.2)]">
+<span class="material-symbols-outlined text-xl">download</span>
+<span>تصدير التقرير</span>
+</button>
+</div>
+</header>
+<!-- Bento Grid Analytics -->
+<div class="bento-grid">
+<!-- KPIs Row -->
+<div class="col-span-12 grid grid-cols-4 gap-6 mb-4">
+<div class="bg-surface-container p-6 rounded-xl border-r-2 border-primary">
+<p class="text-on-surface-variant text-sm mb-1">إجمالي ساعات الاستخدام</p>
+<div class="flex items-baseline justify-between">
+<span class="text-3xl font-display font-bold">14,280</span>
+<span class="text-primary text-xs flex items-center"><span class="material-symbols-outlined text-xs">trending_up</span> 5%</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-r-2 border-primary">
+<p class="text-on-surface-variant text-sm mb-1">متوسط نسبة الإشغال</p>
+<div class="flex items-baseline justify-between">
+<span class="text-3xl font-display font-bold">88.5%</span>
+<span class="text-primary text-xs flex items-center"><span class="material-symbols-outlined text-xs">trending_up</span> 2%</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-r-2 border-primary">
+<p class="text-on-surface-variant text-sm mb-1">صافي الإيرادات (ريال)</p>
+<div class="flex items-baseline justify-between">
+<span class="text-3xl font-display font-bold">2.4M</span>
+<span class="text-primary text-xs flex items-center"><span class="material-symbols-outlined text-xs">trending_up</span> 18%</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-r-2 border-error/50">
+<p class="text-on-surface-variant text-sm mb-1">وقت التوقف التقني</p>
+<div class="flex items-baseline justify-between">
+<span class="text-3xl font-display font-bold">42h</span>
+<span class="text-error text-xs flex items-center"><span class="material-symbols-outlined text-xs">trending_down</span> 12%</span>
+</div>
+</div>
+</div>
+<!-- Revenue vs Maintenance Chart (Large) -->
+<div class="col-span-8 bg-surface-container p-8 rounded-xl h-[450px] relative overflow-hidden group">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">مقارنة الإيرادات مقابل تكاليف الصيانة</h3>
+<p class="text-sm text-on-surface-variant">تحليل العائد على الاستثمار الشهري</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full gold-gradient shadow-[0_0_8px_#f2ca50]"></span>
+<span class="text-xs text-on-surface">الإيرادات</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-outline-variant"></span>
+<span class="text-xs text-on-surface">الصيانة</span>
+</div>
+</div>
+</div>
+<!-- Abstract Chart Mockup -->
+<div class="absolute bottom-8 left-8 right-8 top-32 flex items-end gap-6 h-64">
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[40%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[80%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">يناير</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[30%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[65%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">فبراير</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[45%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[90%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">مارس</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[20%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[75%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">أبريل</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[55%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[95%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">مايو</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-end gap-2 group/bar">
+<div class="w-full flex gap-1 items-end justify-center h-full">
+<div class="w-1/3 bg-outline-variant/30 rounded-t-sm h-[35%] transition-all group-hover/bar:bg-outline-variant/50"></div>
+<div class="w-1/3 gold-gradient rounded-t-sm h-[85%] chart-glow transition-all group-hover/bar:opacity-90"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">يونيو</span>
+</div>
+</div>
+</div>
+<!-- Executive Summary Card -->
+<div class="col-span-4 bg-surface-container p-8 rounded-xl h-[450px] flex flex-col">
+<div class="mb-8">
+<h3 class="text-xl font-headline font-bold text-on-surface">ملخص تنفيذي</h3>
+<p class="text-sm text-on-surface-variant">توصيات الربع الحالي</p>
+</div>
+<div class="space-y-6 flex-1 overflow-y-auto no-scrollbar">
+<div class="flex gap-4 items-start border-r border-primary/20 pr-4">
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">تحسين الكفاءة التشغيلية</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">أظهرت المعدات من الفئة (A) معدلات تشغيل قياسية بنسبة 94%، مما يستدعي جدول صيانة وقائية مكثف.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start border-r border-primary/20 pr-4">
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+<div>
+<p class="text-sm font-bold text-on-surface">تخفيض تكاليف الصيانة</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">انخفاض ملحوظ في التكاليف الطارئة بنسبة 15% بعد تطبيق نظام المراقبة الذكي الجديد.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start border-r border-outline-variant pr-4">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-2"></div>
+<div>
+<p class="text-sm font-bold text-on-surface-variant">معدات تحت المراجعة</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">يجب مراجعة أداء الحفارات الهيدروليكية طراز 2019 نظراً لارتفاع ساعات التوقف غير المبرر.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<div class="flex justify-between items-center bg-surface-container-high p-4 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-sm font-bold">قرار التوسع</span>
+</div>
+<span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">معتمد</span>
+</div>
+</div>
+</div>
+<!-- Downtime Analysis -->
+<div class="col-span-5 bg-surface-container p-8 rounded-xl min-h-[350px]">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-8">تحليل فترات التوقف</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">صيانة دورية</span>
+<span class="text-on-surface-variant">65%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full gold-gradient rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">أعطال طارئة</span>
+<span class="text-on-surface-variant">18%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">تحديث برمجيات</span>
+<span class="text-on-surface-variant">12%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 12%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">أخرى</span>
+<span class="text-on-surface-variant">5%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 5%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Equipment Utilization Table/Grid -->
+<div class="col-span-7 bg-surface-container p-8 rounded-xl min-h-[350px]">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-headline font-bold text-on-surface">كفاءة الأصول الفردية</h3>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                        عرض التفاصيل
+                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+</div>
+<div class="space-y-2">
+<!-- Row 1 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-high rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">رافعة برجية - X500</h4>
+<p class="text-xs text-on-surface-variant">كود: EQ-9821</p>
+</div>
+<div class="text-left">
+<p class="text-sm font-bold text-primary">94%</p>
+<p class="text-[10px] text-on-surface-variant uppercase">كفاءة</p>
+</div>
+<div class="w-24 h-8 bg-surface-container-lowest rounded overflow-hidden relative opacity-50">
+<!-- Mini Sparkline Mockup -->
+<svg class="absolute inset-0 w-full h-full stroke-primary fill-none stroke-2" viewbox="0 0 100 30">
+<path d="M0,20 Q10,5 20,22 T40,10 T60,25 T80,5 T100,15"></path>
+</svg>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-high rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">construction</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">حفارة ضخمة - CAT 390</h4>
+<p class="text-xs text-on-surface-variant">كود: EQ-7742</p>
+</div>
+<div class="text-left">
+<p class="text-sm font-bold text-primary">82%</p>
+<p class="text-[10px] text-on-surface-variant uppercase">كفاءة</p>
+</div>
+<div class="w-24 h-8 bg-surface-container-lowest rounded overflow-hidden relative opacity-50">
+<svg class="absolute inset-0 w-full h-full stroke-primary fill-none stroke-2" viewbox="0 0 100 30">
+<path d="M0,10 Q15,25 30,15 T50,25 T70,10 T90,20 L100,5"></path>
+</svg>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-high rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">ناقلة حمولة ثقيلة - HD-20</h4>
+<p class="text-xs text-on-surface-variant">كود: EQ-3310</p>
+</div>
+<div class="text-left">
+<p class="text-sm font-bold text-primary">76%</p>
+<p class="text-[10px] text-on-surface-variant uppercase">كفاءة</p>
+</div>
+<div class="w-24 h-8 bg-surface-container-lowest rounded overflow-hidden relative opacity-50">
+<svg class="absolute inset-0 w-full h-full stroke-primary fill-none stroke-2" viewbox="0 0 100 30">
+<path d="M0,25 L20,15 L40,25 L60,10 L80,20 L100,5"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Micro-interactions for the cards
+        document.querySelectorAll('.bento-grid > div').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Simulating interactive gold glow on bars
+        const bars = document.querySelectorAll('.gold-gradient');
+        bars.forEach(bar => {
+            bar.addEventListener('mouseover', () => {
+                bar.style.filter = 'drop-shadow(0 0 15px #f2ca50)';
+                bar.style.opacity = '1';
+            });
+            bar.addEventListener('mouseout', () => {
+                bar.style.filter = 'drop-shadow(0 0 8px #f2ca50)';
+                bar.style.opacity = '0.9';
+            });
+        });
+    </script>
+</body></html>

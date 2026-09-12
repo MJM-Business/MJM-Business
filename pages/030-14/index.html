@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#131313",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-variant": "#353534",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#f7e1a6",
+                    "secondary-fixed-dim": "#dac58d",
+                    "on-surface": "#e5e2e1",
+                    "outline-variant": "#4d4635",
+                    "on-tertiary-container": "#254188",
+                    "on-secondary-container": "#c8b37d",
+                    "surface-tint": "#e9c349",
+                    "primary": "#f2ca50",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-dim": "#131313",
+                    "primary-container": "#d4af37",
+                    "on-error": "#690005",
+                    "tertiary-fixed": "#dbe1ff",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#d0c5af",
+                    "on-tertiary": "#082b72",
+                    "tertiary": "#bfcdff",
+                    "surface-container-highest": "#353534",
+                    "surface": "#131313",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "error": "#ffb4ab",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error-container": "#ffdad6",
+                    "inverse-on-surface": "#313030",
+                    "surface-container": "#201f1f",
+                    "inverse-primary": "#735c00",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "on-secondary": "#3c2f05",
+                    "secondary": "#dac58d",
+                    "on-secondary-fixed-variant": "#544519",
+                    "on-primary-container": "#554300",
+                    "tertiary-container": "#97b0ff",
+                    "on-primary": "#3c2f00",
+                    "primary-fixed": "#ffe088",
+                    "on-tertiary-fixed": "#00174b",
+                    "secondary-container": "#544519",
+                    "outline": "#99907c",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-primary-fixed": "#241a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #4d4635; border-radius: 10px; }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<!-- Sidebar Navigation Shell -->
+<!-- Main Content Canvas -->
+<main class="pb-12 min-h-screen pt-12 px-4 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="text-right">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-2 block">التحليل التنفيذي</span>
+<h1 class="text-4xl font-headline font-extrabold text-on-surface mb-2">تقارير أداء الغرف</h1>
+<p class="text-on-surface-variant max-w-2xl leading-relaxed">تحليل استراتيجي لمعدلات الإشغال، الربحية التشغيلية، ومقارنات النمو السنوي عبر كافة الأصول الفندقية والمباني السكنية التابعة للمجموعة.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface border border-outline-variant/20 rounded-lg hover:bg-surface-variant transition-all group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">download</span>
+<span class="font-semibold text-sm">تصدير PDF</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary-container text-on-primary rounded-lg shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:brightness-110 transition-all font-bold">
+<span class="material-symbols-outlined">filter_list</span>
+<span class="text-sm">تصفية البيانات</span>
+</button>
+</div>
+</header>
+<!-- KPI Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">bed</span>
+</div>
+<span class="text-green-500 flex items-center text-xs font-bold">
+                        12.4% <span class="material-symbols-outlined text-sm">arrow_upward</span>
+</span>
+</div>
+<h4 class="text-on-surface-variant text-sm font-medium mb-1">معدل الإشغال السنوي</h4>
+<div class="text-3xl font-headline font-extrabold text-on-surface">88.5%</div>
+<div class="mt-4 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%] shadow-[0_0_8px_#f2ca50]"></div>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<span class="text-green-500 flex items-center text-xs font-bold">
+                        8.1% <span class="material-symbols-outlined text-sm">arrow_upward</span>
+</span>
+</div>
+<h4 class="text-on-surface-variant text-sm font-medium mb-1">متوسط الربح لكل غرفة (RevPAR)</h4>
+<div class="text-3xl font-headline font-extrabold text-on-surface">1,450 ر.س</div>
+<p class="text-[10px] text-on-surface-variant/40 mt-4 uppercase font-bold tracking-widest">تحديث: منذ 14 دقيقة</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<span class="text-red-400 flex items-center text-xs font-bold">
+                        3.2% <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</span>
+</div>
+<h4 class="text-on-surface-variant text-sm font-medium mb-1">إجمالي الإيرادات السنوية</h4>
+<div class="text-3xl font-headline font-extrabold text-on-surface">42.8M</div>
+<p class="text-[10px] text-on-surface-variant/40 mt-4 uppercase font-bold tracking-widest">المستهدف: 45.0M</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">star</span>
+</div>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-xs" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xs" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xs" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xs" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xs" style='font-variation-settings: "FILL" 0;'>star</span>
+</div>
+</div>
+<h4 class="text-on-surface-variant text-sm font-medium mb-1">تقييم تجربة النزلاء</h4>
+<div class="text-3xl font-headline font-extrabold text-on-surface">4.8/5.0</div>
+<div class="mt-4 flex -space-x-2 space-x-reverse">
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-surface-container-highest"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-surface-container-high"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-surface-container"></div>
+<div class="px-2 text-[10px] flex items-center text-on-surface-variant">+1.2k تقييم</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Analysis -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Comparison Chart Placeholder -->
+<div class="lg:col-span-2 bg-surface-container rounded-xl p-8 min-h-[450px] relative">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">مقارنة الأداء السنوي</h3>
+<p class="text-sm text-on-surface-variant mt-1">تباين الأداء المالي بين 2023 و 2024</p>
+</div>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-xs text-on-surface-variant"><div class="w-3 h-3 bg-primary rounded-sm"></div> 2024</span>
+<span class="flex items-center gap-1 text-xs text-on-surface-variant"><div class="w-3 h-3 bg-outline-variant rounded-sm"></div> 2023</span>
+</div>
+</div>
+<!-- Mock Chart Layout -->
+<div class="flex items-end justify-between h-[250px] px-4">
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[40%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[65%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">يناير</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[55%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[75%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">فبراير</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[65%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[90%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">مارس</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[75%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[85%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">أبريل</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[60%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[95%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">مايو</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-12">
+<div class="w-full flex items-end gap-1 h-full">
+<div class="w-1/2 bg-outline-variant h-[80%] rounded-t-sm"></div>
+<div class="w-1/2 bg-primary h-[100%] rounded-t-sm shadow-[0_0_10px_rgba(242,202,80,0.3)]"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold">يونيو</span>
+</div>
+</div>
+<div class="absolute bottom-6 right-8 left-8 border-t border-outline-variant/10 pt-6 flex justify-between items-center">
+<p class="text-sm font-medium text-on-surface-variant italic">ملاحظة: شهد الربع الثاني نمواً ملحوظاً بسبب المواسم السياحية.</p>
+<button class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2">عرض التفاصيل <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+<!-- Side Card: Type Profitability -->
+<div class="bg-surface-container rounded-xl p-8 min-h-[450px] flex flex-col">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">الربحية حسب النوع</h3>
+<p class="text-sm text-on-surface-variant mb-8">كفاءة الأصول التشغيلية</p>
+<div class="space-y-8 flex-grow">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface font-semibold">أجنحة ملكية</span>
+<span class="text-primary font-bold">45%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[45%] rounded-full shadow-[0_0_10px_#f2ca50]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface font-semibold">غرف تنفيذية</span>
+<span class="text-primary font-bold">32%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[32%] rounded-full opacity-80"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface font-semibold">أجنحة عائلية</span>
+<span class="text-primary font-bold">15%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[15%] rounded-full opacity-60"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface font-semibold">ستوديو أعمال</span>
+<span class="text-primary font-bold">8%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[8%] rounded-full opacity-40"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+</div>
+<div>
+<p class="text-xs text-on-surface font-bold">توصية النظام</p>
+<p class="text-[11px] text-on-surface-variant leading-tight">زيادة الاستثمار في الأجنحة الملكية لرفع هامش الربح الإجمالي.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Building Analysis Table Section -->
+<section class="mt-12">
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-xl border border-outline-variant/5">
+<div class="p-8 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="text-xl font-headline font-bold text-on-surface">تحليل الربحية حسب المبنى</h3>
+<div class="flex gap-4">
+<div class="relative">
+<input class="bg-surface-container-highest border-none text-xs px-10 py-2 rounded-lg w-64 text-on-surface focus:ring-1 focus:ring-primary" placeholder="بحث عن مبنى..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-widest font-bold">
+<tr>
+<th class="px-8 py-5">المبنى / الفرع</th>
+<th class="px-8 py-5">إجمالي الغرف</th>
+<th class="px-8 py-5">نسبة الإشغال</th>
+<th class="px-8 py-5">متوسط الإيراد</th>
+<th class="px-8 py-5">صافي الربح</th>
+<th class="px-8 py-5">الحالة التشغيلية</th>
+<th class="px-8 py-5">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-8 py-5 font-semibold text-on-surface">برج السيادة - الرياض</td>
+<td class="px-8 py-5 text-on-surface-variant">420 غرفة</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-green-500 w-[94%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface">94%</span>
+</div>
+</td>
+<td class="px-8 py-5 text-on-surface">2,850 ر.س</td>
+<td class="px-8 py-5 text-primary font-bold">12.4M ر.س</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-green-500/10 text-green-500 text-[10px] font-bold rounded-full border border-green-500/20 uppercase tracking-widest">أداء ممتاز</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-8 py-5 font-semibold text-on-surface">مجمع النخبة - جدة</td>
+<td class="px-8 py-5 text-on-surface-variant">280 غرفة</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface">82%</span>
+</div>
+</td>
+<td class="px-8 py-5 text-on-surface">1,920 ر.س</td>
+<td class="px-8 py-5 text-primary font-bold">8.1M ر.س</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20 uppercase tracking-widest">مستقر</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="px-8 py-5 font-semibold text-on-surface">أجنحة المارينا - الخبر</td>
+<td class="px-8 py-5 text-on-surface-variant">150 غرفة</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-red-500 w-[65%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface">65%</span>
+</div>
+</td>
+<td class="px-8 py-5 text-on-surface">3,100 ر.س</td>
+<td class="px-8 py-5 text-primary font-bold">4.2M ر.س</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-red-500/10 text-red-500 text-[10px] font-bold rounded-full border border-red-500/20 uppercase tracking-widest">تحتاج مراجعة</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">more_horiz</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 bg-surface-container-low flex justify-center">
+<button class="text-on-surface-variant text-sm font-bold flex items-center gap-2 hover:text-primary transition-all">تحميل الجدول بالكامل (CSV) <span class="material-symbols-outlined">table_view</span></button>
+</div>
+</div>
+</section>
+<!-- Dynamic Visual Detail -->
+<section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative h-64 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A luxurious hotel lobby with high ceilings, golden art deco details, and marble floors under warm, sophisticated lighting. The atmosphere is quiet, exclusive, and represents high-end executive hospitality. The image features deep shadows and glowing gold accents consistent with the MJM Sovereign brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsXh2ECgibtCido5NlJfnKzTRclrRXtoAzG4HeehMpR2yn9BTK1h3LMnD8VFpmFInOkiuytmKqTDH39JuHhaFHa43RllwOfP47Oi3a6kHpMCkz134iF807V2WDcZfUIPDpWa5gImLedcEWWIjc3HFVnHOkVE-p5_yJojY35brSWZ0ZENLHcAemSpWUv8sVa3jAVPmupksg9ijfb3_UTogP9OsT2MvDH76mVaId32_Zt7BLDJ41BQy0L_eXqCkmvWY5cshelfHfmA"/>
+<div class="absolute bottom-6 right-8 z-20">
+<h4 class="text-xl font-headline font-bold text-primary mb-1">الرؤية التشغيلية</h4>
+<p class="text-sm text-on-surface">تحسين تجربة النزيل لزيادة ولاء العملاء بنسبة 20%</p>
+</div>
+</div>
+<div class="relative h-64 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A focused close-up of a professional business dashboard on a tablet being used in a dimly lit, high-end corporate office. Golden light reflects off the sleek screen surface. The data shown involves complex financial growth charts and property occupancy metrics. The overall aesthetic is dark, premium, and data-centric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZL30B_0Ct2lmHRp86426uwaGB53lpSasZuHZZV0nBXgjyvwbvlgbMJGWPXeu-srRmvHbpi0IaObtrCTgGxnknLJjYBl5R68pra8cUEo_-LOAtALZcnpzJQGIrQgQCx5IHnXiKVLkptvvbhzaI4beEnUCTKc7wmQJdfOqFCIQQYjB47akQGxVuImZkqDGT0-AmcE7nkjImMv1EUhlbhiQOhJS6t9OouFbIq_DfjehMJdZxVkitZZFisoY90RNZbBMc16S42TIcg"/>
+<div class="absolute bottom-6 right-8 z-20">
+<h4 class="text-xl font-headline font-bold text-primary mb-1">توقعات الربع القادم</h4>
+<p class="text-sm text-on-surface">من المتوقع زيادة الطلب بنسبة 15% في المباني التجارية</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Floating Action -->
+<button class="fixed bottom-10 left-10 w-16 h-16 bg-primary rounded-full shadow-[0_0_20px_#f2ca50] flex items-center justify-center text-on-primary hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>add</span>
+</button>
+</body></html>

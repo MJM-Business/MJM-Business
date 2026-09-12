@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#3a3939",
+                        "on-primary-container": "#554300",
+                        "secondary-fixed-dim": "#dac58d",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-container": "#c8b37d",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#f7e1a6",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#bfcdff",
+                        "on-tertiary-fixed": "#00174b",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#082b72",
+                        "secondary": "#dac58d",
+                        "primary": "#f2ca50",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "secondary-container": "#544519",
+                        "primary-container": "#d4af37",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#544519",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#99907c",
+                        "on-tertiary-container": "#254188",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary": "#3c2f05",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#735c00",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#dbe1ff",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .golden-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .status-glow {
+            box-shadow: 0 0 12px #f2ca50;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<div class="relative flex min-h-screen w-full flex-col bg-surface overflow-x-hidden">
+<!-- Main Content Container -->
+<div class="flex flex-1 flex-col">
+<!-- Shared Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-outline-variant px-10 py-5 glass-panel sticky top-0 z-50">
+<div class="flex items-center gap-6">
+<div class="size-10 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-on-surface text-2xl font-display font-bold leading-tight tracking-tight">الواتساب الذكي</h2>
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest">Executive Management Console</span>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="flex flex-col min-w-64 max-w-sm">
+<div class="flex w-full items-stretch rounded-lg overflow-hidden bg-surface-container-highest border border-outline-variant/30 focus-within:border-primary transition-colors h-10">
+<div class="text-on-surface-variant flex items-center justify-center px-3" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 px-2 text-sm" placeholder="البحث في المحادثات أو التقارير..."/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg size-10 bg-surface-container-high text-on-surface hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex items-center justify-center rounded-lg size-10 bg-surface-container-high text-on-surface hover:bg-surface-variant transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full status-glow"></span>
+</button>
+</div>
+<div class="h-10 w-px bg-outline-variant/30 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-left hidden md:block">
+<p class="text-sm font-bold text-on-surface">أحمد المنصور</p>
+<p class="text-[10px] text-primary uppercase tracking-tighter">مدير التحصيل التنفيذي</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-10 border border-primary/20" data-alt="Professional portrait of a middle-eastern executive in a charcoal suit, sharp lighting, minimalist grey background, luxury corporate photography style, high detail, 8k resolution." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAv915HZYCEyBPdB-RyWlI769yj6DscJkpZezuYCCZFgfztLsXFmp0-AckR6of81DXz3-r0RL7huv0PmduVRzDErpWv3V4HSSrQoutYTK4Ggrx_W3JkykGYeQZb3XIK_WcoQVkjFVhauPdMkOEjtRXvOCii78_GJjdgyi14FVWkUyzhX9V_Yho-m1YGbraQt2yefVeHFTdwkoXLBU83vkmB9mOwi0j7BgiyU9MJIICsNLTgM4KZcXKa_UwaP3uCk8Q6Kd0t6tbRsw");'></div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 p-8 gap-8 bg-surface-container-lowest">
+<!-- Sidebar Navigation -->
+<!-- Main Workspace -->
+<div class="flex-1 flex flex-col gap-8">
+<!-- KPI Section -->
+<div class="grid grid-cols-4 gap-6">
+<div class="p-6 rounded-2xl bg-surface-container-high border-t-2 border-primary transition-transform hover:-translate-y-1">
+<p class="text-on-surface-variant text-sm font-medium mb-2">إجمالي الرسائل المؤتمتة</p>
+<h3 class="text-3xl font-display font-bold text-on-surface">١٢,٤٨٠</h3>
+<div class="flex items-center gap-2 mt-3 text-[#0bda1d]">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-bold">+١٨.٤٪</span>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-high border-t-2 border-secondary transition-transform hover:-translate-y-1">
+<p class="text-on-surface-variant text-sm font-medium mb-2">رسائل الشكر والتحصيل</p>
+<h3 class="text-3xl font-display font-bold text-on-surface">٤,٢١٥</h3>
+<div class="flex items-center gap-2 mt-3 text-primary">
+<span class="material-symbols-outlined text-sm">done_all</span>
+<span class="text-xs font-bold">معدل قراءة ٩٢٪</span>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-high border-t-2 border-primary transition-transform hover:-translate-y-1">
+<p class="text-on-surface-variant text-sm font-medium mb-2">تذكيرات الدفع المتأخر</p>
+<h3 class="text-3xl font-display font-bold text-on-surface">٣,٨٩٠</h3>
+<div class="flex items-center gap-2 mt-3 text-[#ffb4ab]">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-xs font-bold">٢٤ قيد المعالجة</span>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-high border-t-2 border-secondary transition-transform hover:-translate-y-1">
+<p class="text-on-surface-variant text-sm font-medium mb-2">تجديد العقود النشطة</p>
+<h3 class="text-3xl font-display font-bold text-on-surface">١,١٢٠</h3>
+<div class="flex items-center gap-2 mt-3 text-[#0bda1d]">
+<span class="material-symbols-outlined text-sm">autorenew</span>
+<span class="text-xs font-bold">+٥٪ شهر متتالي</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8">
+<!-- Template Management & AI -->
+<div class="col-span-2 flex flex-col gap-6">
+<section class="p-8 rounded-3xl bg-surface-container glass-panel border border-outline-variant/10">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<h2 class="text-xl font-display font-bold text-on-surface">إدارة القوالب الذكية بالذكاء الاصطناعي</h2>
+</div>
+<button class="px-6 py-2 rounded-lg golden-gradient text-on-primary text-sm font-bold shadow-lg shadow-primary/20">قالب جديد</button>
+</div>
+<div class="space-y-4">
+<div class="p-5 rounded-2xl bg-surface-container-highest/50 border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="px-2 py-1 rounded bg-secondary-container text-secondary text-[10px] font-bold uppercase mb-2 inline-block">تذكير دفع</span>
+<h4 class="text-on-surface font-bold text-lg leading-none">تذكير الإيجار الشهري - رسمي</h4>
+</div>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 italic">"عزيزي [الاسم]، نود تذكيركم بموعد استحقاق الدفعة الشهرية..."</p>
+<div class="mt-4 flex items-center justify-between border-t border-outline-variant/20 pt-4">
+<div class="flex gap-4 text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">magic_button</span> تخصيص ذكي نشط</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">analytics</span> ٨٨٪ تجاوب</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-primary">تحسين بواسطة AI</span>
+<div class="flex -space-x-1 space-x-reverse">
+<div class="size-6 rounded-full border-2 border-surface-container-highest bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary">AI</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-surface-container-highest/50 border border-outline-variant/20 group hover:border-primary/50 transition-all opacity-80">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase mb-2 inline-block">تجديد عقد</span>
+<h4 class="text-on-surface font-bold text-lg leading-none">إشعار انتهاء فترة التعاقد</h4>
+</div>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">visibility</span></button>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2 italic">"نقدر وجودكم معنا، نود إخطاركم بأن عقدكم ينتهي في غضون ٣٠ يوم..."</p>
+<div class="mt-4 flex items-center justify-between border-t border-outline-variant/20 pt-4">
+<div class="flex gap-4 text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> مجدولة تلقائياً</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-on-surface-variant">إعداد يدوي</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="grid grid-cols-2 gap-6">
+<div class="p-6 rounded-3xl bg-[#d4af3710] border border-primary/20 flex items-center gap-6 cursor-pointer hover:bg-primary/10 transition-all group">
+<div class="size-16 rounded-2xl bg-primary flex items-center justify-center text-on-primary shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">send_and_archive</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-primary">إرسال تذكير جماعي</h4>
+<p class="text-on-surface-variant text-sm">للمستأجرين المتأخرين &gt; ١٠ أيام</p>
+</div>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container border border-outline-variant/20 flex items-center gap-6 cursor-pointer hover:bg-surface-variant transition-all group">
+<div class="size-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-on-surface">توثيق العقود</h4>
+<p class="text-on-surface-variant text-sm">إرسال روابط التوقيع الإلكتروني</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Real-time Interaction Log -->
+<section class="flex flex-col rounded-3xl bg-surface-container border border-outline-variant/10 overflow-hidden">
+<div class="p-6 border-b border-outline-variant/20 bg-surface-container-high/50">
+<h2 class="text-lg font-display font-bold text-on-surface">سجل التفاعلات اللحظي</h2>
+<p class="text-xs text-on-surface-variant">مراقبة حية لنشاط البوت والمستأجرين</p>
+</div>
+<div class="flex-1 overflow-y-auto p-6 space-y-6 max-h-[600px]">
+<!-- Log Item -->
+<div class="flex gap-4 relative">
+<div class="absolute right-3 top-10 bottom-0 w-px bg-outline-variant/20"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-7 z-10 border border-primary/20" data-alt="Minimal avatar placeholder for tenant interaction log tracking messages on the smart dashboard." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwYZKSaWW2b2Wb4I9X1ypf0Qw6hmLhRPo7oA7NRo5Ov7bj53rzJjh88RCQ60ZBy6GqexGeUv6zajP-DD4OQX7u-aQJiihjJ9EK9Rmjuw6leNh8iRb5sjK55mCyynX1SeIxzJ52QNF_2VzFn6SPBVJo1PJylAYXFMvYYaMrt4iYlZdqwau58BzNmP3oi3D-pWpo4m2aHBWesbrEnLQT4F7oAHED7i94eYhYX1CKGziW7bUDwn6msYO-6e3A8Wfeza4rorhTFQDSvA");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-sm font-bold text-on-surface">فيصل الحربي</span>
+<span class="text-[10px] text-on-surface-variant">منذ ٢ دقيقة</span>
+</div>
+<div class="p-3 rounded-2xl rounded-tr-none bg-surface-container-highest text-sm text-on-surface-variant leading-relaxed">
+                                        تم سداد الدفعة بنجاح، شكراً لكم على التذكير اللطيف.
+                                    </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-[#0bda1d15] text-[#0bda1d] text-[9px] font-bold">تم الرد بواسطة AI</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="absolute right-3 top-10 bottom-0 w-px bg-outline-variant/20"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-7 z-10 border border-primary/20" data-alt="Minimal avatar placeholder for tenant interaction log tracking messages on the smart dashboard." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTL4oZWyBW3aJ_tVdbXCqngtcmz7r0cCDczkXYvIMD9AbSWIlkrR3NPEaAyJy2Gx14ocU_ePbikyXO7afBeionTGdovtn4ZHmOLXqcJoC4JhL-EG4Qwr3UHFqmiNLlNEK3Jstvds9bA1tbk8dsXa-oFOBbsA2czwTWwxKDAnbpmlFvm_aUw17UsJgbOpt8KmPJLGN74jtx7fQ3T11nAE4KJdO4TZOUp8Kzm2ulUMW1FQRBWt7V7aFFzv-G-n0AMbq-q6SHTUQwyQ");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-sm font-bold text-on-surface">عمران يوسف</span>
+<span class="text-[10px] text-on-surface-variant">منذ ١٥ دقيقة</span>
+</div>
+<div class="p-3 rounded-2xl rounded-tr-none bg-surface-container-highest text-sm text-on-surface-variant leading-relaxed">
+                                        أرغب في الاستفسار عن إمكانية تقسيط الدفعة القادمة.
+                                    </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[9px] font-bold">يتطلب تدخل بشري</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="absolute right-3 top-10 bottom-0 w-px bg-outline-variant/20"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-7 z-10 border border-primary/20" data-alt="Minimal avatar placeholder for tenant interaction log tracking messages on the smart dashboard." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEmcB9vlk0SNITyXiQqJ6VK3izCMAOwpMskuoFdEskaMyzhcHROQCSk8zYyN9pu94gWwCMzGpxF3Z9gKsdWJDQ7cdbbODc5o_Mt2-8Fd_ROYlQXoEDFBFoMCviyqxASh3F05DDD2gAmCIwTaENsbOi2sGeKP8lPOOg3TNsA_LJ-XpfcbgKxmXMrzATkjaTXpT--wp1QGGdWEuPzGmyw4bpNxFxZiwPlAfT-UmUD1ovqyAo69CTdHJ48JhUpVOaFrBjpiDOg0hWUw");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-sm font-bold text-on-surface">خالد العمودي</span>
+<span class="text-[10px] text-on-surface-variant">منذ ٣٤ دقيقة</span>
+</div>
+<div class="p-3 rounded-2xl rounded-tr-none bg-surface-container-highest text-sm text-on-surface-variant leading-relaxed">
+                                        تم استلام رابط التجديد، سأقوم بالتوقيع غداً.
+                                    </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[9px] font-bold">تم قراءة الإشعار</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-7 z-10 border border-primary/20" data-alt="Minimal avatar placeholder for tenant interaction log tracking messages on the smart dashboard." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4SdZDz54DDb8Xp6s54iVfrAMbfRotFpnMoXJY02czDUSGbbHr8Fujs55VVWqbTRtcBXUWF44YBvzM3o3dEjGHLUpQswSnb5lxJ8DTRb_MtOUuf5qYQ17LUM5WRQIWgC363BYGfo5uIwbC13t6OS3VtH3TBIieH_itDeEA-VQp0Ua07Us3HrvzN9DsbeqAYUcmE1eKzB8lBxIMwrk5AysJO8YnIDcqetcYjHzZWx4LWXPTqoWa90h4rOhPGwg_DUlb8mwT496uBQ");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-sm font-bold text-on-surface">سليمان ناصر</span>
+<span class="text-[10px] text-on-surface-variant">منذ ساعة</span>
+</div>
+<div class="p-3 rounded-2xl rounded-tr-none bg-surface-container-highest text-sm text-on-surface-variant leading-relaxed">
+                                        الرجاء إرسال كشف حساب لآخر ٣ أشهر.
+                                    </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded-full bg-[#0bda1d15] text-[#0bda1d] text-[9px] font-bold">تم الإرسال آلياً</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low border-t border-outline-variant/10 text-center">
+<button class="text-primary text-xs font-bold hover:underline">عرض جميع المحادثات</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

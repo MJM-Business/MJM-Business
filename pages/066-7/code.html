@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#d4af37",
+                    "on-primary": "#0b0b0b",
+                    "background": "#0b0b0b",
+                    "surface": "#131313",
+                    "surface-container": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-variant": "#353534",
+                    "outline-variant": "#4d4635",
+                    "on-surface": "#e5e2e1",
+                    "on-surface-variant": "#d0c5af",
+                    "error": "#ffb4ab",
+                    "success": "#81c784"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b0b0b;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 27, 27, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom, #d4af37, transparent) 1;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .chart-bar {
+            transition: height 1s ease-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- Simple Global Header -->
+<nav class="bg-surface/80 backdrop-blur-md border-b border-primary/10 sticky top-0 flex flex-row-reverse justify-between items-center w-full px-16 h-20 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-headline font-extrabold tracking-tight text-primary">MJM Smart</span>
+<div class="h-6 w-[1px] bg-outline-variant/30"></div>
+<span class="text-on-surface-variant text-sm font-medium">نظام محاسبة الأصول السيادي</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<p class="text-xs text-on-surface-variant">المستخدم الحالي</p>
+<p class="text-sm font-bold text-on-surface">إدارة الأصول العقارية</p>
+</div>
+<img alt="Profile" class="w-10 h-10 rounded-full border-2 border-primary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM1Oe9Yal9F4caE6XSEsQPH_EkZ4laNBeudBF56YcuOGuzw87E6E_ir4TSZsYo4vv6etXih4wINbeq3ZXH6Ms5LC0MSB50ZiPF9M4anUjxjdpLsMON_h7ycCv0HDe2O5JYty_eob475rTnOWxDS4l1ZKQTyxdQ9RLVBfw9SKg9MgYlEJJTXRL3WDsdn81_Y7_2oYpY1ZgPOAKVABhSLz06XuEN1PhJvoA-xFzVjf2QBOFSSx1idqg9OY-5p2xttTeGWE5_XgbstQ"/>
+</div>
+</nav>
+<main class="max-w-[1600px] mx-auto px-16 py-12 space-y-16">
+<!-- Verbatim Header -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded">Enterprise Version</span>
+<span class="text-on-surface-variant/40">/</span>
+<span class="text-on-surface-variant text-xs">التحليل المالي الشامل</span>
+</div>
+<h1 class="text-5xl font-headline font-extrabold text-on-surface tracking-tight">محاسبة الأصول</h1>
+<p class="text-on-surface-variant font-body text-lg max-w-2xl italic">المنصة المركزية لإدارة وتحليل الأصول العقارية، الأسطول، والمعدات الثقيلة برؤية مالية سيادية.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-md font-bold hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">download</span>
+                تصدير التقرير السنوي
+            </button>
+</div>
+</header>
+<!-- Top Section: High-level KPIs -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden group gold-glow border-r-4 border-r-primary">
+<span class="text-on-surface-variant font-medium text-label-sm block mb-2">إجمالي إيرادات الأصول</span>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">4,852,100</h2>
+<span class="text-primary font-bold text-sm">ر.س</span>
+</div>
+<div class="mt-6 flex items-center gap-2 text-success text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.5% نمو ربع سنوي</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl border-r-4 border-r-error/40">
+<span class="text-on-surface-variant font-medium text-label-sm block mb-2">إجمالي مصروفات التشغيل</span>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">1,240,350</h2>
+<span class="text-on-surface-variant/60 font-bold text-sm">ر.س</span>
+</div>
+<div class="mt-6 flex items-center gap-2 text-error text-xs font-bold">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span>تشمل الصيانة والرسوم</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl border-r-4 border-r-primary group transition-all hover:bg-primary/5">
+<span class="text-on-surface-variant font-medium text-label-sm block mb-2">صافي الأرباح الرأس مالية</span>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tighter">3,611,750</h2>
+<span class="text-primary/70 font-bold text-sm">ر.س</span>
+</div>
+<div class="mt-6 flex items-center gap-2 text-primary text-xs font-bold">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>هامش ربح تشغيلي 74%</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl border-r-4 border-r-on-surface-variant/40">
+<span class="text-on-surface-variant font-medium text-label-sm block mb-2">الزكاة المستحقة للأصول</span>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">90,293</h2>
+<span class="text-on-surface-variant/60 font-bold text-sm">ر.س</span>
+</div>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>الاستحقاق: ذو الحجة 1445</span>
+</div>
+</div>
+</section>
+<!-- Chart Section: Analytics Hub -->
+<section class="space-y-8">
+<div class="flex items-center justify-between border-b border-outline-variant/10 pb-4">
+<h2 class="text-2xl font-headline font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                مركز التحليلات البيانية
+            </h2>
+<div class="flex gap-2">
+<span class="px-4 py-1 bg-surface-container rounded-full text-xs border border-outline-variant/20">تحديث تلقائي: كل 5 دقائق</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Monthly Revenue Trends -->
+<div class="glass-panel p-8 rounded-xl h-[400px] flex flex-col">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="text-lg font-bold">اتجاهات الإيرادات الشهرية</h3>
+<p class="text-xs text-on-surface-variant">مقارنة أداء الأصول خلال 6 أشهر</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">show_chart</span>
+</div>
+<div class="flex-grow flex items-end justify-between gap-4 px-4 pb-4">
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-32 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-2/3 group-hover:h-full transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">يناير</span>
+</div>
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-40 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-3/4 group-hover:h-full transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">فبراير</span>
+</div>
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-48 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-4/5 group-hover:h-full transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">مارس</span>
+</div>
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-36 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-2/3 group-hover:h-full transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">أبريل</span>
+</div>
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-56 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-full group-hover:opacity-80 transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">مايو</span>
+</div>
+<div class="flex flex-col items-center w-full gap-3">
+<div class="w-full bg-primary/20 h-52 rounded-t-lg relative group overflow-hidden">
+<div class="absolute bottom-0 left-0 right-0 bg-primary h-5/6 group-hover:h-full transition-all duration-500"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant">يونيو</span>
+</div>
+</div>
+</div>
+<!-- Profitability by Category -->
+<div class="glass-panel p-8 rounded-xl h-[400px] flex flex-col">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-lg font-bold">الربحية حسب فئة الأصول</h3>
+<p class="text-xs text-on-surface-variant">تحليل العائد على الاستثمار</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">pie_chart</span>
+</div>
+<div class="space-y-6 flex-grow flex flex-col justify-center">
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span>العقارات التجارية (محلات)</span>
+<span class="font-bold text-primary">48%</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[48%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span>الوحدات السكنية (شقق)</span>
+<span class="font-bold text-on-surface-variant">32%</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-surface-variant/40 h-full w-[32%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span>أسطول المركبات</span>
+<span class="font-bold text-on-surface-variant">15%</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-surface-variant/20 h-full w-[15%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span>المعدات الإنشائية</span>
+<span class="font-bold text-on-surface-variant">5%</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-surface-variant/10 h-full w-[5%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Collection Efficiency Rates -->
+<div class="glass-panel p-8 rounded-xl">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+                    كفاءة التحصيل المالي
+                </h3>
+<div class="grid grid-cols-2 gap-8 h-40">
+<div class="flex flex-col items-center justify-center border-l border-outline-variant/10">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="48" cy="48" fill="transparent" r="40" stroke="rgba(212, 175, 55, 0.1)" stroke-width="8"></circle>
+<circle cx="48" cy="48" fill="transparent" r="40" stroke="#d4af37" stroke-dasharray="251.2" stroke-dashoffset="25" stroke-width="8"></circle>
+</svg>
+<span class="absolute text-xl font-bold">92%</span>
+</div>
+<span class="text-xs mt-3 text-on-surface-variant italic">تحصيل الإيجارات</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle cx="48" cy="48" fill="transparent" r="40" stroke="rgba(212, 175, 55, 0.1)" stroke-width="8"></circle>
+<circle cx="48" cy="48" fill="transparent" r="40" stroke="#d4af37" stroke-dasharray="251.2" stroke-dashoffset="62" stroke-width="8"></circle>
+</svg>
+<span class="absolute text-xl font-bold">75%</span>
+</div>
+<span class="text-xs mt-3 text-on-surface-variant italic">مستحقات الصيانة</span>
+</div>
+</div>
+</div>
+<!-- Expense Breakdown -->
+<div class="glass-panel p-8 rounded-xl flex flex-col">
+<h3 class="text-lg font-bold mb-6">تفصيل المصروفات التشغيلية</h3>
+<div class="flex-grow grid grid-cols-3 gap-4">
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">construction</span>
+<span class="text-xs text-on-surface-variant block">الصيانة</span>
+<span class="font-bold">420K</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">bolt</span>
+<span class="text-xs text-on-surface-variant block">المرافق</span>
+<span class="font-bold">185K</span>
+</div>
+<div class="bg-surface-container rounded-lg p-4 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">gavel</span>
+<span class="text-xs text-on-surface-variant block">رسوم وأتعاب</span>
+<span class="font-bold">635K</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Tables: Asset Ledger -->
+<section class="space-y-6">
+<h2 class="text-2xl font-headline font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+            سجل أستاذ الأصول (القيود التلقائية)
+        </h2>
+<div class="glass-panel rounded-xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant text-label-sm">
+<th class="p-5 font-bold">تاريخ القيد</th>
+<th class="p-5 font-bold">البيان</th>
+<th class="p-5 font-bold">من (حساب المدين)</th>
+<th class="p-5 font-bold">إلى (حساب الدائن)</th>
+<th class="p-5 font-bold">المبلغ الجاري</th>
+<th class="p-5 font-bold">الأصل المرتبط</th>
+</tr>
+</thead>
+<tbody class="text-sm border-t border-outline-variant/10">
+<tr class="border-b border-outline-variant/5 hover:bg-white/5 transition-colors">
+<td class="p-5 text-on-surface-variant">2024/05/18</td>
+<td class="p-5 font-medium">إثبات إيراد تأجير شهري</td>
+<td class="p-5"><span class="text-primary">ح/ الصندوق المجمع</span></td>
+<td class="p-5 text-on-surface-variant">ح/ إيرادات العقارات</td>
+<td class="p-5 font-bold">15,000 ر.س</td>
+<td class="p-5 text-xs bg-primary/5 px-2 py-1 rounded inline-block mt-4">برج المرجان - A04</td>
+</tr>
+<tr class="border-b border-outline-variant/5 hover:bg-white/5 transition-colors">
+<td class="p-5 text-on-surface-variant">2024/05/17</td>
+<td class="p-5 font-medium">صيانة دورية للمصاعد</td>
+<td class="p-5"><span class="text-primary">ح/ مصروفات صيانة</span></td>
+<td class="p-5 text-on-surface-variant">ح/ شركة الحلول الهندسية</td>
+<td class="p-5 font-bold text-error">4,200 ر.س</td>
+<td class="p-5 text-xs bg-primary/5 px-2 py-1 rounded inline-block mt-4">مجمع الياسمين السكني</td>
+</tr>
+<tr class="border-b border-outline-variant/5 hover:bg-white/5 transition-colors">
+<td class="p-5 text-on-surface-variant">2024/05/15</td>
+<td class="p-5 font-medium">سداد تأمين أسطول النقل</td>
+<td class="p-5"><span class="text-primary">ح/ مصروفات تأمين</span></td>
+<td class="p-5 text-on-surface-variant">ح/ البنك الأهلي</td>
+<td class="p-5 font-bold text-error">28,500 ر.س</td>
+<td class="p-5 text-xs bg-primary/5 px-2 py-1 rounded inline-block mt-4">أسطول اللوجستيات</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Arrears & Maintenance Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Arrears Report -->
+<section class="space-y-4">
+<h2 class="text-xl font-headline font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-error">event_busy</span>
+                تقرير المتأخرات (الذمم المدينة)
+            </h2>
+<div class="glass-panel rounded-xl overflow-hidden">
+<table class="w-full text-right text-xs">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant/10 text-on-surface-variant">
+<th class="p-4">المستأجر / العميل</th>
+<th class="p-4">الأصل</th>
+<th class="p-4">المبلغ المستحق</th>
+<th class="p-4">أيام التأخير</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant/5">
+<td class="p-4 font-bold">شركة نماء المحدودة</td>
+<td class="p-4 text-on-surface-variant">مكتب تجاري #12</td>
+<td class="p-4 font-bold text-error">45,000 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-error/10 text-error rounded-full">120 يوم</span></td>
+</tr>
+<tr class="border-b border-outline-variant/5">
+<td class="p-4 font-bold">مؤسسة الأفق</td>
+<td class="p-4 text-on-surface-variant">مستودع المنطقة الحرة</td>
+<td class="p-4 font-bold text-error">12,500 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-error/10 text-error rounded-full">45 يوم</span></td>
+</tr>
+<tr>
+<td class="p-4 font-bold">سالم عبدالله الراجحي</td>
+<td class="p-4 text-on-surface-variant">شقة سكنية #09</td>
+<td class="p-4 font-bold text-error">6,000 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full">12 يوم</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Maintenance Log -->
+<section class="space-y-4">
+<h2 class="text-xl font-headline font-bold flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">engineering</span>
+                سجل وجدولة الصيانة
+            </h2>
+<div class="glass-panel rounded-xl overflow-hidden">
+<table class="w-full text-right text-xs">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant/10 text-on-surface-variant">
+<th class="p-4">وصف المهمة</th>
+<th class="p-4">نوع الأصل</th>
+<th class="p-4">التكلفة المتوقعة</th>
+<th class="p-4">الحالة</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant/5">
+<td class="p-4 font-bold">استبدال تكييف مركزي</td>
+<td class="p-4 text-on-surface-variant">مبنى الإدارة</td>
+<td class="p-4 font-bold">3,500 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-primary/10 text-primary rounded-full">قيد التنفيذ</span></td>
+</tr>
+<tr class="border-b border-outline-variant/5">
+<td class="p-4 font-bold">فحص دوري للمحركات</td>
+<td class="p-4 text-on-surface-variant">الشاحنات الثقيلة</td>
+<td class="p-4 font-bold">8,900 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-success/10 text-success rounded-full">مكتمل</span></td>
+</tr>
+<tr>
+<td class="p-4 font-bold">تجديد عزل الأسطح</td>
+<td class="p-4 text-on-surface-variant">مجمع الروابي</td>
+<td class="p-4 font-bold">22,000 ر.س</td>
+<td class="p-4"><span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant rounded-full font-medium">مجدول (يونيو)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest py-12 flex flex-col items-center justify-center space-y-6 w-full border-t border-primary/10 mt-20">
+<div class="flex items-center gap-12">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">مركز المساعدة التقنية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">دليل السياسات المحاسبية</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium" href="#">التقارير السنوية</a>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-lg">verified</span>
+<p class="font-headline font-bold text-sm tracking-widest uppercase">MJM Smart 2024</p>
+</div>
+<p class="text-on-surface-variant/40 text-[10px]">النظام المحاسبي السيادي للأصول والممتلكات - جميع الحقوق محفوظة</p>
+</div>
+</footer>
+</body></html>

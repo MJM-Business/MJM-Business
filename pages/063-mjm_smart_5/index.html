@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تنبيهات إدارة التحصيل | MJM Smart Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Noto+Sans+Arabic:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#3a3939",
+                        "on-primary-container": "#554300",
+                        "secondary-fixed-dim": "#dac58d",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-container": "#c8b37d",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-tint": "#e9c349",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#f7e1a6",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#bfcdff",
+                        "on-tertiary-fixed": "#00174b",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#082b72",
+                        "secondary": "#dac58d",
+                        "primary": "#f2ca50",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "secondary-container": "#544519",
+                        "primary-container": "#d4af37",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#544519",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#99907c",
+                        "on-tertiary-container": "#254188",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary": "#3c2f05",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#735c00",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#dbe1ff",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "Noto Sans Arabic"],
+                        "display": ["Manrope", "Noto Sans Arabic"],
+                        "body": ["Inter", "Noto Sans Arabic"],
+                        "label": ["Inter", "Noto Sans Arabic"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-glow {
+            box-shadow: 0 0 12px rgba(242, 202, 80, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-surface overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Shared Top Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant px-10 py-4 bg-surface-container-low">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-on-background text-xl font-headline font-bold leading-tight tracking-[-0.015em]">MJM Smart Business</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-surface-container-high text-primary hover:bg-surface-bright transition-colors relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-error rounded-full border border-surface"></span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-10 w-[1px] bg-outline-variant opacity-30"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden md:block">
+<p class="text-sm font-bold text-on-background">أحمد المدير</p>
+<p class="text-xs text-on-surface-variant">المسؤول التنفيذي</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-primary-container" data-alt="A professional portrait of a confident middle-aged executive in a charcoal Italian suit. The lighting is dramatic and low-key, emphasizing authority and sophistication against a dark, minimalist background. The style is cinematic and luxurious, reflecting the elite corporate atmosphere of the MJM Smart Business platform." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsk6Wuyw-MNisGUgClv-T3RQTr1Rfe_zhnVMXqYIScv5Q0rQMa5eUK9mJDXisYdpKGfLd7zKzZUpgaSr5poAarohps9omDFiUvs6-Rb114V3FhYYVqiV48wO8vc4QwfSsQqCW2U7MdMHtX0ahzxU27uGGs48dsxclJsNcGiL5BRsxuhM5wxfBhvXdMPDMQNl5sCpOt_4xOhTMrTrILMo6jTrfUY1HLZJaUy0l8r9Ub0-RgKK7ihdn9Msbgsn7EXKDG-JtAGEw9Fg");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col gap-8 px-10 py-10 max-w-[1400px] mx-auto w-full">
+<!-- Title & System Status -->
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-2">
+<h1 class="text-on-background font-display text-4xl font-bold tracking-tight">تنبيهات إدارة التحصيل</h1>
+<p class="text-on-surface-variant text-lg">نظرة شاملة على حالة النظام والتنبيهات الحرجة للعمليات.</p>
+</div>
+<div class="glass-panel p-5 rounded-xl flex items-center gap-6 min-w-[400px]">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<div class="size-2 bg-primary rounded-full gold-glow"></div>
+<p class="text-on-surface text-sm font-bold leading-tight">حالة نظام التنبيهات الذكي</p>
+</div>
+<p class="text-on-surface-variant text-xs font-normal">النظام متصل وتعمل الإشعارات اللحظية بنسبة كفاءة 100%</p>
+</div>
+<label class="relative flex h-[28px] w-[50px] cursor-pointer items-center rounded-full border-none bg-surface-container-highest p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary-container transition-all">
+<div class="h-full w-[24px] rounded-full bg-white shadow-lg"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="flex gap-4 p-1 bg-surface-container-low rounded-xl w-fit">
+<button class="flex h-11 items-center justify-center px-6 rounded-lg bg-primary-container text-on-primary font-bold transition-all shadow-sm">
+                        الكل (24)
+                    </button>
+<button class="flex h-11 items-center justify-center px-6 rounded-lg text-on-surface hover:bg-surface-container-high font-medium transition-all">
+                        انتهاء العقود
+                    </button>
+<button class="flex h-11 items-center justify-center px-6 rounded-lg text-on-surface hover:bg-surface-container-high font-medium transition-all">
+                        تأخير الدفعات
+                    </button>
+<button class="flex h-11 items-center justify-center px-6 rounded-lg text-on-surface hover:bg-surface-container-high font-medium transition-all">
+                        طلبات الصيانة
+                    </button>
+<button class="flex h-11 items-center justify-center px-6 rounded-lg text-on-surface hover:bg-surface-container-high font-medium transition-all">
+                        الأمن والدخول
+                    </button>
+</div>
+<!-- Alerts List -->
+<div class="flex flex-col gap-4">
+<!-- Alert Item: High Priority -->
+<div class="group flex flex-col md:flex-row gap-6 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-r-4 border-error relative overflow-hidden">
+<div class="flex gap-4 flex-1">
+<div class="size-14 rounded-lg bg-error-container/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h3 class="text-on-surface text-lg font-bold">تأخير دفع حرج - عقد رقم #8829</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-error text-on-error uppercase tracking-wider">عالي الأولوية</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-2xl">تجاوز العميل "شركة الأندلس العقارية" فترة السماح بـ 5 أيام. المبلغ المستحق: 45,000 ريال سعودي. يرجى اتخاذ إجراء فوري.</p>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>منذ ساعتين</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>المسؤول: فهد العتيبي</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 self-center">
+<button class="px-6 h-10 rounded-lg bg-primary text-on-primary font-bold hover:scale-105 transition-transform">معالجة التنبيه</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface hover:bg-surface-bright"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+<!-- Alert Item: Medium Priority (Contract) -->
+<div class="group flex flex-col md:flex-row gap-6 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-r-4 border-primary relative overflow-hidden">
+<div class="flex gap-4 flex-1">
+<div class="size-14 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h3 class="text-on-surface text-lg font-bold">قرب انتهاء عقد - مجمع ريفيرا</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary-container text-on-primary-container uppercase tracking-wider">متوسط</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-2xl">ينتهي عقد الإيجار الخاص بـ "مجمع ريفيرا السكني" خلال 30 يومًا. لم يتم استلام طلب التجديد حتى الآن.</p>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>منذ 5 ساعات</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+<span>تم إرسال إشعار آلي للعميل</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 self-center">
+<button class="px-6 h-10 rounded-lg bg-surface-container-highest text-on-surface font-bold hover:bg-surface-bright transition-colors">تجديد العقد</button>
+<button class="px-4 h-10 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-bright transition-colors">تأجيل</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface hover:bg-surface-bright"><span class="material-symbols-outlined">share</span></button>
+</div>
+</div>
+<!-- Alert Item: Low Priority (Maintenance) -->
+<div class="group flex flex-col md:flex-row gap-6 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-r-4 border-tertiary relative overflow-hidden">
+<div class="flex gap-4 flex-1">
+<div class="size-14 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">build</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h3 class="text-on-surface text-lg font-bold">طلب صيانة جديد - البرج الشمالي</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary text-on-tertiary uppercase tracking-wider">منخفض</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-2xl">تم استلام طلب صيانة دورية للمصاعد في البرج الشمالي. الحالة: غير طارئة.</p>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>منذ يوم واحد</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 self-center">
+<button class="px-6 h-10 rounded-lg bg-surface-container-highest text-on-surface font-bold hover:bg-surface-bright transition-colors">تعيين فني</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface hover:bg-surface-bright"><span class="material-symbols-outlined">archive</span></button>
+</div>
+</div>
+<!-- Alert Item: Security Login -->
+<div class="group flex flex-col md:flex-row gap-6 p-6 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all border-r-4 border-outline-variant relative overflow-hidden">
+<div class="flex gap-4 flex-1">
+<div class="size-14 rounded-lg bg-surface-variant flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h3 class="text-on-surface text-lg font-bold">تسجيل دخول من جهاز جديد</h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-highest text-on-surface uppercase tracking-wider">أمني</span>
+</div>
+<p class="text-on-surface-variant text-sm max-w-2xl">تم تسجيل دخول ناجح للحساب "خالد محمد" من متصفح Safari على macOS. الموقع: الرياض، المملكة العربية السعودية.</p>
+<div class="flex items-center gap-4 mt-2 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>منذ دقيقتين</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 self-center">
+<button class="px-6 h-10 rounded-lg border border-primary text-primary font-bold hover:bg-primary/10 transition-colors">ليس أنا؟</button>
+<button class="px-4 h-10 rounded-lg bg-surface-container-highest text-on-surface font-bold hover:bg-surface-bright transition-colors">تأكيد</button>
+</div>
+</div>
+</div>
+<!-- Floating Pagination / Load More -->
+<div class="flex justify-center mt-6">
+<button class="group flex items-center gap-3 px-12 py-4 bg-surface-container-low rounded-full border border-outline-variant hover:border-primary transition-all">
+<span class="text-on-surface font-bold">تحميل المزيد من التنبيهات</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Bottom Action Sidebar Suggestion (Visual only) -->
+<div class="fixed bottom-10 left-10 flex flex-col gap-4">
+<button class="size-14 rounded-full bg-primary text-on-primary shadow-2xl flex items-center justify-center hover:scale-110 transition-transform gold-glow">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<button class="size-14 rounded-full glass-panel text-primary shadow-xl flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

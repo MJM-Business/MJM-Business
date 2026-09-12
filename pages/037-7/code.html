@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أوريوم لإدارة الأصول - الخدمات والمرافق</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed": "#dbe1ff",
+                        "primary": "#f2ca50",
+                        "on-tertiary-fixed": "#00174b",
+                        "surface-variant": "#353534",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#735c00",
+                        "secondary": "#dac58d",
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "on-tertiary-container": "#254188",
+                        "on-tertiary": "#082b72",
+                        "secondary-container": "#544519",
+                        "surface-tint": "#e9c349",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#c8b37d",
+                        "on-primary-container": "#554300",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface": "#131313",
+                        "primary-fixed": "#ffe088",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4d4635",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary-fixed-variant": "#544519",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#bfcdff",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#3a3939",
+                        "outline": "#99907c",
+                        "background": "#131313",
+                        "on-secondary": "#3c2f05",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#f7e1a6",
+                        "tertiary-container": "#97b0ff",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-surface-variant": "#d0c5af",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#dac58d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e5e2e1;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4d4635;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary">
+<!-- SideNavBar Integration -->
+<aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low dark:bg-surface-container-low border-l border-outline-variant/20 flex flex-col py-8 space-y-6 rtl z-50">
+<div class="px-8 flex flex-col items-center mb-8">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary mb-4 shadow-lg">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="A sophisticated portrait of a high-level executive with a confident gaze, set against a dark, blurred architectural background. The lighting is dramatic and warm, reflecting a luxurious corporate environment with gold and black tones. High-end editorial photography style consistent with a premium brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1nKZ3YoP_NR0nmK20qips00QWqwSOWvPYJvWAWGCR5mCFDDA2Tc4wJkT0jG-tBEsZ_g9GrcY9Eum9pGTrCr5Cy1Vz5m2Fi2IDYSk0q3u595NcXE8akKi2GGnlYjIp7QARKg42_IfcUhxKhBVRxj0yFV2BVvcLnV6Q0T5M9wH1miaWckx15bn_ZiguI-eIt6AHw6eGY-g7T0AdMucxwcqsHr76hlU2Odri-RvZjQa_UETfo6jOVuQdJdR_G6dX2abDvBehyOXpTw"/>
+</div>
+<h1 class="font-headline text-xl font-bold text-primary dark:text-primary">أوريوم لإدارة الأصول</h1>
+<p class="font-headline text-xs text-on-surface-variant mt-1 opacity-70">الإدارة الإستراتيجية</p>
+</div>
+<nav class="flex-1 px-4 space-y-2 overflow-y-auto custom-scrollbar">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline text-sm">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-headline text-sm">إدارة المستأجرين</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline text-sm">سجلات الدفع</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-headline text-sm">طلبات الصيانة</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-headline text-sm">عقود الإيجار التجارية</span>
+</a>
+<!-- Active State: الخدمات والمرافق -->
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-primary font-bold border-r-2 border-primary pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform bg-surface-container-high" href="#">
+<span class="material-symbols-outlined active-icon" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline text-sm">الخدمات والمرافق</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant pr-4 hover:bg-surface-container-high transition-colors duration-200 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-headline text-sm">تقارير الأداء</span>
+</a>
+</nav>
+<div class="px-8 mt-auto pt-6 border-t border-outline-variant/10">
+<button class="flex items-center gap-4 text-on-surface-variant hover:text-error transition-colors w-full py-2">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm">تسجيل الخروج</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="mr-72 min-h-screen">
+<!-- TopNavBar Integration -->
+<header class="fixed top-0 right-72 left-0 h-20 bg-surface dark:bg-surface shadow-sm flex items-center justify-between px-16 w-full rtl z-40">
+<div class="flex items-center gap-8">
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full pr-10 pl-4 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:ring-1 focus:ring-primary-container transition-all" placeholder="البحث في الوحدات التجارية..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary-container transition-all focus:ring-1 focus:ring-primary-container">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary-container transition-all focus:ring-1 focus:ring-primary-container">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary-container transition-all focus:ring-1 focus:ring-primary-container">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-outline-variant/20"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="font-headline text-sm font-black text-primary leading-tight">لوحة التحكم الإستراتيجية</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest text-right">Strategic Assets</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="pt-28 pb-12 px-16 max-w-7xl mx-auto">
+<!-- Page Header Section -->
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-on-background mb-2">إدارة الخدمات والمرافق</h2>
+<p class="text-on-surface-variant text-lg">مراقبة العدادات الذكية وإدارة استهلاك المحلات التجارية</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-high px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-surface-variant transition-colors border border-outline-variant/10 active:scale-95">
+<span class="material-symbols-outlined text-primary">download</span>
+<span>تحميل التقرير الشهري</span>
+</button>
+<button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-bold flex items-center gap-2 shadow-lg shadow-primary/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add</span>
+<span>إضافة خدمة جديدة</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- KPI Highlight Row -->
+<div class="col-span-12 grid grid-cols-4 gap-6">
+<div class="bg-surface-container rounded-lg p-6 flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">إجمالي استهلاك الكهرباء</p>
+<h3 class="text-3xl font-display font-bold text-primary">42,850 <span class="text-sm font-normal text-on-surface">كيلوواط</span></h3>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">كفاءة استهلاك المياه</p>
+<h3 class="text-3xl font-display font-bold text-primary">94%</h3>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">عدادات نشطة (سمارت)</p>
+<h3 class="text-3xl font-display font-bold text-primary">128 <span class="text-sm font-normal text-on-surface">وحدة</span></h3>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sensors</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">تنبيهات الصيانة</p>
+<h3 class="text-3xl font-display font-bold text-error">03</h3>
+</div>
+<div class="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+</div>
+<!-- Live Monitoring Grid (Left) -->
+<div class="col-span-8 bg-surface-container rounded-lg p-8">
+<div class="flex justify-between items-center mb-8">
+<h4 class="font-headline text-xl font-bold flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f2ca50]"></span>
+                            مراقبة الاستهلاك المباشر (Smart Meters)
+                        </h4>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs rounded bg-surface-container-high text-primary border border-primary/20">كهرباء</button>
+<button class="px-3 py-1 text-xs rounded text-on-surface-variant hover:bg-surface-container-high">مياه</button>
+<button class="px-3 py-1 text-xs rounded text-on-surface-variant hover:bg-surface-container-high">غاز</button>
+</div>
+</div>
+<div class="h-64 flex items-end gap-2 mb-4">
+<!-- Mock Chart Columns -->
+<div class="flex-1 bg-primary/5 rounded-t-sm h-[40%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/10 rounded-t-sm h-[60%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[45%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/40 rounded-t-sm h-[80%] transition-all hover:bg-primary/20 cursor-pointer relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-container-highest px-2 py-1 rounded text-[10px] text-primary whitespace-nowrap">Peak: 12.4kW</div>
+</div>
+<div class="flex-1 bg-primary/15 rounded-t-sm h-[55%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary-container rounded-t-sm h-[95%] transition-all hover:brightness-110 cursor-pointer"></div>
+<div class="flex-1 bg-primary/30 rounded-t-sm h-[70%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/10 rounded-t-sm h-[50%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[30%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+<div class="flex-1 bg-primary/40 rounded-t-sm h-[65%] transition-all hover:bg-primary/20 cursor-pointer"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant px-2 border-t border-outline-variant/10 pt-4">
+<span>01:00 AM</span>
+<span>06:00 AM</span>
+<span>12:00 PM</span>
+<span>06:00 PM</span>
+<span>11:59 PM</span>
+</div>
+</div>
+<!-- Facility Status (Right) -->
+<div class="col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container rounded-lg p-6 flex-1">
+<h4 class="font-headline text-lg font-bold mb-6">المرافق المشتركة</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-high rounded-lg border-r-2 border-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">ac_unit</span>
+<div>
+<p class="text-sm font-bold">التكييف المركزي</p>
+<p class="text-[10px] text-on-surface-variant">الحالة: يعمل بكفاءة</p>
+</div>
+</div>
+<span class="text-primary-fixed text-xs font-bold">24°C</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-high rounded-lg border-r-2 border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">elevator</span>
+<div>
+<p class="text-sm font-bold">المصاعد التجارية</p>
+<p class="text-[10px] text-on-surface-variant">صيانة مجدولة: غداً</p>
+</div>
+</div>
+<span class="text-on-surface-variant text-xs">نشط</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-high rounded-lg border-r-2 border-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">security</span>
+<div>
+<p class="text-sm font-bold">نظام الأمان الذكي</p>
+<p class="text-[10px] text-on-surface-variant">الحالة: مراقبة نشطة</p>
+</div>
+</div>
+<span class="text-primary-fixed text-xs font-bold">ON</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Shop Specific Services Management -->
+<div class="col-span-12 bg-surface-container rounded-lg p-8 overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<h4 class="font-headline text-xl font-bold">إدارة خدمات المحلات التجارية</h4>
+<div class="flex gap-4">
+<select class="bg-surface-container-highest border-none text-xs rounded-lg focus:ring-1 focus:ring-primary py-2 px-4 rtl">
+<option>كل الفئات</option>
+<option>أزياء وموضة</option>
+<option>مطاعم وكافيهات</option>
+<option>خدمات بنكية</option>
+</select>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right border-separate border-spacing-y-3">
+<thead>
+<tr class="text-on-surface-variant text-xs uppercase tracking-wider">
+<th class="pb-4 px-4 font-normal">المحل التجاري</th>
+<th class="pb-4 px-4 font-normal">رقم الوحدة</th>
+<th class="pb-4 px-4 font-normal">نوع الخدمة</th>
+<th class="pb-4 px-4 font-normal">آخر قراءة للعداد</th>
+<th class="pb-4 px-4 font-normal">حالة الخدمة</th>
+<th class="pb-4 px-4 font-normal">الإجراءات</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4 rounded-r-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/20">
+<img alt="Shop Logo" class="w-full h-full object-cover" data-alt="A luxurious fashion boutique storefront with warm golden lighting and minimalist display cases. The aesthetic is clean and high-end, featuring a modern architectural design in black and brass tones. High resolution editorial photography for a commercial property management dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEe-w2knf--rvXbvW8FwPlEuFCAylpNW32rGClcygbz_omOFAceEBX785KW78wIGS20aa73Tck0Tn7WvNytOxRx5ds0Z_DPplteW8GzNt7nO9oYczZcVDTojMFhn1cBkVKAJbatUE4wXHZnH5yTytJ9AMkbNJCzwBikKUmPT8Qq_veN-qoTzvHOccCfvsCW936EOm_r7g64Y8g6UnizG_QlRhWyy__myVmV0sLbDLtmEhSZc2qUDQGMb1iw_GwcBvbwoTHoeNA0w"/>
+</div>
+<span class="font-bold">براندي للأزياء</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-display">GF-104</td>
+<td class="py-4 px-4">
+<div class="flex gap-2">
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">electric_bolt</span></span>
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">water_drop</span></span>
+</div>
+</td>
+<td class="py-4 px-4 font-display">14,230 kW</td>
+<td class="py-4 px-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">مستقر</span>
+</td>
+<td class="py-4 px-4 rounded-l-lg">
+<button class="text-on-surface-variant hover:text-primary transition-all group-hover:scale-110">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4 rounded-r-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/20">
+<img alt="Cafe Logo" class="w-full h-full object-cover" data-alt="A modern, minimalist coffee shop interior with dark stone textures and elegant lighting. The space features premium furniture and a professional espresso machine, reflecting a high-end commercial tenant in a luxury development. Deep shadows and gold accents dominate the visual palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMm7cV8K5iZQn1KUIWbik2LzhV_Ko9khYPTHtzN_S5GkhZ-PvAkymi9R5WjbNeOQyAXt7dojhK_GzGkRmdPKKmv1hfGKWfhXkbCJ_gidu8ULErlkxqHFrB4raz8w7ZjMxX-qXlvhL5iDNfWBcKlJsq90jRelmvS7rn_JYYcugnrhoMtIC7014uDhIfXEcyr4re9wChDPdigZzeRaXdBysA1ACKRuqGADD6zDScPUX11FeKVacGCYFEGXQ7DU8ZjfBjHdXld8m3MA"/>
+</div>
+<span class="font-bold">أروما كافيه</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-display">GF-022</td>
+<td class="py-4 px-4">
+<div class="flex gap-2">
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">electric_bolt</span></span>
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">water_drop</span></span>
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">mode_fan</span></span>
+</div>
+</td>
+<td class="py-4 px-4 font-display">28,410 kW</td>
+<td class="py-4 px-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-error/10 text-error border border-error/20">فحص مطلوب</span>
+</td>
+<td class="py-4 px-4 rounded-l-lg">
+<button class="text-on-surface-variant hover:text-primary transition-all group-hover:scale-110">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4 rounded-r-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/20">
+<img alt="Tech Store Logo" class="w-full h-full object-cover" data-alt="A futuristic electronics flagship store with glowing LED strips, dark metal surfaces, and sleek product displays. The environment is high-tech and luxurious, with a sophisticated color scheme of black, silver, and gold accents. Wide cinematic angle, sharp focus on architectural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2YzlMIhVQuGZjrio6s_btOb9S2WtjEh791j9G10I9LEJOv6yNOlwdpRW-p8F4p-bt9k-qI0q0aLLC3L5tWJIEVWX8yAAT0FzcOgDW--ybYD1gid4K_KaB2drZXl9xXPmpE39QuQsEQTb4TIqLqUtqj9UQ8z4FQaj8oWuwPlVMqIE2MKLtTYh6g-8IYVs-00JTReeAhLLH-pBVyHWSHn0VFR48VqSpb8c09pEGmfjRQe40vdQQbpoNQV_HvvUP1Eyq1PxIrJLhzQ"/>
+</div>
+<span class="font-bold">مركز التقنية الحديثة</span>
+</div>
+</td>
+<td class="py-4 px-4 text-on-surface-variant font-display">L1-015</td>
+<td class="py-4 px-4">
+<div class="flex gap-2">
+<span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary"><span class="material-symbols-outlined text-[14px]">electric_bolt</span></span>
+</div>
+</td>
+<td class="py-4 px-4 font-display">9,120 kW</td>
+<td class="py-4 px-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">مستقر</span>
+</td>
+<td class="py-4 px-4 rounded-l-lg">
+<button class="text-on-surface-variant hover:text-primary transition-all group-hover:scale-110">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Facility Report / Maintenance Chart (Bottom Small Cards) -->
+<div class="col-span-6 bg-surface-container rounded-lg p-6">
+<h4 class="font-headline text-lg font-bold mb-6">تقرير استخدام المرافق المشتركة</h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2 text-sm">
+<span>صالة كبار الزوار</span>
+<span class="text-primary">82%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2 text-sm">
+<span>مواقف السيارات المميزة</span>
+<span class="text-primary">95%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2 text-sm">
+<span>خدمات التوصيل الداخلي</span>
+<span class="text-primary">45%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant/30 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-6 bg-surface-container rounded-lg p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<path d="M0,100 C20,80 40,90 60,70 S80,30 100,0" fill="transparent" stroke="#f2ca50" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<h4 class="font-headline text-lg font-bold mb-2">توقعات الصيانة الوقائية</h4>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">بناءً على تحليل البيانات الذكي، يوصى بفحص نظام التبريد في الجناح الشرقي خلال الـ 48 ساعة القادمة لتجنب أي انقطاع مفاجئ.</p>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-highest p-4 rounded-lg flex items-center gap-3 flex-1 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<div>
+<p class="text-[10px] text-on-surface-variant">احتمالية العطل</p>
+<p class="text-lg font-bold text-primary">12%</p>
+</div>
+</div>
+<button class="bg-primary/10 text-primary border border-primary/30 px-6 py-4 rounded-lg text-sm font-bold hover:bg-primary/20 transition-all">
+                                جدولة الفحص الآن
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Micro-interactions and subtle animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.bg-surface-container');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Hover effect for the live monitoring chart
+            const chartBars = document.querySelectorAll('.h-64 div');
+            chartBars.forEach(bar => {
+                bar.addEventListener('mouseenter', () => {
+                    bar.style.filter = 'brightness(1.5)';
+                });
+                bar.addEventListener('mouseleave', () => {
+                    bar.style.filter = 'brightness(1)';
+                });
+            });
+        });
+    </script>
+</body></html>

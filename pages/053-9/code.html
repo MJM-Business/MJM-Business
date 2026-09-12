@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart - أسطول السيادة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#3c2f05",
+                    "tertiary": "#bfcdff",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-bright": "#3a3939",
+                    "outline": "#99907c",
+                    "background": "#131313",
+                    "outline-variant": "#4d4635",
+                    "on-primary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#544519",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "on-surface-variant": "#d0c5af",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#dac58d",
+                    "secondary-fixed": "#f7e1a6",
+                    "tertiary-container": "#97b0ff",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#254188",
+                    "on-tertiary": "#082b72",
+                    "secondary-container": "#544519",
+                    "primary-container": "#d4af37",
+                    "inverse-primary": "#735c00",
+                    "secondary": "#dac58d",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-on-surface": "#313030",
+                    "surface-dim": "#131313",
+                    "primary": "#f2ca50",
+                    "on-tertiary-fixed": "#00174b",
+                    "surface-variant": "#353534",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary": "#3c2f00",
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-error": "#690005",
+                    "on-secondary-container": "#c8b37d",
+                    "on-primary-container": "#554300",
+                    "surface-tint": "#e9c349",
+                    "inverse-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b0b0b;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .status-glow { box-shadow: 0 0 8px #f2ca50; }
+    </style>
+</head>
+<body class="antialiased overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low border-l border-outline-variant/20 flex flex-col z-40 transition-all duration-300">
+<div class="p-8 flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full gold-gradient flex items-center justify-center p-1">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img alt="MJM Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKjjd4cFQ05wQBuCxzGkRWTWGbFXe_toYWYlp5ryMgi98w-3sX851aCNZ_EmcS5v3UQQMVmLLWtzaAFs1UV4TYQ9qUy9M_QUD369zCRSEVq-DigyyQps0RQ8rPYHjHMK_IUYL46jaG3B6fdSyAEaPfGanGGn7U6zC_4uVC4NTurEvqoC4iFx5sZwVDcRgdqqqyQa-YiningmRxu9-9c7BmgUZb9JkhaaINtvJg4-QDk-LNg2l02p1ifyPbxPbL6YUTbQCiyD_Yqg"/>
+</div>
+</div>
+<div class="text-center">
+<h1 class="text-headline-sm font-headline font-bold text-primary tracking-tight">نظام الأسطول</h1>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1 opacity-70">الإدارة التنفيذية</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto scrollbar-hide py-4 px-2 space-y-1"><a class="flex flex-row items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg p-3 mx-2 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span><span class="font-body text-sm">نظرة عامة</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">directions_car</span><span class="font-body text-sm">إدارة المركبات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">badge</span><span class="font-body text-sm">إدارة السائقين</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">assignment</span><span class="font-body text-sm">إدارة العقود</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">payments</span><span class="font-body text-sm">إدارة المدفوعات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">assessment</span><span class="font-body text-sm">تقارير حالة المركبات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">shopping_cart</span><span class="font-body text-sm">مبيعات المركبات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">report_problem</span><span class="font-body text-sm">إدارة المخالفات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">description</span><span class="font-body text-sm">إدارة وثائق المركبات</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">analytics</span><span class="font-body text-sm">تقارير عامة</span></a>
+<a class="flex flex-row items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg" href="#"><span class="material-symbols-outlined">chat</span><span class="font-body text-sm">الواتساب الذكي</span></a></nav>
+<div class="p-6">
+<button class="w-full gold-gradient text-on-primary font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="text-sm">إضافة مركبة جديدة</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="mr-72 min-h-screen relative overflow-y-auto">
+<!-- Top Nav Bar -->
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md flex flex-row-reverse justify-between items-center w-full px-8 py-4 shadow-sm">
+<div class="flex flex-row-reverse items-center gap-6">
+<h2 class="text-xl font-bold text-primary font-headline tracking-tighter">أسطول السيادة</h2>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary text-sm px-1 pb-1" href="#">لوحة التحكم</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm" href="#">خارطة الأسطول</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 text-sm" href="#">جدولة الصيانة</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full px-4 py-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface w-48 text-right" placeholder="بحث سريع..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="الملف الشخصي" class="w-full h-full object-cover" data-alt="A professional portrait of a senior executive in a tailored dark suit, with soft ambient office lighting in the background, maintaining a luxury corporate aesthetic with deep tones and golden highlights. High-end professional photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ4sfA_4Ra7xbaYcKsgYa2rkiu3kLlH8D7pi0HLMKSN_RDSiVYmBnOzobM2iq4wWMOJeIUbKhh9afSLGk2kQWGF45NLF6NSqK41yu0vtlUlRg3MWvgXSh_osH8r_OXYMdRHfv88E0dVSTrTOgt4mL1v9oIqqP4uJGFGs_gE5HQSdRAgxJSNJ72wlf91alAmUwuJwj9w4e2lz5LGC-1yfMT2q1MAZ6F0wmQq1zt7j931dKnFOjl-mutgIXx8xe7S_0C2Qj_qUDRkA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Stage Content -->
+<div class="p-8 space-y-10">
+<!-- Statistics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- KPI 1 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<span class="text-primary-fixed font-bold text-sm">+12.4%</span>
+</div>
+<div class="mt-8">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-widest">إجمالي قيمة الأسطول</p>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mt-1">24.5M <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+</div>
+<span class="text-primary-fixed font-bold text-sm">+8.1%</span>
+</div>
+<div class="mt-8">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-widest">الإيرادات الشهرية</p>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mt-1">1.2M <span class="text-sm font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between group hover:bg-surface-container-high transition-all border-r-4 border-primary/40">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">build</span>
+</div>
+<div class="status-glow bg-primary w-2 h-2 rounded-full"></div>
+</div>
+<div class="mt-8">
+<p class="text-on-surface-variant text-xs font-label uppercase tracking-widest">تنبيهات الصيانة</p>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface mt-1">14 <span class="text-sm font-normal text-on-surface-variant">تنبيه نشط</span></h3>
+</div>
+</div>
+<!-- Featured Action -->
+<div class="bg-surface-container-highest rounded-xl p-6 flex flex-col justify-center items-center text-center gap-4 relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity"></div>
+<span class="material-symbols-outlined text-primary text-4xl">speed</span>
+<div>
+<p class="text-on-surface font-bold">تحليل الأداء اللحظي</p>
+<p class="text-xs text-on-surface-variant mt-1">رؤية شاملة لتحركات الأسطول</p>
+</div>
+<button class="text-primary text-xs font-bold border border-primary/30 rounded-full px-4 py-2 hover:bg-primary hover:text-on-primary transition-all">فتح التقرير الذكي</button>
+</div>
+</section>
+<!-- Main Tables & Sections Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Vehicle List Column -->
+<section class="lg:col-span-2 space-y-6">
+<div class="flex justify-between items-end px-2">
+<div>
+<h2 class="text-headline-sm font-headline font-bold text-on-surface">إدارة قائمة المركبات</h2>
+<p class="text-sm text-on-surface-variant">مراقبة حالة التشغيل والإيرادات الشهرية</p>
+</div>
+<button class="text-sm text-primary flex items-center gap-1 hover:underline">
+                            عرض الكل <span class="material-symbols-outlined text-sm">arrow_left</span>
+</button>
+</div>
+<div class="bg-surface-container rounded-xl overflow-hidden">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-tighter">
+<th class="px-6 py-4 font-bold">المركبة</th>
+<th class="px-6 py-4 font-bold">رقم اللوحة</th>
+<th class="px-6 py-4 font-bold">السائق الحالي</th>
+<th class="px-6 py-4 font-bold">حالة المركبة</th>
+<th class="px-6 py-4 font-bold text-left">الإيرادات الشهرية</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-row-reverse items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">Mercedes-Benz S500</p>
+<p class="text-[10px] text-on-surface-variant">Luxury Sedan 2024</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-mono text-primary">أ ب ج 1234</td>
+<td class="px-6 py-5 text-sm">أحمد محمد عبد الله</td>
+<td class="px-6 py-5 text-sm"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span><span class="text-xs text-on-surface">نشط</span></div></td>
+<td class="px-6 py-5 text-left font-bold text-primary">43,500 ر.س</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-row-reverse items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">airport_shuttle</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">Lexus LX600</p>
+<p class="text-[10px] text-on-surface-variant">Executive SUV 2023</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-mono text-primary">ر س ط 9988</td>
+<td class="px-6 py-5 text-sm">خالد فهد السبيعي</td>
+<td class="px-6 py-5 text-sm"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]"></span><span class="text-xs text-on-surface">في الخدمة</span></div></td>
+<td class="px-6 py-5 text-left font-bold text-primary">63,000 ر.س</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-row-reverse items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">minor_crash</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">Range Rover Sport</p>
+<p class="text-[10px] text-on-surface-variant">Premium Sport 2024</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-mono text-primary">ع هـ ك 7777</td>
+<td class="px-6 py-5 text-sm">محمد فيصل الحربي</td>
+<td class="px-6 py-5 text-sm"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span><span class="text-xs text-on-surface">نشط</span></div></td>
+<td class="px-6 py-5 text-left font-bold text-primary">55,500 ر.س</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-row-reverse items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">BMW 7 Series</p>
+<p class="text-[10px] text-on-surface-variant">Luxury Sedan 2024</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-mono text-primary">د ق ل 5544</td>
+<td class="px-6 py-5 text-sm">علي يحيى الغامدي</td>
+<td class="px-6 py-5 text-sm"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]"></span><span class="text-xs text-on-surface">خارج الخدمة</span></div></td>
+<td class="px-6 py-5 text-left font-bold text-primary">48,000 ر.س</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Documents & Expirations Column -->
+<section class="space-y-6">
+<div class="px-2">
+<h2 class="text-headline-sm font-headline font-bold text-on-surface">التراخيص والتأمين</h2>
+<p class="text-sm text-on-surface-variant">متابعة المواعيد النهائية للوثائق</p>
+</div>
+<div class="space-y-4">
+<!-- Expiration Card 1 -->
+<div class="glass-panel rounded-xl p-5 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="flex justify-between items-start mb-3">
+<span class="bg-error/20 text-error text-[10px] px-2 py-1 rounded-full font-bold">منتهي الصلاحية</span>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<h4 class="font-bold text-on-surface">تأمين المركبة (أ ب ج 1234)</h4>
+<p class="text-xs text-on-surface-variant mt-1">شركة التعاونية للتأمين - شامل بلس</p>
+<div class="mt-4 flex justify-between items-center">
+<div class="text-xs text-on-surface-variant">تاريخ الانتهاء: <span class="text-error">2024/05/10</span></div>
+<button class="text-[10px] font-bold bg-error text-on-error px-3 py-1.5 rounded-lg active:scale-95 transition-transform">تجديد الآن</button>
+</div>
+</div>
+<!-- Expiration Card 2 -->
+<div class="glass-panel rounded-xl p-5 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-3">
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-1 rounded-full font-bold">ينتهي قريباً (5 أيام)</span>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<h4 class="font-bold text-on-surface">استمارة المركبة (ر س ط 9988)</h4>
+<p class="text-xs text-on-surface-variant mt-1">تجديد رخصة السير السنوية</p>
+<div class="mt-4 flex justify-between items-center">
+<div class="text-xs text-on-surface-variant">تاريخ الانتهاء: <span class="text-primary">2024/05/25</span></div>
+<button class="text-[10px] font-bold border border-primary text-primary px-3 py-1.5 rounded-lg hover:bg-primary hover:text-on-primary transition-all">بدأ المعاملة</button>
+</div>
+</div>
+<!-- Expiration Card 3 -->
+<div class="glass-panel rounded-xl p-5 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-on-surface-variant/30"></div>
+<div class="flex justify-between items-start mb-3">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2 py-1 rounded-full font-bold">نشط</span>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<h4 class="font-bold text-on-surface">رخصة القيادة - محمد الحربي</h4>
+<p class="text-xs text-on-surface-variant mt-1">رخصة عمومي ثقيل</p>
+<div class="mt-4 flex justify-between items-center">
+<div class="text-xs text-on-surface-variant">تاريخ الانتهاء: <span class="">2025/12/30</span></div>
+<span class="material-symbols-outlined text-primary-fixed text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 border-2 border-dashed border-outline-variant/30 rounded-xl text-on-surface-variant hover:text-primary hover:border-primary/50 transition-all flex flex-col items-center gap-2 group">
+<span class="material-symbols-outlined text-3xl opacity-50 group-hover:opacity-100">upload_file</span>
+<span class="text-sm font-bold">رفع وثيقة جديدة للمراجعة</span>
+</button>
+</section>
+</div>
+<!-- Smart Map / Fleet Live Tracking Mockup -->
+<section class="bg-surface-container rounded-2xl p-8 relative overflow-hidden h-96">
+<div class="absolute inset-0 bg-[#0e0e0e] opacity-40">
+<!-- Placeholder for Map Visualization using CSS patterns -->
+<div class="w-full h-full" style="background-image: radial-gradient(#d4af37 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div>
+<!-- Map UI Elements -->
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">التتبع المباشر للأسطول</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="status-glow bg-primary w-2 h-2 rounded-full animate-pulse"></span>
+<span class="text-xs text-primary font-bold">مباشر الآن: 42 مركبة قيد الحركة</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-2 rounded-lg flex gap-2">
+<button class="bg-primary text-on-primary p-2 rounded shadow-lg"><span class="material-symbols-outlined text-sm">map</span></button>
+<button class="text-on-surface-variant p-2 rounded"><span class="material-symbols-outlined text-sm">satellite_alt</span></button>
+<button class="text-on-surface-variant p-2 rounded"><span class="material-symbols-outlined text-sm">traffic</span></button>
+</div>
+</div>
+<div class="flex flex-row-reverse gap-4 overflow-x-auto scrollbar-hide py-4">
+<!-- Map Marker Info Card -->
+<div class="min-w-[280px] glass-panel rounded-xl p-4 flex gap-3 items-center">
+<div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary">local_taxi</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant">الرحلة الحالية: مرسيدس S500</p>
+<p class="text-sm font-bold text-on-surface">طريق الملك فهد، الرياض</p>
+<div class="flex gap-4 mt-2">
+<span class="text-[10px] text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">speed</span> 85 كم/س</span>
+<span class="text-[10px] text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> 15 دقيقة</span>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] glass-panel rounded-xl p-4 flex gap-3 items-center opacity-60">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">airport_shuttle</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant">الرحلة الحالية: لكزس LX600</p>
+<p class="text-sm font-bold text-on-surface">حي النخيل، الرياض</p>
+<div class="flex gap-4 mt-2">
+<span class="text-[10px] text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-xs">speed</span> 20 كم/س</span>
+<span class="text-[10px] text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-xs">schedule</span> 5 دقيقة</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Explicit Location Metadata for Model -->
+<div class="hidden" data-location="Riyadh, Saudi Arabia"></div>
+</section>
+</div>
+</main>
+<!-- Micro-interactions Script -->
+<script>
+        document.querySelectorAll('nav a').forEach(item => {
+            item.addEventListener('click', function(e) {
+                document.querySelectorAll('nav a').forEach(el => {
+                    el.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                    el.classList.add('text-on-surface-variant');
+                });
+                this.classList.add('bg-secondary-container', 'text-on-secondary-container');
+                this.classList.remove('text-on-surface-variant');
+            });
+        });
+    </script>
+</body></html>

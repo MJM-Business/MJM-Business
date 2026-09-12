@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>البيانات الأساسية للنظام | MJM Smart Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#d0c5af",
+                        "on-tertiary": "#082b72",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#254188",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed": "#241a00",
+                        "on-primary-container": "#554300",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#544519",
+                        "on-secondary-container": "#c8b37d",
+                        "secondary-fixed-dim": "#dac58d",
+                        "on-tertiary-fixed": "#00174b",
+                        "surface-container-highest": "#353534",
+                        "primary": "#f2ca50",
+                        "on-secondary-fixed-variant": "#544519",
+                        "on-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "primary-fixed-dim": "#e9c349",
+                        "outline-variant": "#4d4635",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-primary": "#3c2f00",
+                        "background": "#131313",
+                        "secondary": "#dac58d",
+                        "primary-container": "#d4af37",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "surface-tint": "#e9c349",
+                        "secondary-fixed": "#f7e1a6",
+                        "tertiary-container": "#97b0ff",
+                        "tertiary": "#bfcdff",
+                        "on-secondary": "#3c2f05",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#99907c",
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#3a3939",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-error": "#690005",
+                        "inverse-primary": "#735c00"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #E5E2E1;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #F2CA50 0%, #D4AF37 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full w-64 z-40 bg-[#1C1B1B] border-l border-[#4D4635]/20 flex flex-col py-8 px-4 gap-y-2 font-['Inter'] text-sm font-medium shadow-2xl shadow-black/50">
+<div class="flex items-center gap-3 px-2 mb-8">
+<img alt="MJM Smart Business Logo" class="h-10 w-10 object-contain" data-alt="Official luxury brand logo with elegant typography and golden accents on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTwhJJW5LPXeqRg6qwwyl6MuFqHkPd8u0Omavsb8-0YU7qmYlSa3nFSAQWoLCcpj_aKQrKy6DiWW5_BFR7MLY53wFZiUJFeIcj6f6Ut3yf0PRbBThair457lzitMfWJUOGW6IuYDvgLVsuCYpWwinnjp__m4jYZyoWKNqjLJtnVNpDidNlaMFHJLjoylpoPTHTzcDmpxtRM2wIySQQlzAiDny2D3C6vYGTLVtPMMe1gZblvwyNytrwcPDlLRUUSQ1najbxfHyJYw"/>
+<div>
+<h1 class="text-[#F2CA50] font-bold text-lg leading-tight uppercase">MJM Smart Business</h1>
+<p class="text-[#D0C5AF] opacity-50 text-[10px] tracking-widest">EXECUTIVE SUITE</p>
+</div>
+</div>
+<nav class="flex flex-col gap-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] hover:translate-x-[-4px] transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#2A2A2A] text-[#F2CA50] border-r-4 border-[#F2CA50] rounded-l-md transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">database</span>
+<span>البيانات الأساسية للنظام</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] hover:translate-x-[-4px] transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>أصول البيانات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] hover:translate-x-[-4px] transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>البيانات المالية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] hover:translate-x-[-4px] transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span>الحوكمة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] hover:translate-x-[-4px] transition-all duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>التقارير</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-y-1 border-t border-[#4D4635]/10 pt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF] opacity-70 hover:opacity-100 hover:bg-[#201F1F] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span>الدعم الفني</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-red-400 opacity-70 hover:opacity-100 hover:bg-red-950/20 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="mr-64 min-h-screen bg-[#131313] pb-12">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-30 bg-[#131313] px-8 py-4 flex justify-between items-center relative">
+<div class="flex items-center gap-4">
+<h2 class="font-headline text-xl font-bold tracking-tight text-[#E5E2E1]">البيانات الأساسية للنظام</h2>
+<div class="flex items-center bg-[#2A2A2A] px-3 py-1.5 rounded-lg border border-[#4D4635]/20">
+<span class="material-symbols-outlined text-[#F2CA50] text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-[#D0C5AF] placeholder-[#D0C5AF]/30 w-64" placeholder="البحث في السجلات..." type="text"/>
+<span class="text-[10px] text-[#D0C5AF]/40 mr-2 border border-[#D0C5AF]/20 px-1 rounded">Ctrl + K</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#D0C5AF]/50 hover:text-[#F2CA50] hover:bg-[#2A2A2A] transition-colors rounded-md">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-[#D0C5AF]/50 hover:text-[#F2CA50] hover:bg-[#2A2A2A] transition-colors rounded-md">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-[1px] bg-[#4D4635]/20 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="text-xs font-bold text-[#F2CA50]">مدير النظام</p>
+<p class="text-[10px] text-[#D0C5AF]/50">Executive Profile</p>
+</div>
+<div class="h-10 w-10 rounded-full border border-[#F2CA50]/30 p-0.5">
+<img alt="Executive Profile" class="h-full w-full rounded-full object-cover" data-alt="Professional portrait of a corporate executive in a dark suit, soft dramatic lighting, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIsBt9oFtBZ094tKV-mRIbKk68dNAHuwuFwG8vW4mX0kOqHfPGnlFTn_gigbAXK3Aw5Fayk3QsYIFXHlzllNe4NlAQPkRF6EEcoBDMC6VTi0WsQTtFG4gEBX2-FhrEwvGdM1cW45-DtFolaB_odeJB7PoMP3C8vldaKpt0U28g9oD1rVrrx9Z6PFk0EIZJH84hpfsfuIHJoknjDJU-YVwoR7XrUZrapgnJQriyr6Jb29vgkuWOKlc3IwhnsTtz7dOwadWcRFoiHA"/>
+</div>
+</div>
+</div>
+<div class="bg-[#1C1B1B] h-[1px] w-full absolute bottom-0 left-0"></div>
+</header>
+<div class="px-8 mt-10">
+<!-- Hero: System Vital Statistics -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+<div class="lg:col-span-2 bg-[#201F1F] rounded-xl p-8 relative overflow-hidden flex flex-col justify-between h-64 border-r-4 border-[#F2CA50]">
+<div class="absolute -right-10 -top-10 opacity-5">
+<span class="material-symbols-outlined text-[200px] text-[#F2CA50]">chat</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="h-2 w-2 rounded-full bg-[#F2CA50] shadow-[0_0_8px_#F2CA50]"></span>
+<span class="text-[10px] uppercase tracking-widest text-[#D0C5AF]/60 font-bold">نشط الآن</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-[#E5E2E1] mb-1">مركز الاتصال الذكي</h3>
+<p class="text-[#D0C5AF]/70 max-w-md">إدارة قنوات التواصل المؤتمتة عبر WhatsApp والربط المباشر مع قواعد بيانات العملاء.</p>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-[10px] text-[#F2CA50] font-bold mb-1">رقم الواتساب الرسمي</p>
+<p class="text-3xl font-mono text-[#E5E2E1] tracking-tighter" dir="ltr">+966 500 000 000</p>
+</div>
+<button class="gold-gradient text-[#3C2F00] px-6 py-2.5 rounded-md font-bold text-sm flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+                            تحديث البيانات
+                        </button>
+</div>
+</div>
+<div class="bg-[#201F1F] rounded-xl p-6 flex flex-col justify-between border-b-2 border-[#D4AF37]/30">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-[#D0C5AF]/50 mb-1">حالة الخادم</p>
+<h4 class="font-headline text-lg font-bold">الرياض - السحابة الرئيسية</h4>
+</div>
+<div class="bg-[#2A2A2A] p-2 rounded-lg text-[#F2CA50]">
+<span class="material-symbols-outlined">dns</span>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-[10px] mb-1.5 px-1">
+<span class="text-[#D0C5AF]/60">حمل المعالج</span>
+<span class="text-[#F2CA50]">24%</span>
+</div>
+<div class="h-1 w-full bg-[#131313] rounded-full overflow-hidden">
+<div class="h-full bg-[#F2CA50] w-[24%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] mb-1.5 px-1">
+<span class="text-[#D0C5AF]/60">استهلاك الذاكرة</span>
+<span class="text-[#F2CA50]">4.2GB / 16GB</span>
+</div>
+<div class="h-1 w-full bg-[#131313] rounded-full overflow-hidden">
+<div class="h-full bg-[#F2CA50] w-[42%]"></div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-[#4D4635]/10 flex justify-between items-center">
+<span class="text-[10px] text-[#D0C5AF]/40">آخر فحص: منذ 3 دقائق</span>
+<div class="flex -space-x-reverse space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500/30"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500/10"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid Content: Administrative Data & Config -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-10">
+<!-- Administrative Card -->
+<div class="lg:col-span-1 glass-panel rounded-xl p-6 border border-[#4D4635]/10 group">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 rounded bg-primary-container/10 group-hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-[#F2CA50]">verified_user</span>
+</div>
+<h4 class="font-headline font-bold text-[#E5E2E1]">البيانات الإدارية</h4>
+</div>
+<ul class="space-y-5">
+<li class="flex flex-col gap-1">
+<span class="text-[10px] text-[#D0C5AF]/50">السجل التجاري</span>
+<span class="text-sm font-medium">1010XXXX99</span>
+</li>
+<li class="flex flex-col gap-1">
+<span class="text-[10px] text-[#D0C5AF]/50">نوع التشفير</span>
+<span class="text-sm font-medium flex items-center gap-2">
+                                AES-256 (Military Grade)
+                                <span class="material-symbols-outlined text-xs text-green-400">lock</span>
+</span>
+</li>
+<li class="flex flex-col gap-1">
+<span class="text-[10px] text-[#D0C5AF]/50">نطاق النظام</span>
+<span class="text-sm font-medium text-[#F2CA50]">internal.mjm.system</span>
+</li>
+</ul>
+</div>
+<!-- Global Configuration -->
+<div class="lg:col-span-3 bg-[#1C1B1B] rounded-xl p-6 border border-[#4D4635]/5">
+<div class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded bg-[#2A2A2A]">
+<span class="material-symbols-outlined text-[#F2CA50]">tune</span>
+</div>
+<h4 class="font-headline font-bold text-[#E5E2E1]">الإعدادات العامة للنظام</h4>
+</div>
+<div class="flex gap-2">
+<kbd class="px-2 py-1 bg-[#2A2A2A] border border-[#4D4635]/30 rounded text-[9px] text-[#D0C5AF]/40">Alt + S</kbd>
+<button class="text-[11px] text-[#F2CA50] hover:underline">حفظ التغييرات</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#201F1F]">
+<div>
+<p class="text-xs font-bold mb-0.5">التنبيهات النظامية</p>
+<p class="text-[10px] text-[#D0C5AF]/50">إرسال تنبيهات لكل العمليات الحساسة</p>
+</div>
+<div class="w-10 h-5 bg-[#D4AF37] rounded-full relative flex items-center px-1">
+<div class="w-3.5 h-3.5 bg-[#3C2F00] rounded-full mr-auto"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-[#201F1F]">
+<div>
+<p class="text-xs font-bold mb-0.5">الأرشفة التلقائية</p>
+<p class="text-[10px] text-[#D0C5AF]/50">نسخ احتياطي كل 24 ساعة</p>
+</div>
+<div class="w-10 h-5 bg-[#353534] rounded-full relative flex items-center px-1">
+<div class="w-3.5 h-3.5 bg-[#D0C5AF]/20 rounded-full ml-auto"></div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<label class="text-[10px] text-[#D0C5AF]/50 mb-1.5 block px-1">توقيت إيقاف النظام المجدول</label>
+<div class="relative">
+<input class="w-full bg-[#2A2A2A] border-none text-xs rounded-lg py-2.5 pr-4 text-[#E5E2E1] focus:ring-1 focus:ring-[#F2CA50]" type="text" value="03:00 AM (UTC+3)"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-xs text-[#D0C5AF]/30">schedule</span>
+</div>
+</div>
+<div>
+<label class="text-[10px] text-[#D0C5AF]/50 mb-1.5 block px-1">عتبة تنبيه الأمان</label>
+<div class="flex items-center gap-3">
+<input class="accent-[#F2CA50] w-full bg-[#2A2A2A] h-1 rounded-full appearance-none" type="range"/>
+<span class="text-xs font-mono text-[#F2CA50]">High</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Management Table -->
+<section class="bg-[#1C1B1B] rounded-xl overflow-hidden shadow-2xl border border-[#4D4635]/5">
+<div class="px-8 py-5 flex justify-between items-center border-b border-[#4D4635]/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#F2CA50]">folder_managed</span>
+<h3 class="font-headline font-bold">سجلات وإدارة البيانات</h3>
+</div>
+<button class="text-xs text-[#D0C5AF]/60 hover:text-[#F2CA50] flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">download</span>
+                        تصدير التقرير الكامل
+                    </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-[#201F1F] text-[11px] uppercase tracking-wider text-[#D0C5AF]/50 font-bold">
+<th class="px-8 py-4">اسم الملف / السجل</th>
+<th class="px-6 py-4">النوع</th>
+<th class="px-6 py-4">آخر تحديث</th>
+<th class="px-6 py-4">حجم البيانات</th>
+<th class="px-6 py-4">الحالة الأمنية</th>
+<th class="px-8 py-4 text-left">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#4D4635]/10">
+<tr class="hover:bg-[#2A2A2A] transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded flex items-center justify-center bg-[#2A2A2A] text-[#F2CA50]">
+<span class="material-symbols-outlined text-lg">description</span>
+</div>
+<div>
+<p class="text-sm font-medium">whatsapp_api_logs_v2.sql</p>
+<p class="text-[10px] text-[#D0C5AF]/40">سجلات محادثات العملاء</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs">قاعدة بيانات</td>
+<td class="px-6 py-4 text-xs font-mono">2023-11-20 14:30</td>
+<td class="px-6 py-4 text-xs font-mono">1.2 GB</td>
+<td class="px-6 py-4">
+<span class="bg-green-500/10 text-green-400 text-[10px] px-2 py-0.5 rounded-full border border-green-500/20">مشفر بالكامل</span>
+</td>
+<td class="px-8 py-4 text-left">
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">visibility</span></button>
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">cloud_sync</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#2A2A2A] transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded flex items-center justify-center bg-[#2A2A2A] text-[#F2CA50]">
+<span class="material-symbols-outlined text-lg">key</span>
+</div>
+<div>
+<p class="text-sm font-medium">encryption_vault_main</p>
+<p class="text-[10px] text-[#D0C5AF]/40">مفاتيح الوصول السيادية</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs">مفاتيح أمان</td>
+<td class="px-6 py-4 text-xs font-mono">2023-11-19 09:12</td>
+<td class="px-6 py-4 text-xs font-mono">256 KB</td>
+<td class="px-6 py-4">
+<span class="bg-[#F2CA50]/10 text-[#F2CA50] text-[10px] px-2 py-0.5 rounded-full border border-[#F2CA50]/20">محمي للغاية</span>
+</td>
+<td class="px-8 py-4 text-left">
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">settings_input_component</span></button>
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">history</span></button>
+</td>
+</tr>
+<tr class="hover:bg-[#2A2A2A] transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded flex items-center justify-center bg-[#2A2A2A] text-[#F2CA50]">
+<span class="material-symbols-outlined text-lg">settings_suggest</span>
+</div>
+<div>
+<p class="text-sm font-medium">system_core_config.json</p>
+<p class="text-[10px] text-[#D0C5AF]/40">إعدادات النواة المركزية</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs">تكوين</td>
+<td class="px-6 py-4 text-xs font-mono">منذ 4 ساعات</td>
+<td class="px-6 py-4 text-xs font-mono">42 KB</td>
+<td class="px-6 py-4">
+<span class="bg-blue-500/10 text-blue-400 text-[10px] px-2 py-0.5 rounded-full border border-blue-500/20">جاهز</span>
+</td>
+<td class="px-8 py-4 text-left">
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">edit</span></button>
+<button class="p-1 hover:text-[#F2CA50] transition-colors"><span class="material-symbols-outlined text-sm">backup</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-[#0E0E0E] flex justify-between items-center text-[10px] text-[#D0C5AF]/30">
+<p>عرض 3 من أصل 42 سجلاً</p>
+<div class="flex gap-4">
+<button class="hover:text-[#F2CA50]">السابق</button>
+<button class="hover:text-[#F2CA50]">التالي</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-8 left-8 z-50">
+<button class="h-16 w-16 gold-gradient rounded-full shadow-[0_8px_32px_rgba(242,202,80,0.3)] flex items-center justify-center text-[#3C2F00] hover:scale-110 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+<!-- Interactive Map Element (Mocking System Location) -->
+<div class="hidden">
+<div data-location="Riyadh" style=""></div>
+</div>
+</body></html>

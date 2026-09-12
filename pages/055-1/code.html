@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart Business Platform - إدارة صيانة الأصول الفاخرة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;family=Noto+Kufi+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Gold accent
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0B0B0B", // Dark theme
+                        "glass": "rgba(255, 255, 255, 0.03)",
+                        "glass-border": "rgba(212, 175, 55, 0.2)"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Kufi Arabic", "Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Kufi Arabic', 'Public Sans', sans-serif;
+            background-color: #0B0B0B;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom, #D4AF37, #8A6E2F) 1;
+        }
+    </style>
+</head>
+<body class="text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<main class="flex-1 p-6 lg:p-10 max-w-[1600px] mx-auto w-full">
+<!-- Hero Section & Actions -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<div><h1 class="text-3xl font-bold text-white mb-2">نظام الصيانة الدورية الذكية وصحة الأصول</h1><p class="text-slate-400">مراقبة استباقية للحالة التشغيلية للأصول الفاخرة باستخدام الذكاء الاصطناعي.</p></div>
+<div class="flex gap-3"><h1 class="text-3xl font-bold text-white mb-2">نظام الصيانة الدورية الذكية وصحة الأصول</h1><p class="text-slate-400">مراقبة استباقية للحالة التشغيلية للأصول الفاخرة باستخدام الذكاء الاصطناعي.</p></div>
+</div>
+<!-- 1. Maintenance Overview Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+<div class="glass-morphism p-6 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary/10 rounded-xl text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="text-red-400 text-xs font-medium">تجاوز الميزانية بـ 2%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">تتبع التكاليف مقابل الميزانية</p>
+<h3 class="text-2xl font-bold text-white">$142,500 <span class="text-sm text-slate-500 font-normal">/ $140k</span></h3>
+<div class="w-full bg-white/5 h-1 rounded-full mt-3 overflow-hidden"><div class="bg-red-500 h-full" style="width: 102%"></div></div>
+</div>
+<div class="glass-morphism p-6 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-orange-500/10 rounded-xl text-orange-500">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-slate-500 text-sm font-medium">هذا الأسبوع</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">المهام المعلقة</p>
+<h3 class="text-2xl font-bold text-white">18</h3>
+</div>
+<div class="glass-morphism p-6 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-blue-500/10 rounded-xl text-blue-500">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<span class="text-blue-400 text-sm font-medium">نشط الآن</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">الإصلاحات النشطة</p>
+<h3 class="text-2xl font-bold text-white">07</h3>
+</div>
+<div class="glass-morphism p-6 rounded-2xl group hover:border-primary/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-green-500/10 rounded-xl text-green-500">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<span class="text-green-400 text-sm font-medium">ممتاز</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">كفاءة الصيانة</p>
+<h3 class="text-2xl font-bold text-white">96.4%</h3>
+</div>
+</div><!-- Asset Health Scores -->
+<div class="mb-10">
+<h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">monitor_heart</span>
+        مؤشر صحة الأصول الكبرى
+    </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-morphism p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full border-4 border-green-500/30 border-t-green-500 flex items-center justify-center">
+<span class="text-sm font-bold text-white">94%</span>
+</div>
+<div>
+<p class="text-white font-bold">أسطول الطائرات</p>
+<p class="text-xs text-slate-500">حالة تشغيلية ممتازة</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600">flight</span>
+</div>
+<div class="glass-morphism p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full border-4 border-primary/30 border-t-primary flex items-center justify-center">
+<span class="text-sm font-bold text-white">82%</span>
+</div>
+<div>
+<p class="text-white font-bold">السيارات الفاخرة</p>
+<p class="text-xs text-slate-500">تتطلب فحصاً دورياً</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600">directions_car</span>
+</div>
+<div class="glass-morphism p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full border-4 border-orange-500/30 border-t-orange-500 flex items-center justify-center">
+<span class="text-sm font-bold text-white">65%</span>
+</div>
+<div>
+<p class="text-white font-bold">العقارات والفيلات</p>
+<p class="text-xs text-slate-500">صيانة هيكلية مطلوبة</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600">apartment</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Table & AI -->
+<div class="lg:col-span-2 space-y-8">
+<!-- 2. Maintenance Tasks Table -->
+<div class="glass-morphism rounded-2xl overflow-hidden">
+<div class="p-6 border-b border-white/10 flex justify-between items-center">
+<h2 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+                            جدول مهام الصيانة
+                        </h2>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-white/5 text-slate-400 text-sm"><th class="px-6 py-4 font-semibold">الأصل</th><th class="px-6 py-4 font-semibold">المشكلة</th><th class="px-6 py-4 font-semibold">الأولوية</th><th class="px-6 py-4 font-semibold">الفني / إشعار</th><th class="px-6 py-4 font-semibold">الحالة</th><th class="px-6 py-4 font-semibold">التكلفة</th></tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-primary">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-slate-800" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgQjz9bkdVZdTQrRc-a0zyFeNmHVlWrY6Y9jGcF2nplQXXPbb6ZJG6gEWMEmYHmvvzc0NC3JM3Qy1cNu4UkQkPuYYg7U4EyLl2BKBh6ayMHQnoZo8GB4OcV1ql2-Vd5p7PzK3xlEkJjSiD49eiT-bjAJ9Wp_mQ5AZVB9wI4ySJ1qof5sFYuJ66tdFezmu1M-OzwnVQHdOmlJ2rmqPUYl_KJp_trPKe9foeR-bcZOj7QZkvHagt5zz51XiwG4lA8opaj5OWA7bqfw');"></div>
+<div>
+<p class="text-white font-medium">رولز رويس كولينان</p>
+<p class="text-xs text-slate-500 text-red-400 font-bold">متأخر 48 ساعة</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-300">فحص دوري للمحرك</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-orange-500/20 text-orange-500">عاجل</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-slate-400">م. أحمد كمال</span>
+<div class="flex items-center gap-1 text-[10px] text-green-500 font-bold">
+<span class="material-symbols-outlined text-xs">chat</span> تم الإرسال واتساب
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2 text-blue-400 text-sm">
+<span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> قيد التنفيذ
+</div>
+</td>
+<td class="px-6 py-4 text-white font-bold">$1,200</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-slate-800" data-alt="Private jet asset thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4xWkBY4EH_S-8TevrY94uSoV_J5zY8nPEJ_Zm96pmhZHLxkoX5XfmFdT7jA9A-Cdxz1B8u2XRQEOhdddn53PGOQgyFPRj58iHPxYTzh-pnzxewKUtcu2Ti4xPaEBTSPHbYbkK0rR2mTIbBcg8btIjI51tc0bqqZSvfkXFvSc1S7FrBcv8p1CmSQkJ6AXx6sS4Nh9DX-Fw3_xzEDgoOYg77lR_jLOCArVRGtJPgGiE3oBiKxWIxXr5i9EwPeplNLBYDu39B67yJA');"></div>
+<div>
+<p class="text-white font-medium">جلف ستريم G650</p>
+<p class="text-xs text-slate-500">طيران خاص</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-300">عطل في نظام التكييف</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/20 text-red-500 uppercase">طارئ</span>
+</td>
+<td class="px-6 py-4 text-sm text-slate-400">م. جاسم المرزوقي</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2 text-slate-500 text-sm">
+<span class="w-2 h-2 rounded-full bg-slate-500"></span>
+                                            بانتظار القطع
+                                        </div>
+</td>
+<td class="px-6 py-4 text-white font-bold">$4,850</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 6. AI Recommendations Section -->
+<!-- Automated Scheduling Timeline -->
+<div class="glass-morphism rounded-2xl p-6">
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_repeat</span>
+        جدول الصيانة الدورية
+    </h3>
+<div class="flex justify-between items-center text-[10px] text-slate-500 mb-2">
+<span>الأحد</span><span>الأثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span>
+</div>
+<div class="grid grid-cols-5 gap-1 h-20 mb-4">
+<div class="bg-primary/20 rounded relative group">
+<div class="absolute top-2 inset-x-1 h-2 bg-primary rounded shadow-[0_0_8px_rgba(212,175,55,0.5)]"></div>
+</div>
+<div class="bg-white/5 rounded relative"></div>
+<div class="bg-primary/20 rounded relative">
+<div class="absolute bottom-2 inset-x-1 h-2 bg-orange-500 rounded"></div>
+</div>
+<div class="bg-white/5 rounded relative"></div>
+<div class="bg-primary/20 rounded relative">
+<div class="absolute top-1/2 inset-x-1 h-2 bg-blue-500 rounded"></div>
+</div>
+</div>
+<div class="flex gap-4 text-[10px] text-slate-400">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> يومي</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-orange-500"></span> أسبوعي</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span> شهري</span>
+</div>
+</div><div class="p-6 rounded-2xl bg-gradient-to-br from-primary/10 via-background-dark to-background-dark border border-primary/20">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 bg-primary rounded-lg">
+<span class="material-symbols-outlined text-background-dark">psychology</span>
+</div>
+<div>
+<h2 class="text-xl font-bold text-white">توصيات الذكاء الاصطناعي (AI)</h2>
+<p class="text-sm text-slate-400">تنبؤات الصيانة الوقائية بناءً على أنماط الاستخدام</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">مهمة صيانة جديدة</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + M</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">التقارير التحليلية</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + R</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">تصفية النتائج الذكية</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + F</span>
+</div></div>
+</div>
+</div>
+<!-- Right Column: Schedule & Inventory -->
+<div class="space-y-8">
+<!-- 3. Smart Scheduling (Calendar Lite) -->
+<div class="glass-morphism rounded-2xl p-6">
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+                        المواعيد القادمة
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-3 rounded-xl bg-white/5 border-r-4 border-primary">
+<div class="text-center">
+<p class="text-xs text-slate-500">يوليو</p>
+<p class="text-xl font-bold text-primary">12</p>
+</div>
+<div>
+<p class="text-sm font-semibold text-white">صيانة المصعد الرئيسي</p>
+<p class="text-xs text-slate-400">برج MJM التجاري - 09:00 ص</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-3 rounded-xl bg-white/5 border-r-4 border-slate-600">
+<div class="text-center">
+<p class="text-xs text-slate-500">يوليو</p>
+<p class="text-xl font-bold text-slate-300">15</p>
+</div>
+<div>
+<p class="text-sm font-semibold text-white">تحديث أنظمة الأمان</p>
+<p class="text-xs text-slate-400">الجناح الرئاسي - 02:00 م</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 rounded-xl border border-primary/30 text-primary text-sm font-medium hover:bg-primary/10 transition-colors">
+                        عرض التقويم الكامل
+                    </button>
+</div>
+<!-- 4. Maintenance Inventory -->
+<!-- Automated Scheduling Timeline -->
+<div class="glass-morphism rounded-2xl p-6">
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_repeat</span>
+        جدول الصيانة الدورية
+    </h3>
+<div class="flex justify-between items-center text-[10px] text-slate-500 mb-2">
+<span>الأحد</span><span>الأثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span>
+</div>
+<div class="grid grid-cols-5 gap-1 h-20 mb-4">
+<div class="bg-primary/20 rounded relative group">
+<div class="absolute top-2 inset-x-1 h-2 bg-primary rounded shadow-[0_0_8px_rgba(212,175,55,0.5)]"></div>
+</div>
+<div class="bg-white/5 rounded relative"></div>
+<div class="bg-primary/20 rounded relative">
+<div class="absolute bottom-2 inset-x-1 h-2 bg-orange-500 rounded"></div>
+</div>
+<div class="bg-white/5 rounded relative"></div>
+<div class="bg-primary/20 rounded relative">
+<div class="absolute top-1/2 inset-x-1 h-2 bg-blue-500 rounded"></div>
+</div>
+</div>
+<div class="flex gap-4 text-[10px] text-slate-400">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> يومي</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-orange-500"></span> أسبوعي</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span> شهري</span>
+</div>
+</div><div class="glass-morphism rounded-2xl p-6">
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+                        توفر قطع الغيار
+                    </h3>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-300">فلاتر زيت هيدروليك</span>
+<span class="text-primary font-bold">12 قطعة</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 80%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-300">شاشات تحكم ذكية</span>
+<span class="text-red-500 font-bold">2 قطعة (منخفض)</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-red-500" style="width: 15%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-300">كيابل توصيل فائق السرعة</span>
+<span class="text-slate-300 font-bold">45 متر</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-green-500" style="width: 60%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Keyboard Shortcuts Legend -->
+<div class="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+<h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">keyboard</span>
+                        اختصارات لوحة المفاتيح
+                    </h3>
+<div class="grid grid-cols-1 gap-3"><div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">مهمة صيانة جديدة</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + M</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">التقارير التحليلية</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + R</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-400">تصفية النتائج الذكية</span>
+<span class="font-mono bg-white/10 px-2 py-0.5 rounded border border-white/5 text-slate-100">Alt + F</span>
+</div></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Stats -->
+<footer class="mt-auto border-t border-white/10 p-6 glass-morphism">
+<div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<p>© 2024 منصة MJM للأعمال الذكية. جميع الحقوق محفوظة.</p>
+<div class="flex gap-6">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                    حالة النظام: متصل
+                </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">update</span>
+                    آخر تحديث للبيانات: منذ دقيقتين
+                </span>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

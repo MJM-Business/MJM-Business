@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>الخدمات والمرافق المتكاملة - الشقق | MJM Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#241a00",
+                    "primary": "#f2ca50",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#0B0B0B",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#0B0B0B",
+                    "inverse-primary": "#735c00",
+                    "on-error": "#690005",
+                    "surface": "#0B0B0B",
+                    "on-primary-fixed-variant": "#574500",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "error-container": "#93000a",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-container": "#554300",
+                    "outline-variant": "#4d4635",
+                    "primary-fixed": "#ffe088",
+                    "on-tertiary": "#082b72",
+                    "on-primary-fixed": "#241a00",
+                    "surface-bright": "#3a3939",
+                    "primary-container": "#d4af37",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#d0c5af",
+                    "inverse-on-surface": "#313030",
+                    "outline": "#99907c",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#bfcdff",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#c8b37d",
+                    "secondary-fixed": "#f7e1a6",
+                    "on-primary": "#3c2f00",
+                    "on-secondary": "#3c2f05",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "tertiary-container": "#97b0ff",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-fixed-dim": "#dac58d",
+                    "secondary": "#dac58d",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed": "#00174b",
+                    "secondary-container": "#544519",
+                    "on-tertiary-container": "#254188",
+                    "on-secondary-fixed-variant": "#544519"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0B0B0B;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(32, 31, 31, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Gold Gradient Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            color: #3c2f00;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        /* Gold Glow Status */
+        .status-glow {
+            box-shadow: 0 0 12px #f2ca50;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+    </style>
+</head>
+<body class="overflow-x-hidden flex min-h-screen">
+<!-- Side Navigation Bar -->
+
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full pt-16 pb-20 px-12 bg-surface min-h-screen">
+<!-- Hero Header -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<p class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-2">إدارة الأصول</p>
+<h3 class="text-4xl font-headline font-bold text-on-surface leading-tight">الخدمات والمرافق المتكاملة-الشقق</h3>
+<p class="text-on-surface-variant/70 mt-2 max-w-2xl">تحكم كامل في الخدمات الإضافية، الاشتراكات، وحجوزات المرافق للمجمع السكني الفاخر.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 border border-primary/20 text-primary rounded-md font-medium hover:bg-primary/5 transition-colors">تصدير الفواتير</button>
+<button class="px-6 py-3 btn-gold rounded-md font-bold">إضافة مرفق جديد</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Key Performance Indicators -->
+<div class="col-span-12 grid grid-cols-4 gap-6 mb-4">
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl">wifi</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">الإنترنت النشط</p>
+<p class="text-3xl font-display font-bold mt-2">142 <span class="text-xs text-primary font-normal">شقة</span></p>
+<div class="mt-4 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary status-glow"></span>
+<span class="text-[10px] text-primary-fixed uppercase tracking-wider">تشغيل مستقر</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl">local_parking</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">إشغال المواقف</p>
+<p class="text-3xl font-display font-bold mt-2">89% <span class="text-xs text-primary font-normal">سعة</span></p>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-4 overflow-hidden">
+<div class="bg-primary h-full" style="width: 89%"></div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden group" style="--mouse-x: 62px; --mouse-y: 112px;">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl">cleaning_services</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">طلبات الصيانة</p>
+<p class="text-3xl font-display font-bold mt-2">12 <span class="text-xs text-error font-normal">معلقة</span></p>
+<div class="mt-4 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-[10px] text-error uppercase tracking-wider">تتطلب استجابة</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl">payments</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">إيرادات المرافق (الشهر)</p>
+<p class="text-3xl font-display font-bold mt-2">42,500 <span class="text-xs text-primary font-normal">SAR</span></p>
+<p class="text-[10px] text-primary/60 mt-4">+15% عن الشهر السابق</p>
+</div>
+</div>
+<!-- Facilities Booking (Interactive Glass Section) -->
+<div class="col-span-8 glass-panel rounded-xl p-8" style="--mouse-x: 97.66668701171875px; --mouse-y: 45px;">
+<div class="flex justify-between items-center mb-8">
+<h4 class="text-xl font-headline font-bold text-on-surface">جدول حجز المرافق المشتركة</h4>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-highest rounded-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="p-2 bg-surface-container-highest rounded-md hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Facility Card -->
+<div class="bg-surface-container-high/50 rounded-lg p-4 border border-outline-variant/10 group cursor-pointer hover:bg-surface-container-high transition-all">
+<img class="w-full h-32 object-cover rounded-md mb-4 brightness-75 group-hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGMv8HNfJCKiDVFN2aZbC-wZdIrKhBsdg1InCseO36y0chqn6xlB9MgTR-6CuPHXgVG7ySBb4gNm2hPp14FnStx1tog5xFF_UxgBVMGnn2yDV5U859g7Wtr1JVBa_vnHGATZQHPPcl4BggRVqz3kb8lSnWwj2LVrNJuC0pITGDGwNMNLkl_IA31yjp9zT2JQe_-ZXr-nRxHQ7cJLWF2u6992mqv7sEU5-ImqJIPunGQeiJHsTgpM_R-8l8Cyyl4biMbrzm-SS87A">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-sm">النادي الصحي</h5>
+<p class="text-[10px] text-on-surface-variant">متاح لـ 5 أشخاص حالياً</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary status-glow"></span>
+</div>
+<button class="w-full mt-4 py-2 border border-primary/20 rounded text-xs text-primary hover:bg-primary/10 transition-colors">حجز موعد</button>
+</div>
+<!-- Facility Card -->
+<div class="bg-surface-container-high/50 rounded-lg p-4 border border-outline-variant/10 group cursor-pointer hover:bg-surface-container-high transition-all">
+<img class="w-full h-32 object-cover rounded-md mb-4 brightness-75 group-hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAb0piv3BJdwvAg--gydAIFXoE46w8EQzR_x7mYWmxc49Yni4qZYYcXNE-wxTYDbC7wkAAFVNsKk1wOa-1tr5qaWqfhslo52pkvNEY0h89sPNeVeMvih23_rGGYFDazHkLgba3wp4RPO50YvRm5b5yfEr427Up03VVGi6E7WynguapSZpMnS1hbcfpxSb-urzbR09Ne4gSexT0VbmNWqZywvK4zllqWYVVeWLts80e_Tlkl4UmhiEn5aRurHV9DPD3KkqxDdmrNg">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-sm">المسبح الأولمبي</h5>
+<p class="text-[10px] text-on-surface-variant">مغلق للصيانة الدورية</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<button class="w-full mt-4 py-2 border border-outline-variant/20 rounded text-xs text-on-surface-variant cursor-not-allowed">غير متاح</button>
+</div>
+<!-- Facility Card -->
+<div class="bg-surface-container-high/50 rounded-lg p-4 border border-outline-variant/10 group cursor-pointer hover:bg-surface-container-high transition-all">
+<img class="w-full h-32 object-cover rounded-md mb-4 brightness-75 group-hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG2Esb34KoQrVOw2_V0AaBs7K6lD0hlcOR8sWza7oMXuUs--Xmh-L_xkaTJIPCv_0CyZk1UsS9YIkqIegtiFFd_QDWgcG3OtnSg5D7DziqcsgU3t1rbLqnGUIDbdDu_zFUNvhLr6GRC-G8wpbjH8zRYOYlWDoZr4YVvl8M92ItCTPGcZEUvYfFtDAOFc-YuUcpSXpLXAuV06rYVfd4QOdyqV1IWQoczgFNIMQY58ol7sq1covTyIGDFQOfLTbeYQ11ns7Xa6hq4A">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-sm">صالة السينما</h5>
+<p class="text-[10px] text-on-surface-variant">متوفر 3 فترات اليوم</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary status-glow"></span>
+</div>
+<button class="w-full mt-4 py-2 border border-primary/20 rounded text-xs text-primary hover:bg-primary/10 transition-colors">حجز موعد</button>
+</div>
+<!-- Facility Card -->
+<div class="bg-surface-container-high/50 rounded-lg p-4 border border-outline-variant/10 group cursor-pointer hover:bg-surface-container-high transition-all">
+<img class="w-full h-32 object-cover rounded-md mb-4 brightness-75 group-hover:brightness-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVJ-Jzz_X5Uggb3siircNdV2gwnUZjkXJwmVMRO4G_CpjZfVDS1_oekV1Vdq56vGdahHWAHmUdZqb_8auRoA9FLThT3oLes4hfneA3jg7w6zubPuI5Sv8cUTuLeoOmu5FzgF38NW-Hqp1wGWSt1YW4P1qJY4GSH06cNx67nIkE-UvWZJF3alpisex0EFboWvb6SjjrSE_ZAECHibEiu84fWifF4hKNs8TRLrgM2AlaRWVoitovO-A8cClg3DEJE0PXRvmxfnheMA">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold text-sm">مركز الأعمال</h5>
+<p class="text-[10px] text-on-surface-variant">متاح بالكامل</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary status-glow"></span>
+</div>
+<button class="w-full mt-4 py-2 border border-primary/20 rounded text-xs text-primary hover:bg-primary/10 transition-colors">حجز موعد</button>
+</div>
+</div>
+</div>
+<!-- Additional Services -->
+<div class="col-span-4 bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
+<h4 class="text-xl font-headline font-bold text-on-surface mb-8">الخدمات الإضافية</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-surface-container rounded-lg border-r-4 border-primary">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">wifi</span>
+</div>
+<div>
+<p class="font-bold text-sm">إنترنت فائق السرعة</p>
+<p class="text-[10px] text-on-surface-variant">باقة الـ 1GB</p>
+</div>
+</div>
+<p class="text-primary font-display font-bold">299 <span class="text-[8px]">ر.س</span></p>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container rounded-lg border-r-4 border-outline-variant">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-on-surface-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">cleaning_services</span>
+</div>
+<div>
+<p class="font-bold text-sm">التنظيف اليومي</p>
+<p class="text-[10px] text-on-surface-variant">خدمة التدبير المنزلي</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-display font-bold">450 <span class="text-[8px]">ر.س</span></p>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container rounded-lg border-r-4 border-primary" style="--mouse-x: 111px; --mouse-y: 62px;">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_parking</span>
+</div>
+<div>
+<p class="font-bold text-sm">موقف سيارات إضافي</p>
+<p class="text-[10px] text-on-surface-variant">قبو B2 - رقم 45</p>
+</div>
+</div>
+<p class="text-primary font-display font-bold">150 <span class="text-[8px]">ر.س</span></p>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container rounded-lg border-r-4 border-outline-variant">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-on-surface-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">medical_services</span>
+</div>
+<div>
+<p class="font-bold text-sm">الرعاية الصحية المنزلية</p>
+<p class="text-[10px] text-on-surface-variant">خدمة طوارئ 24/7</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-display font-bold">600 <span class="text-[8px]">ر.س</span></p>
+</div>
+</div>
+<div class="mt-8 p-6 bg-primary-container/10 rounded-lg border border-primary/20">
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                    يتم فوترة جميع الخدمات الإضافية في اليوم الأول من كل شهر ميلادي. يمكن الإلغاء قبل 5 أيام من نهاية الشهر.
+                </p>
+</div>
+</div>
+<!-- Apartment Service Status Table -->
+<div class="col-span-12 mt-4 bg-surface-container rounded-xl overflow-hidden shadow-sm shadow-primary/5">
+<div class="p-8 border-b border-outline-variant/10 flex justify-between items-center">
+<h4 class="text-xl font-headline font-bold text-on-surface">قائمة حالات الخدمة لكل وحدة</h4>
+<div class="flex gap-4">
+<select class="bg-surface-container-highest border-none rounded-md px-4 py-2 text-xs focus:ring-primary/30">
+<option>تصفية حسب الطابق</option>
+<option>الطابق الأول</option>
+<option>الطابق الثاني</option>
+</select>
+<select class="bg-surface-container-highest border-none rounded-md px-4 py-2 text-xs focus:ring-primary/30">
+<option>حالة الاشتراك</option>
+<option>نشط</option>
+<option>معلق</option>
+</select>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">
+<th class="px-8 py-5">رقم الشقة</th>
+<th class="px-8 py-5">المستأجر</th>
+<th class="px-8 py-5">الإنترنت</th>
+<th class="px-8 py-5">المواقف</th>
+<th class="px-8 py-5">النادي</th>
+<th class="px-8 py-5">إجمالي الرسوم</th>
+<th class="px-8 py-5">الحالة المالية</th>
+<th class="px-8 py-5">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-5 font-bold">A-101</td>
+<td class="px-8 py-5">م. عبد العزيز بن سلطان</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full">نشط - 1GB</span></td>
+<td class="px-8 py-5 text-on-surface-variant">موقف 1 - أساسي</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full">مشترك</span></td>
+<td class="px-8 py-5 font-display font-bold">750 ر.س</td>
+<td class="px-8 py-5"><span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> مدفوع</span></td>
+<td class="px-8 py-5">
+<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">edit_note</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-5 font-bold">B-205</td>
+<td class="px-8 py-5">د. سارة الهاشمي</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] rounded-full">غير مشترك</span></td>
+<td class="px-8 py-5 text-on-surface-variant">موقف 2 - أساسي</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full">مشترك</span></td>
+<td class="px-8 py-5 font-display font-bold">150 ر.س</td>
+<td class="px-8 py-5"><span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span> متأخر</span></td>
+<td class="px-8 py-5">
+<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">edit_note</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="px-8 py-5 font-bold">C-302</td>
+<td class="px-8 py-5">الأستاذ خالد الدوسري</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full">نشط - 500MB</span></td>
+<td class="px-8 py-5 text-on-surface-variant">موقف 1 - أساسي</td>
+<td class="px-8 py-5"><span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] rounded-full">غير مشترك</span></td>
+<td class="px-8 py-5 font-display font-bold">199 ر.س</td>
+<td class="px-8 py-5"><span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> مدفوع</span></td>
+<td class="px-8 py-5">
+<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">edit_note</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<script>
+    // Micro-interactions and atmospheric effects
+    document.querySelectorAll('.glass-panel, .bg-surface-container').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+</script>
+
+
+</body></html>

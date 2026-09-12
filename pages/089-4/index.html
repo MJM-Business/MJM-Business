@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="flex items-center justify-between border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-6 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-4xl">diamond</span>
+<h2 class="text-xl font-black leading-tight tracking-tight uppercase">MJM Smart</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-100 hover:text-primary text-sm font-medium transition-colors" href="#">لوحة القيادة</a>
+<a class="text-slate-100/60 hover:text-primary text-sm font-medium transition-colors" href="#">الرحلات</a>
+<a class="text-slate-100/60 hover:text-primary text-sm font-medium transition-colors" href="#">الشحن</a>
+<a class="text-slate-100/60 hover:text-primary text-sm font-medium transition-colors" href="#">التقارير</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-white/5 rounded-lg border border-primary/10 px-3 py-1.5">
+<span class="material-symbols-outlined text-primary/60 mr-2 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-500" placeholder="بحث سريع..." type="text"/>
+</div>
+<button class="relative p-2 text-slate-100 hover:bg-primary/10 rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-primary"></span>
+</button>
+<div class="h-10 w-10 rounded-full bg-gradient-to-tr from-primary to-primary/40 border border-primary/20 flex items-center justify-center overflow-hidden" data-alt="User profile avatar circle">
+<span class="material-symbols-outlined text-background-dark">person</span>
+</div>
+</div>
+</header>
+<main class="flex-1 p-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full space-y-8">
+<!-- Welcome & Quick Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div>
+<h1 class="text-3xl md:text-4xl font-black text-white mb-2">مرحباً بك، منصة MJM Smart</h1>
+<p class="text-slate-400 text-lg">إدارة السفر المؤسسي وعمليات الشحن الفاخرة</p>
+</div>
+<div class="flex flex-wrap gap-3"><button class="flex items-center gap-2 bg-primary text-background-dark px-5 py-3 rounded-xl font-bold hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">flight_takeoff</span>
+<span>حجز طيران</span>
+</button>
+<button class="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-5 py-3 rounded-xl font-bold hover:bg-primary/30 transition-all">
+<span class="material-symbols-outlined">directions_bus</span>
+<span>سفر بري (باصات)</span>
+</button>
+<button class="flex items-center gap-2 bg-primary/20 text-primary border border-primary/30 px-5 py-3 rounded-xl font-bold hover:bg-primary/30 transition-all">
+<span class="material-symbols-outlined">directions_boat</span>
+<span>سفر بحري (باخرة)</span>
+</button></div>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- KPI Section (Revenue Overview) -->
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white/5 border border-primary/10 p-6 rounded-2xl flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">payments</span>
+<span class="text-green-500 text-xs font-bold">+12.5%</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-400 text-sm">إجمالي الربح اليومي</p>
+<h3 class="text-2xl font-bold text-white mt-1">45,200 ريال</h3>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 p-6 rounded-2xl flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">travel</span>
+<span class="text-primary text-xs font-bold">85 عملية</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-400 text-sm">أرباح قطاع السفر</p>
+<h3 class="text-2xl font-bold text-white mt-1">18,400 ريال</h3>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 p-6 rounded-2xl flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">inventory_2</span>
+<span class="text-primary text-xs font-bold">42 شحنة</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-400 text-sm">أرباح قطاع الشحن</p>
+<h3 class="text-2xl font-bold text-white mt-1">26,800 ريال</h3>
+</div>
+</div>
+</div>
+<!-- Pricing Calculator (Ultra Flexible) -->
+<div class="bg-gradient-to-b from-primary/10 to-transparent border border-primary/30 p-6 rounded-2xl row-span-2"><div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">confirmation_number</span>
+<h3 class="text-lg font-bold text-white">نظام حجز التذاكر الذكي</h3>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-[10px] text-slate-400 mb-1">نقطة الانطلاق</label>
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg py-2 px-3 text-white text-sm focus:border-primary outline-none" placeholder="من..." type="text"/>
+</div>
+<div>
+<label class="block text-[10px] text-slate-400 mb-1">وجهة الوصول</label>
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg py-2 px-3 text-white text-sm focus:border-primary outline-none" placeholder="إلى..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-[10px] text-slate-400 mb-1">تاريخ السفر</label>
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg py-2 px-3 text-white text-sm focus:border-primary outline-none" type="date"/>
+</div>
+<div>
+<label class="block text-[10px] text-slate-400 mb-1">فئة التذكرة</label>
+<select class="w-full bg-background-dark border border-primary/20 rounded-lg py-2 px-3 text-white text-sm focus:border-primary outline-none">
+<option>اقتصادية</option>
+<option>رجال أعمال</option>
+<option>VIP / جناح</option>
+</select>
+</div>
+</div>
+<div class="pt-4 border-t border-primary/10">
+<label class="block text-sm text-slate-400 mb-1.5">تكلفة الشراء (صافي)</label>
+<div class="relative">
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg py-2.5 px-4 text-white focus:border-primary outline-none transition-all" placeholder="0.00" type="number"/>
+<span class="absolute left-4 top-2.5 text-slate-500 text-sm">SAR</span>
+</div>
+</div>
+<div>
+<label class="block text-sm text-slate-400 mb-1.5">هامش الربح (%)</label>
+<div class="relative">
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg py-2.5 px-4 text-white focus:border-primary outline-none transition-all" placeholder="15" type="number"/>
+<span class="absolute left-4 top-2.5 text-slate-500">%</span>
+</div>
+</div>
+<div class="pt-4 border-t border-primary/10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-slate-400">السعر النهائي</span>
+<span class="text-primary text-2xl font-black">0.00 ريال</span>
+</div>
+<button class="w-full bg-primary text-background-dark py-3 rounded-lg font-bold hover:shadow-[0_0_20px_rgba(212,175,53,0.3)] transition-all">إصدار وتأكيد الحجز</button>
+</div>
+</div></div>
+<!-- Service Categories -->
+<div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4"><div class="group cursor-pointer bg-white/5 hover:bg-primary/10 border border-primary/5 hover:border-primary/40 p-4 rounded-xl transition-all text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2 block transition-transform group-hover:-translate-y-1">flight</span>
+<h4 class="font-bold text-sm text-white">طيران</h4>
+</div>
+<div class="group cursor-pointer bg-white/5 hover:bg-primary/10 border border-primary/5 hover:border-primary/40 p-4 rounded-xl transition-all text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2 block transition-transform group-hover:-translate-y-1">directions_boat</span>
+<h4 class="font-bold text-sm text-white">سفر بحري / باخرة</h4>
+</div>
+<div class="group cursor-pointer bg-white/5 hover:bg-primary/10 border border-primary/5 hover:border-primary/40 p-4 rounded-xl transition-all text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2 block transition-transform group-hover:-translate-y-1">directions_bus</span>
+<h4 class="font-bold text-sm text-white">باصات / سفر بري</h4>
+</div>
+<div class="group cursor-pointer bg-white/5 hover:bg-primary/10 border border-primary/5 hover:border-primary/40 p-4 rounded-xl transition-all text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2 block transition-transform group-hover:-translate-y-1">confirmation_number</span>
+<h4 class="font-bold text-sm text-white">نظام التذاكر</h4>
+</div></div>
+</div>
+<!-- Active Shipments Table -->
+<div class="bg-white/5 border border-primary/10 rounded-2xl overflow-hidden">
+<div class="px-6 py-5 border-b border-primary/10 flex justify-between items-center">
+<h3 class="text-lg font-bold text-white">العمليات والطلبات النشطة</h3>
+<button class="text-primary text-sm font-bold hover:underline">عرض الكل</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-primary/5 text-slate-400 text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-bold">نوع الخدمة</th>
+<th class="px-6 py-4 font-bold">العميل</th>
+<th class="px-6 py-4 font-bold">الوجهة</th>
+<th class="px-6 py-4 font-bold">التكلفة</th>
+<th class="px-6 py-4 font-bold">الربح</th>
+<th class="px-6 py-4 font-bold">الحالة</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">flight</span>
+<span class="text-white text-sm">تذكرة دولية</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-300 text-sm">شركة الخليج للتجارة</td>
+<td class="px-6 py-4 text-slate-300 text-sm">الرياض - لندن</td>
+<td class="px-6 py-4 text-slate-300 text-sm">4,200 ريال</td>
+<td class="px-6 py-4 text-primary font-bold text-sm">630 ريال</td>
+<td class="px-6 py-4">
+<span class="bg-yellow-500/10 text-yellow-500 text-[10px] px-2 py-1 rounded-full font-bold">قيد الإصدار</span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">package_2</span>
+<span class="text-white text-sm">شحن جوي</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-300 text-sm">أحمد العامودي</td>
+<td class="px-6 py-4 text-slate-300 text-sm">دبي - جدة</td>
+<td class="px-6 py-4 text-slate-300 text-sm">12,500 ريال</td>
+<td class="px-6 py-4 text-primary font-bold text-sm">2,500 ريال</td>
+<td class="px-6 py-4">
+<span class="bg-green-500/10 text-green-500 text-[10px] px-2 py-1 rounded-full font-bold">تم الشحن</span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">directions_boat</span>
+<span class="text-white text-sm">حاوية بحرية</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-300 text-sm">مؤسسة التوريد الحديثة</td>
+<td class="px-6 py-4 text-slate-300 text-sm">الصين - ميناء جدة</td>
+<td class="px-6 py-4 text-slate-300 text-sm">38,000 ريال</td>
+<td class="px-6 py-4 text-primary font-bold text-sm">5,700 ريال</td>
+<td class="px-6 py-4">
+<span class="bg-blue-500/10 text-blue-500 text-[10px] px-2 py-1 rounded-full font-bold">في البحر</span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">train</span>
+<span class="text-white text-sm">حجز قطار سريع</span>
+</div>
+</td>
+<td class="px-6 py-4 text-slate-300 text-sm">سارة عبدالله</td>
+<td class="px-6 py-4 text-slate-300 text-sm">باريس - ميلانو</td>
+<td class="px-6 py-4 text-slate-300 text-sm">850 ريال</td>
+<td class="px-6 py-4 text-primary font-bold text-sm">127 ريال</td>
+<td class="px-6 py-4">
+<span class="bg-slate-500/10 text-slate-400 text-[10px] px-2 py-1 rounded-full font-bold">مكتمل</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bottom Maps/Location (Contextual) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/5 border border-primary/10 p-6 rounded-2xl relative overflow-hidden h-64 group">
+<div class="absolute inset-0 opacity-20 grayscale brightness-50 group-hover:scale-110 transition-transform duration-1000" data-alt="Modern dark world map pattern" data-location="Global" style="background-image: url('https://placeholder.pics/svg/300'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 flex flex-col justify-end h-full">
+<h4 class="text-white font-bold text-xl">تتبع مباشر للأسطول</h4>
+<p class="text-slate-400">مراقبة 12 شحنة بحرية و 5 رحلات جوية الآن</p>
+</div>
+</div>
+<div class="bg-white/5 border border-primary/10 p-6 rounded-2xl flex flex-col justify-center items-center gap-4 text-center">
+<span class="material-symbols-outlined text-6xl text-primary/40">support_agent</span>
+<div>
+<h4 class="text-white font-bold text-lg">تحتاج مساعدة فورية؟</h4>
+<p class="text-slate-400 mb-4">مدير حسابك متاح الآن للمساعدة في الحجوزات المعقدة</p>
+<button class="bg-primary/10 border border-primary text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary hover:text-background-dark transition-all">تحدث معنا</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 py-8 border-t border-primary/10 bg-background-dark/50 text-center">
+<p class="text-slate-500 text-sm">© 2024 MJM Smart Business Platform. جميع الحقوق محفوظة.</p>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>إدارة العقود السكنية | MJM Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#241a00",
+                        "primary": "#f2ca50",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "inverse-primary": "#735c00",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "on-primary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#554300",
+                        "outline-variant": "#4d4635",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#082b72",
+                        "on-primary-fixed": "#241a00",
+                        "surface-bright": "#3a3939",
+                        "primary-container": "#d4af37",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#dbe1ff",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-on-surface": "#313030",
+                        "outline": "#99907c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#bfcdff",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#c8b37d",
+                        "secondary-fixed": "#f7e1a6",
+                        "on-primary": "#3c2f00",
+                        "on-secondary": "#3c2f05",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "tertiary-container": "#97b0ff",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#dac58d",
+                        "secondary": "#dac58d",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed": "#00174b",
+                        "secondary-container": "#544519",
+                        "on-tertiary-container": "#254188",
+                        "on-secondary-fixed-variant": "#544519"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.15);
+        }
+        .status-dot-active {
+            box-shadow: 0 0 8px #f2ca50;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #4d4635; border-radius: 10px; }
+        .sidebar-active {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-right: 4px solid #d4af37;
+            color: #f2ca50;
+        }
+    </style>
+</head>
+<body class="bg-surface flex" style="background-color: #0B0B0B; color: #e5e2e1; font-family: 'Inter', sans-serif; overflow-x: hidden;">
+<!-- Fixed Right Side Navigation Bar -->
+<!-- Top Navigation Anchor (Offset for Sidebar) -->
+<div class="flex-1 w-full">
+<main class="pb-20 px-12 max-w-[1600px] mx-auto pt-12">
+<!-- Hero Section & Headline -->
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl font-bold text-on-surface tracking-tight mb-2">منظومة العقود السكنية</h2>
+<p class="text-on-surface-variant text-lg">إدارة وتوثيق الأصول العقارية بذكاء سيادي</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest px-6 py-3 rounded-lg text-on-surface font-medium hover:bg-surface-container-high transition-all flex items-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">cloud_download</span>
+                    تصدير التقارير
+                </button>
+<button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-bold hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined">add_circle</span>
+                    توثيق عقد جديد
+                </button>
+</div>
+</div>
+<!-- Bento Grid Statistics -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="col-span-1 bg-surface-container p-8 rounded-xl relative overflow-hidden group border-t-2 border-primary">
+<div class="relative z-10">
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-4">العقود النشطة</p>
+<h3 class="font-display text-5xl font-extrabold text-primary mb-2">1,284</h3>
+<div class="flex items-center gap-2 text-primary-fixed-dim text-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="">+12% زيادة سنوية</span>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-primary/5 group-hover:text-primary/10 transition-all">gavel</span>
+</div>
+<div class="col-span-1 bg-surface-container p-8 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-4">تنتهي قريباً</p>
+<h3 class="font-display text-5xl font-extrabold text-on-surface mb-2">42</h3>
+<div class="flex items-center gap-2 text-error text-sm">
+<span class="material-symbols-outlined text-sm">alarm</span>
+<span class="">تتطلب إجراء خلال 30 يوم</span>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-on-surface/5 group-hover:text-on-surface/10 transition-all">event_repeat</span>
+</div>
+<div class="col-span-1 bg-surface-container p-8 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-4">القيمة الإجمالية</p>
+<h3 class="font-display text-5xl font-extrabold text-on-surface mb-2">8.4M</h3>
+<p class="text-on-surface-variant text-sm">ريال سعودي / سنوياً</p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl text-on-surface/5 group-hover:text-on-surface/10 transition-all">payments</span>
+</div>
+<div class="col-span-1 bg-surface-container-low border border-outline-variant/20 p-8 rounded-xl flex flex-col justify-center items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-1">98% مكتملة</h4>
+<p class="text-on-surface-variant text-sm px-4">نسبة دقة التوثيق الرقمي في منصة إيجار</p>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Table Section -->
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-2xl shadow-surface-container-lowest/50">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center bg-surface-container-high/30">
+<h4 class="font-headline font-bold text-lg flex items-center gap-3">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+                            قائمة العقود الجارية
+                        </h4>
+<div class="flex items-center bg-surface-container-highest px-4 py-2 rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64 placeholder:text-on-surface-variant/50" placeholder="البحث عن مستأجر أو رقم عقد..." type="text"/>
+</div>
+</div>
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest/50 text-on-surface-variant text-xs uppercase tracking-widest font-label">
+<th class="p-5 font-medium">رقم العقد</th>
+<th class="p-5 font-medium">المستأجر</th>
+<th class="p-5 font-medium">تاريخ الانتهاء</th>
+<th class="p-5 font-medium">القيمة السنوية</th>
+<th class="p-5 font-medium">الحالة</th>
+<th class="p-5 font-medium">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="p-5 font-display text-primary font-bold text-sm">#CON-8832</td>
+<td class="p-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center text-xs font-bold">FA</div>
+<div>
+<p class="text-sm font-bold">فهد العتيبي</p>
+<p class="text-[10px] text-on-surface-variant">شقة رقم 104 - برج أ</p>
+</div>
+</div>
+</td>
+<td class="p-5 text-sm">24 مايو 2024</td>
+<td class="p-5 text-sm font-display">45,000 ر.س</td>
+<td class="p-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">نشط</span>
+</td>
+<td class="p-5">
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary" title="طباعة">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary" title="توقيع رقمي">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">draw</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="p-5 font-display text-primary font-bold text-sm">#CON-8901</td>
+<td class="p-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center text-xs font-bold">SM</div>
+<div>
+<p class="text-sm font-bold">سارة المنصور</p>
+<p class="text-[10px] text-on-surface-variant">شقة رقم 202 - برج ب</p>
+</div>
+</div>
+</td>
+<td class="p-5 text-sm">12 ابريل 2024</td>
+<td class="p-5 text-sm font-display">62,000 ر.س</td>
+<td class="p-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-error/10 text-error border border-error/20">ينتهي قريباً</span>
+</td>
+<td class="p-5">
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary">
+<span class="material-symbols-outlined text-lg">draw</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="p-5 font-display text-primary font-bold text-sm">#CON-9022</td>
+<td class="p-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center text-xs font-bold">KA</div>
+<div>
+<p class="text-sm font-bold">خالد عبد الله</p>
+<p class="text-[10px] text-on-surface-variant">شقة رقم 305 - برج ج</p>
+</div>
+</div>
+</td>
+<td class="p-5 text-sm">30 ديسمبر 2024</td>
+<td class="p-5 text-sm font-display">55,000 ر.س</td>
+<td class="p-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">نشط</span>
+</td>
+<td class="p-5">
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="p-2 hover:bg-primary/20 rounded transition-colors text-primary">
+<span class="material-symbols-outlined text-lg">draw</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="p-4 bg-surface-container-lowest/30 flex justify-center border-t border-outline-variant/10">
+<button class="text-primary text-xs font-bold flex items-center gap-2 hover:underline">
+                            عرض جميع العقود (1,284)
+                            <span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Analysis & Renewal Sidebar -->
+<div class="space-y-8">
+<!-- Renewal Analytics Card -->
+<div class="glass-panel p-8 rounded-xl gold-glow">
+<h4 class="font-headline font-bold text-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                        تحليلات تجديد العقود
+                    </h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-on-surface-variant">معدل التجديد التلقائي</span>
+<span class="text-primary font-bold">82%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%] shadow-[0_0_8px_#f2ca50]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-on-surface-variant">العقود في مرحلة التفاوض</span>
+<span class="text-on-surface font-bold">14%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-on-surface-variant w-[14%]"></div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 grid grid-cols-2 gap-4">
+<div class="text-center p-3 bg-surface-container rounded-lg">
+<p class="text-[10px] text-on-surface-variant mb-1 uppercase">متوسط الإيجار</p>
+<p class="font-display font-bold text-primary">52,400</p>
+</div>
+<div class="text-center p-3 bg-surface-container rounded-lg">
+<p class="text-[10px] text-on-surface-variant mb-1 uppercase">عائد الاستثمار</p>
+<p class="font-display font-bold text-primary">8.2%</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Digital Signing Status Card -->
+<div class="bg-surface-container p-6 rounded-xl border-r-4 border-primary/40">
+<h5 class="font-headline font-bold text-sm mb-4">طلبات التوقيع الرقمي المعلقة</h5>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-3 bg-surface-container-high rounded-lg group cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex-1 w-full">
+<p class="text-xs font-bold">فيصل الحربي</p>
+<p class="text-[10px] text-on-surface-variant">منذ ساعتين</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-[-4px] transition-transform">chevron_left</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high rounded-lg group cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex-1 w-full">
+<p class="text-xs font-bold">منيرة السديري</p>
+<p class="text-[10px] text-on-surface-variant">منذ 5 ساعات</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-[-4px] transition-transform">chevron_left</span>
+</div>
+</div>
+</div>
+<!-- Visual Asset Overview -->
+<div class="relative h-64 rounded-xl overflow-hidden group">
+<img alt="Luxury Complex" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, low-angle shot of a luxury modern apartment complex at dusk. The architecture features sleek glass balconies and dark stone cladding. Warm golden interior lights contrast with the deep navy blue and obsidian exterior. The lighting is sophisticated, with a clear focus on architectural lines and a high-end, sovereign executive aesthetic. No people visible, emphasizing exclusivity and property value." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATESN9zp_vpoReUn5vXuaJcFYoYglRkbTwjlQjw9cDcNOWPjcrC4KqNLRWn68NAEAgeWVwqf1Ftf8j43Ai5TNE3HclPmALf9p-qxZWAP_9MEoyH8tXgSWx-TfEX1gMMdMXjT3icHORPhH8r-qu4Noj0VxLDcXu1LFs6kB0PP7s8JmGGNYXgitDqkCuM939CskKkJBRXPeG3PzGZXv9gMu4BT5uHjhQzCIylg1Shpy8FqHMPCC5BK6nWCttXkLpDU2ej_TU-kNjlw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-primary font-bold text-sm mb-1 tracking-widest">إطلالة الأصول</p>
+<h5 class="text-on-surface font-headline font-bold">مجمع ميريديان السكني - الرياض</h5>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Background Elements -->
+<div class="fixed top-0 left-0 w-1/2 h-full pointer-events-none opacity-5 overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-primary rounded-full blur-[200px]"></div>
+</div>
+<script>
+        // Micro-interaction for hover effects on cards
+        document.querySelectorAll('.bg-surface-container').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

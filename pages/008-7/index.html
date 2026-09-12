@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart Business - AI Risk Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                        "neutral-dark": "#1a1710",
+                        "accent-gold": "#D4AF37",
+                        "risk-high": "#ef4444",
+                        "risk-mid": "#f97316",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans Arabic", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Noto Sans Arabic', sans-serif; }
+        .glass-panel {
+            background: rgba(26, 23, 16, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #997b21 100%);
+        }
+        .glow-gold {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/20 bg-background-dark/90 px-6 py-3 backdrop-blur-md">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary glow-gold">
+<span class="material-symbols-outlined text-3xl">shield_with_heart</span>
+</div>
+<div>
+<h1 class="text-xl font-bold leading-tight tracking-tight text-primary">منصة MJM الذكية</h1>
+<p class="text-[10px] text-primary/60 uppercase tracking-widest">Smart Business Platform</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center bg-neutral-dark rounded-lg px-3 py-1.5 border border-primary/10">
+<span class="material-symbols-outlined text-primary/60 text-xl mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64 text-slate-100 placeholder-primary/40" placeholder="بحث في النظام..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 text-xs font-bold text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">language</span>
+<span>EN / AR</span>
+</button>
+<div class="flex gap-3">
+<button class="relative flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-dark border border-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-risk-high"></span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-dark border border-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3 border-r border-primary/20 pr-6 mr-2">
+<div class="text-left">
+<p class="text-sm font-bold text-slate-100">سعود بن عبد العزيز</p>
+<p class="text-[10px] text-primary text-right">المدير التنفيذي</p>
+</div>
+<div class="h-10 w-10 rounded-full border-2 border-primary/50 overflow-hidden">
+<img alt="Profile" class="h-full w-full object-cover" data-alt="CEO Profile Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxoXGsr1I5_KJ7rYcXefjlnxdR2uNGHpFAdfWjbfHpqafzVYzoTx1WxSaInfR4vyN2D8bSys8nG1XKiKIdpIH11zz1sE8AC_tb09KAnOj6_iMhC8mBrdk7ZlfU-2xDZxsXhDiqnIanLUortKDyRul5zI-kxXC4WCuCMZQxh0fev3RFuCvKbxhl97klRInZ2YYylXd_k1pboz7uHuc95aEaW1aVG4Fko2n6xQuvqhs4lsXu0v2j0JRB6R9qOYLsu7dfEjpVxCknQA"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1">
+<aside class="w-64 border-l border-primary/10 bg-neutral-dark/50 p-4 hidden md:flex flex-col justify-between">
+<nav class="space-y-2">
+<p class="text-[10px] font-bold text-primary/40 px-3 uppercase mb-4 tracking-widest">القائمة الرئيسية</p>
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2.5 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium text-sm">نظرة عامة</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-medium text-sm">محرك التنبؤ</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-medium text-sm">مخاطر المالية</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-medium text-sm">مراقبة الأصول</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium text-sm">أداء الموظفين</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-medium text-sm">التقارير السنوية</span>
+</a>
+</nav>
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] text-primary font-bold uppercase">حالة النظام</span>
+<span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+</div>
+<p class="text-xs text-slate-300">يعمل بكفاءة عالية</p>
+<div class="mt-3 h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%]"></div>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-6 overflow-y-auto">
+<div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="text-3xl font-black text-slate-100 flex items-center gap-3">
+                            نظام إدارة المخاطر والإنذار المبكر
+                            <span class="inline-flex items-center rounded-full bg-primary/20 px-2.5 py-0.5 text-xs font-bold text-primary">مدعوم بالذكاء الاصطناعي</span>
+</h2>
+<p class="text-slate-400 mt-1">لوحة تحكم القيادة العليا - تحديث فوري لكافة قطاعات العمل</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 rounded-lg bg-neutral-dark border border-primary/30 px-4 py-2 text-sm font-bold text-primary hover:bg-primary hover:text-black transition-all">
+<span>تحديث البيانات</span>
+<kbd class="text-[10px] bg-black/20 px-1 rounded">Alt+R</kbd>
+</button>
+<button class="flex items-center gap-2 rounded-lg gold-gradient px-4 py-2 text-sm font-bold text-black shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">bolt</span>
+<span>بروتوكول الطوارئ</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="glass-panel p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-primary/5">
+<span class="material-symbols-outlined text-9xl">speed</span>
+</div>
+<p class="text-sm font-bold text-primary/60 mb-1">مستوى المخاطر الحالي</p>
+<div class="flex items-baseline gap-2">
+<h3 class="text-4xl font-black text-slate-100">14%</h3>
+<span class="text-green-400 text-sm flex items-center">
+<span class="material-symbols-outlined text-xs">arrow_downward</span>
+                                2.4%
+                            </span>
+</div>
+<p class="text-xs text-slate-400 mt-2">نطاق آمن للعمليات التشغيلية</p>
+<div class="mt-4 h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[14%] shadow-[0_0_8px_#d4af35]"></div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl relative overflow-hidden">
+<div class="absolute -right-4 -top-4 text-risk-high/5">
+<span class="material-symbols-outlined text-9xl">warning</span>
+</div>
+<p class="text-sm font-bold text-primary/60 mb-1">التنبيهات النشطة</p>
+<div class="flex items-baseline gap-2">
+<h3 class="text-4xl font-black text-slate-100">08</h3>
+<span class="text-risk-high text-sm flex items-center">
+<span class="material-symbols-outlined text-xs">priority_high</span>
+                                2 حرجة
+                            </span>
+</div>
+<p class="text-xs text-slate-400 mt-2">آخر تنبيه منذ 12 دقيقة</p>
+<div class="mt-4 flex gap-1">
+<div class="h-2 w-1/4 bg-risk-high rounded-full"></div>
+<div class="h-2 w-1/4 bg-risk-mid rounded-full"></div>
+<div class="h-2 w-1/2 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl relative overflow-hidden">
+<div class="absolute -right-4 -top-4 text-primary/5">
+<span class="material-symbols-outlined text-9xl">pie_chart</span>
+</div>
+<p class="text-sm font-bold text-primary/60 mb-1">توزيع المخاطر</p>
+<div class="space-y-3 mt-4">
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-300">مالية</span>
+<span class="text-primary font-bold">22%</span>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full">
+<div class="h-full bg-primary w-[22%]"></div>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-300">تشغيلية</span>
+<span class="text-primary font-bold">45%</span>
+</div>
+<div class="h-1.5 w-full bg-slate-800 rounded-full">
+<div class="h-full bg-primary w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<div class="glass-panel rounded-2xl p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="text-lg font-bold text-slate-100">توقعات الذكاء الاصطناعي (30 يوم)</h3>
+</div>
+<span class="text-[10px] text-primary/60 bg-primary/5 px-2 py-1 rounded border border-primary/20 uppercase">Early Warning Engine</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-risk-high/5 border border-risk-high/20">
+<div class="h-10 w-10 shrink-0 flex items-center justify-center rounded-lg bg-risk-high/10 text-risk-high">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-100">عجز في السيولة المتوقعة</h4>
+<p class="text-xs text-slate-400 mt-1">يتوقع النظام فجوة تمويلية بنسبة 12% خلال الـ 25 يوماً القادمة بسبب تأخر تحصيل المستحقات.</p>
+<div class="mt-3 flex items-center gap-4">
+<span class="text-[10px] font-bold py-0.5 px-2 rounded bg-risk-high/20 text-risk-high uppercase">أولوية قصوى</span>
+<span class="text-[10px] text-slate-500">دقة التوقع: 94%</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-risk-mid/5 border border-risk-mid/20">
+<div class="h-10 w-10 shrink-0 flex items-center justify-center rounded-lg bg-risk-mid/10 text-risk-mid">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-slate-100">مخاطر صيانة الأصول</h4>
+<p class="text-xs text-slate-400 mt-1">3 مركبات شحن تتجاوز الكيلومترات المحددة للصيانة الدورية؛ احتمال تعطل مفاجئ مرتفع.</p>
+<div class="mt-3 flex items-center gap-4">
+<span class="text-[10px] font-bold py-0.5 px-2 rounded bg-risk-mid/20 text-risk-mid uppercase">تنبيه متوسط</span>
+<span class="text-[10px] text-slate-500">دقة التوقع: 88%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-panel rounded-2xl p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+<h3 class="text-lg font-bold text-slate-100">سجل التنبيهات الأخيرة</h3>
+</div>
+<button class="text-xs text-primary hover:underline">عرض الكل</button>
+</div>
+<div class="space-y-1">
+<div class="grid grid-cols-12 gap-2 py-3 border-b border-primary/5 items-center hover:bg-white/5 transition-colors rounded-lg px-2">
+<div class="col-span-1 flex justify-center">
+<span class="h-2 w-2 rounded-full bg-risk-high shadow-[0_0_8px_#ef4444]"></span>
+</div>
+<div class="col-span-8">
+<p class="text-sm font-medium text-slate-200">تجاوز ميزانية مشروع 'نيوم سكاي'</p>
+<p class="text-[10px] text-slate-500">قسم المحاسبة • منذ 14 دقيقة</p>
+</div>
+<div class="col-span-3 text-left">
+<button class="text-[10px] font-bold text-primary hover:text-white">إجراء</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-2 py-3 border-b border-primary/5 items-center hover:bg-white/5 transition-colors rounded-lg px-2">
+<div class="col-span-1 flex justify-center">
+<span class="h-2 w-2 rounded-full bg-risk-mid shadow-[0_0_8px_#f97316]"></span>
+</div>
+<div class="col-span-8">
+<p class="text-sm font-medium text-slate-200">انخفاض كفاءة الموظفين (المناوبة ب)</p>
+<p class="text-[10px] text-slate-500">الموارد البشرية • منذ ساعتين</p>
+</div>
+<div class="col-span-3 text-left">
+<button class="text-[10px] font-bold text-primary hover:text-white">إجراء</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-2 py-3 border-b border-primary/5 items-center hover:bg-white/5 transition-colors rounded-lg px-2">
+<div class="col-span-1 flex justify-center">
+<span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_8px_#d4af35]"></span>
+</div>
+<div class="col-span-8">
+<p class="text-sm font-medium text-slate-200">اكتمال الفحص الدوري للشحنات الدولية</p>
+<p class="text-[10px] text-slate-500">الشحن والخدمات • منذ 4 ساعات</p>
+</div>
+<div class="col-span-3 text-left">
+<button class="text-[10px] font-bold text-primary hover:text-white">عرض</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-panel rounded-2xl overflow-hidden mb-8">
+<div class="p-6 border-b border-primary/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">domain</span>
+<h3 class="text-lg font-bold text-slate-100">مراقبة الأقسام والقطاعات</h3>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1 rounded bg-green-400/10 px-2 py-1 text-[10px] font-bold text-green-400">
+<span class="h-1 w-1 rounded-full bg-green-400"></span> 5 مستقر
+                            </span>
+<span class="inline-flex items-center gap-1 rounded bg-risk-mid/10 px-2 py-1 text-[10px] font-bold text-risk-mid">
+<span class="h-1 w-1 rounded-full bg-risk-mid"></span> 2 تحذير
+                            </span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-primary/5 text-primary text-xs font-bold uppercase tracking-wider">
+<th class="px-6 py-4">القسم / القطاع</th>
+<th class="px-6 py-4 text-center">مؤشر المخاطر</th>
+<th class="px-6 py-4">عامل الخطر الرئيسي</th>
+<th class="px-6 py-4">كفاءة الأداء</th>
+<th class="px-6 py-4 text-left">الحالة</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-neutral-dark flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">payments</span>
+</div>
+<span class="text-sm font-bold">المحاسبة والمالية</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<div class="h-2 w-24 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-risk-mid w-[42%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-300">تحصيل الديون المتأخرة</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-100">88.5%</span>
+</td>
+<td class="px-6 py-4 text-left">
+<span class="inline-flex items-center rounded-full bg-risk-mid/10 px-2.5 py-0.5 text-[10px] font-bold text-risk-mid">تحذير</span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-neutral-dark flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+<span class="text-sm font-bold">الشحن واللوجستيات</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<div class="h-2 w-24 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[12%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-300">تكاليف الوقود</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-100">96.2%</span>
+</td>
+<td class="px-6 py-4 text-left">
+<span class="inline-flex items-center rounded-full bg-green-400/10 px-2.5 py-0.5 text-[10px] font-bold text-green-400">مستقر</span>
+</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-neutral-dark flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">badge</span>
+</div>
+<span class="text-sm font-bold">الموارد البشرية</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<div class="h-2 w-24 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[28%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-300">معدل الدوران الوظيفي</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-slate-100">91.0%</span>
+</td>
+<td class="px-6 py-4 text-left">
+<span class="inline-flex items-center rounded-full bg-green-400/10 px-2.5 py-0.5 text-[10px] font-bold text-green-400">مستقر</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl">
+<h3 class="text-lg font-bold text-slate-100 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+                        مركز الإجراءات السريعة
+                    </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<button class="flex items-center justify-between gap-4 p-4 rounded-xl bg-neutral-dark border border-primary/20 hover:border-primary transition-all group">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-slate-100">تقرير المخاطر التفصيلي</p>
+<p class="text-[10px] text-slate-400">تحميل ملف PDF شامل</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary">download</span>
+</button>
+<button class="flex items-center justify-between gap-4 p-4 rounded-xl bg-neutral-dark border border-primary/20 hover:border-primary transition-all group">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 flex items-center justify-center rounded-full bg-green-500/10 text-green-500">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-slate-100">تنبيه واتساب ذكي</p>
+<p class="text-[10px] text-slate-400">إرسال لمدراء الأقسام</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary">send</span>
+</button>
+<button class="flex items-center justify-between gap-4 p-4 rounded-xl bg-risk-high/10 border border-risk-high/20 hover:bg-risk-high/20 transition-all group">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 flex items-center justify-center rounded-full bg-risk-high/20 text-risk-high">
+<span class="material-symbols-outlined">emergency_share</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-slate-100">تفعيل بروتوكول الطوارئ</p>
+<p class="text-[10px] text-risk-high/60">يتطلب بصمة المدير</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-risk-high/40 group-hover:text-risk-high">lock_open</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+<footer class="border-t border-primary/10 bg-neutral-dark/80 px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">keyboard</span>
+                    اختصارات سريعة:
+                </div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-[10px] text-slate-500">
+<kbd class="bg-primary/10 text-primary border border-primary/20 px-1.5 py-0.5 rounded font-bold">Alt + R</kbd>
+                        تحديث البيانات
+                    </div>
+<div class="flex items-center gap-2 text-[10px] text-slate-500">
+<kbd class="bg-primary/10 text-primary border border-primary/20 px-1.5 py-0.5 rounded font-bold">Alt + A</kbd>
+                        مركز التنبيهات
+                    </div>
+</div>
+</div>
+<div class="text-[10px] text-slate-500 font-medium">
+                جميع الحقوق محفوظة © 2024 MJM Smart Business Platform - الإصدار 4.2.0
+            </div>
+</footer>
+</div>
+</body></html>

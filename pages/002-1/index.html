@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                        "surface-dark": "#1A1A1A",
+                        "border-dark": "#2A2A2A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-l border-border-dark bg-surface-dark hidden md:flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">diamond</span>
+</div>
+<div>
+<h1 class="text-white text-lg font-bold leading-tight">MJM Smart</h1>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Luxury Corporate</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined active-fill">dashboard</span>
+<span class="font-medium">لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-medium">المدفوعات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-medium">التحويلات</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="font-medium">التقارير المالية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">الإعدادات</span>
+</a>
+</nav>
+<div class="p-4 border-t border-border-dark">
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">verified_user</span>
+<span class="text-xs font-bold text-primary">تصنيف الموظف: فئة A</span>
+</div>
+<p class="text-[10px] text-slate-500 leading-relaxed">تطبق أسعار النخبة تلقائياً على كافة المعاملات</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto">
+<!-- Header -->
+<header class="h-16 border-b border-border-dark flex items-center justify-between px-8 bg-background-dark/50 backdrop-blur-md sticky top-0 z-10">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+<input class="w-full bg-surface-dark border-border-dark rounded-lg py-2 pr-10 pl-4 text-sm focus:ring-primary focus:border-primary" placeholder="البحث السريع عن عميل أو معاملة..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-10 flex items-center justify-center rounded-lg bg-surface-dark border border-border-dark text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-[1px] bg-border-dark mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-left">
+<p class="text-xs font-bold text-white">أحمد المنصور</p>
+<p class="text-[10px] text-primary">مدير عمليات</p>
+</div>
+<img alt="User Avatar" class="size-10 rounded-full border border-primary/50" data-alt="Corporate user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvNgJKT-kEKxOOExtkiKGiMZPILf2hSxvqTyWWPbhE4kCLQEiSLBkrqV8NqB1CdpsQ0ImTg4k_2V3QOk6GE1cL77PSVRL-zRxnC2bDs_JtSAI-dnbOLRKKAmAqiiUo0tW35E7hmLnAFuLtlL_OjyB8vFG3f7BE3ZKSL1n2ehzD_i0h2Ihaj5QMZZpcBr-IaVl5gw-dxIYybVs78CyHXdV2cd9sIUf-Hev-xhnVq9UFhee6kR6snLvsTqB3DDiGAXXNXN_ZHw5kAQ"/>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-8">
+<!-- Top Section: Summary & Rapid Entry -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Financial Summary Cards -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-dark p-6 rounded-xl border border-border-dark hover:border-primary/30 transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-xs font-medium text-emerald-500 flex items-center gap-1">+12.5% <span class="material-symbols-outlined text-xs">trending_up</span></span>
+</div>
+<p class="text-slate-400 text-sm font-medium">مدفوعات اليوم</p>
+<h3 class="text-2xl font-black text-white mt-1">45,000 <span class="text-sm font-normal text-slate-500">ر.س</span></h3>
+</div>
+<div class="bg-surface-dark p-6 rounded-xl border border-border-dark hover:border-primary/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="size-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<span class="text-xs font-medium text-emerald-500 flex items-center gap-1">+5.2% <span class="material-symbols-outlined text-xs">trending_up</span></span>
+</div>
+<p class="text-slate-400 text-sm font-medium">إجمالي التحويلات</p>
+<h3 class="text-2xl font-black text-white mt-1">12,500 <span class="text-sm font-normal text-slate-500">ر.س</span></h3>
+</div>
+<div class="bg-primary p-6 rounded-xl border border-primary shadow-lg shadow-primary/10">
+<div class="flex justify-between items-start mb-4">
+<div class="size-10 rounded-lg bg-background-dark/20 flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<span class="text-xs font-bold text-background-dark/60">صافي اليوم</span>
+</div>
+<p class="text-background-dark/70 text-sm font-bold">صافي الإيرادات</p>
+<h3 class="text-2xl font-black text-background-dark mt-1">57,500 <span class="text-sm font-normal opacity-60">ر.س</span></h3>
+</div>
+</div>
+<!-- Pre-defined Services Grid (Fast Access) -->
+<div class="lg:col-span-4 bg-surface-dark p-6 rounded-xl border border-border-dark">
+<h4 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">bolt</span> خدمات سريعة
+                        </h4>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">receipt_long</span>
+<span class="text-[10px] font-bold">فواتير</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">account_balance</span>
+<span class="text-[10px] font-bold">حكومي</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary hover:bg-primary/5 transition-all group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">send_money</span>
+<span class="text-[10px] font-bold">تحويل</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Console & Pricing Engine -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Rapid Payment Console -->
+<div class="lg:col-span-8 bg-surface-dark rounded-xl border border-border-dark overflow-hidden shadow-2xl">
+<div class="bg-gradient-to-r from-primary/20 to-transparent p-6 border-b border-border-dark flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold text-white">وحدة الخدمات العامة والعلاقات الحكومية</h2>
+<p class="text-slate-500 text-xs mt-1">إدارة المعاملات الحكومية، التعقيب، والخدمات العامة</p>
+</div>
+<div class="flex items-center gap-2 bg-background-dark/50 px-3 py-1.5 rounded-full border border-primary/20">
+<span class="size-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold text-primary">النظام جاهز</span>
+</div>
+</div>
+<form class="p-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-400 mr-1">بحث عن عميل (الاسم أو الرقم)</label>
+<div class="relative">
+<input class="w-full bg-background-dark border-border-dark rounded-lg py-3 pr-10 focus:ring-primary focus:border-primary text-sm" placeholder="مثال: محمد عبدالله..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-600">person_search</span>
+</div>
+</div><div class="space-y-2">
+<div class="flex justify-between items-center mr-1">
+<label class="text-xs font-bold text-slate-400">رقم جوال العميل</label>
+<span class="text-[10px] text-slate-500">Alt+M</span>
+</div>
+<div class="relative">
+<input accesskey="m" class="w-full bg-background-dark border-border-dark rounded-lg py-3 pr-10 focus:ring-primary focus:border-primary text-sm" placeholder="05xxxxxxxx" type="tel"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-emerald-500 text-lg">chat</span>
+<div class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-60">
+<span class="text-[9px] text-slate-400">إيصال تلقائي</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-400 mr-1">نوع الخدمة / البند</label>
+<div class="relative">
+<input class="w-full bg-background-dark border-border-dark rounded-lg py-3 pr-10 focus:ring-primary focus:border-primary text-sm" placeholder="مثال: طباعة إقامة، توثيق سجل، تعقيب..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-600">edit_note</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center mr-1">
+<label class="text-xs font-bold text-slate-400">العمولة / الأتعاب المتفق عليها</label>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">payments</span>
+<span class="text-[10px] text-primary font-bold">إدخال يدوي</span>
+</div>
+</div>
+<div class="relative">
+<input class="w-full bg-background-dark border-border-dark rounded-lg py-3 pr-4 text-sm font-black text-primary focus:ring-primary focus:border-primary" placeholder="0.00" type="number"/>
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-500">ر.س</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-slate-400 mr-1">توثيق الاتفاقية</label>
+<button class="w-full flex items-center justify-between px-4 py-3 bg-background-dark border border-dashed border-border-dark rounded-lg hover:border-primary/50 transition-colors group" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-primary">attach_file</span>
+<span class="text-sm text-slate-500 group-hover:text-slate-300">إرفاق العقد / المستند</span>
+</div>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded">PDF/JPG</span>
+</button>
+</div><div class="flex items-end">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-black py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined font-bold">rocket_launch</span>
+                                    إتمام المعاملة فوراً
+                                </button>
+</div>
+</form>
+</div>
+<!-- Automatic Pricing Engine Visualizer -->
+<div class="lg:col-span-4 space-y-4">
+<div class="bg-surface-dark p-6 rounded-xl border border-border-dark relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">calculate</span>
+</div>
+<h4 class="text-sm font-bold text-white mb-6">محرك التسعير الذكي</h4>
+<div class="space-y-6 relative z-0">
+<div class="flex items-center gap-4 group">
+<div class="size-12 rounded-full border-2 border-primary flex items-center justify-center bg-primary/10 text-primary shadow-[0_0_15px_rgba(212,175,53,0.3)]">
+<span class="text-lg font-black">A</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-primary font-bold">عضوية النخبة</span>
+<span class="text-slate-400">نشط الآن</span>
+</div>
+<div class="h-1.5 w-full bg-background-dark rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full shadow-[0_0_10px_#d4af35]"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-40 grayscale">
+<div class="size-12 rounded-full border-2 border-slate-700 flex items-center justify-center">
+<span class="text-lg font-black text-slate-600">B</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-600 font-bold">العضوية الممتازة</span>
+</div>
+<div class="h-1.5 w-full bg-background-dark rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-20 grayscale">
+<div class="size-12 rounded-full border-2 border-slate-800 flex items-center justify-center">
+<span class="text-lg font-black text-slate-700">C</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-slate-700 font-bold">العضوية القياسية</span>
+</div>
+<div class="h-1.5 w-full bg-background-dark rounded-full"></div>
+</div>
+</div>
+</div>
+<p class="mt-6 text-[10px] text-slate-500 leading-relaxed text-center italic">
+                                * تعتمد الأسعار على تصنيف الموظف ولا يمكن تعديلها يدوياً لضمان النزاهة المالية.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Real-time Transactions Table -->
+<div class="bg-surface-dark rounded-xl border border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-dark flex justify-between items-center bg-background-dark/30">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined text-sm animate-pulse">radio_button_checked</span>
+</div>
+<h2 class="text-lg font-bold text-white">سجل المعاملات المباشر</h2>
+</div>
+<button class="text-xs font-bold text-primary hover:underline">عرض الكل</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-background-dark/50 text-slate-500 text-[11px] uppercase tracking-wider"><th class="px-6 py-4 font-bold">الوقت</th>
+<th class="px-6 py-4 font-bold">العميل / المعاملة</th>
+<th class="px-6 py-4 font-bold">تفاصيل الخدمة</th>
+<th class="px-6 py-4 font-bold">العمولة المتفق عليها</th>
+<th class="px-6 py-4 font-bold text-center">حالة المستند</th>
+<th class="px-6 py-4 font-bold"></th></tr>
+</thead>
+<tbody class="divide-y divide-border-dark">
+<tr class="hover:bg-white/5 transition-colors group"><td class="px-6 py-4 text-xs text-slate-400">14:32:05</td>
+<td class="px-6 py-4">
+<p class="text-sm font-bold text-white">شركة آفاق للتجارة</p>
+<p class="text-[10px] text-slate-500">#SRV-99281</p>
+</td>
+<td class="px-6 py-4">
+<span class="text-xs text-slate-300 bg-background-dark px-2 py-1 rounded">توثيق سجلات تجارية (فروع)</span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-black text-white">3,500.00 ر.س</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-[10px] font-bold border border-emerald-500/20">
+<span class="material-symbols-outlined text-[12px]">task_alt</span> تم الإرفاق
+</span>
+</div>
+</td>
+<td class="px-6 py-4 text-left">
+<div class="flex gap-2 justify-end">
+<button class="material-symbols-outlined text-slate-600 hover:text-emerald-500 transition-colors cursor-pointer">chat</button>
+<button class="material-symbols-outlined text-slate-600 hover:text-primary transition-colors cursor-pointer">description</button>
+</div>
+</td></tr>
+<tr class="hover:bg-white/5 transition-colors group"><td class="px-6 py-4 text-xs text-slate-400">14:28:12</td>
+<td class="px-6 py-4">
+<p class="text-sm font-bold text-white">سعد بن فيصل</p>
+<p class="text-[10px] text-slate-500">#SRV-99280</p>
+</td>
+<td class="px-6 py-4">
+<span class="text-xs text-slate-300 bg-background-dark px-2 py-1 rounded">تجديد وطباعة إقامات (5 عمال)</span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-black text-white">1,200.00 ر.س</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] font-bold border border-amber-500/20">
+<span class="material-symbols-outlined text-[12px]">pending</span> بانتظار العقد
+</span>
+</div>
+</td>
+<td class="px-6 py-4 text-left">
+<div class="flex gap-2 justify-end">
+<button class="material-symbols-outlined text-slate-600 hover:text-emerald-500 transition-colors cursor-pointer">chat</button>
+<button class="material-symbols-outlined text-slate-600 hover:text-primary transition-colors cursor-pointer">upload_file</button>
+</div>
+</td></tr>
+<tr class="hover:bg-white/5 transition-colors group"><td class="px-6 py-4 text-xs text-slate-400">14:15:44</td>
+<td class="px-6 py-4">
+<p class="text-sm font-bold text-white">المؤسسة العامة للتقاعد</p>
+<p class="text-[10px] text-slate-500">#SRV-99279</p>
+</td>
+<td class="px-6 py-4">
+<span class="text-xs text-slate-300 bg-background-dark px-2 py-1 rounded">تعقيب معاملة Z (بلدية)</span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-black text-white">2,500.00 ر.س</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex justify-center">
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-[10px] font-bold border border-emerald-500/20">
+<span class="material-symbols-outlined text-[12px]">task_alt</span> تم الإرفاق
+</span>
+</div>
+</td>
+<td class="px-6 py-4 text-left">
+<div class="flex gap-2 justify-end">
+<button class="material-symbols-outlined text-slate-600 hover:text-emerald-500 transition-colors cursor-pointer">chat</button>
+<button class="material-symbols-outlined text-slate-600 hover:text-primary transition-colors cursor-pointer">description</button>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0B0B0B",
+                        "accent-gold": "#D4AF37",
+                        "surface-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Tajawal", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D27B 50%, #B8860B 100%);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(to right, #D4AF37, #F1D27B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-72 bg-white dark:bg-surface-dark border-l border-slate-200 dark:border-primary/20 flex flex-col h-full z-20">
+<div class="p-6 flex items-center gap-3 border-b border-slate-200 dark:border-primary/10">
+<div class="size-10 rounded-lg gold-gradient flex items-center justify-center text-background-dark shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined font-bold">shield_person</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight gold-text-gradient">MJM Smart</h1>
+<p class="text-xs text-slate-500 dark:text-primary/60 uppercase tracking-widest font-bold">Business Platform</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-all group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">لوحة القيادة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-all group" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-medium">الخدمات العامة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-all group" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-medium">المحاسبة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-all group" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-medium">الأصول</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-background-dark font-bold shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined">security</span>
+<span class="font-medium">مركز الأمان</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-primary/10">
+<div class="p-4 rounded-xl bg-primary/5 gold-border flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold">م</div>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">محمد جاسم</p>
+<p class="text-xs text-slate-500 dark:text-primary/60">المدير العام</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden">
+<!-- Header -->
+<header class="h-20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/10 flex items-center justify-between px-8 z-10">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-primary/40">search</span>
+<input class="w-full pr-10 pl-4 py-2 bg-slate-100 dark:bg-surface-dark border-none rounded-xl focus:ring-1 focus:ring-primary text-sm" placeholder="البحث في الصلاحيات والمراقبين..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-primary/20"></div>
+<div class="flex items-center gap-3">
+<div class="text-left hidden md:block">
+<p class="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tighter">Business Admin</p>
+</div>
+<img alt="User Profile" class="size-10 rounded-full gold-border p-0.5" data-alt="User profile photo of Mohammed Jassim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB13A0RFt3UWCFKqlBpULVOfE2IYorEYELpElzPlgdfW169iZkdcAgr9b1_oe2ce0qv94hm39Op_MenDRYeJSC9m9bytzs4LCucyyMrFB9DqO5Ghzx083JrvnbtnJMnbOC6ouyj_IgI4x8J3JHRYIAbHgvBbKU5fdf2O2aQWDNkPzsQMWB5-fz2XbHvb6QVzb9jLktu_W5d_3OnzzWHzJtJYAZCxo30YyAiLM2_7XHiYrw0yNRQ5NNyjy4POBywLCtmugLvYHbRlw"/>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Page Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-black gold-text-gradient">مركز الأمان والتحكم بالصلاحيات</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">إدارة الوصول والمراقبة الأمنية المتقدمة للنظام</p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-xl border-primary border text-primary font-bold hover:bg-primary/10 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">backup</span>
+                            نسخة احتياطية فورية
+                        </button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-background-dark font-black hover:brightness-110 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">person_add</span>
+                            إضافة دور جديد
+                        </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl gold-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">pulse_alert</span>
+</div>
+<span class="text-xs font-bold text-emerald-500">+12%</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">الجلسات النشطة</p>
+<h3 class="text-2xl font-black mt-1">128</h3>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl gold-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-orange-500/10 text-orange-500">
+<span class="material-symbols-outlined">login</span>
+</div>
+<span class="text-xs font-bold text-orange-500">منذ 5 د</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">محاولات الدخول</p>
+<h3 class="text-2xl font-black mt-1">14</h3>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl gold-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<span class="text-xs font-bold text-primary">ممتاز</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">صحة النظام</p>
+<div class="flex items-center gap-3 mt-2">
+<div class="flex-1 h-2 bg-slate-200 dark:bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full gold-gradient" style="width: 98%"></div>
+</div>
+<span class="text-sm font-bold">98%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl gold-border shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-bold text-slate-400">تلقائي</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">آخر نسخة احتياطية</p>
+<h3 class="text-2xl font-black mt-1">ساعتين</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Roles Management -->
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-surface-dark rounded-2xl border border-slate-200 dark:border-primary/10 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-primary/10 flex justify-between items-center">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">manage_accounts</span>
+                                    إدارة أدوار المستخدمين
+                                </h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead class="bg-slate-50 dark:bg-primary/5 text-slate-500 dark:text-primary/60 text-sm uppercase">
+<tr>
+<th class="px-6 py-4 font-bold">الدور الوظيفي</th>
+<th class="px-6 py-4 font-bold">عدد المستخدمين</th>
+<th class="px-6 py-4 font-bold">الحالة الأمنية</th>
+<th class="px-6 py-4 font-bold text-center">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-primary/5">
+<tr class="hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-sm">admin_panel_settings</span></div>
+<span class="font-bold">مدير نظام (Super Admin)</span>
+</div>
+</td>
+<td class="px-6 py-4">02 مستخدم</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold bg-primary/20 text-primary border border-primary/30 uppercase">High Access</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-primary hover:underline font-bold text-sm">تعديل الصلاحيات</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-slate-100 dark:bg-primary/5 text-slate-400 flex items-center justify-center"><span class="material-symbols-outlined text-sm">person</span></div>
+<span class="font-bold">مدير فرع (Manager)</span>
+</div>
+</td>
+<td class="px-6 py-4">08 مستخدم</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 uppercase">Medium</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-primary hover:underline font-bold text-sm">تعديل الصلاحيات</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-slate-100 dark:bg-primary/5 text-slate-400 flex items-center justify-center"><span class="material-symbols-outlined text-sm">payments</span></div>
+<span class="font-bold">محاسب (Accountant)</span>
+</div>
+</td>
+<td class="px-6 py-4">04 مستخدم</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 uppercase">Medium</span>
+</td>
+<td class="px-6 py-4 text-center">
+<button class="text-primary hover:underline font-bold text-sm">تعديل الصلاحيات</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Permission Matrix -->
+<section class="bg-white dark:bg-surface-dark rounded-2xl border border-slate-200 dark:border-primary/10 p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">fact_check</span>
+                                    مصفوفة الصلاحيات الدقيقة
+                                </h3>
+<select class="bg-slate-100 dark:bg-surface-dark border border-primary/20 rounded-lg text-sm px-4 py-2 focus:ring-primary">
+<option>اختر الدور: مدير فرع</option>
+<option>مدير نظام</option>
+<option>محاسب</option>
+</select><div class="flex items-center gap-2 mr-4"><span class="text-sm text-slate-500">التصنيف:</span><select class="bg-slate-100 dark:bg-surface-dark border border-primary/20 rounded-lg text-sm px-4 py-2 focus:ring-primary font-bold text-primary"><option>A</option><option selected="">B</option><option>C</option></select></div>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-6 gap-2 text-center text-xs font-bold text-slate-400 dark:text-primary/60 mb-2">
+<div class="text-right">الوحدة</div>
+<div>قراءة</div>
+<div>إنشاء</div>
+<div>تعديل</div>
+<div>حذف</div>
+<div>موافقة</div>
+</div>
+<!-- Matrix Row -->
+<div class="grid grid-cols-6 gap-2 p-3 bg-slate-50 dark:bg-primary/5 rounded-xl items-center border border-transparent hover:border-primary/20 transition-all">
+<div class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">assessment</span>
+                                        لوحة القيادة
+                                    </div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+</div>
+<div class="grid grid-cols-6 gap-2 p-3 bg-slate-50 dark:bg-primary/5 rounded-xl items-center border border-transparent hover:border-primary/20 transition-all">
+<div class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">groups</span>
+                                        إدارة العملاء CRM
+                                    </div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+</div>
+<div class="grid grid-cols-6 gap-2 p-3 bg-slate-50 dark:bg-primary/5 rounded-xl items-center border border-transparent hover:border-primary/20 transition-all">
+<div class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">account_balance_wallet</span>
+                                        المحاسبة والمالية
+                                    </div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+<div class="flex justify-center"><input checked="" class="rounded text-primary focus:ring-primary bg-background-dark border-primary/30" type="checkbox"/></div>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="bg-primary text-background-dark font-black px-6 py-2 rounded-xl">حفظ التعديلات</button>
+</div>
+</section>
+</div>
+<!-- Side Controls -->
+<div class="space-y-8">
+<!-- Audit Log -->
+<section class="bg-white dark:bg-surface-dark rounded-2xl border border-slate-200 dark:border-primary/10 p-6">
+<h3 class="text-xl font-bold flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">visibility</span>
+                                سجل المراقبة
+                            </h3>
+<div class="space-y-6 relative before:absolute before:right-3.5 before:top-0 before:bottom-0 before:w-[1px] before:bg-primary/20">
+<div class="relative pr-8">
+<div class="absolute right-0 top-1.5 size-7 rounded-full bg-primary/20 flex items-center justify-center border border-primary text-primary z-10">
+<span class="material-symbols-outlined text-xs">edit</span>
+</div>
+<p class="text-sm font-bold">تعديل صلاحيات المحاسب</p>
+<p class="text-[10px] text-slate-500 uppercase">محمد جاسم • 192.168.1.1</p>
+<p class="text-[10px] text-primary/70 mt-1">منذ 10 دقائق</p>
+</div>
+<div class="relative pr-8 opacity-70">
+<div class="absolute right-0 top-1.5 size-7 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 text-slate-400 z-10">
+<span class="material-symbols-outlined text-xs">login</span>
+</div>
+<p class="text-sm font-bold">دخول ناجح للنظام</p>
+<p class="text-[10px] text-slate-500 uppercase">أحمد علي • 10.0.0.45</p>
+<p class="text-[10px] text-primary/70 mt-1">منذ 45 دقيقة</p>
+</div>
+<div class="relative pr-8 opacity-70">
+<div class="absolute right-0 top-1.5 size-7 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500 text-red-500 z-10">
+<span class="material-symbols-outlined text-xs">error</span>
+</div>
+<p class="text-sm font-bold">محاولة دخول فاشلة</p>
+<p class="text-[10px] text-slate-500 uppercase">مجهول • 45.22.11.90</p>
+<p class="text-[10px] text-primary/70 mt-1">منذ 3 ساعات</p>
+</div>
+</div>
+<button class="w-full mt-8 py-2 border border-primary/20 rounded-xl text-primary text-sm font-bold hover:bg-primary/5 transition-all">عرض كافة السجلات</button>
+</section>
+<!-- Security Settings -->
+<section class="bg-white dark:bg-surface-dark rounded-2xl border border-slate-200 dark:border-primary/10 p-6">
+<h3 class="text-xl font-bold flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">shield</span>
+                                إعدادات الأمان العامة
+                            </h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-bold">المصادقة الثنائية (2FA)</p>
+<p class="text-[10px] text-slate-500">إجبارية لجميع المديرين</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-bold">تتبع الـ IP</p>
+<p class="text-[10px] text-slate-500">تسجيل عناوين الدخول</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-bold">انتهاء الجلسة التلقائي</p>
+<p class="text-[10px] text-slate-500">بعد 15 دقيقة خمول</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="pt-4 border-t border-primary/10">
+<p class="text-[10px] text-primary/60 mb-2">تأمين نطاق الدخول:</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-background-dark border-none rounded-lg text-xs font-mono text-primary py-1 px-3" type="text" value="192.168.1.1/24"/>
+<button class="bg-primary/20 text-primary p-1 rounded-lg"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart Business - نظام التقارير المحاسبية المستقلة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#544519",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-container": "#254188",
+              "on-error": "#690005",
+              "primary-container": "#d4af37",
+              "on-tertiary": "#082b72",
+              "error-container": "#93000a",
+              "primary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#00174b",
+              "on-primary": "#3c2f00",
+              "tertiary-container": "#97b0ff",
+              "surface-tint": "#e9c349",
+              "inverse-on-surface": "#313030",
+              "tertiary-fixed": "#dbe1ff",
+              "primary": "#f2ca50",
+              "surface": "#0B0B0B",
+              "secondary-fixed-dim": "#dac58d",
+              "on-primary-fixed-variant": "#574500",
+              "secondary": "#dac58d",
+              "on-primary-fixed": "#241a00",
+              "tertiary": "#bfcdff",
+              "inverse-surface": "#e5e2e1",
+              "inverse-primary": "#735c00",
+              "on-primary-container": "#554300",
+              "outline": "#99907c",
+              "background": "#0B0B0B",
+              "surface-dim": "#0B0B0B",
+              "on-tertiary-fixed-variant": "#27438a",
+              "on-surface-variant": "#d0c5af",
+              "primary-fixed-dim": "#e9c349",
+              "on-secondary-container": "#c8b37d",
+              "surface-variant": "#1c1c1c",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#3a3939",
+              "secondary-fixed": "#f7e1a6",
+              "on-secondary": "#3c2f05",
+              "on-secondary-fixed-variant": "#544519",
+              "on-background": "#e5e2e1",
+              "outline-variant": "#4d4635",
+              "surface-container-lowest": "#080808",
+              "surface-container": "#141414",
+              "on-secondary-fixed": "#241a00",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#1c1c1c",
+              "on-error-container": "#ffdad6",
+              "surface-container-low": "#111111",
+              "tertiary-fixed-dim": "#b4c5ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0B0B0B;
+        color: #e5e2e1;
+      }
+    </style>
+</head>
+<body class="font-body antialiased overflow-x-hidden">
+<!-- SideNavBar (Glass Sidebar) -->
+<aside class="fixed right-0 top-0 h-full flex flex-col py-8 z-50 bg-[#111111] w-64 border-l border-white/5 shadow-[48px_0_48px_rgba(0,0,0,0.5)] font-['Manrope'] antialiased">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-[#D4AF37]">MJM Smart</h1>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest opacity-60">الوحدة المستقلة</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#D4AF37] font-bold border-r-2 border-[#D4AF37] bg-primary-container/10 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">لوحة التحكم</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-white/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-sm">السجلات المحاسبية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-white/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="text-sm">أداء الفروع</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-white/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-sm">القوائم المالية</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-white/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="text-sm">إدارة المنشأة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#D0C5AF]/50 hover:text-[#E5E2E1] hover:bg-white/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">الإعدادات</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-2">
+<button class="w-full flex items-center justify-center gap-2 py-3 bg-primary-container/10 border border-primary-container/20 text-[#D4AF37] rounded-xl hover:bg-primary-container/20 transition-all text-sm font-semibold mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="swap_horiz">swap_horiz</span>
+            تبديل المنشأة
+        </button>
+<a class="flex items-center gap-3 px-4 py-2 text-[#D0C5AF]/50 hover:text-[#E5E2E1] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">الدعم الفني</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-[#D0C5AF]/50 hover:text-red-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-sm">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="mr-64 min-h-screen bg-surface flex flex-col">
+<!-- TopNavBar (Executive Header) -->
+<header class="w-full h-20 sticky top-0 z-40 bg-[#0B0B0B]/60 backdrop-blur-xl flex items-center justify-between px-12">
+<div class="flex items-center gap-8">
+<h2 class="text-2xl font-black text-[#D4AF37] font-headline">MJM Smart Business</h2>
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant/40" data-icon="search">search</span>
+<input class="bg-surface-container-highest/50 border-none rounded-full pr-10 pl-4 py-2 text-sm w-64 focus:ring-1 focus:ring-primary-container placeholder:text-on-surface-variant/30 text-right" placeholder="بحث (Alt+S)" type="text"/>
+</div>
+</div>
+<nav class="flex items-center gap-8 font-['Manrope'] font-semibold tracking-wide">
+<a class="text-[#E5E2E1]/70 hover:text-[#D4AF37] transition-all" href="#">الزكاة</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#D4AF37] transition-all" href="#">الإيجارات</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#D4AF37] transition-all" href="#">هامش النمو</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all text-sm">
+                تصدير التقرير
+            </button>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container" data-icon="apps">apps</span>
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 p-0.5">
+<img alt="ملف المدير الشخصي" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-VtIHyMUoskoIWcUAVcB2nfIA9ULznIo5c-NeEWidlMVvyQMrWtCxpw7ZYDMAKeEJ7OEef1ywsoICGx-fZi_GKjR-Jlbp44bSLnFr1pXPIvAHlcHyk-Hq7U7SGdlKo9VPxcWnTTApysLw3CzTgOAVSmin2AB1a5ORe9nbTZKq9q_MjtVsmcY3w_Oq_ny3pRhcNRvn-vJ7QLHjZa6M1R9MczX6fngkpWRa34B9-SkFwaFU7jsN5Uargfgcd4RbviH8pIyJwH8nw"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-12 space-y-12">
+<!-- Hero KPIs / Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- User Context Identity -->
+<div class="col-span-1 md:col-span-2 bg-surface-container rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-32 h-32 bg-primary-container/5 rounded-full -ml-16 -mt-16 blur-3xl group-hover:bg-primary-container/10 transition-all"></div>
+<div class="text-right">
+<span class="text-xs font-bold text-[#D4AF37] tracking-[0.2em] uppercase mb-2 block">الوحدة الحالية</span>
+<h3 class="text-3xl font-headline font-extrabold text-on-surface">أحمد المنصور</h3>
+<p class="text-on-surface-variant mt-1">مدير فرع الرياض - الخدمات اللوجستية</p>
+</div>
+<div class="mt-8 flex items-center justify-start gap-4 flex-row-reverse">
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-on-surface-variant/60 uppercase">المعرف المستقل</span>
+<span class="font-mono text-sm text-[#D4AF37]">UNIT-882-901</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/20"></div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-on-surface-variant/60 uppercase">آخر نشاط</span>
+<span class="text-sm">منذ 12 دقيقة</span>
+</div>
+</div>
+</div>
+<!-- Zakat Card -->
+<div class="bg-surface-container rounded-xl p-6 border-t-2 border-primary-container shadow-lg">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary-container" data-icon="payments">payments</span>
+<span class="text-[10px] font-bold py-1 px-2 bg-primary-container/10 text-primary-container rounded">تقديري</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-1">حساب الزكاة المستحق</p>
+<h4 class="text-2xl font-headline font-bold">12,450.00 <span class="text-xs font-normal opacity-50">ر.س</span></h4>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-[10px] text-on-surface-variant/60">النمو السنوي</span>
+<span class="text-[10px] text-primary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+                        +2.4%
+                    </span>
+</div>
+</div>
+<!-- Growth Margin Card -->
+<div class="bg-surface-container rounded-xl p-6 border-t-2 border-primary-container shadow-lg">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary-container" data-icon="show_chart">show_chart</span>
+<div class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_#D4AF37]"></div>
+</div>
+<p class="text-sm text-on-surface-variant mb-1">هامش النمو الصافي</p>
+<h4 class="text-2xl font-headline font-bold">34.8%</h4>
+<div class="mt-4 pt-4 border-t border-outline-variant/10">
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[72%]"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] text-on-surface-variant/60">الهدف المخطط</span>
+<span class="text-[10px] text-on-surface">45%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Second Row: Rents & Detailed Stats -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Rent Balance -->
+<div class="lg:col-span-1 bg-surface-container rounded-xl p-8 relative">
+<h3 class="text-lg font-headline font-bold mb-6">رصيد الإيجارات والخدمات</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="location_city">location_city</span>
+</div>
+<div>
+<p class="text-sm font-semibold">مكتب الرياض الرئيسي</p>
+<p class="text-[10px] text-on-surface-variant/60">عقد سنوي - مستقل</p>
+</div>
+</div>
+<span class="text-sm font-mono text-primary-container">85,000</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="warehouse">warehouse</span>
+</div>
+<div>
+<p class="text-sm font-semibold">مستودع السلي</p>
+<p class="text-[10px] text-on-surface-variant/60">دفع شهري</p>
+</div>
+</div>
+<span class="text-sm font-mono text-primary-container">12,300</span>
+</div>
+<div class="pt-6 border-t border-outline-variant/10">
+<button class="w-full py-3 bg-surface-container-highest text-sm font-bold rounded-lg hover:bg-surface-container-high transition-colors">عرض كافة العقود</button>
+</div>
+</div>
+</div>
+<!-- Independent Ledger Table -->
+<div class="lg:col-span-2 bg-surface-container rounded-xl overflow-hidden">
+<div class="px-8 py-6 flex items-center justify-between border-b border-outline-variant/10">
+<h3 class="text-lg font-headline font-bold">دفتر الأستاذ المستقل (Ledger)</h3>
+<div class="flex gap-2">
+<button class="text-xs bg-surface-container-high px-3 py-1.5 rounded-md hover:text-primary-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="download">download</span>
+                            تصدير (Alt+E)
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-surface-container-lowest text-[10px] text-on-surface-variant/60 uppercase tracking-widest">
+<th class="px-8 py-4 font-semibold">معرف العملية</th>
+<th class="px-4 py-4 font-semibold">المستخدم الوحدوي</th>
+<th class="px-4 py-4 font-semibold">الفرع</th>
+<th class="px-4 py-4 font-semibold">الخدمة</th>
+<th class="px-4 py-4 font-semibold">المبلغ (ر.س)</th>
+<th class="px-8 py-4 font-semibold">الحالة</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-8 py-5 text-xs font-mono">#TRX-99012</td>
+<td class="px-4 py-5 text-sm">أحمد المنصور</td>
+<td class="px-4 py-5 text-sm text-on-surface-variant">الرياض</td>
+<td class="px-4 py-5 text-sm">تخليص جمركي</td>
+<td class="px-4 py-5 text-sm font-bold text-primary-container">2,450.00</td>
+<td class="px-8 py-5">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+                                        مكتمل
+                                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-8 py-5 text-xs font-mono">#TRX-99015</td>
+<td class="px-4 py-5 text-sm">أحمد المنصور</td>
+<td class="px-4 py-5 text-sm text-on-surface-variant">الرياض</td>
+<td class="px-4 py-5 text-sm">شحن جوي</td>
+<td class="px-4 py-5 text-sm font-bold text-primary-container">15,200.00</td>
+<td class="px-8 py-5">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+                                        مكتمل
+                                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors group">
+<td class="px-8 py-5 text-xs font-mono">#TRX-99021</td>
+<td class="px-4 py-5 text-sm">أحمد المنصور</td>
+<td class="px-4 py-5 text-sm text-on-surface-variant">الرياض</td>
+<td class="px-4 py-5 text-sm">استشارات مالية</td>
+<td class="px-4 py-5 text-sm font-bold text-primary-container">5,000.00</td>
+<td class="px-8 py-5">
+<span class="flex items-center gap-1.5 text-[10px] font-bold text-on-surface-variant/40">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant/20"></span>
+                                        قيد المعالجة
+                                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+<!-- Real-time Balance Floating Summary -->
+<div class="fixed bottom-12 left-12 flex gap-4 z-30">
+<div class="bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/20 rounded-2xl p-4 flex items-center gap-6 shadow-2xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-500 text-sm" data-icon="arrow_upward">arrow_upward</span>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">إجمالي الإيرادات</p>
+<p class="text-sm font-mono font-bold">245,670.00</p>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant/20"></div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-sm" data-icon="arrow_downward">arrow_downward</span>
+</div>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">المصروفات</p>
+<p class="text-sm font-mono font-bold">112,400.00</p>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant/20"></div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="account_balance_wallet" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div>
+<p class="text-[10px] text-on-primary-container uppercase font-bold">صافي الأرباح</p>
+<p class="text-lg font-headline font-black text-primary-container">+133,270.00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="hidden" data-location="Riyadh, Saudi Arabia"></div>
+</body></html>

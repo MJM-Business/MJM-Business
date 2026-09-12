@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MJM Smart Business Platform | منصة الأعمال الذكية</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37", // Gold
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0B0B0B", // Deep Black
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D57F 50%, #B8860B 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F1D57F 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gold {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="MJM PLATFORM" class="h-10 w-auto object-contain" src="data:image/png;base64,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"/>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">الرئيسية</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">المميزات</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">الذكاء الاصطناعي</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">الأمان</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary/10 transition-all">
+<span>English</span>
+<span class="material-symbols-outlined text-sm">language</span>
+</button>
+<button class="hidden md:flex items-center justify-center rounded-full h-10 px-6 gold-gradient text-background-dark text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                        ابدأ الآن
+                    </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 px-6 overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] rounded-full bg-primary/10 blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8 text-right">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 w-fit">
+<span class="size-2 rounded-full gold-gradient animate-pulse"></span>
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">المستقبل يبدأ هنا</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
+                        منصة MJM <br/>
+<span class="gold-text-gradient">للأعمال الذكية</span>
+</h1>
+<p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                        نظام Super ERP المطور مع أتمتة شاملة بالذكاء الاصطناعي. حلول تقنية تعيد تعريف الكفاءة والنمو لمؤسستك في العصر الرقمي.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="flex items-center justify-center rounded-xl h-14 px-10 gold-gradient text-background-dark text-lg font-black shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all">
+                            ابدأ رحلتك الآن
+                        </button>
+<button class="flex items-center justify-center rounded-xl h-14 px-8 border border-white/20 text-white text-lg font-bold hover:bg-white/5 transition-all">
+                            مشاهدة العرض
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="Luxury corporate dashboard visualization with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxZ7fGc735Iv8Dgh-nGQ3uCSNVrF8O1ZJf92s_8mWWSKLtjlj0FsIPBQRqrjPNCsIAU-88s7mIe5TXLnI9rjT2LrRHq6x2sQCGRGBvst2cCl791UPTPvGJce4VcxIXGa_q1Gs8efUkSXOmHKlTz1Cmqe_zpYRmv18YVO5GKFPHkiGBLZbaEThoh-QWqdWj9LIBTaZpjGpnwv_mD39quj8m8WyPmUvF735rakmGEm1CqdI1igW2Q8ryrnKOd16fnfJqss3YHsY-kg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+<!-- Floating Card -->
+<div class="absolute -bottom-6 -right-6 md:-right-12 bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-2xl max-w-[240px]">
+<div class="flex items-center gap-4 mb-3">
+<div class="size-10 rounded-full gold-gradient flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark">trending_up</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter">زيادة الكفاءة</p>
+<p class="text-xl font-bold text-white">+45%</p>
+</div>
+</div>
+<p class="text-xs text-slate-500 leading-tight">تحسين الأداء السنوي باستخدام تقنياتنا الذكية.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="py-24 px-6 bg-white/[0.02]">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center gap-4 mb-20">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em]">وحداتنا المتكاملة</h2>
+<h3 class="text-white text-4xl md:text-5xl font-black">حلول مصممة للتميز</h3>
+<div class="w-20 h-1 gold-gradient rounded-full mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="group p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all duration-300 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">business_center</span>
+<div class="flex flex-col gap-2 text-right">
+<h4 class="text-white text-xl font-bold">الخدمات العامة</h4>
+<p class="text-slate-400 text-sm leading-relaxed">إدارة شاملة لجميع العمليات الإدارية والتشغيلية في منصة واحدة.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all duration-300 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">flight_takeoff</span>
+<div class="flex flex-col gap-2 text-right">
+<h4 class="text-white text-xl font-bold">السفر والشحن</h4>
+<p class="text-slate-400 text-sm leading-relaxed">أنظمة لوجستية ذكية لتتبع الشحنات وإدارة رحلات العمل بكفاءة.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all duration-300 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">account_balance_wallet</span>
+<div class="flex flex-col gap-2 text-right">
+<h4 class="text-white text-xl font-bold">إدارة الأصول</h4>
+<p class="text-slate-400 text-sm leading-relaxed">حماية وتتبع ممتلكات المؤسسة المادية والرقمية بدقة متناهية.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="group p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all duration-300 flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">memory</span>
+<div class="flex flex-col gap-2 text-right">
+<h4 class="text-white text-xl font-bold">ذكاء الآلة</h4>
+<p class="text-slate-400 text-sm leading-relaxed">تحليلات تنبؤية متقدمة تعتمد على بيانات ضخمة لدعم اتخاذ القرار.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Capabilities -->
+<section class="py-24 px-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 -skew-y-3"></div>
+<div class="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<div class="size-14 rounded-full bg-white/5 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+</div>
+<h4 class="text-white text-2xl font-bold">المساعد الذكي (AI)</h4>
+<p class="text-slate-400 text-sm">مساعد افتراضي متكامل لجدولة المهام، الرد الآلي، وتنظيم العمل اليومي.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="size-14 rounded-full bg-white/5 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">insights</span>
+</div>
+<h4 class="text-white text-2xl font-bold">ذكاء الأداء</h4>
+<p class="text-slate-400 text-sm">مراقبة لحظية لمؤشرات الأداء الرئيسية وتقديم تقارير تحليلية دقيقة.</p>
+</div>
+</div>
+<div class="p-8 rounded-3xl bg-background-dark border border-white/10">
+<div class="flex items-center justify-between mb-6">
+<h5 class="text-white font-bold">تحليلات الذكاء الاصطناعي اليومية</h5>
+<span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded">مباشر</span>
+</div>
+<div class="space-y-4">
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full gold-gradient w-[85%]"></div>
+</div>
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full gold-gradient w-[65%]"></div>
+</div>
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full gold-gradient w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 text-right">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">قدرات فائقة</h2>
+<h3 class="text-white text-4xl md:text-5xl font-black mb-6 leading-tight">أتمتة ذكية لمستقبل بلا حدود</h3>
+<p class="text-slate-400 text-lg leading-relaxed mb-8">
+                        نحن لا نوفر مجرد أدوات، بل نبني عقلًا إلكترونيًا لمنشأتك يتعلم ويتطور مع كل عملية. تقنيات الذكاء الاصطناعي لدينا تضمن لك البقاء في طليعة المنافسة.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+<span>اكتشف المزيد عن AI</span>
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Performance & Security -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-10 rounded-3xl border border-primary/20 bg-gradient-to-br from-white/5 to-transparent flex flex-col gap-6 group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-5xl text-primary">security</span>
+<span class="text-white/30 font-display text-4xl font-black italic">SECURE</span>
+</div>
+<h4 class="text-white text-3xl font-black">أمن بيانات سيادي</h4>
+<p class="text-slate-400 leading-relaxed">
+                            نستخدم تشفير AES-256 المتطور لضمان خصوصية بياناتك وحمايتها من أي تهديدات خارجية، متوافق مع أعلى المعايير العالمية.
+                        </p>
+<div class="mt-4 flex items-center gap-3">
+<span class="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-bold">AES-256</span>
+<span class="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-bold">TLS 1.3</span>
+<span class="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-bold">GDPR</span>
+</div>
+</div>
+<div class="p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-5xl text-primary">bolt</span>
+<span class="text-white/30 font-display text-4xl font-black italic">FAST</span>
+</div>
+<h4 class="text-white text-3xl font-black">سرعة تنفيذ فائقة</h4>
+<p class="text-slate-400 leading-relaxed">
+                            محركنا المطور يضمن تنفيذ كافة العمليات والمعالجات في أقل من ثانيتين، مما يمنح فريقك تجربة استخدام سلسة وإنتاجية أعلى.
+                        </p>
+<div class="mt-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-500">زمن الاستجابة</span>
+<span class="text-primary font-bold">1.2 ثانية</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full">
+<div class="h-full gold-gradient rounded-full w-[95%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<!-- Testimonials Section -->
+<section class="py-24 px-6 bg-background-dark relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col items-center text-center gap-4 mb-20">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em]">ثقة شركائنا</h2>
+<h3 class="text-white text-4xl md:text-5xl font-black">آراء العملاء</h3>
+<div class="w-20 h-1 gold-gradient rounded-full mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col gap-6 hover:border-primary/30 transition-all duration-500">
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+</div>
+<p class="text-slate-300 text-lg leading-relaxed italic text-right">
+                    "لقد أحدثت منصة MJM تحولاً جذرياً في طريقة إدارتنا للعمليات اللوجستية. الذكاء الاصطناعي ليس مجرد كلمة تسويقية هنا، بل هو واقع ملموس يوفر لنا الوقت والجهد يومياً."
+                </p>
+<div class="flex items-center gap-4 mt-auto flex-row-reverse">
+<div class="size-12 rounded-full overflow-hidden border border-primary/30">
+<img alt="Client" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="text-right">
+<h5 class="text-white font-bold">أحمد المنصور</h5>
+<p class="text-primary text-xs">المدير التنفيذي، شركة المنصور للنقل</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col gap-6 hover:border-primary/30 transition-all duration-500">
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+</div>
+<p class="text-slate-300 text-lg leading-relaxed italic text-right">
+                    "الأمن والسرعة هما أهم ما نبحث عنه في المؤسسات المالية، ووجدنا في MJM شريكاً تقنياً يفهم هذه المتطلبات بدقة متناهية ويقدم حلولاً سيادية حقيقية."
+                </p>
+<div class="flex items-center gap-4 mt-auto flex-row-reverse">
+<div class="size-12 rounded-full overflow-hidden border border-primary/30">
+<img alt="Client" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="text-right">
+<h5 class="text-white font-bold">سارة القحطاني</h5>
+<p class="text-primary text-xs">مديرة التقنية، بنك الاستثمار الرقمي</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col gap-6 hover:border-primary/30 transition-all duration-500">
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+<span class="material-symbols-outlined text-primary text-xl fill-1">star</span>
+</div>
+<p class="text-slate-300 text-lg leading-relaxed italic text-right">
+                    "تكامل الأنظمة الإدارية مع ذكاء الآلة أعطانا رؤية استباقية للسوق لم نكن نحلم بها سابقاً. الدعم الفني والاحترافية لدى فريق MJM استثنائية بكل المقاييس."
+                </p>
+<div class="flex items-center gap-4 mt-auto flex-row-reverse">
+<div class="size-12 rounded-full overflow-hidden border border-primary/30">
+<img alt="Client" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="text-right">
+<h5 class="text-white font-bold">خالد العتيبي</h5>
+<p class="text-primary text-xs">رئيس قسم الابتكار، مجموعة الخليج الصناعية</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 px-6 bg-background-dark border-t border-white/5 relative overflow-hidden">
+<div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="max-w-4xl mx-auto relative z-10">
+<div class="flex flex-col items-center text-center gap-4 mb-16">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em]">الذكاء الاصطناعي في خدمتك</h2>
+<h3 class="text-white text-4xl md:text-5xl font-black">الأسئلة الشائعة والتحليل الذكي</h3>
+<div class="w-20 h-1 gold-gradient rounded-full mt-2"></div>
+<p class="text-slate-400 mt-4">احصل على إجابات فورية لاستفساراتك من خلال مساعدنا الذكي</p>
+</div>
+<!-- AI Search Bar -->
+<div class="mb-12 relative">
+<div class="absolute inset-y-0 right-0 pr-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+</div>
+<input class="w-full bg-white/5 border border-primary/30 rounded-2xl py-5 pr-14 pl-40 text-white placeholder-slate-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="اسأل الذكاء الاصطناعي أي شيء عن المنصة..." type="text"/>
+<button class="absolute left-2 top-2 bottom-2 px-8 gold-gradient text-background-dark font-black rounded-xl hover:scale-105 transition-transform">
+                اسأل الآن
+            </button>
+</div>
+<!-- Accordion Items -->
+<div class="space-y-4">
+<div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<h4 class="text-white font-bold">كيف يضمن النظام أمن البيانات الحساسة؟</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-slate-400 text-sm mt-4 hidden group-hover:block leading-relaxed">نعتمد تقنيات تشفير سيادية متوافقة مع معايير AES-256، مع عزل تام للبيانات وضمان الخصوصية الكاملة لكل مؤسسة.</p>
+</div>
+<div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<h4 class="text-white font-bold">هل يمكن ربط MJM مع أنظمتنا الحالية؟</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-slate-400 text-sm mt-4 hidden group-hover:block leading-relaxed">نعم، توفر المنصة واجهات برمجة تطبيقات (API) مرنة تتيح التكامل السلس مع معظم الأنظمة المحاسبية واللوجستية العالمية.</p>
+</div>
+<div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<h4 class="text-white font-bold">ما هي ميزة الأتمتة الذكية مقارنة بالأنظمة التقليدية؟</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-slate-400 text-sm mt-4 hidden group-hover:block leading-relaxed">أنظمتنا لا تكتفي بتنفيذ الأوامر، بل تتعلم من أنماط العمل لتقديم توصيات استباقية وتوقع المشكلات قبل وقوعها، مما يوفر 40% من الجهد التشغيلي.</p>
+</div>
+<div class="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-primary/30 transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<h4 class="text-white font-bold">كيف يتم تحديث النظام والذكاء الاصطناعي؟</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-slate-400 text-sm mt-4 hidden group-hover:block leading-relaxed">تتم التحديثات بشكل سحابي وتلقائي دون التأثير على سير العمل، حيث نقوم دورياً بتطوير النماذج اللغوية والتحليلية لضمان أعلى دقة.</p>
+</div>
+</div>
+</div>
+</section><section class="py-24 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center gap-4 mb-16">
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.3em]">ننمو مع الأفضل</h2>
+<h3 class="text-white text-4xl md:text-5xl font-black">شركاء النجاح</h3>
+<div class="w-20 h-1 gold-gradient rounded-full mt-2"></div>
+<p class="text-slate-400 mt-4 max-w-2xl">نفخر بالتعاون مع كبرى المؤسسات والشركات العالمية التي وضعت ثقتها في حلولنا الذكية.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-50">
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 1" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 2" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 3" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 4" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 5" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+<div class="flex justify-center p-6 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+<img alt="Partner 6" class="h-12 object-contain filter brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+</div>
+</div>
+</section><footer class="bg-black py-20 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-right">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="MJM PLATFORM" class="h-8 w-auto object-contain" src="data:image/png;base64,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"/>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        الريادة في تقديم حلول إدارة الأعمال الذكية المتكاملة. نجمع بين الخبرة العميقة وأحدث تقنيات الذكاء الاصطناعي.
+                    </p>
+<div class="flex items-center gap-4">
+<a class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary transition-all" href="#">
+<img class="opacity-60" data-alt="Social icon X" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD1E2ppg2pq9eD6oMv3P2YqZ5ahx7eWke93ZGShKwNPchXgqL895lhh4HIK-CJQ0mYIMjdK5RUyEJbrmFUQ3MbXFiF1h_1VPfiHMCo9oAiVjKCec_R13OrWr4jqqbQqIyzwWc_V3hnLIxihgdZP7l8u0Kmms41CPMZRkXDzFNrpt_zqJYzlLEql7JJWX9LPBrkLa_Df2-ace2J9Oll-Q-KCRLPN2rVgtl-isNpus5EsbWX-euDSUg1II5n3LoUr04KEWDpklW_FA"/>
+</a>
+<a class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary transition-all" href="#">
+<img class="opacity-60" data-alt="Social icon LinkedIn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSJkAzW_NYOcSR9htJecsxmOGwukuZ4e5qcx4baoxUVxjVQSmU1xWiksrQoBXg_ohxjS2pntKJdhYNJ9ufMuW4OseqVVc4SUFCZCkPyt09G0X7TnoePq_OAkb_JaKlf24Rir763x_Ln5AIXFOHvjCNV0g9wbBwIwGD1lY0wfp2ptxeTZRsCsLOgJn49aQZQzInqFFQZvjcm8NfKseLVGHN9goGsO3wq2Ad8-h85JuLSFDZ9GN1PxN6iOfeCN0FlsXWmkqw6bbT6w"/>
+</a>
+<a class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary transition-all" href="#">
+<img class="opacity-60" data-alt="Social icon Instagram" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlkpehfoMxl3Csie5-Lz0nPqJS0_UkV4APO2dNT-iopOjqZOlV4G8bZKl23Vznm-tJHR1t5ieDNvBagLC2n1yyP5PHQ-cERDMV9aVZDbtFKKFe44OPyAPLMTRjwbRqKz11eFMOXK54en91nIB3SJSQuvFCyQ42qQh7-yXJdMVhSLIgyIWPtO8en_flrOjVLbn37YNkyx3Vhq09uhJHNZuNfdVzRM09GQ82_Us4k2yZ8o9eg0SVFEJEHdnJ0pKsB9BVcGc9auulcw"/>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-white font-bold">الروابط السريعة</h5>
+<nav class="flex flex-col gap-4 text-slate-500 text-sm">
+<a class="hover:text-primary transition-colors" href="#">من نحن</a>
+<a class="hover:text-primary transition-colors" href="#">خدماتنا</a>
+<a class="hover:text-primary transition-colors" href="#">الأسعار</a>
+<a class="hover:text-primary transition-colors" href="#">المدونة</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-white font-bold">الدعم الفني</h5>
+<nav class="flex flex-col gap-4 text-slate-500 text-sm">
+<a class="hover:text-primary transition-colors" href="#">مركز المساعدة</a>
+<a class="hover:text-primary transition-colors" href="#">تواصل معنا</a>
+<a class="hover:text-primary transition-colors" href="#">سياسة الخصوصية</a>
+<a class="hover:text-primary transition-colors" href="#">الشروط والأحكام</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-white font-bold">اشترك في نشرتنا</h5>
+<p class="text-slate-500 text-sm">كن أول من يعرف عن تحديثاتنا الذكية.</p>
+<div class="flex gap-2">
+<button class="bg-primary px-4 py-2 rounded-lg text-background-dark font-bold text-sm">اشترك</button>
+<input class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 text-sm focus:border-primary focus:ring-0" placeholder="بريدك الإلكتروني" type="email"/>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs">جميع الحقوق محفوظة © 2024 منصة MJM للأعمال الذكية</p>
+<div class="flex items-center gap-4">
+<img class="grayscale opacity-30" data-alt="Payment and security badges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXHhQY5Fytu0HaprHrq5KucwYUuUU_RCNBRvK-ofk5fiYr3pp38LD_ij3OHVLebY06uGyB8UYPlvMLSo9ZoecjVeO7kLY6D0MnT6VXHVcJh0q7omZGY5SfE9xth1nrIKNa8Wdt7MMnrqBWwNoF5g8zjxWd_ICTHyxZM6IWMlOplfwVxgJfuYNRlzA3YBbvVbG2LmhrABRRhQtNbdp7crs9haOBT_o9exfQ_TGxWrbUv056v-isC_u6k9Xk_BQtvOsi6FQuroTrw"/>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

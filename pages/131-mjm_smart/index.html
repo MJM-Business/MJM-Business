@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مركز التواصل والتبادل المهني الموحد - The Sovereign Executive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#353534",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-fixed": "#00174b",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#d4af37",
+                        "outline": "#99907c",
+                        "surface-container": "#201f1f",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-container-low": "#1c1b1b",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#554300",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary": "#3c2f00",
+                        "primary": "#f2ca50",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-container": "#c8b37d",
+                        "error": "#ffb4ab",
+                        "secondary": "#dac58d",
+                        "secondary-fixed": "#f7e1a6",
+                        "on-tertiary-container": "#254188",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#241a00",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe088",
+                        "tertiary": "#bfcdff",
+                        "background": "#131313",
+                        "on-secondary": "#3c2f05",
+                        "on-tertiary": "#082b72",
+                        "outline-variant": "#4d4635",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "inverse-primary": "#735c00",
+                        "tertiary-container": "#97b0ff",
+                        "on-secondary-fixed-variant": "#544519",
+                        "secondary-container": "#544519",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed-dim": "#dac58d",
+                        "surface-container-high": "#2a2a2a",
+                        "on-error": "#690005",
+                        "surface-bright": "#3a3939"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #E5E2E1; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-panel { background: rgba(53, 53, 52, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(77, 70, 53, 0.2); }
+        .gold-gradient { background: linear-gradient(135deg, #F2CA50 0%, #D4AF37 100%); }
+        .active-glow { box-shadow: 0 0 12px rgba(242, 202, 80, 0.4); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-[#1C1B1B] border-l border-[#4D4635]/20 fixed right-0 top-0 py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold text-[#F2CA50] tracking-tighter uppercase font-headline">المحور المهني</h1>
+<p class="text-[10px] text-[#D0C5AF]/50 font-label tracking-[0.2em] mt-1">الإدارة التنفيذية</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#D4AF37] hover:bg-[#2A2A2A] transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-bold text-sm">مركز القيادة</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#F2CA50] bg-[#2A2A2A] border-l-4 border-[#D4AF37] font-bold text-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span>المحادثات</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#D4AF37] hover:bg-[#2A2A2A] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-bold text-sm">المعاملات</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#D4AF37] hover:bg-[#2A2A2A] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-bold text-sm">المساعد الذكي</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-[#D0C5AF]/50 hover:text-[#D4AF37] hover:bg-[#2A2A2A] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-bold text-sm">الإعدادات</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4 pt-4 border-t border-[#4D4635]/10">
+<button class="w-full py-3 gold-gradient text-[#3C2F00] font-bold rounded-md flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span>معاملة جديدة</span>
+</button>
+<div class="flex items-center justify-around text-[#D0C5AF]/50">
+<div class="relative cursor-pointer hover:text-[#F2CA50]">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-[#F2CA50] rounded-full active-glow"></span>
+</div>
+<div class="cursor-pointer hover:text-[#F2CA50]">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:pr-64 bg-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 md:pr-64 z-40 h-20 bg-[#131313]/80 backdrop-blur-xl flex items-center justify-between px-8 border-b border-[#4D4635]/10">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#D4AF37] uppercase tracking-widest font-headline">MJM EXECUTIVE</span>
+<nav class="hidden lg:flex gap-6">
+<a class="text-[#F2CA50] border-b-2 border-[#D4AF37] pb-1 text-sm font-medium" href="#">الرئيسية</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#F2CA50] text-sm font-medium transition-colors" href="#">المشاريع</a>
+<a class="text-[#E5E2E1]/70 hover:text-[#F2CA50] text-sm font-medium transition-colors" href="#">التقارير</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative bg-surface-container-highest/40 rounded-full px-4 py-2 flex items-center gap-3 border border-[#4D4635]/20 focus-within:border-[#D4AF37]/50 transition-all">
+<span class="material-symbols-outlined text-[#D0C5AF]/50 text-xl">search</span>
+<input class="bg-transparent border-none outline-none text-sm text-on-surface w-64 placeholder:text-[#D0C5AF]/30" placeholder="بحث عن معاملة أو زميل..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative cursor-pointer text-[#E5E2E1]/70">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full animate-pulse"></span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container/20 border border-primary/30 flex items-center justify-center overflow-hidden">
+<img alt="Executive Avatar" class="w-full h-full object-cover" data-alt="professional executive headshot of a middle-aged man in a sharp suit with dark background and dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdSqONp7cjUgEiNMgzGQEPshwOnhES93eVPZzcs41iaFH4TJQkBVm2KtreHaObSe0RIs8PMvY09A36Rc7ujTd8vTJA4Ki7exU5zZoFzrGcvGgWa9ixKi81vnRCkO6XyP2dj3B24qhGpr0tQG6cFa8Z763dq_GIUYknOobH9hcmbFtkgEDhOYbjIQdUJQs9AVKVtloAY3FhKj2IUN5Agywbm3ZsF_gE8ppECqtfX5s-0rTrPvcqLN8S1pDXzrGjkE3R0nv-3Iy7Kw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="pt-28 px-8 pb-12 grid grid-cols-12 gap-6">
+<!-- Left Column: Professional Hub & Circulars -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- Circulars Section (التعاميم) -->
+<section class="bg-surface-container rounded-xl p-6 shadow-2xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-[#F2CA50]"></div>
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[#F2CA50]">campaign</span>
+                            التعاميم الإدارية
+                        </h2>
+<span class="text-[10px] text-[#D4AF37] font-bold tracking-widest uppercase">جديد</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-4 rounded-lg border border-[#4D4635]/10 hover:border-[#D4AF37]/30 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] bg-primary-container/20 text-[#D4AF37] px-2 py-0.5 rounded">هام جداً</span>
+<span class="text-[10px] text-[#D0C5AF]/40">منذ ساعتين</span>
+</div>
+<p class="text-sm font-bold text-on-surface mb-1">تحديث سياسات العمل عن بعد</p>
+<p class="text-xs text-[#D0C5AF]/60 leading-relaxed">بناءً على القرار الإداري رقم (٤٠٢) يرجى الالتزام بالنماذج الجديدة...</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg border border-[#4D4635]/10 hover:border-[#D4AF37]/30 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] bg-surface-container-high text-[#D0C5AF] px-2 py-0.5 rounded">إداري</span>
+<span class="text-[10px] text-[#D0C5AF]/40">يوم أمس</span>
+</div>
+<p class="text-sm font-bold text-on-surface mb-1">إجازة عيد التأسيس الرسمي</p>
+<p class="text-xs text-[#D0C5AF]/60 leading-relaxed">نحيطكم علماً بمواعيد العمل الرسمية خلال فترة العيد...</p>
+</div>
+</div>
+</section>
+<!-- Professional Transactions Hub -->
+<section class="bg-surface-container rounded-xl p-6 shadow-2xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[#F2CA50]">swap_horiz</span>
+                            سوق المعاملات المهنية
+                        </h2>
+</div>
+<div class="space-y-4">
+<!-- Task Item -->
+<div class="bg-surface-container-low p-4 rounded-lg border-r-4 border-primary shadow-lg">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#F2CA50] text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-xs font-bold text-[#F2CA50]">عمولة: ١٥٪</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] bg-primary-container/10 text-primary border border-primary/20">متاحة الآن</span>
+</div>
+<h3 class="font-bold text-sm mb-2 text-on-surface">تجديد إقامة - فئة أولى</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-[10px] text-[#D0C5AF]/50">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>تنتهي خلال: ٤ ساعات</span>
+</div>
+<button class="text-xs font-bold text-on-primary bg-primary px-3 py-1.5 rounded hover:brightness-110 transition-all">قبول المهمة</button>
+</div>
+</div>
+<!-- Task Item -->
+<div class="bg-surface-container-low p-4 rounded-lg border-r-4 border-outline-variant/30 opacity-70">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-[#D0C5AF]/60">عمولة: ١٠٪</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] bg-surface-container-high text-[#D0C5AF]/60 border border-outline-variant/10">قيد الإنجاز</span>
+</div>
+<h3 class="font-bold text-sm mb-2 text-on-surface">استخراج تأشيرة خروج وعودة</h3>
+<div class="flex items-center gap-2">
+<img alt="Avatar" class="w-5 h-5 rounded-full" data-alt="professional portrait of a young man with glasses, professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn9MtZWoXP5Y12ex9AEGxN7immxzIhAh9w8XZ5Fr0LtVnhWcx7GSDEFA2JEhZIB19soZFiHnPFnCuKLIilCpVfcaa4p6PXkTXRMxcgN7ui2nNyGkNn_PIvGY7NsLyyA09G8-zCWpWsSuK1rbUwTNaGRGQhkSyb4pspXACeISMpIQuzU1BjYgvQLsmOwqu2xOJDPOYdw5PzNRtV9FJuRL-L92F48btpc7OTjRwADeUV6CvYRx5uztmingku-MzZBX5mSLIHArvsIA"/>
+<span class="text-[10px] text-[#D0C5AF]/50">يتم إنجازها بواسطة: م. أحمد</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Middle Column: Communications Hub -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<section class="bg-surface-container rounded-xl h-[800px] flex flex-col shadow-2xl border border-[#4D4635]/10">
+<div class="p-5 border-b border-[#4D4635]/10 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="w-12 h-12 rounded-full gold-gradient p-[1px]">
+<div class="w-full h-full rounded-full bg-surface-container overflow-hidden">
+<img alt="Channel Logo" class="w-full h-full object-cover" data-alt="elegant team portrait of professional colleagues in a high-end corporate setting, soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs6et8-YdiqT2xXwBQq0N6N45ziSDXcC-aiv_n9mPThgSDEWEtFPTh-t-BeKRRP5SMEFfrXOFAUHXNf4fkAso2CE6mX-eyeQwIAXMB8yJdlM7O-2V_3eumPpxlM5sIVlQo-UaLDbOl7vRAaZ-inzvAuSET9oHuatVPSoEaSpamfQGZkgQ8JzvY2mZsFJ88bQ3eErsoF-IjceAEJx0STm5CWtLIDZm-0nywh6j7v_YyDeSbOd9FbrHEGu4VaFxTvV4f97OfieO-cg"/>
+</div>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-primary rounded-full border-2 border-surface active-glow"></span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-md">القناة العامة للمهنيين</h2>
+<p class="text-[10px] text-primary/70 font-label">٢٤ مستخدم نشط الآن</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-high text-[#D0C5AF] hover:text-[#F2CA50] transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-high text-[#D0C5AF] hover:text-[#F2CA50] transition-colors">
+<span class="material-symbols-outlined">call</span>
+</button>
+</div>
+</div>
+<!-- Chat Messages -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide">
+<div class="flex justify-center">
+<span class="text-[10px] px-3 py-1 bg-surface-container-high text-[#D0C5AF]/40 rounded-full">اليوم، ١٢ فبراير</span>
+</div>
+<!-- Message Received -->
+<div class="flex items-start gap-3">
+<img alt="Avatar" class="w-8 h-8 rounded-full" data-alt="close-up of a smiling young professional man with beard, neutral background, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcuG9qGcE_QKNE9Z02m3xNx9B2Cg-Cdgc8OhIGFCcRw5uWdypf0esekUISqDXDrCmy1wHDm6vzIjVciq2zzBq8M9ZEv8q-gCGsmf7Wvu77hKV4Hwh5_MHQLlBIqgVRdkjPDi1qjBcneTzHu5Nay92IeEhYCF9R0yTW0BrIvOTDaS2rVBugUh0h5IWvdY5ycixU4CnAwJi1Ycszab41cGpruHa1_c4m4VE71xWeiCxhpJGePmzbBJlRXEPbDphY4cAW5sKRDY-fNg"/>
+<div class="max-w-[70%]">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary">علي الزهراني</span>
+<span class="text-[8px] text-[#D0C5AF]/30">١٠:٢٤ ص</span>
+</div>
+<div class="bg-surface-container-high p-3 rounded-2xl rounded-tr-none text-sm leading-relaxed text-[#E5E2E1]">
+                                    السلام عليكم، هل يوجد أحد متاح لإنجاز معاملة تجديد إقامة فورية؟
+                                </div>
+</div>
+</div>
+<!-- AI Suggestion Bubble -->
+<div class="flex justify-center">
+<div class="glass-panel px-4 py-2 rounded-full border border-primary/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-[11px] text-primary font-medium italic">اقتراح الذكاء الاصطناعي: يمكنك عرضها في "سوق المعاملات" للحصول على رد أسرع.</span>
+</div>
+</div>
+<!-- Message Sent -->
+<div class="flex items-start gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary-container/40 flex items-center justify-center border border-primary/30">
+<span class="text-[10px] font-bold text-primary">أنا</span>
+</div>
+<div class="max-w-[70%] text-left">
+<div class="flex items-center gap-2 mb-1 flex-row-reverse">
+<span class="text-[10px] font-bold text-[#D0C5AF]">أنت</span>
+<span class="text-[8px] text-[#D0C5AF]/30">١٠:٢٦ ص</span>
+</div>
+<div class="gold-gradient p-3 rounded-2xl rounded-tl-none text-sm leading-relaxed text-[#3C2F00] font-medium">
+                                    تم رفعها بالفعل يا علي، وسأتابع معك التنفيذ.
+                                </div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-5 bg-surface-container-low/50 border-t border-[#4D4635]/10">
+<div class="bg-surface-container-high rounded-xl p-2 flex items-center gap-2 border border-[#4D4635]/20">
+<button class="w-10 h-10 flex items-center justify-center text-[#D0C5AF]/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-[#D0C5AF]/20" placeholder="اكتب رسالتك هنا..." type="text"/>
+<button class="w-10 h-10 flex items-center justify-center gold-gradient text-[#3C2F00] rounded-lg shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: AI Assistant & Direct Messages -->
+<div class="col-span-12 lg:col-span-3 space-y-6">
+<!-- AI Assistant Module -->
+<section class="bg-surface-container-high/40 rounded-xl p-6 border border-primary/20 relative group">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-sm text-primary">المساعد الذهبي</h3>
+<p class="text-[9px] text-primary/50 tracking-widest uppercase">مراقب الكفاءة</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-surface-container rounded-lg border border-primary/10">
+<p class="text-[11px] text-[#D0C5AF] mb-2 leading-relaxed">بناءً على نشاطك اليوم: كفاءة الردود مرتفعة (٩٤٪). تم إنجاز ٣ معاملات بنجاح.</p>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+<button class="w-full py-2 bg-primary/10 text-primary border border-primary/30 rounded text-xs font-bold hover:bg-primary/20 transition-all">توليد تقرير الأداء</button>
+</div>
+</section>
+<!-- Private Messages List -->
+<section class="bg-surface-container rounded-xl p-5 shadow-2xl">
+<div class="flex items-center justify-between mb-5">
+<h2 class="font-headline font-bold text-sm">المراسلات الخاصة</h2>
+<span class="material-symbols-outlined text-[#D0C5AF]/30 text-lg">edit_note</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-2 hover:bg-surface-container-high rounded-lg cursor-pointer transition-all">
+<div class="relative">
+<img alt="Avatar" class="w-10 h-10 rounded-full border border-primary/20" data-alt="professional portrait of a man with a dark beard in a black turtleneck, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd9CuUmqHyNvXIUvSTaZfqcOIjOMak4p5P7gSBedWwKmXb8IGv2q-a6BGcsDgb83HsKkPbcBvQj08fSJuhpD9uHSFo80pcjKEpjj7r7Xr6KxGieD2nEEghr_ApBc8C0aIHGzyvt6au8CQu8BwlHT-ZFTTpyKnWSDcfuF3_XQGWOymyqWxIrVanLdDEFwEcaN9Ca1qbig1KYyJZOBHCZSEDt9EB7cCkP8qW1nXi8m0543AYTSCJd1tQ4wiRK233Lu-o1LCOHz98ew"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary rounded-full border-2 border-surface"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="text-xs font-bold truncate">سلطان العتيبي</span>
+<span class="text-[8px] text-[#D0C5AF]/40">١٠:٠٠ ص</span>
+</div>
+<p class="text-[10px] text-[#D0C5AF]/50 truncate">وصل الملف المطلوب؟</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 hover:bg-surface-container-high rounded-lg cursor-pointer transition-all">
+<div class="relative">
+<img alt="Avatar" class="w-10 h-10 rounded-full border border-primary/20" data-alt="professional portrait of a woman in business attire, soft lighting, blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtTSrl2tUsTLbB7m6rpBbXuXxxV6vNql3wZsc4SVhH4lAMOYDASgNknmT5EWK1VVfjaEy5FuDZmYaS_MXAmQYfplhbDVzOApNriIBkKuroQkR20-dNsAxx1Gc2HE6nv_yVwItV-5BE-dD04-zUxAQNCWg4dt1m_FYmt5M-f3rAb11CqTJGwGc3IPlyFT9FU8BG11y3iFX9R0kd3-Tf8o6o4PmEmdP4ShRrLhf6dwHlmXQa81s0KRChfRlnbSzSEBCtvdeFdE518g"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-gray-600 rounded-full border-2 border-surface"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="text-xs font-bold truncate">أ. ليلى الحربي</span>
+<span class="text-[8px] text-[#D0C5AF]/40">أمس</span>
+</div>
+<p class="text-[10px] text-primary font-bold truncate">تم استلام العرض المالي الجديد</p>
+</div>
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Floating System Alert -->
+<div class="p-4 bg-error-container/10 border border-error/20 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error">warning</span>
+<div class="flex-1">
+<h4 class="text-[11px] font-bold text-error">تنبيه النظام</h4>
+<p class="text-[9px] text-[#D0C5AF]/60">يوجد تعميم جديد يتطلب قراءتك فوراً.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Mobile Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#131313] border-t border-[#4D4635]/10 h-16 flex items-center justify-around px-4 z-50">
+<a class="text-[#D0C5AF]/50 hover:text-primary flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[8px] mt-1">الرئيسية</span>
+</a>
+<a class="text-primary flex flex-col items-center" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="text-[8px] mt-1">المحادثات</span>
+</a>
+<div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center -mt-8 shadow-xl border-4 border-surface">
+<span class="material-symbols-outlined text-[#3C2F00] font-bold">add</span>
+</div>
+<a class="text-[#D0C5AF]/50 hover:text-primary flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[8px] mt-1">المعاملات</span>
+</a>
+<a class="text-[#D0C5AF]/50 hover:text-primary flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[8px] mt-1">حسابي</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="ar" style="opacity: 0;" data-stitch-anim-opacity="true"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>تقارير الواتساب الذكي للأسطول - أسطول السيادة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Noto+Sans+Arabic:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-container": "#254188",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#f2ca50",
+                        "on-error": "#690005",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "primary-container": "#d4af37",
+                        "on-surface-variant": "#d0c5af",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed": "#00174b",
+                        "surface-bright": "#3a3939",
+                        "surface": "#131313",
+                        "outline": "#99907c",
+                        "on-primary-container": "#554300",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary": "#bfcdff",
+                        "secondary-container": "#544519",
+                        "inverse-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#544519",
+                        "on-secondary-fixed": "#241a00",
+                        "primary-fixed-dim": "#e9c349",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#f7e1a6",
+                        "surface-container-highest": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-primary": "#3c2f00",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-container": "#c8b37d",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-primary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#dac58d",
+                        "background": "#131313",
+                        "secondary": "#dac58d",
+                        "surface-tint": "#e9c349",
+                        "on-secondary": "#3c2f05",
+                        "tertiary-container": "#97b0ff",
+                        "outline-variant": "#4d4635",
+                        "on-tertiary": "#082b72",
+                        "on-primary-fixed-variant": "#574500"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "Noto Sans Arabic"],
+                        "display": ["Manrope", "Noto Sans Arabic"],
+                        "body": ["Inter", "Noto Sans Arabic"],
+                        "label": ["Inter", "Noto Sans Arabic"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-headline { font-family: 'Manrope', 'Noto Sans Arabic', sans-serif; }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.2);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .status-glow {
+            box-shadow: 0 0 8px #f2ca50;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #353534; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 z-50 w-full bg-surface shadow-sm flex flex-row-reverse justify-between items-center px-8 py-4">
+<div class="flex items-center gap-6 flex-row-reverse">
+<div class="text-xl font-bold text-primary font-headline">أسطول السيادة</div>
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body">الرئيسية</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body">الأسطول</span>
+<span class="text-primary font-bold border-b-2 border-primary cursor-default font-body">التقارير الذكية</span>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-row-reverse">
+<div class="relative group">
+<input class="bg-surface-container-highest border-none rounded-full px-10 py-2 text-sm focus:ring-1 focus:ring-primary w-64 text-right" placeholder="بحث سريع..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant">search</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-primary/30">
+<img alt="صورة الملف الشخصي للمدير التنفيذي" data-alt="A professional portrait of a senior Middle Eastern executive in a tailored dark suit, exuding confidence and authority. The background is a blurred high-end corporate office with warm, golden ambient lighting that complements the premium branding of the ERP system. The aesthetic is sharp, clean, and evokes a sense of leadership and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRkJB5nodoTLDR4uQ2q1r0Az-GfrK8xndlWP-fwzcIG6JFBgIjEmwmZJAGWF5qycHTAfkX419SpDLp7mbydV_-JLSMIvf1d8mID1vhqFpGXvGZ68fZkj0FzUeAMlyWrsHPcz7_MUuSPVEhvnE4k31aKYbI1nR0gDfahyWuZQ2QX5NYFIWtTXhXQkbdL475vpB8BLihOZfcCJ-u4LzeE5NDnwLnLiDMoyS3d_cYo-XQ1kRJKCLS1sS_vHVmFdpbrfuXsZd0e64CSA">
+</div>
+</div>
+</nav>
+<!-- Side Navigation Bar -->
+<aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low border-l border-outline-variant/20 flex flex-col z-40 pt-20">
+<div class="px-6 py-6 border-b border-outline-variant/10">
+<div class="flex flex-row-reverse items-center gap-4">
+<div class="w-12 h-12 gold-gradient rounded-xl flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="text-right">
+<div class="text-headline-sm font-headline font-bold text-primary">نظام الأسطول</div>
+<div class="text-xs text-on-surface-variant">الإدارة التنفيذية</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 py-4 space-y-1 overflow-y-auto">
+<!-- Navigation Items Mapping -->
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">dashboard</span>
+<span class="font-body text-sm">نظرة عامة</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">directions_car</span>
+<span class="font-body text-sm">إدارة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">badge</span>
+<span class="font-body text-sm">إدارة السائقين</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">assignment</span>
+<span class="font-body text-sm">إدارة العقود</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">payments</span>
+<span class="font-body text-sm">إدارة المدفوعات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">assessment</span>
+<span class="font-body text-sm">تقارير حالة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-2 hover:bg-surface-container-high hover:text-primary transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">report_problem</span>
+<span class="font-body text-sm">إدارة المخالفات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg p-3 mx-2 shadow-inner active:scale-98 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-body text-sm font-bold">الواتساب الذكي</span>
+</a>
+</nav>
+<div class="p-4">
+<button class="w-full gold-gradient text-on-primary py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="">إضافة مركبة جديدة</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="mr-72 mt-20 p-8 min-h-screen">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-10">
+<div class="text-right">
+<h1 class="text-3xl font-headline font-extrabold text-on-surface mb-2">تقارير الواتساب الذكي للأسطول</h1>
+<p class="text-on-surface-variant max-w-2xl">تحليل ذكي للتفاعلات المؤتمتة مع السائقين عبر بروتوكول واتساب للأعمال. تتبع كفاءة التنبيهات ونسب الاستجابة اللحظية.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container hover:bg-surface-container-high text-primary border border-primary/20 px-4 py-2 rounded-lg flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined">download</span>
+                    تصدير PDF
+                </button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined">refresh</span>
+                    تحديث البيانات
+                </button>
+</div>
+</header>
+<!-- KPI Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden border-t-2 border-primary">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">outgoing_mail</span>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">+12%</span>
+</div>
+<div class="text-2xl font-headline font-extrabold">24,812</div>
+<div class="text-on-surface-variant text-sm">إجمالي الرسائل المرسلة</div>
+<div class="absolute -bottom-2 -right-2 opacity-5 text-8xl material-symbols-outlined">send</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">quickreply</span>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">89%</span>
+</div>
+<div class="text-2xl font-headline font-extrabold">22,082</div>
+<div class="text-on-surface-variant text-sm">رسائل تم تسليمها</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">ads_click</span>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">64%</span>
+</div>
+<div class="text-2xl font-headline font-extrabold">15,890</div>
+<div class="text-on-surface-variant text-sm">نسبة التفاعل (الاستجابة)</div>
+</div>
+<div class="bg-surface-container rounded-xl p-6 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary status-glow"></div>
+<span class="text-xs text-primary">نشط</span>
+</div>
+</div>
+<div class="text-2xl font-headline font-extrabold">4.2s</div>
+<div class="text-on-surface-variant text-sm">متوسط وقت الرد الآلي</div>
+</div>
+</div>
+<!-- Analytical Main Grid (Bento Style) -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Response Rate Chart Placeholder -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8 min-h-[400px]">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-headline font-bold text-on-surface">إحصائيات الاستجابة الأسبوعية</h3>
+<div class="flex gap-2">
+<span class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-primary"></span> تنبيهات السرعة</span>
+<span class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="w-3 h-3 rounded-full bg-primary-container"></span> المواعيد الدورية</span>
+</div>
+</div>
+<!-- Visual Mock of a Chart -->
+<div class="w-full h-64 flex items-end gap-4 px-4">
+<div class="flex-1 bg-surface-container-high relative group h-[40%] rounded-t-lg transition-all hover:bg-primary-container">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">40%</div>
+</div>
+<div class="flex-1 bg-surface-container-high relative group h-[65%] rounded-t-lg transition-all hover:bg-primary-container">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">65%</div>
+</div>
+<div class="flex-1 bg-surface-container-high relative group h-[90%] rounded-t-lg transition-all hover:bg-primary-container">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">90%</div>
+</div>
+<div class="flex-1 bg-surface-container-high relative group h-[55%] rounded-t-lg transition-all hover:bg-primary-container">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">55%</div>
+</div>
+<div class="flex-1 bg-primary relative group h-[95%] rounded-t-lg shadow-lg">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">اليوم</div>
+</div>
+<div class="flex-1 bg-surface-container-high relative group h-[70%] rounded-t-lg transition-all hover:bg-primary-container">
+</div>
+<div class="flex-1 bg-surface-container-high relative group h-[45%] rounded-t-lg transition-all hover:bg-primary-container">
+</div>
+</div>
+<div class="flex justify-between mt-4 text-xs text-on-surface-variant border-t border-outline-variant/10 pt-4">
+<span class="">السبت</span><span class="">الأحد</span><span class="">الإثنين</span><span class="">الثلاثاء</span><span class="">الأربعاء</span><span class="">الخميس</span><span class="">الجمعة</span>
+</div>
+</div>
+<!-- Categories of Messages -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container rounded-xl p-8 flex flex-col">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-6">توزيع التنبيهات</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface">تنبيهات السرعة</span>
+<span class="text-primary font-bold">45%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[45%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface">مواعيد الصيانة</span>
+<span class="text-primary font-bold">30%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[30%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface">انتهاء الوثائق</span>
+<span class="text-primary font-bold">15%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[15%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface">أخرى</span>
+<span class="text-primary font-bold">10%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-outline-variant w-[10%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6">
+<div class="glass-panel p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
+<p class="text-xs text-on-surface-variant">تم تحسين نسبة الاستجابة بنسبة 8% بعد تفعيل ميزة الأزرار التفاعلية في رسائل الصيانة.</p>
+</div>
+</div>
+</div>
+<!-- Recent Interactions Table -->
+<div class="col-span-12 bg-surface-container rounded-xl overflow-hidden">
+<div class="p-8 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="text-xl font-headline font-bold text-on-surface">آخر التفاعلات الذكية</h3>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                        عرض الكل
+                        <span class="material-symbols-outlined text-sm">arrow_left</span>
+</button>
+</div>
+<table class="w-full text-right">
+<thead class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+<tr>
+<th class="px-8 py-4 font-bold">السائق</th>
+<th class="px-8 py-4 font-bold">نوع التنبيه</th>
+<th class="px-8 py-4 font-bold">الحالة</th>
+<th class="px-8 py-4 font-bold">وقت الاستجابة</th>
+<th class="px-8 py-4 font-bold">التفاعل</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary">أ</div>
+<div>
+<div class="text-sm font-bold">أحمد المنصوري</div>
+<div class="text-xs text-on-surface-variant">+966 50 *** 1234</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="bg-error/10 text-error px-2 py-1 rounded text-xs border border-error/20">تنبيه سرعة (140 كم/س)</span>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm">done_all</span>
+<span class="text-xs">تمت القراءة</span>
+</div>
+</td>
+<td class="px-8 py-4 text-sm">12 ثانية</td>
+<td class="px-8 py-4">
+<span class="text-xs bg-surface-container-highest px-3 py-1 rounded-full">تم خفض السرعة</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary">س</div>
+<div>
+<div class="text-sm font-bold">سالم الغامدي</div>
+<div class="text-xs text-on-surface-variant">+966 55 *** 8899</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs border border-primary/20">صيانة دورية</span>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">done</span>
+<span class="text-xs">تم التسليم</span>
+</div>
+</td>
+<td class="px-8 py-4 text-sm">--</td>
+<td class="px-8 py-4">
+<span class="text-xs italic text-on-surface-variant">قيد الانتظار</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-primary">م</div>
+<div>
+<div class="text-sm font-bold">محمد العمري</div>
+<div class="text-xs text-on-surface-variant">+966 54 *** 4567</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="bg-tertiary-container/10 text-tertiary-container px-2 py-1 rounded text-xs border border-tertiary-container/20">تجديد التأمين</span>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs">مكتمل</span>
+</div>
+</td>
+<td class="px-8 py-4 text-sm">45 دقيقة</td>
+<td class="px-8 py-4">
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-bold">تم إرسال الوثائق</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<!-- Floating Action for Quick Broadcast (Contextual) -->
+<div class="fixed bottom-8 left-8 z-50">
+<button class="w-16 h-16 rounded-full gold-gradient shadow-[0_0_20px_rgba(242,202,80,0.4)] flex items-center justify-center text-on-primary hover:scale-110 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">campaign</span>
+</button>
+</div>
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 right-0 -z-10 w-full h-full pointer-events-none opacity-10">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary blur-[150px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary-container blur-[120px] rounded-full"></div>
+</div>
+<script>
+        // Simple Micro-interaction for hover states on charts
+        const bars = document.querySelectorAll('.group');
+        bars.forEach(bar => {
+            bar.addEventListener('mouseenter', () => {
+                bar.classList.add('scale-105');
+            });
+            bar.addEventListener('mouseleave', () => {
+                bar.classList.remove('scale-105');
+            });
+        });
+    </script>
+
+
+</body></html>

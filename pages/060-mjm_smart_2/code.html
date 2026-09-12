@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>مدفوعات الأصول</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#131313",
+                        "primary-container": "#d4af37",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#f2ca50",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#3c2f05",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#082b72",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-primary": "#735c00",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#dac58d",
+                        "on-surface-variant": "#d0c5af",
+                        "outline-variant": "#4d4635",
+                        "background": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#00174b",
+                        "secondary-container": "#544519",
+                        "tertiary-fixed": "#dbe1ff",
+                        "secondary": "#dac58d",
+                        "surface-container-highest": "#353534",
+                        "surface-tint": "#e9c349",
+                        "on-secondary-container": "#c8b37d",
+                        "on-tertiary-fixed-variant": "#27438a",
+                        "on-secondary-fixed-variant": "#544519",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-container": "#97b0ff",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#bfcdff",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#ffe088",
+                        "outline": "#99907c",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#f7e1a6",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#554300",
+                        "surface-variant": "#353534",
+                        "on-primary": "#3c2f00",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#254188"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #E5E2E1;
+            font-family: 'Manrope', 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #F2CA50 0%, #D4AF37 100%);
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .status-glow {
+            box-shadow: 0 0 12px #F2CA50;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none !important;
+            border-color: #F2CA50 !important;
+            box-shadow: 0 0 0 1px #F2CA50 !important;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4D4635;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="bg-[#131313] fixed top-0 z-50 w-full flex justify-between items-center px-8 md:px-16 py-6 border-b border-outline-variant/10">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold tracking-tight text-[#F2CA50]">MJM Smart Business</span>
+<div class="h-6 w-[1px] bg-outline-variant/30 mx-2"></div>
+<h1 class="text-on-surface font-headline font-bold text-lg">مدفوعات الأصول</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group hidden lg:block">
+<input class="bg-surface-container-highest border-none rounded-lg py-2 pr-10 pl-4 w-64 text-sm focus:ring-1 focus:ring-primary transition-all" placeholder="بحث سريع عن العقد..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant/50">search</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-2 cursor-pointer transition-all duration-300 hover:bg-[#2A2A2A] rounded-lg relative">
+<span class="material-symbols-outlined text-[#D4AF37]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full status-glow"></span>
+</div>
+<div class="flex items-center gap-3 cursor-pointer transition-all duration-300 hover:bg-[#2A2A2A] p-1 px-3 rounded-lg border border-outline-variant/10">
+<div class="text-left leading-tight hidden md:block">
+<p class="text-xs font-semibold text-[#F2CA50]">المدير العام</p>
+<p class="text-[10px] text-on-surface-variant/70">المدير التنفيذي</p>
+</div>
+<img alt="Profile" class="w-10 h-10 rounded-lg object-cover border border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2cUm-el7ls1SU6lCAT3XnFC-10iDDajRB1N_-yfpgWumB7J7Mkw-74k2FdpZevdXujm_5GV6KjNIuJiFUgmJNylxJrp_JdHRmJnHOMZXXd5Ixx0DaqWDb1qHPDlnax1gyIchY2un-Ed2_Jnu3HvQAOj8qUje33m8OSFFPQcOCm_U6pY00ANusS1-Ck6tvOVQoB3mJfiZ1gY6RPsDH_WV-Ddn4Kl7QGz29nBTE24sxzh3EoZAaPiym6FcBZ1Dc_mTRRZFGYPKU6A"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sidebar Navigation (RTL) -->
+<!-- Main Content Canvas -->
+<main class="mt-20 p-8 min-h-screen mx-auto max-w-7xl">
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container p-6 rounded-xl border-r-4 border-primary shadow-lg flex justify-between items-center transition-transform hover:-translate-y-1">
+<div>
+<p class="text-on-surface-variant/60 text-xs font-medium mb-1">إجمالي دفعات اليوم</p>
+<h3 class="text-2xl font-bold text-on-surface">164,700 <span class="text-xs font-normal text-on-surface-variant">ر.س</span></h3>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-r-4 border-secondary shadow-lg flex justify-between items-center transition-transform hover:-translate-y-1">
+<div>
+<p class="text-on-surface-variant/60 text-xs font-medium mb-1">بانتظار الموافقة</p>
+<h3 class="text-2xl font-bold text-on-surface">12 <span class="text-xs font-normal text-on-surface-variant">عملية</span></h3>
+</div>
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">pending_actions</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Section: Form -->
+<section class="col-span-12 lg:col-span-8 space-y-8">
+<div class="bg-surface-container p-8 rounded-xl shadow-2xl relative overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">add_card</span>
+<h2 class="text-xl font-headline font-bold">نموذج الإدخال السريع</h2>
+</div>
+<div class="flex items-center gap-4">
+<label class="inline-flex items-center cursor-pointer">
+<span class="ml-2 text-xs text-on-surface-variant">حفظ تلقائي</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+<span class="text-[10px] bg-surface-container-highest px-2 py-1 rounded text-on-surface-variant/50">Ctrl + S</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">رقم العقد</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-3 pr-10 text-sm focus:ring-primary transition-all" placeholder="أدخل رقم العقد أو امسح الـ QR..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-primary cursor-pointer hover:scale-110 transition-transform">qr_code_scanner</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">اسم المستأجر</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-3 pr-10 text-sm focus:ring-primary transition-all" placeholder="بحث تلقائي عن المستأجر..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant/50">person_search</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">الأصل المؤجر</label>
+<input class="w-full bg-surface-container-low text-on-surface-variant border-none rounded-lg py-3 px-4 text-sm cursor-not-allowed" readonly="" type="text" value="مستودع المنطقة الصناعية B-12"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">مبلغ الدفعة</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-3 pl-12 pr-4 text-sm focus:ring-primary transition-all text-left" placeholder="0.00" type="number"/>
+<span class="absolute left-4 top-3 text-[10px] text-primary font-bold">ر.س</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">تاريخ السداد</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-3 px-4 text-sm focus:ring-primary transition-all [color-scheme:dark]" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">طريقة الدفع</label>
+<select class="w-full bg-surface-container-highest border-none rounded-lg py-3 px-4 text-sm focus:ring-primary transition-all cursor-pointer">
+<option>تحويل بنكي مباشر</option>
+<option>مدى / شبكة</option>
+<option>شيك مصدق</option>
+<option>نقدي</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">رقم العملية / المرجع</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-3 px-4 text-sm focus:ring-primary transition-all" placeholder="رقم الإيصال أو التحويل" type="text"/>
+</div>
+<div class="col-span-full space-y-2">
+<label class="text-xs font-medium text-on-surface-variant">ملاحظات إضافية</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg py-3 px-4 text-sm focus:ring-primary transition-all resize-none" placeholder="أضف أي تفاصيل خاصة بالدفعة..." rows="2"></textarea>
+</div>
+</div>
+<div class="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-outline-variant/10 pt-6">
+<div class="flex items-center gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant bg-surface-container-highest text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">طباعة الإيصال فوراً</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded border-outline-variant bg-surface-container-highest text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-xs text-on-surface-variant group-hover:text-on-surface transition-colors">إرسال إشعار SMS/WhatsApp</span>
+</label>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-lg border border-primary/20 text-primary hover:bg-primary/5 transition-all active:scale-95 text-sm font-semibold">
+                                مسح الحقول
+                            </button>
+<button class="px-10 py-3 rounded-lg luxury-gradient text-on-primary hover:brightness-110 shadow-lg shadow-primary/20 transition-all active:scale-95 text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">save</span>
+                                اعتماد الدفعة
+                            </button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Batch Entry Table -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg border border-outline-variant/10">
+<div class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">view_list</span>
+<h2 class="text-lg font-headline font-bold">إدخال دفعات متعددة (Batch)</h2>
+</div>
+<button class="text-primary text-xs font-semibold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm">add</span> إضافة سطر جديد
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right text-xs">
+<thead>
+<tr class="text-on-surface-variant/60 border-b border-outline-variant/10">
+<th class="pb-3 pr-2 font-medium">رقم العقد</th>
+<th class="pb-3 font-medium">المبلغ</th>
+<th class="pb-3 font-medium">طريقة الدفع</th>
+<th class="pb-3 font-medium">المرجع</th>
+<th class="pb-3 pl-2 text-left font-medium">إجراء</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-4 pr-2"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-24 text-on-surface" type="text" value="C-2024-001"/></td>
+<td class="py-4"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-20 text-on-surface" type="text" value="12,500"/></td>
+<td class="py-4">
+<select class="bg-transparent border-none p-0 text-xs focus:ring-0 cursor-pointer text-on-surface">
+<option>تحويل</option>
+<option>شبكة</option>
+</select>
+</td>
+<td class="py-4"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-24 text-on-surface" type="text" value="TRX-99812"/></td>
+<td class="py-4 pl-2 text-left"><span class="material-symbols-outlined text-error/50 cursor-pointer hover:text-error transition-colors">delete</span></td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="py-4 pr-2"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-24" placeholder="عقد جديد..." type="text"/></td>
+<td class="py-4"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-20" placeholder="المبلغ..." type="text"/></td>
+<td class="py-4">
+<select class="bg-transparent border-none p-0 text-xs focus:ring-0 text-on-surface-variant/40">
+<option>اختر</option>
+<option>تحويل</option>
+</select>
+</td>
+<td class="py-4"><input class="bg-transparent border-none p-0 text-xs focus:ring-0 w-24" placeholder="المرجع..." type="text"/></td>
+<td class="py-4 pl-2 text-left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Right Section: Management & Actions -->
+<aside class="col-span-12 lg:col-span-4 space-y-6">
+<!-- Management Section -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg border border-outline-variant/10">
+<h3 class="text-sm font-bold mb-6 text-on-surface-variant border-b border-outline-variant/10 pb-2">إدارة السندات المالية</h3>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-surface-container-high border border-primary/20 hover:bg-primary/10 transition-all group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">receipt_long</span>
+<span class="text-xs font-semibold">سند قبض</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-surface-container-high border border-outline-variant/10 hover:bg-surface-variant/30 transition-all group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform">payments</span>
+<span class="text-xs font-semibold">سند صرف</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-surface-container-high border border-outline-variant/10 hover:bg-surface-variant/30 transition-all group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform">assignment_return</span>
+<span class="text-xs font-semibold">إشعار دائن</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-lg bg-surface-container-high border border-outline-variant/10 hover:bg-surface-variant/30 transition-all group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform">assignment_late</span>
+<span class="text-xs font-semibold">إشعار مدين</span>
+</button>
+</div>
+</div>
+<!-- Digital Verification -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg border border-primary/5">
+<h3 class="text-sm font-bold mb-4 text-on-surface-variant">التحقق الرقمي والاعتماد</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded bg-surface-container-lowest border border-outline-variant/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-sm">verified_user</span>
+<span class="text-xs">توقيع إلكتروني</span>
+</div>
+<span class="text-[10px] text-primary bg-primary/10 px-2 py-0.5 rounded-full font-bold">نشط</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded bg-surface-container-lowest border border-outline-variant/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-sm">token</span>
+<span class="text-xs">ختم إلكتروني</span>
+</div>
+<span class="text-[10px] text-on-surface-variant/50 bg-surface-container-highest px-2 py-0.5 rounded-full font-bold">قيد التشغيل</span>
+</div>
+<div class="flex gap-2 mt-6">
+<button class="flex-1 py-3 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-xs font-bold flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> تصدير PDF
+                            </button>
+</div>
+</div>
+</div>
+<!-- Visual Asset -->
+<div class="rounded-xl overflow-hidden relative h-48 group">
+<img alt="Assets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjmL4bZmpzAHyUjhCdaGNbAxmtSzIlbgFOg7dJTyqfgHirKBoS7tbw6P1gBE83WHwN-DPV-rK1cGjqaAEtkyv-od0uV2wBlxQWO0Sx5eRF6YPL2FGqxkCq1lKnqlQVCmkfecdM3NXHnLk46-RY4-Fd6p2TM0jJfO8oeUOFe-zIZj-hP5bGpMcnrjDIrqfyxLhuYPRd8GJWOpxtNggknJKR06RAsT8xaf7ZFha9fd4cu1_a37XTyvIBjOym739P2YLmrUjwRhafrg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-4 right-4">
+<p class="text-primary text-[10px] font-bold tracking-widest uppercase mb-1">Asset Intelligence</p>
+<h4 class="text-white text-sm font-bold">إدارة التدفقات النقدية الذكية</h4>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Support Help Anchor -->
+<div class="fixed bottom-8 left-8 flex flex-col items-center gap-3">
+<button class="w-12 h-12 rounded-full glass-panel border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container-high transition-all group shadow-2xl">
+<span class="material-symbols-outlined text-primary group-hover:rotate-12 transition-transform">support_agent</span>
+</button>
+</div>
+</body></html>

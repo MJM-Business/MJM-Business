@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#D4AF37",
+              "primary-dark": "#B8962E",
+              "surface": "#FFFFFF",
+              "surface-container": "#F9F9F7",
+              "on-surface": "#1A1A1A",
+              "on-surface-variant": "#666666",
+              "outline": "#E5E1D8",
+              "gold-accent": "#D4AF37"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #FDFDFB; }
+      h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+      .gold-gradient {
+        background: linear-gradient(135deg, #D4AF37 0%, #B8962E 100%);
+      }
+      .phone-shadow {
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,0.25), 0 30px 60px -30px rgba(0,0,0,0.3);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+      }
+    </style>
+</head>
+<body class="text-on-surface min-h-screen">
+<!-- Header -->
+<header class="flex justify-between items-center w-full px-12 py-5 bg-white border-b border-outline sticky top-0 z-50">
+<div class="flex items-center gap-12">
+<img alt="MJM Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhsYsTjeDo42W4UO0CmX7ClL7RnnPBtLYyqLc3akgqOqoxbrkBia_VfUmnNTf_iFtRl2P0u6c_3mY-iMq9rfAdFbMxU8zUOYlmIjJ1yhf0h3jSSmVVdTECbdptsR0Z9ZUpffPyDemaR_gfSlW6pzsElfO7Kk2tMzxFbwpB-pgfXe1LyA27IvpKOR7NNfR3SrBtfSCXcZ7oLBBWul8ObbvpBCIM5QhhLcanaKNw3IIbfnjyWSxt-FPtYkXbPd6lIpj6hVkIIRrOE"/>
+<nav class="hidden lg:flex gap-8">
+<a class="font-bold text-primary border-b-2 border-primary pb-1" href="#">الرئيسية</a>
+<a class="font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">الأجهزة</a>
+<a class="font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">التحليلات</a>
+<a class="font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">التوزيع</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">settings</button>
+<div class="flex items-center gap-3 pr-4 border-r border-outline">
+<div class="text-left hidden sm:block">
+<p class="text-xs font-bold leading-none">الإدارة التنفيذية</p>
+<p class="text-[10px] text-on-surface-variant">المدير العام</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-primary/20">
+<img alt="Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyycPHyYhxAX8zlyHJ7S21U7YHT0-tf9OquoN8pDbnkLU0Ot00QKzGgUtLODwhFni9_upj5OMfhuFYAJKmdtCXXrDpYevGMkZNEVK4CYa03KhEdsYNua-eX4CzaLGwjktGnPfSUIAeedSCEZLjYern88uSjg_57MzH78vT1T6LsVlpFtqX2fr_28SLT89pIoXWTnKZj3YlOUuIwvUB-bX-KHI-R2_PZazjMTBcQz4rTAA86cyV9PlL754GpaEIvy5HN8YSmalVUw"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1600px] mx-auto px-8 lg:px-12 py-12">
+<!-- Hero Section with Smartphone -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-bold text-xs uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                نظام الإدارة المتكامل
+            </div>
+<h1 class="text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight tracking-tight">مركز إدارة وتوزيع <br/><span class="text-primary">تطبيق الجوال الذكي</span></h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">حلول تقنية متقدمة لمراقبة الأجهزة الميدانية، إدارة الموظفين، ونشر التحديثات الفورية عبر منصة موحدة تتسم بالفخامة والكفاءة.</p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline flex-1 min-w-[200px]">
+<div class="flex justify-between items-center mb-2">
+<span class="material-symbols-outlined text-primary">download</span>
+<span class="text-green-600 text-xs font-bold">+12%</span>
+</div>
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">إجمالي التحميلات</p>
+<p class="text-3xl font-headline font-bold">12,482</p>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline flex-1 min-w-[200px]">
+<div class="flex justify-between items-center mb-2">
+<span class="material-symbols-outlined text-primary">sensors</span>
+<span class="text-primary text-xs font-bold">Live</span>
+</div>
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">الأجهزة النشطة</p>
+<p class="text-3xl font-headline font-bold">842</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+<!-- Luxury Smartphone Visual -->
+<div class="relative w-[320px] h-[650px] bg-black rounded-[3rem] p-3 border-[6px] border-[#1a1a1a] shadow-2xl overflow-hidden phone-shadow rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+<!-- Phone Notch -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-2xl z-20"></div>
+<!-- App Interface Mockup -->
+<div class="bg-white h-full w-full rounded-[2.5rem] overflow-hidden flex flex-col">
+<div class="pt-10 px-6 pb-4 bg-primary text-white">
+<div class="flex justify-between items-center mb-6">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-bold text-sm">تطبيق MJM الميداني</span>
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<div class="p-4 bg-white/20 rounded-xl mb-4">
+<p class="text-[10px] opacity-80 mb-1">الرصيد الحالي</p>
+<p class="text-xl font-bold">42,500 ر.س</p>
+</div>
+</div>
+<div class="p-6 space-y-4 overflow-y-auto">
+<div class="grid grid-cols-2 gap-3">
+<div class="p-4 bg-surface-container rounded-xl border border-outline flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary">assignment</span>
+<span class="text-[10px] font-bold">الطلبات</span>
+</div>
+<div class="p-4 bg-surface-container rounded-xl border border-outline flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary">person_pin_circle</span>
+<span class="text-[10px] font-bold">الموقع</span>
+</div>
+</div>
+<div class="space-y-3">
+<p class="text-xs font-bold text-on-surface-variant uppercase">آخر العمليات</p>
+<div class="flex items-center justify-between p-3 bg-white rounded-lg border border-outline shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600 text-sm">check</span>
+</div>
+<div class="text-[10px]">
+<p class="font-bold">زيارة ميدانية ناجحة</p>
+<p class="opacity-50">قبل 10 دقائق</p>
+</div>
+</div>
+<span class="text-[10px] font-bold">+50 نقطة</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white rounded-lg border border-outline shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-sm">sync</span>
+</div>
+<div class="text-[10px]">
+<p class="font-bold">مزامنة البيانات</p>
+<p class="opacity-50">مكتملة</p>
+</div>
+</div>
+<span class="text-[10px] font-bold">8.2MB</span>
+</div>
+</div>
+<div class="p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-[10px] font-bold text-primary mb-2 uppercase">مخطط الأداء</p>
+<div class="flex items-end gap-1 h-12">
+<div class="bg-primary/20 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-primary/40 w-full h-[60%] rounded-t-sm"></div>
+<div class="bg-primary/80 w-full h-[100%] rounded-t-sm"></div>
+<div class="bg-primary/60 w-full h-[80%] rounded-t-sm"></div>
+<div class="bg-primary/30 w-full h-[50%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
+</div>
+</section>
+<!-- Main Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Right Column: WhatsApp and Stats -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Send App Module -->
+<div class="bg-white rounded-2xl p-8 border border-outline shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined">send_to_mobile</span>
+</div>
+<div>
+<h2 class="text-xl font-bold">توزيع التطبيق</h2>
+<p class="text-xs text-on-surface-variant">إرسال الرابط للموظفين الميدانيين</p>
+</div>
+</div>
+<form class="space-y-5">
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">اسم الموظف</label>
+<input class="w-full bg-surface-container border border-outline rounded-xl p-4 text-on-surface focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="الاسم الكامل للموظف" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">رقم الواتساب</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50 text-sm font-bold border-r border-outline pr-3">+966</span>
+<input class="w-full bg-surface-container border border-outline rounded-xl p-4 pl-20 text-on-surface focus:ring-1 focus:ring-primary transition-all" placeholder="5XXXXXXX" type="tel"/>
+</div>
+</div>
+<button class="w-full gold-gradient text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">brand_awareness</span>
+                        إرسال عبر واتساب
+                    </button>
+</form>
+<div class="mt-8 pt-6 border-t border-outline">
+<h4 class="text-[10px] font-bold text-on-surface-variant uppercase mb-4 tracking-widest">السجل الأخير</h4>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs p-3 bg-surface-container rounded-lg">
+<span class="font-bold">أحمد منصور</span>
+<span class="text-green-600 flex items-center gap-1 font-bold">تم الإرسال <span class="material-symbols-outlined text-[14px]">check_circle</span></span>
+</div>
+<div class="flex items-center justify-between text-xs p-3 bg-surface-container rounded-lg">
+<span class="font-bold">سارة العتيبي</span>
+<span class="text-green-600 flex items-center gap-1 font-bold">تم الإرسال <span class="material-symbols-outlined text-[14px]">check_circle</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="bg-[#1A1A1A] text-white rounded-2xl p-8 border border-white/10 shadow-xl overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<h2 class="text-xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">terminal</span>
+                    التحكم السريع
+                </h2>
+<div class="space-y-4 relative z-10">
+<button class="w-full text-right p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-all group flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">system_update</span>
+<div>
+<p class="font-bold text-sm">تحديث التطبيق للكل</p>
+<p class="text-[10px] opacity-50">إصدار v2.4.2 مستقر</p>
+</div>
+</button>
+<button class="w-full text-right p-4 rounded-xl bg-white/5 hover:bg-red-500/10 border border-white/10 hover:border-red-500/30 transition-all flex items-center gap-4">
+<span class="material-symbols-outlined text-red-400">no_sim</span>
+<div>
+<p class="font-bold text-sm">سحب صلاحية الدخول</p>
+<p class="text-[10px] opacity-50">تعطيل فوري للأجهزة</p>
+</div>
+</button>
+<button class="w-full text-right p-4 rounded-xl bg-red-600 hover:bg-red-700 transition-all flex items-center gap-4">
+<span class="material-symbols-outlined">auto_delete</span>
+<div>
+<p class="font-bold text-sm">مسح بيانات عن بعد</p>
+<p class="text-[10px] opacity-80">في حال فقدان الجهاز</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Left Column: Monitor and Analytics -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Live Monitor -->
+<div class="bg-white rounded-2xl border border-outline shadow-sm overflow-hidden">
+<div class="px-8 py-6 border-b border-outline flex justify-between items-center bg-surface-container/50">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-primary/10">
+<span class="material-symbols-outlined text-primary">devices_other</span>
+</div>
+<h2 class="text-xl font-bold">مراقب الأجهزة المباشر</h2>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">filter_list</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">refresh</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-surface-container/30 border-b border-outline">
+<th class="px-8 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">الموظف</th>
+<th class="px-8 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">الجهاز</th>
+<th class="px-8 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">الإصدار</th>
+<th class="px-8 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">الحالة</th>
+<th class="px-8 py-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">آخر تزامن</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline/30">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold">MA</div>
+<span class="font-bold">محمد العبدالله</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">iPhone 15 Pro</td>
+<td class="px-8 py-5 text-sm font-mono text-primary font-bold">v2.4.1</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                        متصل الآن
+                                    </span>
+</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">قبل 2 دقيقة</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold">RH</div>
+<span class="font-bold">رائد الحمود</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">Samsung S23 Ultra</td>
+<td class="px-8 py-5 text-sm font-mono text-primary font-bold">v2.4.1</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                        متصل الآن
+                                    </span>
+</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">قبل 5 ثواني</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors opacity-70">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center text-xs font-bold">FK</div>
+<span class="font-bold">فهد الخالدي</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">Pixel 7 Pro</td>
+<td class="px-8 py-5 text-sm font-mono text-red-500 font-bold">v2.3.8</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                                        غير متصل
+                                    </span>
+</td>
+<td class="px-8 py-5 text-xs text-on-surface-variant">قبل 3 ساعات</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Analytics -->
+<div class="bg-white rounded-2xl p-8 border border-outline shadow-sm">
+<div class="flex justify-between items-center mb-10">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-primary/10">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<h2 class="text-xl font-bold">تحليلات الأداء الميداني</h2>
+</div>
+<select class="bg-surface-container border border-outline text-xs rounded-lg px-4 py-2 outline-none font-bold">
+<option>آخر 24 ساعة</option>
+<option>آخر 7 أيام</option>
+</select>
+</div>
+<div class="relative h-48 w-full flex items-end justify-between px-8 gap-4 border-b border-outline pb-2">
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full bg-primary/10 rounded-t-lg h-[30%] group-hover:bg-primary transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">8AM</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full bg-primary/20 rounded-t-lg h-[55%] group-hover:bg-primary transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">10AM</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full gold-gradient rounded-t-lg h-[85%] group-hover:opacity-80 transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">12PM</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full gold-gradient rounded-t-lg h-[100%] group-hover:opacity-80 transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">2PM</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full gold-gradient rounded-t-lg h-[75%] group-hover:opacity-80 transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">4PM</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full group">
+<div class="w-full bg-primary/20 rounded-t-lg h-[40%] group-hover:bg-primary transition-all duration-300"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">6PM</span>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+<div class="p-4 bg-surface-container rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold mb-1">وقت الذروة</p>
+<p class="text-sm font-bold">1 PM - 3 PM</p>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold mb-1">متوسط الجلسة</p>
+<p class="text-sm font-bold">42 دقيقة</p>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold mb-1">نسبة الخطأ</p>
+<p class="text-sm font-bold text-green-600">0.02%</p>
+</div>
+<div class="p-4 bg-surface-container rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold mb-1">استهلاك البيانات</p>
+<p class="text-sm font-bold">128 GB</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 py-12 border-t border-outline bg-white">
+<div class="max-w-[1600px] mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<img alt="MJM Logo" class="h-8 opacity-50 filter grayscale" src="https://lh3.googleusercontent.com/aida/ADBb0uhsYsTjeDo42W4UO0CmX7ClL7RnnPBtLYyqLc3akgqOqoxbrkBia_VfUmnNTf_iFtRl2P0u6c_3mY-iMq9rfAdFbMxU8zUOYlmIjJ1yhf0h3jSSmVVdTECbdptsR0Z9ZUpffPyDemaR_gfSlW6pzsElfO7Kk2tMzxFbwpB-pgfXe1LyA27IvpKOR7NNfR3SrBtfSCXcZ7oLBBWul8ObbvpBCIM5QhhLcanaKNw3IIbfnjyWSxt-FPtYkXbPd6lIpj6hVkIIRrOE"/>
+<p class="text-xs text-on-surface-variant font-medium">جميع الحقوق محفوظة © 2024 MJM Smart - منصة الإدارة المركزية</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary text-xs font-bold" href="#">الشروط والأحكام</a>
+<a class="text-on-surface-variant hover:text-primary text-xs font-bold" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-primary text-xs font-bold" href="#">اتصل بنا</a>
+</div>
+</div>
+</footer>
+</body></html>

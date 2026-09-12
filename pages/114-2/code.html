@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0b0b0b",
+                        "surface-dark": "#1a1a1a",
+                        "accent-gold": "#d4af37",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af3733;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="w-72 bg-surface-dark border-l border-white/5 flex flex-col shrink-0">
+<div class="p-6 flex items-center gap-4">
+<div class="size-10 bg-primary rounded-full flex items-center justify-center text-background-dark shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined font-bold">diamond</span>
+</div>
+<div>
+<h1 class="text-white text-base font-bold leading-tight">منصة MJM الذكية</h1>
+<p class="text-primary/70 text-xs font-medium">إدارة الشركات الفاخرة</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4 overflow-y-auto custom-scrollbar">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">لوحة القيادة</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg transition-all border border-primary/20" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="text-sm font-bold">إدارة واتساب AI</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">التقارير</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">الموظفين</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">الإعدادات</span>
+</a>
+</nav>
+<div class="p-6 mt-auto border-t border-white/5">
+<button class="w-full bg-primary text-background-dark py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/10">
+                    الوضع المتقدم
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0 bg-[#0B0B0B]">
+<!-- TopBar -->
+<header class="h-16 border-b border-white/5 flex items-center justify-between px-8 bg-surface-dark/30 backdrop-blur-md">
+<div class="flex items-center gap-6">
+<h2 class="text-white text-lg font-bold">إدارة رسائل الواتساب الذكية</h2>
+<div class="flex items-center gap-4 text-slate-400 text-sm">
+<a class="hover:text-primary transition-colors" href="#">الرئيسية</a>
+<span class="size-1 rounded-full bg-slate-600"></span>
+<a class="hover:text-primary transition-colors" href="#">الأتمتة</a>
+<span class="size-1 rounded-full bg-slate-600"></span>
+<a class="text-primary font-bold underline decoration-2 underline-offset-8" href="#">لوحة التحكم AI</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<input class="bg-surface-dark border-none rounded-lg text-sm px-10 py-2 w-64 focus:ring-1 focus:ring-primary/50 text-slate-100 placeholder:text-slate-500" placeholder="البحث..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm">search</span>
+</div>
+<button class="p-2 bg-surface-dark rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-9 bg-primary/20 rounded-full border border-primary/50 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsZTfoAuzyyFCZk1Jql8QWLh8LH9lEhWzDzq4Yz0vyCFSxuToaDLCl9ZMY1QrwMt0wOIQQ1j7o3HOvNSVmXR6g4MDt9SHEvLEc55phBtm4fn_bpEoTFs9eJBIBV1Y0N_it6gqzAoDFxC2EpJlWvob9uSF87uU1I1z6wLE3yanf7xSK9aVavjXCgkx2Zaqapp333l7nO3udZoaSvns6wCzDGEtg-pBvAKAB4WgiuqJFB1Ja9aQXCjQyRqRx_nF2S4-pGsjiacVYow"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<!-- Performance Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface-dark border border-white/5 p-6 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-slate-400 text-sm mb-1 font-medium">دقة استجابة AI</p>
+<h3 class="text-3xl font-bold text-white">98.5%</h3>
+<p class="text-emerald-500 text-xs mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-xs">trending_up</span> +1.2% من الشهر الماضي
+                            </p>
+</div>
+<div class="size-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+</div>
+<div class="bg-surface-dark border border-white/5 p-6 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-slate-400 text-sm mb-1 font-medium">حجم الأتمتة اليومي</p>
+<h3 class="text-3xl font-bold text-white">1,240 <span class="text-sm font-normal text-slate-500">رسالة</span></h3>
+<p class="text-amber-500 text-xs mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-xs">remove</span> مستقر
+                            </p>
+</div>
+<div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</div>
+</div>
+<div class="bg-surface-dark border border-white/5 p-6 rounded-xl flex items-center justify-between">
+<div>
+<p class="text-slate-400 text-sm mb-1 font-medium">الموظفين النشطين</p>
+<h3 class="text-3xl font-bold text-white">85</h3>
+<p class="text-red-500 text-xs mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-xs">warning</span> 3 بحاجة لمتابعة
+                            </p>
+</div>
+<div class="size-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Control Panel -->
+<div class="lg:col-span-2 space-y-8">
+<!-- AI Message Generator -->
+<div class="bg-surface-dark border border-white/5 rounded-xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-white/5 bg-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h3 class="text-white font-bold">إنشاء رسالة ذكية</h3>
+</div>
+<div class="flex bg-black p-1 rounded-lg">
+<button class="px-6 py-1.5 bg-primary text-background-dark text-xs font-bold rounded-md">خدمة العملاء</button>
+<button class="px-6 py-1.5 text-slate-400 text-xs font-bold hover:text-white transition-colors">خدمة الموظفين</button>
+</div>
+</div>
+<div class="p-8">
+<div class="mb-6">
+<label class="block text-slate-400 text-xs font-bold mb-3 uppercase tracking-wider">الإجراء المطلوب</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/10 transition-all text-amber-500 group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">notification_important</span>
+<span class="text-xs font-bold">تنبيه</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-red-500/30 bg-red-500/5 hover:bg-red-500/10 transition-all text-red-500 group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">warning</span>
+<span class="text-xs font-bold">تحذير</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all text-primary group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">celebration</span>
+<span class="text-xs font-bold">دعوة</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all text-emerald-500 group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">volunteer_activism</span>
+<span class="text-xs font-bold">شكر وتقدير</span>
+</button>
+</div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-slate-400 text-xs font-bold mb-2 uppercase tracking-wider">المستلم</label>
+<select class="w-full bg-black border border-white/10 rounded-lg text-slate-200 text-sm focus:ring-primary focus:border-primary p-3">
+<option>إختر الموظف أو العميل...</option>
+<option>محمد السعدي (عميل VIP)</option>
+<option>سارة أحمد (موظفة مبيعات)</option>
+</select>
+</div>
+<div>
+<label class="block text-slate-400 text-xs font-bold mb-2 uppercase tracking-wider">سياق الرسالة</label>
+<input class="w-full bg-black border border-white/10 rounded-lg text-slate-200 text-sm focus:ring-primary focus:border-primary p-3" placeholder="مثال: تأخير في تسليم المشروع" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-slate-400 text-xs font-bold mb-2 uppercase tracking-wider">توليد بواسطة AI</label>
+<div class="relative">
+<textarea class="w-full bg-black border border-white/10 rounded-xl text-slate-200 text-sm focus:ring-primary focus:border-primary p-4 resize-none placeholder:text-slate-600" placeholder="اكتب التعليمات الأساسية هنا ليقوم الذكاء الاصطناعي بصياغة الرسالة بشكل احترافي..." rows="4"></textarea>
+<button class="absolute left-4 bottom-4 px-4 py-2 bg-primary text-background-dark text-xs font-bold rounded-lg shadow-lg shadow-primary/20">توليد المسودة</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Log -->
+<div class="bg-surface-dark border border-white/5 rounded-xl shadow-2xl">
+<div class="p-6 border-b border-white/5 flex items-center justify-between">
+<h3 class="text-white font-bold">سجل العمليات الأتمتة</h3>
+<button class="text-primary text-sm font-medium hover:underline">عرض الكل</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead>
+<tr class="text-slate-500 text-xs border-b border-white/5">
+<th class="p-6 font-bold uppercase tracking-wider">المستلم</th>
+<th class="p-6 font-bold uppercase tracking-wider">النوع</th>
+<th class="p-6 font-bold uppercase tracking-wider">الوقت</th>
+<th class="p-6 font-bold uppercase tracking-wider">الحالة</th>
+<th class="p-6 font-bold uppercase tracking-wider">الإجراء</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-white/5">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-800 flex items-center justify-center text-xs text-slate-400">AM</div>
+<div>
+<p class="text-white font-medium">أحمد محمود</p>
+<p class="text-slate-500 text-xs">موظف</p>
+</div>
+</div>
+</td>
+<td class="p-6"><span class="px-2.5 py-1 bg-amber-500/10 text-amber-500 rounded text-xs font-bold">تنبيه</span></td>
+<td class="p-6 text-slate-400">10:45 ص</td>
+<td class="p-6">
+<span class="flex items-center gap-1 text-emerald-500">
+<span class="material-symbols-outlined text-sm">done_all</span> تم التسليم
+                                                </span>
+</td>
+<td class="p-6"><button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined">more_vert</span></button></td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-xs text-primary font-bold">JS</div>
+<div>
+<p class="text-white font-medium">جاسم السعيد</p>
+<p class="text-slate-500 text-xs">عميل VIP</p>
+</div>
+</div>
+</td>
+<td class="p-6"><span class="px-2.5 py-1 bg-primary/10 text-primary rounded text-xs font-bold">شكر</span></td>
+<td class="p-6 text-slate-400">09:12 ص</td>
+<td class="p-6">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">visibility</span> تم القراءة
+                                                </span>
+</td>
+<td class="p-6"><button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined">more_vert</span></button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Activity -->
+<div class="space-y-8">
+<!-- Live Preview -->
+<div class="bg-surface-dark border border-white/5 rounded-xl overflow-hidden flex flex-col h-[500px]">
+<div class="p-4 bg-white/5 border-b border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">chat</span>
+</div>
+<div>
+<p class="text-white text-xs font-bold">معاينة الرسالة الذكية</p>
+<p class="text-slate-500 text-[10px]">مباشر • واتساب للأعمال</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-500">phone</span>
+</div>
+<div class="flex-1 p-6 space-y-4 overflow-y-auto bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-opacity-5">
+<div class="max-w-[85%] bg-background-dark/80 border border-white/10 p-4 rounded-2xl rounded-tr-none ml-auto text-slate-200 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary/50"></div>
+<p class="text-xs leading-relaxed">
+                                        عزيزنا العميل <span class="text-primary font-bold">جاسم السعيد</span>،<br/><br/>
+                                        نتقدم لكم بخالص الشكر والتقدير على ثقتكم الغالية في خدماتنا. يسعدنا إعلامكم بأن طلبكم الأخير قد تم تنفيذه بأعلى معايير الجودة.
+                                        <br/><br/>
+                                        نحن في MJM ملتزمون دائماً بتقديم تجربة فاخرة تليق بتطلعاتكم.
+                                        <br/><br/>
+                                        مع تحيات إدارة MJM.
+                                    </p>
+<div class="mt-2 flex justify-end gap-1 items-center">
+<span class="text-[10px] text-slate-500">11:05 م</span>
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+</div>
+</div>
+<div class="text-center py-4">
+<span class="text-[10px] text-slate-500 bg-black/50 px-3 py-1 rounded-full uppercase tracking-widest font-bold">تم الإنشاء بواسطة AI</span>
+</div>
+</div>
+<div class="p-4 bg-white/5 border-t border-white/5 flex gap-3">
+<button class="flex-1 bg-primary text-background-dark text-xs font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-sm">send</span>
+                                    إرسال الآن
+                                </button>
+<button class="px-4 bg-white/5 text-white rounded-lg hover:bg-white/10 border border-white/10 transition-all">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</div>
+</div>
+<!-- Quick Statistics -->
+<div class="bg-surface-dark border border-white/5 rounded-xl p-6">
+<h3 class="text-white font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">analytics</span>
+                                إحصائيات سريعة
+                            </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-400">تحويل المسودات إلى إرسال</span>
+<span class="text-primary font-bold">92%</span>
+</div>
+<div class="h-1.5 bg-black rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-400">سرعة الاستجابة المتوسطة</span>
+<span class="text-emerald-500 font-bold">1.2 ثانية</span>
+</div>
+<div class="h-1.5 bg-black rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[98%]"></div>
+</div>
+</div>
+<div class="p-4 bg-primary/5 border border-primary/20 rounded-xl mt-4">
+<p class="text-[11px] text-slate-300 leading-relaxed italic">
+                                        "يقوم الذكاء الاصطناعي حالياً بتقليل العبء التشغيلي بنسبة 45% عن موظفي خدمة العملاء."
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

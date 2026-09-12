@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#99907c",
+              "inverse-on-surface": "#313030",
+              "background": "#131313",
+              "tertiary-fixed": "#dbe1ff",
+              "on-primary-container": "#554300",
+              "surface-dim": "#131313",
+              "surface-container": "#201f1f",
+              "on-tertiary-container": "#254188",
+              "on-surface": "#e5e2e1",
+              "surface-tint": "#e9c349",
+              "primary-fixed": "#ffe088",
+              "on-background": "#e5e2e1",
+              "secondary": "#dac58d",
+              "on-secondary-container": "#c8b37d",
+              "inverse-primary": "#735c00",
+              "on-primary-fixed": "#241a00",
+              "on-secondary": "#3c2f05",
+              "secondary-fixed": "#f7e1a6",
+              "primary-fixed-dim": "#e9c349",
+              "tertiary-container": "#97b0ff",
+              "surface-container-highest": "#353534",
+              "error-container": "#93000a",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "surface": "#131313",
+              "primary-container": "#d4af37",
+              "outline-variant": "#4d4635",
+              "on-surface-variant": "#d0c5af",
+              "on-error": "#690005",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#544519",
+              "primary": "#f2ca50",
+              "error": "#ffb4ab",
+              "on-primary": "#3c2f00",
+              "on-tertiary-fixed-variant": "#27438a",
+              "secondary-fixed-dim": "#dac58d",
+              "surface-bright": "#3a3939",
+              "on-tertiary-fixed": "#00174b",
+              "inverse-surface": "#e5e2e1",
+              "surface-variant": "#353534",
+              "on-tertiary": "#082b72",
+              "tertiary": "#bfcdff",
+              "on-primary-fixed-variant": "#574500",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed": "#241a00",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-container": "#544519"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .luxury-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+    </style>
+</head>
+<body class="flex flex-row-reverse min-h-screen overflow-x-hidden">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="fixed right-0 top-0 h-full flex flex-col z-40 bg-[#1C1B1B] w-72 border-l border-[#4D4635]/20 font-['Manrope','Inter'] text-right shadow-[0_0_48px_rgba(229,226,225,0.04)]">
+<div class="p-8 flex flex-col items-center border-b border-[#4D4635]/10">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(242,202,80,0.3)]">
+<span class="material-symbols-outlined text-on-primary text-3xl" data-weight="fill">account_balance</span>
+</div>
+<h2 class="text-lg font-bold text-[#F2CA50]">مركز البيانات</h2>
+<p class="text-xs text-[#D0C5AF]/50 font-medium">الإدارة التنفيذية</p>
+</div>
+<nav class="flex-1 py-6">
+<a class="bg-[#2A2A2A] text-[#F2CA50] border-r-4 border-[#F2CA50] flex flex-row-reverse items-center p-4 transition-all active:pr-6" href="#">
+<span class="material-symbols-outlined ml-4" data-weight="fill">dashboard</span>
+<span class="text-sm font-semibold">لوحة التحكم</span>
+</a>
+<a class="text-[#D0C5AF]/70 flex flex-row-reverse items-center p-4 hover:bg-[#201F1F] transition-all active:pr-6" href="#">
+<span class="material-symbols-outlined ml-4">badge</span>
+<span class="text-sm">بيانات المستخدمين</span>
+</a>
+<a class="text-[#D0C5AF]/70 flex flex-row-reverse items-center p-4 hover:bg-[#201F1F] transition-all active:pr-6" href="#">
+<span class="material-symbols-outlined ml-4">account_balance</span>
+<span class="text-sm">الحسابات البنكية</span>
+</a>
+<a class="text-[#D0C5AF]/70 flex flex-row-reverse items-center p-4 hover:bg-[#201F1F] transition-all active:pr-6" href="#">
+<span class="material-symbols-outlined ml-4">business_center</span>
+<span class="text-sm">السجلات التجارية</span>
+</a>
+<a class="text-[#D0C5AF]/70 flex flex-row-reverse items-center p-4 hover:bg-[#201F1F] transition-all active:pr-6" href="#">
+<span class="material-symbols-outlined ml-4">location_on</span>
+<span class="text-sm">المواقع</span>
+</a>
+</nav>
+<div class="mt-auto p-4 border-t border-[#4D4635]/10">
+<button class="w-full text-[#D0C5AF]/70 flex flex-row-reverse items-center p-4 hover:bg-[#201F1F] transition-all rounded-lg group">
+<span class="material-symbols-outlined ml-4 group-hover:text-error transition-colors">logout</span>
+<span class="text-sm">تسجيل الخروج</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 mr-72 transition-all duration-300">
+<!-- TopAppBar (Authority Source: JSON) -->
+<header class="bg-[#131313] flex flex-row-reverse justify-between items-center px-16 h-20 w-full docked full-width top-0 z-50 font-['Manrope','Inter'] text-right">
+<div class="flex flex-row-reverse items-center gap-8">
+<h1 class="text-xl font-bold text-[#F2CA50] tracking-tight">The Sovereign Executive</h1>
+<nav class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-[#F2CA50] border-b-2 border-[#F2CA50] pb-1 text-sm font-medium" href="#">الرئيسية</a>
+<a class="text-[#D0C5AF]/50 hover:text-[#D0C5AF] transition-colors text-sm font-medium" href="#">التقارير</a>
+<a class="text-[#D0C5AF]/50 hover:text-[#D0C5AF] transition-colors text-sm font-medium" href="#">الإعدادات</a>
+</nav>
+</div>
+<div class="flex flex-row-reverse items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#D0C5AF]/40 text-sm">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg pr-10 pl-4 py-2 text-sm text-on-surface w-64 focus:ring-1 focus:ring-primary transition-all" placeholder="البحث في البيانات..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="p-2 text-[#D0C5AF]/70 hover:bg-[#2A2A2A] rounded-md transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-[#D0C5AF]/70 hover:bg-[#2A2A2A] rounded-md transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 text-[#D0C5AF]/70 hover:bg-[#2A2A2A] rounded-md transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<img alt="صورة الملف الشخصي للمدير التنفيذي" class="w-10 h-10 rounded-full border border-primary/20 object-cover" data-alt="professional executive portrait of a middle-eastern businessman in a sharp dark suit against a minimalist studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhdlIBU9Z_GBwuNcRxeQr9RlGnssi8DbK0zPL6FqbGeT9qYzBe4_x2GL6a5JoGr5VU16eY0FnhjURCf_1Zrnw6v4zt2pilFkyEcjqe0py33gOKfLyhcN2Sq9CGIiXOw0WCYQ2l5yvBBUr5EE4-K1auL1u0vRhREag6HX0a9cpd0s7jrod1tRwEy7YQuJ_sZDhxpVTBTtDfshHQY1KSucPkwvN6IWcJFXS8Ova6F1MiE72ti9WjV1-ncr3glnha-ctRJVWIfq-6zQ"/>
+</div>
+</header>
+<div class="w-full h-[1px] bg-[#1C1B1B]"></div>
+<!-- Dashboard Body -->
+<div class="p-16 space-y-12 max-w-[1600px] mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row-reverse justify-between items-end gap-6">
+<div class="text-right space-y-2">
+<h2 class="text-4xl font-extrabold font-headline luxury-gradient-text tracking-tight">مركز المعلومات الشامل</h2>
+<p class="text-on-surface-variant text-lg">قاعدة البيانات المركزية لإدارة الأصول والموارد</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-high text-primary border border-primary/10 px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-surface-bright transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm">download</span>
+<span class="text-sm font-semibold">تصدير التقارير</span>
+</button>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg flex items-center gap-2 font-bold hover:shadow-[0_0_20px_rgba(242,202,80,0.4)] transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm">add</span>
+<span class="text-sm">إضافة بيان جديد</span>
+</button>
+</div>
+</section>
+<!-- Summary Stats (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+<div class="flex flex-row-reverse justify-between items-start">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">group</span>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-sm font-medium mb-1">إجمالي المستخدمين</p>
+<h3 class="text-3xl font-bold font-headline">١,٢٤٨</h3>
+<p class="text-primary text-xs mt-2 flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+١٢٪ هذا الشهر</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary/40"></div>
+<div class="flex flex-row-reverse justify-between items-start">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">storefront</span>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-sm font-medium mb-1">الفروع المسجلة</p>
+<h3 class="text-3xl font-bold font-headline">٨٦</h3>
+<p class="text-on-surface-variant text-xs mt-2">عبر كافة المناطق</p>
+</div>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-1 h-full bg-primary/40"></div>
+<div class="flex flex-row-reverse justify-between items-start">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-weight="fill">account_balance_wallet</span>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant text-sm font-medium mb-1">إجمالي الأرصدة</p>
+<h3 class="text-3xl font-bold font-headline text-primary">٤.٢M ر.س</h3>
+<p class="text-on-surface-variant text-xs mt-2">صافي التدفقات النقدية</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Data Module -->
+<section class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/10 shadow-2xl">
+<!-- Table Headers & Controls -->
+<div class="p-6 bg-surface-container flex flex-col md:flex-row-reverse justify-between items-center gap-6">
+<div class="flex flex-row-reverse p-1 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<button class="px-6 py-2 rounded-md bg-surface-container-high text-primary font-bold text-sm transition-all">المستخدمين</button>
+<button class="px-6 py-2 rounded-md text-on-surface-variant hover:text-on-surface text-sm transition-all">الحسابات البنكية</button>
+<button class="px-6 py-2 rounded-md text-on-surface-variant hover:text-on-surface text-sm transition-all">السجلات التجارية</button>
+</div>
+<div class="flex flex-row-reverse items-center gap-4 w-full md:w-auto">
+<div class="relative flex-1 md:w-80">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#D0C5AF]/40">search</span>
+<input class="w-full bg-surface-container-highest border border-outline-variant/20 rounded-lg pr-10 pl-4 py-2.5 text-sm focus:ring-1 focus:ring-primary" placeholder="بحث مخصص..." type="text"/>
+</div>
+<button class="p-2.5 bg-surface-container-highest border border-outline-variant/20 rounded-lg text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Table Content -->
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead class="bg-surface-container-lowest border-b border-outline-variant/10">
+<tr>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">المستخدم</th>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">الهوية / الإقامة</th>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">المنشأة والفرع</th>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">البنك المعتمد</th>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">الحالة</th>
+<th class="px-8 py-5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex flex-row-reverse items-center gap-4">
+<img alt="User" class="w-10 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="close up headshot of a professional young man with a slight smile in a business casual attire, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqICnHjQSnwgK8hcT3deFl7bRskfeR-lqGWfy1O3IxUunFg4ntFZhNrTnNkMsRsmIra1TqT6U127KUKk0OIPkRr-9UguwFYyoeLOO80wlplWO_5tJw2mk0046tTmbgZEN1j29vkFh9-WSmtfSUGcYl-_GsA012y6N48FkZWe2Bh8wcYQrztZBGrmBX6nBNU085LTGbcclBaqR3VOauvmvgAda9PHSfQwmUwopyz32kAlEuHRvtuhl99WwgqGnMaiWDkO_KBE8V3Q"/>
+<div>
+<p class="font-bold text-on-surface">أحمد محمد القحطاني</p>
+<p class="text-xs text-on-surface-variant">مدير عمليات - عمارة Z</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-on-surface-variant">١٠٩٢٨٣٧٤٦٥</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface font-medium">مؤسسة قمة التقنية</p>
+<p class="text-xs text-on-surface-variant">فرع الرياض - شقة ١١</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-row-reverse items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+<span class="text-sm">البنك الأهلي (SNB)</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">نشط</span>
+</td>
+<td class="px-8 py-6">
+<button class="text-primary hover:underline text-sm font-semibold flex items-center gap-1 transition-all">
+<span>عرض التفاصيل</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex flex-row-reverse items-center gap-4">
+<img alt="User" class="w-10 h-10 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="corporate headshot of a senior executive male with a grey beard in a dark blazer, professional and authoritative lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU86BSvLAf5akVhTl5tiCgvVUSPWd1ny--1fQ-KB-HIT6xxrgAtYJqlLvVgLJSPq44H-QxGHjpUHrM_ZfQ7ypVi4z1g0a-O72XZaE7Dxx1tdV41WJky9SKYneptKVfahzUgnB1-QgvrnTCCgjUfo1T7Sgd-KQhase2Y0Sig5bOZFASBc0S6BY62kn-8FCTLl9zRsUW2dmDUkJauhhQBsC69snXwe-KqyHYagoieZazu_LGQ_HWPEXrrEQ_DBtIjM2MMDb72wYAaA"/>
+<div>
+<p class="font-bold text-on-surface">سارة بنت عبدالله</p>
+<p class="text-xs text-on-surface-variant">مدير مالي</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-on-surface-variant">٢٠٩٣٨٤٧٥٦١</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface font-medium">شركة الأفق للمقاولات</p>
+<p class="text-xs text-on-surface-variant">فرع جدة - المكتب الرئيسي</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-row-reverse items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+<span class="text-sm">مصرف الراجحي</span>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">نشط</span>
+</td>
+<td class="px-8 py-6">
+<button class="text-primary hover:underline text-sm font-semibold flex items-center gap-1 transition-all">
+<span>عرض التفاصيل</span>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer / Pagination -->
+<div class="p-6 bg-surface-container border-t border-outline-variant/10 flex flex-row-reverse justify-between items-center">
+<p class="text-xs text-on-surface-variant">عرض ١-١٠ من أصل ١,٢٤٨ مستخدم</p>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-primary text-on-primary font-bold text-xs">١</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant hover:text-primary font-bold text-xs">٢</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant hover:text-primary font-bold text-xs">٣</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Layout: Team & Map Distribution -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-16">
+<!-- Team Breakdown Card -->
+<div class="bg-surface-container rounded-xl p-8 border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-8 flex items-center gap-2 flex-row-reverse">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span>تحليل فرق العمل</span>
+</h3>
+<div class="space-y-6">
+<div class="flex flex-row-reverse items-center justify-between">
+<div class="flex flex-row-reverse items-center gap-4">
+<div class="w-2 h-10 bg-primary rounded-full"></div>
+<div class="text-right">
+<p class="font-bold">فريق عمارة Z</p>
+<p class="text-xs text-on-surface-variant">١٢ موظف</p>
+</div>
+</div>
+<div class="text-left font-headline font-bold text-xl">١٨٥,٠٠٠ ر.س</div>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 75%"></div>
+</div>
+<div class="flex flex-row-reverse items-center justify-between">
+<div class="flex flex-row-reverse items-center gap-4">
+<div class="w-2 h-10 bg-primary/40 rounded-full"></div>
+<div class="text-right">
+<p class="font-bold">فريق المجمع الغربي</p>
+<p class="text-xs text-on-surface-variant">٨ موظفين</p>
+</div>
+</div>
+<div class="text-left font-headline font-bold text-xl">٩٢,٤٠٠ ر.س</div>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary/40" style="width: 45%"></div>
+</div>
+</div>
+</div>
+<!-- Distribution Map -->
+<div class="bg-surface-container rounded-xl overflow-hidden relative border border-outline-variant/10">
+<div class="absolute top-6 right-6 z-10 bg-surface-container-high/90 backdrop-blur-md p-4 rounded-lg border border-primary/20">
+<h4 class="text-sm font-bold text-primary mb-1">التوزيع الجغرافي</h4>
+<p class="text-xs text-on-surface">تركيز عالي في المنطقة الوسطى</p>
+</div>
+<div class="w-full h-full min-h-[300px] bg-cover bg-center grayscale opacity-60 mix-blend-luminosity" data-alt="abstract stylized map of the middle east region with high-end dark aesthetics and glowing dots representing data centers" data-location="Riyadh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAu_mAnPOIxi8NOyH3V6XAmlN3-SrXGWnUXDBVzHU0IFVIQu8rvLSTnabQM-T3kC65KRwzeF6GhYyqVhsG_dJHooKA2uRWYBo-mxRnDBqTKQdBJFiu0rPAdQRf6vRCGDs8FrnPBB4RWFDLe9RAD5apQgJo4bR3Dy36nx_YNPwGY64mVzDnVhwjaMxL9fH-g7PbMW9q1JuvnF04oFBX6hKKuxExyadHnTo9qY0fk_BmczWA4nZFRTp3sAhjqu-F-wsjlRuBkFOZodA')">
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

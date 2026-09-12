@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #f2ca50;
+            --primary-container: #d4af37;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(242, 202, 80, 0.15);
+        }
+        .status-glow {
+            box-shadow: 0 0 8px #f2ca50;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary-fixed": "#ffe088",
+                "error-container": "#93000a",
+                "surface-tint": "#e9c349",
+                "tertiary-container": "#97b0ff",
+                "surface-variant": "#353534",
+                "surface-dim": "#131313",
+                "on-secondary-fixed-variant": "#544519",
+                "secondary": "#dac58d",
+                "tertiary": "#bfcdff",
+                "on-error-container": "#ffdad6",
+                "on-surface": "#e5e2e1",
+                "inverse-primary": "#735c00",
+                "secondary-fixed-dim": "#dac58d",
+                "secondary-fixed": "#f7e1a6",
+                "on-primary-fixed": "#241a00",
+                "surface-container-low": "#1c1b1b",
+                "on-primary-fixed-variant": "#574500",
+                "surface-container-highest": "#353534",
+                "secondary-container": "#544519",
+                "on-background": "#e5e2e1",
+                "inverse-on-surface": "#313030",
+                "surface": "#131313",
+                "primary": "#f2ca50",
+                "on-tertiary-container": "#254188",
+                "on-secondary": "#3c2f05",
+                "error": "#ffb4ab",
+                "surface-container-lowest": "#0e0e0e",
+                "on-surface-variant": "#d0c5af",
+                "inverse-surface": "#e5e2e1",
+                "outline": "#99907c",
+                "on-tertiary": "#082b72",
+                "background": "#131313",
+                "tertiary-fixed-dim": "#b4c5ff",
+                "on-primary-container": "#554300",
+                "surface-bright": "#3a3939",
+                "on-error": "#690005",
+                "on-secondary-container": "#c8b37d",
+                "outline-variant": "#4d4635",
+                "tertiary-fixed": "#dbe1ff",
+                "primary-fixed-dim": "#e9c349",
+                "on-tertiary-fixed": "#00174b",
+                "on-primary": "#3c2f00",
+                "primary-container": "#d4af37",
+                "surface-container": "#201f1f",
+                "surface-container-high": "#2a2a2a",
+                "on-tertiary-fixed-variant": "#27438a",
+                "on-secondary-fixed": "#241a00"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+              },
+              "fontFamily": {
+                "headline": ["Manrope"],
+                "display": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="fixed right-0 top-0 h-full flex flex-col z-40 bg-surface-container-low border-l border-outline-variant/20 docked-right h-screen w-72">
+<div class="p-8 mb-6 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<h2 class="text-headline-sm font-headline font-bold text-primary">نظام الأسطول</h2>
+<p class="text-xs text-on-surface-variant mt-1 opacity-70">الإدارة التنفيذية</p>
+</div>
+<nav class="flex-1 overflow-y-auto no-scrollbar space-y-1">
+<!-- Nav Items generated from JSON -->
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body">نظرة عامة</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-body">إدارة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg p-3 mx-4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">badge</span>
+<span class="font-body font-bold">إدارة السائقين</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-body">إدارة العقود</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body">إدارة المدفوعات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="font-body">تقارير حالة المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-body">مبيعات المركبات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">report_problem</span>
+<span class="font-body">إدارة المخالفات</span>
+</a>
+<a class="flex flex-row-reverse items-center gap-3 text-on-surface-variant p-3 mx-4 rounded-lg hover:bg-surface-container-high hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-body">إدارة وثائق المركبات</span>
+</a>
+<div class="pt-6 px-4">
+<button class="w-full bg-primary-container text-on-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined">person_add</span>
+                    إضافة سائق جديد
+                </button>
+</div>
+</nav>
+<div class="p-6 mt-auto border-t border-outline-variant/10">
+<div class="flex items-center justify-between flex-row-reverse">
+<div class="flex items-center gap-3 flex-row-reverse">
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full border border-primary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjt_OOlYTk7xEb0G3yxtTaIj02L5qxnH2waqw1_qVAsz7pj1aOMWhm_l2mgG81nXgjXW0n5GXTT4ULnlml0GngXet0mBWNGaj5E2GJeTBInQyhTRwMpS4x6svdxdAMFpHUlfd-NPZydv5s-TnqfjmJaup0iSqm38F5TGIUU_baOr00pYnbVs3Pumz5PgGMpPfqawCFKEfNqJIxwAtHg24cZp2uCglHpMoygi2LUDJelh2l_H_5jGD0E71kq9oYpskCWr9ja5In-A"/>
+<div class="text-right">
+<p class="text-sm font-bold">أحمد العتيبي</p>
+<p class="text-[10px] text-on-surface-variant">مدير العمليات</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="mr-72 min-h-screen">
+<!-- Top App Bar -->
+<header class="flex flex-row-reverse justify-between items-center w-full px-8 py-6 bg-surface shadow-sm sticky top-0 z-50">
+<div class="flex items-center gap-6">
+<h1 class="text-2xl font-headline font-extrabold gold-gradient-text tracking-tight uppercase">إآءارة السائققلن - الأءاء والبلللناء</h1>
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-highest border-none rounded-full pr-10 pl-4 py-2 w-80 text-sm focus:ring-1 focus:ring-primary text-on-surface" placeholder="البحث عن سائق، رقم رخصة..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-8 w-px bg-outline-variant/20 mx-2"></div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="text-sm font-medium">الوضع المتصل</span>
+<div class="w-2.5 h-2.5 bg-primary rounded-full status-glow"></div>
+</div>
+</div>
+</header>
+<div class="p-8">
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container p-6 rounded-xl border-t-2 border-primary">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">group</span>
+<span class="text-xs text-primary font-bold">+12%</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">إجمالي السائقين</p>
+<h3 class="text-3xl font-headline font-bold">1,284</h3>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-fixed-dim p-2 bg-primary-fixed-dim/10 rounded-lg">verified</span>
+<span class="text-xs text-on-surface-variant font-medium">98% فعال</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">التراخيص النشطة</p>
+<h3 class="text-3xl font-headline font-bold">1,256</h3>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">star</span>
+<span class="text-xs text-on-surface-variant font-medium">ممتاز</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">متوسط التقييم</p>
+<h3 class="text-3xl font-headline font-bold">4.85</h3>
+</div>
+<div class="bg-surface-container p-6 rounded-xl">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-error p-2 bg-error/10 rounded-lg">warning</span>
+<span class="text-xs text-error font-bold">28 معلق</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-1">تراخيص منتهية قريباً</p>
+<h3 class="text-3xl font-headline font-bold">42</h3>
+</div>
+</div>
+<!-- Main Profiles Grid -->
+<div class="flex flex-col gap-8">
+<div class="flex justify-between items-center">
+<h2 class="text-xl font-headline font-bold">قائمة السائقين النشطين</h2>
+<div class="flex gap-3">
+<button class="bg-surface-container-high px-4 py-2 rounded-lg text-sm flex items-center gap-2 border border-outline-variant/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-base">filter_list</span>
+                            تصفية
+                        </button>
+<button class="bg-surface-container-high px-4 py-2 rounded-lg text-sm flex items-center gap-2 border border-outline-variant/10 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-base">download</span>
+                            تصدير البيانات
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Driver Card 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="p-6 flex flex-col md:flex-row-reverse gap-6">
+<!-- Left: Profile Info -->
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex justify-between items-start flex-row-reverse">
+<div class="text-right">
+<h3 class="text-lg font-bold">ياسر محمد القحطاني</h3>
+<p class="text-sm text-on-surface-variant">كود السائق: #DRV-9021</p>
+</div>
+<div class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">نشط الآن</div>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">call</span>
+<span class="text-on-surface-variant">+966 50 123 4567</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">local_shipping</span>
+<span class="text-on-surface-variant">مرسيدس أكتروس 2023</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">credit_card</span>
+<span class="text-on-surface-variant">رخصة نقل ثقيل</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse text-error">
+<span class="material-symbols-outlined text-lg">event_busy</span>
+<span class="font-medium">تنتهي: 14/05/2025</span>
+</div>
+</div>
+</div>
+<!-- Middle: Divider -->
+<div class="hidden md:block w-px bg-outline-variant/10"></div>
+<!-- Right: Performance & Avatar -->
+<div class="flex flex-row-reverse md:flex-col items-center justify-between gap-4 md:w-32">
+<div class="relative">
+<img class="w-20 h-20 rounded-full border-2 border-primary/30 group-hover:border-primary transition-colors" data-alt="A professional portrait of a Saudi Arabian man in his 40s, wearing traditional white ghutra. The photography is high-end corporate style with soft directional lighting. The background is a blurred dark executive office with hints of gold and deep wood tones. The image conveys authority, reliability, and expertise in a modern ERP environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvr-GGu1v34kU02WIg6fMcUNHuCr-kxA6JlHF1KX4B0BSfWdyzC6yIa27x7UK3JXMGIVp7VU33i_fx3s0rqYbMPdQ6JUYDTjlz7wfAu-HhTWQKRR1sU_9Vqqkvd0gjlwS8E6xU2RapIcwqxI2MA6KTGGB-DQQh92nVQZVXquyCdBe3CSYg8AnGbzirb7IPtqdhoxWbN3W9o0TX6iW1ykcVdElPMIXvU7q4usQMTeAAaM3EvuLDE6vUKSA3UrUSemoKfFDpjszvTA"/>
+<div class="absolute -bottom-1 -right-1 bg-surface-container-high rounded-full p-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 mb-1">
+<span class="text-primary font-bold">4.9</span>
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">تقييم الأداء</span>
+</div>
+</div>
+</div>
+<!-- Footer Stats Bar -->
+<div class="bg-surface-container-highest/30 px-6 py-3 flex justify-between items-center border-t border-outline-variant/5">
+<div class="flex gap-6 flex-row-reverse">
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">الرحلات</p>
+<p class="text-sm font-bold">1,420</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">معدل السلامة</p>
+<p class="text-sm font-bold text-primary">96%</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">عرض الملف الكامل</button>
+</div>
+</div>
+<!-- Driver Card 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="p-6 flex flex-col md:flex-row-reverse gap-6">
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex justify-between items-start flex-row-reverse">
+<div class="text-right">
+<h3 class="text-lg font-bold">خالد سليمان الحربي</h3>
+<p class="text-sm text-on-surface-variant">كود السائق: #DRV-7734</p>
+</div>
+<div class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold rounded-full border border-outline-variant/20">في إجازة</div>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">call</span>
+<span class="text-on-surface-variant">+966 55 987 6543</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">local_shipping</span>
+<span class="text-on-surface-variant">فولفو FH16</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">credit_card</span>
+<span class="text-on-surface-variant">رخصة خصوصي</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>تنتهي: 22/11/2026</span>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-px bg-outline-variant/10"></div>
+<div class="flex flex-row-reverse md:flex-col items-center justify-between gap-4 md:w-32">
+<div class="relative">
+<img class="w-20 h-20 rounded-full border-2 border-outline-variant/30 group-hover:border-primary transition-colors" data-alt="A portrait of a senior Middle Eastern driver in professional grey uniform, standing against a dark architectural backdrop with golden light accents. The style is cinematic and dignified, emphasizing experience and professionalism. High contrast lighting with warm gold highlights on the face and shoulder. Premium digital art quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKErhBrxtR9gwb84yjL4LdS-hQPB1uxG_upcyohRJFL_ZjrP5kQu5EGM-JJZboqM0MNvvFj6tF4dm3Sn1-TrkqdpRjdojsu-m22fbpIjuDaE5WwCP_tQTmsb0yB0Xfp27yWuxYV68q-xIXWyPzFTMSQyUP4evnavbzEKvFt1lrJtBYmm5Eefu-E1GfLek4rlabIkalR7-Wp9NSo--zNKQ4fzoHfFHH12GFUtYEVIEVtjkWsLD_cYl4YhAXB19gPKayxwWmx2AyIA"/>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 mb-1">
+<span class="text-on-surface font-bold">4.2</span>
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">تقييم الأداء</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest/30 px-6 py-3 flex justify-between items-center border-t border-outline-variant/5">
+<div class="flex gap-6 flex-row-reverse">
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">الرحلات</p>
+<p class="text-sm font-bold">894</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">معدل السلامة</p>
+<p class="text-sm font-bold text-on-surface">88%</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">عرض الملف الكامل</button>
+</div>
+</div>
+<!-- Driver Card 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group hover:bg-surface-container-high transition-all duration-300">
+<div class="p-6 flex flex-col md:flex-row-reverse gap-6">
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex justify-between items-start flex-row-reverse">
+<div class="text-right">
+<h3 class="text-lg font-bold">فهد بن عبدالله</h3>
+<p class="text-sm text-on-surface-variant">كود السائق: #DRV-1120</p>
+</div>
+<div class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">في مهمة</div>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">call</span>
+<span class="text-on-surface-variant">+966 54 555 1212</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">local_shipping</span>
+<span class="text-on-surface-variant">تويوتا هايلكس 2024</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse">
+<span class="material-symbols-outlined text-primary-fixed-dim text-lg">credit_card</span>
+<span class="text-on-surface-variant">رخصة نقل متوسط</span>
+</div>
+<div class="flex items-center gap-3 flex-row-reverse text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>تنتهي: 01/01/2028</span>
+</div>
+</div>
+</div>
+<div class="hidden md:block w-px bg-outline-variant/10"></div>
+<div class="flex flex-row-reverse md:flex-col items-center justify-between gap-4 md:w-32">
+<div class="relative">
+<img class="w-20 h-20 rounded-full border-2 border-primary/30 group-hover:border-primary transition-colors" data-alt="Modern high-resolution portrait of a young professional driver wearing a branded dark polo shirt. The lighting is crisp and studio-quality with subtle amber rim lighting. Dark minimalist background featuring blurred digital dashboard elements. The mood is focused and technologically advanced, fitting a luxury fleet management interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWOWTuNT2QYNj9x1RiChNRyDIjvXs5g7rzTGDJTxJe1-9ZkcNhdyjU5i2PhglaWmZvssF9j4NcIIVjTTnpEIuVCkV52Cq2bhQiHoy5qx5v1nYhaumnkwRajlQYGK1EKl3oUql2pCesYIZzSTCfSs8G0288aPQsfa71zzDFpr0y8gyIg95n6zxxsEeMj2xwLo1AVWVHoNC11faH-IexIhVNZjoTfKp2b4O4yK6cDyv1FVELQfv2Q5hhVqWrw_Sb-CZ-BXcNBjPr6Q"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full status-glow"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 mb-1">
+<span class="text-primary font-bold">5.0</span>
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">تقييم الأداء</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest/30 px-6 py-3 flex justify-between items-center border-t border-outline-variant/5">
+<div class="flex gap-6 flex-row-reverse">
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">الرحلات</p>
+<p class="text-sm font-bold">512</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-on-surface-variant">معدل السلامة</p>
+<p class="text-sm font-bold text-primary">100%</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">عرض الملف الكامل</button>
+</div>
+</div>
+<!-- Add New Driver Empty State / CTA -->
+<button class="group relative bg-surface-container-lowest border-2 border-dashed border-outline-variant/20 rounded-xl flex flex-col items-center justify-center p-8 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+</div>
+<h3 class="text-lg font-bold mb-1">إضافة سائق جديد للنظام</h3>
+<p class="text-on-surface-variant text-sm">تسجيل بيانات السائق والترخيص وتخصيص مركبة</p>
+<!-- Decorative corners -->
+<div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-primary/20 group-hover:border-primary/60 transition-colors"></div>
+<div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-primary/20 group-hover:border-primary/60 transition-colors"></div>
+</button>
+</div>
+</div>
+<!-- Detailed Performance Metrics Table (Simplified) -->
+<div class="mt-12">
+<h2 class="text-xl font-headline font-bold mb-6">مؤشرات الأداء التشغيلي</h2>
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-2xl">
+<table class="w-full text-right text-sm">
+<thead class="bg-surface-container-high text-on-surface-variant">
+<tr>
+<th class="px-6 py-4 font-bold">السائق</th>
+<th class="px-6 py-4 font-bold">حالة السلامة</th>
+<th class="px-6 py-4 font-bold">الرحلات المكتملة</th>
+<th class="px-6 py-4 font-bold">استهلاك الوقود</th>
+<th class="px-6 py-4 font-bold">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary">YM</div>
+<span>ياسر محمد</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2 flex-row-reverse">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[96%] h-full bg-primary"></div>
+</div>
+<span class="text-xs">96%</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">1,420</td>
+<td class="px-6 py-4">8.4 لتر/100كم</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/20 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center text-[10px] font-bold text-secondary">KH</div>
+<span>خالد الحربي</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2 flex-row-reverse">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[88%] h-full bg-primary-container"></div>
+</div>
+<span class="text-xs">88%</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium">894</td>
+<td class="px-6 py-4">9.1 لتر/100كم</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (FAB) - For Global Quick Actions -->
+<button class="fixed bottom-8 left-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 gold-glow">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+<script>
+        // Micro-interactions and subtle glow effects
+        document.querySelectorAll('.bg-surface-container').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-1', 'ring-primary/50');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-1', 'ring-primary/50');
+        });
+    </script>
+</body></html>

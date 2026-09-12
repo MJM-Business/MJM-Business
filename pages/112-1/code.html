@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#0B0B0B",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between border-b border-primary/20 px-6 py-4 bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">account_balance</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary">MJM Smart Business</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<nav class="flex gap-4">
+<a class="text-primary border-b-2 border-primary pb-1 px-2 text-sm font-medium" href="#">لوحة التحكم</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">الرسائل</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">العملاء</a>
+<a class="text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">التقارير</a>
+</nav>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-primary/10 border-none rounded-lg pr-10 pl-4 py-2 text-sm focus:ring-1 focus:ring-primary w-64 text-slate-100" placeholder="بحث..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full border-2 border-primary p-0.5">
+<div class="h-full w-full rounded-full bg-cover bg-center" data-alt="User profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRb4KI1K-DiH878ZKs9q7fjpGTNNYzv7XKKnn6x2NF-thnEUAZU4bc1DBL2PD3gA0KyyK2MtGq-J6vA3p_giGAC3Wjz93pfXhxu58hQ9C316Y3rI2ICMhRqPu-7pifWWNYXwTVNjxuftgrm_LnfsjPtj6rneCvyvQ_sk1mFyWJFsH6_WqKResic9MwDbVwaLTA4p-dfn0qVUlAmWagf5VHeL_ioRJXaOYVDJckOIqyKyP-bifJ2WxM7wZuf-WynNVBiOGy-pVi3w')"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 p-6 space-y-6 max-w-[1600px] mx-auto w-full">
+<!-- Stats Bar -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 hover:border-primary/40 transition-all group">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">chat</span>
+<span class="text-emerald-500 text-xs font-bold">+12%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">إجمالي الرسائل</p>
+<h3 class="text-2xl font-bold text-slate-100">15,680</h3>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 hover:border-primary/40 transition-all group">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">forum</span>
+<span class="text-emerald-500 text-xs font-bold">+5%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">المحادثات النشطة</p>
+<h3 class="text-2xl font-bold text-slate-100">3,245</h3>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 hover:border-primary/40 transition-all group">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">smart_toy</span>
+<span class="text-emerald-500 text-xs font-bold">+18%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">ردود الذكاء الاصطناعي</p>
+<h3 class="text-2xl font-bold text-slate-100">12,430</h3>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 hover:border-primary/40 transition-all group">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">error</span>
+<span class="text-rose-500 text-xs font-bold">-2%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">فشل الإرسال</p>
+<h3 class="text-2xl font-bold text-slate-100">850</h3>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-5 hover:border-primary/40 transition-all group">
+<div class="flex justify-between items-start mb-2">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">person_add</span>
+<span class="text-emerald-500 text-xs font-bold">+7%</span>
+</div>
+<p class="text-slate-400 text-sm mb-1">عملاء محتملون جدد</p>
+<h3 class="text-2xl font-bold text-slate-100">1,920</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Sidebar: Monitor Panel -->
+<aside class="lg:col-span-3 space-y-6">
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+<h4 class="font-bold text-primary">مراقب AI WhatsApp</h4>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-400">معدل الاستجابة التلقائية</span>
+<span class="text-primary font-bold">92%</span>
+</div>
+<div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-400">دقة تحليل AI</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-primary/10">
+<p class="text-xs text-slate-500 mb-3">حالة النظام</p>
+<div class="flex items-center gap-2 text-emerald-500 text-sm">
+<span class="size-2 bg-emerald-500 rounded-full"></span>
+                                    متصل ويعمل بكفاءة
+                                </div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<h4 class="font-bold text-primary mb-4">التصنيفات</h4>
+<div class="space-y-2">
+<button class="flex items-center justify-between w-full p-2 rounded-lg bg-primary/20 text-primary text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">inbox</span>
+<span>الكل</span>
+</div>
+<span class="bg-primary/30 px-2 py-0.5 rounded text-[10px]">142</span>
+</button>
+<button class="flex items-center justify-between w-full p-2 rounded-lg hover:bg-primary/10 text-slate-400 text-sm transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mark_as_unread</span>
+<span>غير مقروء</span>
+</div>
+<span class="bg-primary/10 px-2 py-0.5 rounded text-[10px]">24</span>
+</button>
+<button class="flex items-center justify-between w-full p-2 rounded-lg hover:bg-primary/10 text-slate-400 text-sm transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span>إدارة AI</span>
+</div>
+<span class="bg-primary/10 px-2 py-0.5 rounded text-[10px]">89</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Central: Chat Management Area -->
+<section class="lg:col-span-6 space-y-4">
+<div class="bg-primary/5 border border-primary/20 rounded-xl overflow-hidden flex flex-col h-[700px]">
+<div class="p-4 border-b border-primary/20 flex flex-col sm:flex-row gap-4 items-center justify-between bg-background-dark/30">
+<h4 class="font-bold text-primary">إدارة المحادثات</h4>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-background-dark border border-primary/20 rounded-lg pr-10 pl-4 py-1.5 text-xs text-slate-100 focus:ring-1 focus:ring-primary" placeholder="البحث في المحادثات..." type="text"/>
+</div>
+<button class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<!-- Contact List -->
+<div class="divide-y divide-primary/10">
+<!-- Contact Item -->
+<div class="p-4 flex gap-4 hover:bg-primary/10 cursor-pointer transition-colors border-r-4 border-primary">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border border-primary/30" data-alt="Mohamed Al-Qahtani profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0o_NLYfgdOM2zoQP9p7MUTZEK2x4OZ8B8elKymwNUbo8wJCWD48xEPgulTTfWK_n8RbixTTEbL67H5Iarus7HiVCp1KZ3nTsXTlNciYf8m8rZKuCwkBR9oytkdOGc3OV_jqWLhYNOrBaY3dU5ScBQw2NLFdAmroXCPK-qs2VDoOJw_PDnM5lXGMxp_bYF3IhcaknQlECS-5UvxN5Q_1vwPtQFqVVYEcLNZ6fi8lT7JlnIM14CHhXOuk8ah-yW-Updv2UhLEuamQ')"></div>
+<span class="absolute bottom-0 left-0 size-3 bg-emerald-500 border-2 border-background-dark rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-bold text-slate-100 text-sm truncate">محمد القحطاني</h5>
+<span class="text-[10px] text-slate-500">10:45 ص</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-xs text-slate-400 truncate">أرغب في الاستفسار عن تفاصيل الباقة الماسية المقدمة...</p>
+<span class="size-5 bg-primary rounded-full text-[10px] flex items-center justify-center text-background-dark font-bold">2</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-primary/10 cursor-pointer transition-colors">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border border-primary/30" data-alt="Sara Al-Mutaibi profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB__kPafQfqrwuwY4Vcc97uXXbXs2ZLokCSI_4_apRBvB30aijFyizHIBX8YFgYypsvmoJmCUH9bN5C3sBPfhNoRA9Jojt6n8lULJVOI3JDd-hM8PkZHDB8_BQ7zJSYjn9HPvEz1L1IoxRv0xUB8itnRcRkUg-_sZrbYQWZ2O7xkx4ETbcHexP0k49_xrIAKRgiYhOnu6_5hMZgE3cDScBi1EALxdbFroyUQuJr82B55vgp3YSmq0ISRoqDHzeaV98PTN9dqR-a6A')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-bold text-slate-100 text-sm truncate">سارة المطيبي</h5>
+<span class="text-[10px] text-slate-500">09:15 ص</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-xs text-slate-500 truncate italic">تم الرد بواسطة AI: شكراً لتواصلك، جاري تحويلك...</p>
+<span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-primary/10 cursor-pointer transition-colors">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border border-primary/30" data-alt="Fahad Al-Dossari profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQOBSoGi-3-UilowC4395YyBldzVHuGL8w-d2SlZJwDsAA2SCJNjHtdLcPh9m5Z37Rzh0eT4RuljFbyvjt5K2vVJnnu6C_QcqypHl7qjYQPUNiWag_IquImFeLKlYS4uNzPtt4abN6eumUAhwcAIJl98fMlXvQ2MO_QwUCcoo6xL4qMX3RnEldHIsA_Ubz5GY2C3mxOEiXThFvuZHY6Zq_E9_JfjEwM_HDU1UHLnKWR-G-luKj5vGUOvRNpHtk3vYMCMpOeta7Ow')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-bold text-slate-100 text-sm truncate">فهد الدوسري</h5>
+<span class="text-[10px] text-slate-500">أمس</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-xs text-slate-400 truncate">متى سيتم تفعيل الحساب الجديد الخاص بالمؤسسة؟</p>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-primary/10 cursor-pointer transition-colors">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border border-primary/30" data-alt="Laila Ahmed profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQcVSnVsRv1N45S1mr2Wwk4lJQNSLonMVdA_ANq5GpOz1F-6ck2SKPA_nIfSNCf7yhunZYPBNxdF3ufzCV0WoVtOjzqo7-X4ZlgjKg1amp_W1Y_FmY-3_tByLYlI-iF2DHI4pKiLlpxtXasv4edo7zE12LijvFbZtlIPxriphfx6oHavZjejPWtinR2NhuXQtElpoKvsLk0jocxZ_09tTHnnC8Vs8WL1oCG2U-XiKXSP6_OShrFUUgTuWF34D_uEZZ5sJZ1BDkMg')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-bold text-slate-100 text-sm truncate">ليلى أحمد</h5>
+<span class="text-[10px] text-slate-500">أمس</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-xs text-slate-500 truncate italic">تم الرد بواسطة AI: تم استلام طلبك رقم #5432</p>
+<span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-primary/10 cursor-pointer transition-colors">
+<div class="relative flex-shrink-0">
+<div class="size-12 rounded-full bg-cover bg-center border border-primary/30" data-alt="Noura Mansour profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCO2wcDyxO6Js8a39wIUtedfi863fJGgi8wKAQGFHRWI20NC3AAa584P9Cz0ldjdcgrL5_RZOoO2PSYX_4BPe4VsMVYWbTkUQqc1_o1RHFNHp34CUrlwAC7a_aTN41AxeLrkX5f2sG6_AOFSRPs34W5gTieB5uRXRdPhRFHg_vmRDZYkPvH7wwOcwzSQqquNjbvZniutYRAX1qpd_rdwX8SWTyeyfn2aDR236x_YcfND8bCjmRXo0LkdabpkXL7VHShRPhaGWr3kA')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h5 class="font-bold text-slate-100 text-sm truncate">نورة منصور</h5>
+<span class="text-[10px] text-slate-500">02/10/2023</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-xs text-slate-400 truncate">شكراً جزيلاً على سرعة التجاوب والدعم الفني...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: AI Performance -->
+<aside class="lg:col-span-3 space-y-6">
+<!-- Distribution Chart -->
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<h4 class="font-bold text-primary mb-6">أداء الذكاء الاصطناعي</h4>
+<div class="relative flex justify-center mb-6">
+<!-- Placeholder for circular chart -->
+<div class="size-40 rounded-full border-8 border-primary/10 flex items-center justify-center">
+<div class="size-40 absolute rounded-full border-8 border-transparent border-t-primary border-r-primary rotate-45"></div>
+<div class="size-40 absolute rounded-full border-8 border-transparent border-l-primary/40 -rotate-12"></div>
+<div class="text-center">
+<p class="text-2xl font-bold text-slate-100">82%</p>
+<p class="text-[10px] text-slate-500 uppercase">كفاءة الرد</p>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="size-2 bg-primary rounded-full"></span>
+<span class="text-xs text-slate-400">الشركة</span>
+</div>
+<span class="text-xs font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="size-2 bg-primary/60 rounded-full"></span>
+<span class="text-xs text-slate-400">التسويق</span>
+</div>
+<span class="text-xs font-bold">15%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="size-2 bg-primary/30 rounded-full"></span>
+<span class="text-xs text-slate-400">الدعم الفني</span>
+</div>
+<span class="text-xs font-bold">37%</span>
+</div>
+</div>
+</div>
+<!-- Activity Graph -->
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<h4 class="font-bold text-primary mb-4">النشاط اليومي</h4>
+<div class="flex items-end justify-between h-32 gap-1 mb-4">
+<div class="w-full bg-primary/20 rounded-t-sm" style="height: 60%"></div>
+<div class="w-full bg-primary/40 rounded-t-sm" style="height: 40%"></div>
+<div class="w-full bg-primary rounded-t-sm" style="height: 85%"></div>
+<div class="w-full bg-primary/60 rounded-t-sm" style="height: 55%"></div>
+<div class="w-full bg-primary/20 rounded-t-sm" style="height: 30%"></div>
+<div class="w-full bg-primary/80 rounded-t-sm" style="height: 70%"></div>
+<div class="w-full bg-primary/40 rounded-t-sm" style="height: 45%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-slate-500">
+<span>الأحد</span>
+<span>الثلاثاء</span>
+<span>الخميس</span>
+<span>السبت</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-4">
+<button class="w-full py-3 bg-primary text-background-dark font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add_comment</span>
+                            إنشاء رسالة جديدة
+                        </button>
+</div>
+</aside>
+</div>
+</main>
+</div>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(212, 175, 53, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 53, 0.2);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 53, 0.4);
+        }
+    </style>
+</body></html>
