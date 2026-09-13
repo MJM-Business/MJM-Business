@@ -1,1 +1,141 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MJM Smart Business</title><link rel="stylesheet" href="assets/css/app.css"></head><body data-page="dashboard"><script src="data/demo.js"></script><script src="assets/js/app.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MJM Group — بوابة رقمية متكاملة للخدمات الحكومية والعقارات والنقل والخدمات السكنية في المملكة العربية السعودية.">
+  <title>MJM GROUP | بوابة الخدمات المتكاملة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="MJM Group">
+      <span class="brand-mark">⌂</span>
+      <span><b>MJM</b><small>GROUP</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#home">الرئيسية</a>
+      <a href="#about">عن الشركة</a>
+      <a href="#services">الخدمات</a>
+      <a href="#investment">الفرص الاستثمارية</a>
+      <a href="#map">المنطقة الجغرافية</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <div class="top-actions">
+      <label class="lang-select">🌐 <select id="languageSelect" aria-label="اللغة"></select></label>
+      <button class="login-mini" onclick="openLogin()">تسجيل الدخول</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">حلول رقمية متكاملة</span>
+        <h1>حلول متكاملة<br><strong>لخدماتك في المملكة العربية السعودية</strong></h1>
+        <p>إدارة متقدمة للخدمات الحكومية، العقارية، النقل والخدمات السكنية عبر منصة رقمية واحدة.</p>
+        <div class="hero-buttons">
+          <button class="gold-btn" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})">ابدأ الآن ←</button>
+          <button class="ghost-btn" onclick="document.querySelector('#map').scrollIntoView({behavior:'smooth'})">استكشف الخريطة</button>
+        </div>
+      </div>
+      <div class="globe-wrap">
+        <div class="globe-grid"></div>
+        <div class="globe-core">🌍</div>
+        <span class="pin pin1">🇸🇦</span><span class="pin pin2">✦</span><span class="pin pin3">✦</span>
+      </div>
+      <aside class="language-panel">
+        <h3>اختر لغتك المفضلة</h3>
+        <div class="selected-lang">✓ <span id="selectedLanguageLabel">العربية</span></div>
+        <div class="lang-list" id="langList"></div>
+        <small>+ أكثر من 100 لغة</small>
+      </aside>
+    </section>
+
+    <div class="statusbar">
+      <span>📍 المملكة العربية السعودية</span><span>◷ الأحد، 13 سبتمبر 2026</span>
+      <b>معاً نبني مستقبلاً أفضل</b>
+    </div>
+
+    <section id="services" class="section">
+      <div class="section-heading"><span>خدماتنا</span><h2>بوابة خدمات متكاملة في مكان واحد</h2></div>
+      <div class="service-grid">
+        <article class="service-card" data-role="government">
+          <div class="service-image gov-img"></div><div class="icon">🏛</div>
+          <h3>الخدمات الحكومية</h3>
+          <ul><li>إصدار وتجديد الوثائق الرسمية</li><li>متابعة المعاملات الحكومية</li><li>خدمات الوزارات والجهات الرسمية</li></ul>
+          <button onclick="openService('government')">المزيد ←</button>
+        </article>
+        <article class="service-card" data-role="realestate">
+          <div class="service-image realestate-img"></div><div class="icon">🏢</div>
+          <h3>العقارات</h3>
+          <ul><li>شراء وبيع وتأجير العقارات</li><li>إدارة المحافظ العقارية</li><li>الاستثمار والتقييم العقاري</li></ul>
+          <button onclick="openService('realestate')">المزيد ←</button>
+        </article>
+        <article class="service-card" data-role="transport">
+          <div class="service-image transport-img"></div><div class="icon">🚚</div>
+          <h3>النقل والخدمات اللوجستية</h3>
+          <ul><li>النقل البري والبحري والجوي</li><li>تغطية دول الخليج والشرق الأوسط</li><li>تتبع الشحنات وإدارة الأساطيل</li></ul>
+          <button onclick="openService('transport')">المزيد ←</button>
+        </article>
+        <article class="service-card" data-role="residential">
+          <div class="service-image residential-img"></div><div class="icon">⌂</div>
+          <h3>السكن</h3>
+          <ul><li>حلول سكنية متنوعة</li><li>إدارة المجمعات السكنية</li><li>الصيانة والدعم</li></ul>
+          <button onclick="openService('residential')">المزيد ←</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="map" class="map-section">
+      <div class="map-copy">
+        <span class="eyebrow">شبكة متكاملة</span>
+        <h2>نصل إليك في الخليج والشرق الأوسط وحول العالم</h2>
+        <p>خدمات نقل ولوجستيات تربط المملكة بدول مجلس التعاون والدول العربية والوجهات الدولية.</p>
+        <div class="stats"><div><b>+100</b><small>دولة</small></div><div><b>+20</b><small>دولة عربية</small></div><div><b>24/7</b><small>دعم وتشغيل</small></div></div>
+      </div>
+      <div class="network-map">
+        <div class="map-sphere">🌐</div>
+        <div class="route r1"></div><div class="route r2"></div><div class="route r3"></div>
+        <span class="map-dot sa">السعودية</span><span class="map-dot ae">الإمارات</span><span class="map-dot eg">مصر</span><span class="map-dot tr">تركيا</span>
+      </div>
+    </section>
+
+    <section id="investment" class="section">
+      <div class="section-heading"><span>بيانات تجريبية</span><h2>تفاصيل الخدمات حسب المجال</h2></div>
+      <div class="demo-grid" id="demoGrid"></div>
+    </section>
+
+    <section id="about" class="about-strip">
+      <div><span class="eyebrow">MJM DIGITAL</span><h2>منصة واحدة لإدارة عملياتك</h2><p>واجهة عربية أولاً، متعددة اللغات، مصممة لتكون قابلة للتوسع مع صلاحيات مستخدمين دقيقة.</p></div>
+      <button class="gold-btn" onclick="openLogin()">دخول لوحة التحكم</button>
+    </section>
+  </main>
+
+  <footer id="contact"><div class="brand"><span class="brand-mark">⌂</span><span><b>MJM</b><small>GROUP</small></span></div><span>جميع الحقوق محفوظة © 2026 مجموعة MJM</span><span>المملكة العربية السعودية 📍</span></footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" onclick="closeLogin()">×</button>
+      <div class="login-logo">MJM <small>GROUP</small></div>
+      <h2>تسجيل الدخول</h2><p>ادخل بيانات الدخول للوصول إلى لوحة التحكم الخاصة بدورك.</p>
+      <label>اسم المستخدم<input id="username" placeholder="مثال: ceo"></label>
+      <label>كلمة المرور<input id="password" type="password" placeholder="demo123"></label>
+      <button class="gold-btn full" onclick="login()">تسجيل الدخول 🔒</button>
+      <div class="demo-users"><b>حسابات الاختبار:</b><span>CEO: ceo</span><span>HR: hr</span><span>Finance: finance</span><span>Transport: transport</span><span>Employees: employees</span><span>Admin: admin</span></div>
+      <div id="loginError" class="error"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="serviceModal" aria-hidden="true">
+    <div class="modal-card wide"><button class="close" onclick="closeService()">×</button><div id="serviceContent"></div></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

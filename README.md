@@ -1,16 +1,36 @@
-# MJM Smart Business — GitHub Test Build
+# MJM GROUP — Arabic Digital Services Portal
 
-Static GitHub Pages test build.
+نسخة Static Demo جاهزة للاختبار على GitHub Pages.
 
-## Demo logins
-- CEO: `ceo` / `1234` — full access
-- Finance: `finance` / `1234`
-- Transportation: `transport` / `1234`
-- HR: `hr` / `1234`
-- Operations: `operations` / `1234`
-- Employee: `employee` / `1234`
+## المزايا
+- واجهة RTL عربية بطابع Dark + Gold.
+- السعودية كمنطقة رئيسية.
+- World Map / شبكة نقل دولية.
+- أقسام: الخدمات الحكومية، العقارات، النقل والخدمات اللوجستية، السكن.
+- بيانات Demo داخل كل مجال.
+- قائمة لغات كبيرة (100+ خيار).
+- Login Demo مع صلاحيات مختلفة للأدوار:
+  - CEO: وصول كامل.
+  - HR: الموارد البشرية فقط.
+  - Finance Manager: المالية فقط.
+  - Transport Manager: النقل فقط.
+  - Employees Manager: الموظفون فقط.
+  - Admin: إدارة النظام فقط.
 
-Role navigation and route blocking are implemented in the browser for testing.
-This is **not server-side security**. Real authentication/authorization should be connected to a backend before production use.
+## حسابات الاختبار
+كلمة المرور لجميع الحسابات: `demo123`
 
-The supplied visual image set is included under `assets/images/`.
+| Username | Role |
+|---|---|
+| ceo | CEO |
+| hr | HR |
+| finance | Finance Manager |
+| transport | Transport Manager |
+| employees | Employees Manager |
+| admin | Admin |
+
+## مهم
+هذه صلاحيات Front-End تجريبية فقط، ومناسبة لاختبار الواجهة على GitHub Pages. لا تعتبر نظام صلاحيات آمناً للإنتاج؛ عند تحويله إلى نظام حقيقي يجب تطبيق Authentication + Authorization على Backend/API وقاعدة بيانات، مع جلسات آمنة وتشفير وكلمات مرور مُجزأة.
+
+## GitHub Pages
+ارفع محتويات المجلد إلى repository، وتأكد أن `index.html` موجود في الجذر، ثم فعّل GitHub Pages من Settings → Pages → Deploy from branch.
