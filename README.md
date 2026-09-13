@@ -1,10 +1,7 @@
-# MJM Website — Temporary Assembly
+# MJM Smart ERP - GitHub Test Build
 
-This package contains 134 unique Stitch-exported pages collected from 13 unique ZIP exports.
+Frontend test package for the MJM Smart ERP concept. Includes role-based demo login, dashboard, records, finance/payments, transfers, contracts, reports, HR, cargo, travel, transportation, assets and inventory navigation.
 
-- Root homepage: `index.html`
-- Each page has its own folder under `pages/`.
-- Each page includes `index.html` (copied from Stitch's `code.html`) plus the original exported files.
-- The duplicate ZIP export was excluded because it was byte-for-byte identical to another ZIP.
+Demo users: ceo / 1234, manager / 1234, finance / 1234, employee / 1234.
 
-This is an assembly for deployment/testing. Page-to-page navigation and shared assets should be reviewed before treating it as the final production build.
+GitHub Pages is suitable for this frontend test only. Secure multi-user authentication, shared database, audit logs and integrations require a server-side backend for the production Hostinger deployment.
