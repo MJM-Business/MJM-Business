@@ -1,7 +1,16 @@
-# MJM Smart ERP - GitHub Test Build
+# MJM Smart Business — GitHub Test Build
 
-Frontend test package for the MJM Smart ERP concept. Includes role-based demo login, dashboard, records, finance/payments, transfers, contracts, reports, HR, cargo, travel, transportation, assets and inventory navigation.
+Static GitHub Pages test build.
 
-Demo users: ceo / 1234, manager / 1234, finance / 1234, employee / 1234.
+## Demo logins
+- CEO: `ceo` / `1234` — full access
+- Finance: `finance` / `1234`
+- Transportation: `transport` / `1234`
+- HR: `hr` / `1234`
+- Operations: `operations` / `1234`
+- Employee: `employee` / `1234`
 
-GitHub Pages is suitable for this frontend test only. Secure multi-user authentication, shared database, audit logs and integrations require a server-side backend for the production Hostinger deployment.
+Role navigation and route blocking are implemented in the browser for testing.
+This is **not server-side security**. Real authentication/authorization should be connected to a backend before production use.
+
+The supplied visual image set is included under `assets/images/`.

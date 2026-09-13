@@ -1,1 +1,26 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MJM Smart Login</title><link rel="stylesheet" href="assets/css/erp.css"></head><body><div class="login"><div class="loginbox"><h1>MJM Smart</h1><div class="muted">ERP Secure Access</div><div class="notice">Demo: ceo / 1234 &nbsp; | &nbsp; manager / 1234 &nbsp; | &nbsp; finance / 1234 &nbsp; | &nbsp; employee / 1234</div><label>User ID</label><input class="input" id="u" placeholder="ceo"><label>Password</label><input class="input" id="p" type="password" placeholder="1234"><button class="btn primary" style="width:100%" id="go">Login</button><p id="err" class="muted"></p></div></div><script src="data/demo.js"></script><script src="assets/js/app.js"></script><script>go.onclick=function(){if(!MJM.login(u.value.trim(),p.value)){err.textContent="Invalid demo credentials."}}</script></body></html>
+
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MJM Smart Business — Login</title><link rel="stylesheet" href="assets/css/app.css"></head>
+<body class="auth-page">
+<div class="auth-card">
+  <div class="brand-icon">◆</div>
+  <h1>MJM Smart</h1><p class="muted">Business ERP Platform · GitHub Live Test</p>
+  <div class="notice">Role-based demo: CEO has full access. Department users only see their assigned modules.</div>
+  <form id="loginForm">
+    <label>User ID<input id="username" autocomplete="username" placeholder="ceo" required></label>
+    <label>Password<input id="password" type="password" autocomplete="current-password" placeholder="1234" required></label>
+    <button class="btn primary wide" type="submit">Login</button>
+  </form>
+  <div class="demo-users">
+    <button data-u="ceo">CEO</button><button data-u="finance">Finance</button>
+    <button data-u="transport">Transportation</button><button data-u="hr">HR</button>
+    <button data-u="operations">Operations</button><button data-u="employee">Employee</button>
+  </div>
+  <p class="demo-note">Demo password for all test accounts: <b>1234</b>. This is frontend-only testing; do not use real passwords.</p>
+  <p id="error" class="danger-text"></p>
+</div>
+<script src="data/demo.js"></script><script>
+const users=window.MJM_DEMO.users;
+const f=document.getElementById("loginForm"),u=document.getElementById("username"),p=document.getElementById("password"),err=document.getElementById("error");
+document.querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>{u.value=b.dataset.u;p.value="1234";f.requestSubmit()});
+f.onsubmit=e=>{e.preventDefault();const x=users.find(v=>v.id===u.value.trim()&&v.password===p.value);if(!x){err.textContent="Invalid demo credentials.";return}sessionStorage.setItem("mjm_user",JSON.stringify({id:x.id,name:x.name,role:x.role}));location.replace("index.html")};
+</script></body></html>
